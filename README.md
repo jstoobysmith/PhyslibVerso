@@ -154,3 +154,4 @@ Source: GitHub Actions**.
 2. Have the ability to see those claims which are not associated with anything, and those which are in the halo 
     of Physlib (i.e. could be formalized next).
 3. Have a 'reviewed' tag on everything in Physlib but not PhyslibAlpha. 
+4. New pages have to be added via adding Lean code to Physlib or PhyslibAlpha. Can we try and do this from the wiki?
