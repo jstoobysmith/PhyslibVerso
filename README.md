@@ -1,5 +1,9 @@
 # PhyslibVerso
 
+> **Disclaimer.** The look and structure of this wiki are based on
+> [paperview.org](https://paperview.org/) by Sabrina Pasterski. Please refer to
+> [paperview.org](https://paperview.org/) as the original.
+
 A standalone [Verso](https://github.com/leanprover/verso) literate-programming
 site generator that renders the
 [Physlib](https://github.com/leanprover-community/physlib) library as a physics
@@ -62,6 +66,14 @@ must match the Physlib revision you point at (both currently
 `leanprover/lean4:v4.32.0`).
 
 ## Building and viewing locally
+
+From a clean checkout, this single command builds the whole site:
+
+```sh
+lake update && lake exe cache get && lake query :wiki
+```
+
+The three steps are explained below.
 
 First, resolve dependencies and download the prebuilt mathlib cache (Physlib
 depends on mathlib):
