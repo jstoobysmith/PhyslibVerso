@@ -1,0 +1,100 @@
+# ──────────────────────────────────────────────────────────────────
+# Physlib wiki configuration.
+#
+# To add a page to the site: add a [[targets]] entry naming the
+# Physlib module and (optionally) a [modules."..."] entry giving the
+# page a human-readable title. Then re-run `lake query :wiki` from
+# inside Verso/. Nothing else is needed — the page content comes
+# straight from the module's source file.
+# ──────────────────────────────────────────────────────────────────
+
+# Render declaration docstrings as prose between code blocks
+# (wiki-style), rather than inside the code boxes.
+docstrings_as_text = true
+
+# Hide structural boilerplate so pages read like articles. (Don't add
+# "set_option" here: `set_option ... in <declaration>` commands would
+# disappear along with their declaration. TODO commands are not hidden:
+# wiki.js renders them as "Open problem" callouts.)
+hide_commands = ["namespace", "end", "open", "variable", "section", "noncomputable", "public section"]
+
+# Extra styling and page furniture for the paperview.org wiki look:
+# header bar, sidebar tree, article typography, landing-page cards.
+extra_css = ["static/wiki.css"]
+extra_js = ["static/wiki.js"]
+
+[metadata]
+title = "Physlib"
+description = "Digitalized physics — results and proofs from the Physlib library"
+
+# Palette matched to paperview.org (light mode; dark mode keeps
+# Verso's defaults).
+[theme]
+text_color = "#1a1a1a"
+structure_color = "#1a1a1a"
+link_color = "#0056b3"
+border_color = "#e5e7eb"
+muted_color = "#6b7280"
+surface_color = "#f8f9fa"
+breadcrumb_color = "#6b7280"
+current_bg = "#0056b3"
+prose_max_width = "78ch"
+
+# Verso applies [theme] values unconditionally, which would leak the
+# light palette into dark mode — so re-assert Verso's dark defaults
+# here for every variable overridden above.
+[theme.dark]
+text_color = "#e0e0e0"
+structure_color = "#e0e0e0"
+link_color = "#90caf9"
+border_color = "#2a2a4a"
+muted_color = "#9e9e9e"
+surface_color = "#16213e"
+breadcrumb_color = "#9e9e9e"
+current_bg = "#1a2744"
+
+# ── Pages ─────────────────────────────────────────────────────────
+# The whole Physlib library. To publish only selected pages instead,
+# replace this with per-module entries:
+#   [[targets]]
+#   module = "Physlib.QuantumMechanics.HarmonicOscillator.Basic"
+
+[[targets]]
+library = "Physlib"
+
+# Alpha-quality content: included in the same site, but wiki.js puts a
+# "not reviewed to the same extent" notice at the top of these pages.
+[[targets]]
+library = "PhyslibAlpha"
+
+# ── Page titles ───────────────────────────────────────────────────
+
+[modules."PhyslibAlpha.QFT.WittenIndex.Basic"]
+title = "Witten index"
+
+[modules."PhyslibAlpha.QFT.BoundaryCFT.Basic"]
+title = "Boundary conformal field theory"
+
+[modules."PhyslibAlpha.QFT.OperatorProductExpansion.Basic"]
+title = "Operator product expansion"
+
+[modules."PhyslibAlpha.QFT.RenormalizationGroup.Basic"]
+title = "Renormalization group"
+
+[modules."PhyslibAlpha.QuantumMechanics.EntanglementEntropy.Basic"]
+title = "Entanglement entropy"
+
+[modules."PhyslibAlpha.Relativity.BlackHoleThermodynamics.Basic"]
+title = "Black hole thermodynamics"
+
+[modules."Physlib.QuantumMechanics.HarmonicOscillator.Basic"]
+title = "The quantum harmonic oscillator"
+
+[modules."Physlib.QuantumMechanics.HarmonicOscillator.LadderOperators"]
+title = "Ladder operators"
+
+[modules."Physlib.ClassicalMechanics.HarmonicOscillator.Basic"]
+title = "The classical harmonic oscillator"
+
+[modules."Physlib.ClassicalMechanics.HarmonicOscillator.Solution"]
+title = "Solving the classical harmonic oscillator"

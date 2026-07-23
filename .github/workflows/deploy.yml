@@ -1,0 +1,56 @@
+name: Build and deploy wiki
+
+# Renders the Physlib wiki with Verso and publishes it to GitHub Pages.
+# Enable under Settings → Pages → Source: GitHub Actions.
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+# Allow one concurrent deployment; let a new push cancel an in-progress run.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan (Lean toolchain manager)
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -o elan-init.sh
+          bash elan-init.sh -y --default-toolchain "$(cat lean-toolchain)"
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Resolve dependencies
+        run: lake update
+
+      - name: Fetch prebuilt mathlib cache
+        run: lake exe cache get || true
+
+      - name: Render the wiki
+        run: lake query :wiki
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .lake/build/literate-html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

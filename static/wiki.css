@@ -1,0 +1,972 @@
+/* ══════════════════════════════════════════════════════════════════
+   Physlib wiki — paperview.org-style theme.
+
+   Loaded after Verso's literate.css on every page, so these rules win.
+   Colors go through Verso's CSS variables (overridden in literate.toml
+   under [theme]) wherever possible, so dark mode keeps working; the
+   few paperview-specific tints get explicit dark values below.
+   ══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --pv-accent: #0056b3;
+  --pv-accent-bg: rgba(232, 240, 254, 0.55);
+  --pv-text-2: #6b7280;
+  --pv-text-3: #9ca3af;
+  --pv-border-subtle: #f0f0f0;
+  --pv-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --pv-mono: 'SF Mono', 'Menlo', 'Consolas', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pv-accent: #90caf9;
+    --pv-accent-bg: rgba(26, 39, 68, 0.7);
+    --pv-text-2: #9e9e9e;
+    --pv-text-3: #7d7d7d;
+    --pv-border-subtle: #26263f;
+  }
+}
+
+/* ── Header bar (44px, injected by wiki.js) ─────────────────────── */
+
+.pv-header {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 12px;
+  gap: 10px;
+  border-bottom: 1px solid var(--verso-border-color);
+  background: var(--verso-surface-color);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1000;
+  font-family: var(--pv-font);
+}
+
+.pv-logo {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--pv-accent) !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pv-logo:hover { opacity: 0.8; text-decoration: none; }
+
+.pv-title {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: var(--pv-text-2) !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pv-title:hover { color: var(--verso-text-color) !important; }
+
+.pv-stats {
+  font-size: 10px;
+  color: var(--pv-text-3);
+  white-space: nowrap;
+}
+
+.pv-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pv-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 280px;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 13px;
+  color: var(--pv-text-3) !important;
+  background: var(--verso-background-color);
+  border: 1px solid var(--verso-border-color);
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.pv-search:hover {
+  border-color: var(--pv-accent);
+  text-decoration: none;
+}
+
+.pv-search svg { flex-shrink: 0; }
+
+@media (max-width: 700px) {
+  .pv-title { display: none; }
+  .pv-search { width: auto; }
+  .pv-search span { display: none; }
+  .pv-header { padding-left: 56px; } /* room for verso's hamburger */
+}
+
+/* Site-wide work-in-progress banner. */
+.pv-wip-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 28px;
+  padding: 0 10px;
+  font-family: var(--pv-font);
+  font-size: 11px;
+  color: #e65100;
+  background: #fff3e0;
+  border-bottom: 1px solid rgba(230, 81, 0, 0.25);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pv-wip-banner a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pv-wip-banner {
+    color: #ffb74d;
+    background: rgba(230, 81, 0, 0.12);
+    border-color: rgba(255, 183, 77, 0.3);
+  }
+}
+
+/* Keep the accessibility skip-link fully off-screen until focused. */
+body.pv .skip-link { top: -100px; }
+body.pv .skip-link:focus { top: 0; }
+
+/* The layout fills the viewport below the header (and WIP banner). */
+body.pv .layout {
+  height: calc(100vh - 44px);
+  height: calc(100dvh - 44px);
+}
+
+body.pv-has-banner .layout {
+  height: calc(100vh - 72px);
+  height: calc(100dvh - 72px);
+}
+
+/* ── Sidebar: paperview wiki-nav clone ──────────────────────────── */
+
+.sidebar {
+  background: var(--verso-background-color);
+  border-right: 1px solid var(--verso-border-color);
+  width: 380px;
+}
+
+.sidebar-content { padding: 0; }
+
+.module-tree {
+  font-family: var(--pv-font);
+  font-size: 11.5px;
+}
+
+/* Section head strip, like paperview's .nav-section-head.
+   Sticky (with the filter below it) so it survives sidebar scrolling. */
+.module-tree .nav-title {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 34px;
+  padding: 0 12px;
+  margin: 0;
+  border-bottom: 1px solid var(--verso-border-color);
+  background: var(--verso-surface-color);
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--pv-text-3);
+}
+
+.pv-tree { padding: 10px 14px 28px; }
+
+/* Filter box under the section head (inserted by wiki.js). */
+.pv-filter {
+  position: sticky;
+  top: 34px;
+  z-index: 2;
+  padding: 10px 14px;
+  background: var(--verso-background-color);
+  border-bottom: 1px solid var(--pv-border-subtle);
+}
+
+.pv-filter input {
+  width: 100%;
+  height: 28px;
+  padding: 0 10px;
+  font-family: var(--pv-font);
+  font-size: 12px;
+  color: var(--verso-text-color);
+  background: var(--verso-background-color);
+  border: 1px solid var(--verso-border-color);
+  border-radius: 6px;
+  outline: none;
+}
+
+.pv-filter input:focus { border-color: var(--pv-accent); }
+
+.pv-filter input::placeholder { color: var(--pv-text-3); }
+
+.pv-hidden { display: none !important; }
+
+/* Page-count badge on area rows. */
+.nav-count {
+  margin-left: auto;
+  padding-left: 6px;
+  font-size: 9px;
+  font-weight: 400;
+  color: var(--pv-text-3);
+  flex-shrink: 0;
+}
+
+/* Rows */
+.module-tree summary {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.module-tree summary:hover { background: var(--verso-surface-color); }
+
+.module-tree summary a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Depth-graded typography: subfields 600, programs 500, concepts 400. */
+.module-tree summary[data-pv-depth="0"] {
+  font-weight: 600;
+  color: var(--verso-text-color);
+  margin-top: 2px;
+}
+
+.module-tree summary[data-pv-depth="1"] { font-weight: 500; color: var(--pv-text-2); }
+.module-tree summary[data-pv-depth="2"] { font-weight: 500; color: var(--pv-text-2); }
+
+/* Library roots (Physlib / PhyslibAlpha) as section labels. */
+.module-tree summary.pv-lib-row,
+.module-tree summary.pv-lib-row a {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--pv-text-3);
+  text-decoration: none;
+}
+
+.module-tree summary.pv-lib-row { margin-top: 10px; }
+
+/* No trunk lines directly under a library root. */
+.pv-tree details:has(> summary.pv-lib-row) > *:not(summary) {
+  border-left: none;
+  margin-left: 2px;
+  padding-left: 2px;
+}
+
+.pv-tree details:has(> summary.pv-lib-row) > .leaf::after { display: none; }
+.pv-tree details:has(> summary.pv-lib-row) > details > summary::after { display: none; }
+
+/* Area rows (with dots) read as paperview subfields. */
+.module-tree summary.pv-area-row {
+  font-weight: 600;
+  color: var(--verso-text-color);
+}
+
+/* Current page rendered as a summary row (module with children):
+   replace verso's solid-blue treatment with the accent tint. */
+.module-tree summary.current {
+  background: var(--pv-accent-bg);
+  border-radius: 4px;
+}
+
+.module-tree summary.current,
+.module-tree summary.current a {
+  color: var(--pv-accent);
+  font-weight: 600;
+}
+
+/* Colored subfield dot (inserted by wiki.js). */
+.nav-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Tree trunk lines: each nested row carries a tinted left border, so
+   stacked rows form a continuous trunk in the group's color. */
+.module-tree details > *:not(summary) {
+  margin-left: 9px;
+  padding-left: 9px;
+  border-left: 1.5px solid
+    color-mix(in srgb, var(--tree-color, var(--verso-border-color)) 35%, transparent);
+}
+
+/* Horizontal branch stubs from trunk to row label. */
+.pv-tree details details > summary::after,
+.pv-tree details .leaf::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  border-top: 1.5px solid
+    color-mix(in srgb, var(--tree-color, var(--verso-border-color)) 35%, transparent);
+  pointer-events: none;
+}
+
+/* Summaries sit inside a bordered <details>: reach back to its trunk. */
+.pv-tree details details > summary::after { left: -9px; }
+
+/* Leaves carry their own trunk segment at x=0: stub spans the padding. */
+.pv-tree details .leaf::after { left: 0; }
+
+.module-tree .leaf {
+  padding: 0;
+  margin: 1px 0;
+  position: relative;
+}
+
+.module-tree .leaf a {
+  display: block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 400;
+  color: var(--pv-text-3);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.module-tree .leaf[data-pv-depth="1"] a { color: var(--pv-text-2); }
+
+.module-tree .leaf a:hover {
+  background: var(--verso-surface-color);
+  color: var(--verso-text-color);
+}
+
+.module-tree .leaf.current,
+.module-tree .current {
+  background: none;
+}
+
+.module-tree .leaf.current a,
+.module-tree .current a {
+  background: var(--pv-accent-bg);
+  color: var(--pv-accent);
+  font-weight: 600;
+}
+
+/* ── Article column ─────────────────────────────────────────────── */
+
+.code-content {
+  padding: 20px 32px 60px;
+  max-width: 900px;
+}
+
+/* Crumb line above the title (breadcrumbs moved here by wiki.js). */
+.pv-crumb { margin-bottom: 2px; }
+
+.pv-crumb .breadcrumbs {
+  font-family: var(--pv-font);
+  font-size: 11px;
+  color: var(--pv-text-3);
+}
+
+.pv-crumb .breadcrumbs li:not(:last-child)::after {
+  content: "›";
+  margin: 0 6px;
+  color: var(--pv-text-3);
+  font-weight: 400;
+}
+
+.pv-crumb .breadcrumbs a {
+  color: var(--pv-accent);
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.pv-crumb .breadcrumbs a:hover { background: none; text-decoration: underline; }
+
+.pv-crumb .breadcrumbs a code,
+.pv-crumb .breadcrumbs .current code {
+  font-family: var(--pv-font);
+  background: none;
+  padding: 0;
+  font-size: 11px;
+}
+
+.pv-crumb .breadcrumbs .current {
+  color: var(--pv-text-3);
+  font-weight: 400;
+  padding: 0;
+}
+
+/* Meta line under the title (injected by wiki.js). */
+.pv-meta {
+  font-family: var(--pv-font);
+  font-size: 11px;
+  color: var(--pv-text-3);
+  margin: -8px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--pv-border-subtle);
+}
+
+/* Alpha-content notice (paperview orange chip palette). */
+.pv-alpha-banner {
+  font-family: var(--pv-font);
+  font-size: 12px;
+  line-height: 1.55;
+  color: #e65100;
+  background: #fff3e0;
+  border: 1px solid rgba(230, 81, 0, 0.25);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 0 0 16px;
+  max-width: 78ch;
+}
+
+.pv-alpha-banner code {
+  font-family: var(--pv-mono);
+  font-size: 11px;
+  background: rgba(230, 81, 0, 0.08);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pv-alpha-banner {
+    color: #ffb74d;
+    background: rgba(230, 81, 0, 0.12);
+    border-color: rgba(255, 183, 77, 0.3);
+  }
+
+  .pv-alpha-banner code { background: rgba(255, 183, 77, 0.12); }
+}
+
+/* ── Article typography (paperview .art-body) ───────────────────── */
+
+.code-content > .verso-text.mod-doc,
+.code-content > .md-text.mod-doc {
+  font-family: var(--pv-font);
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: none;
+}
+
+.code-content .mod-doc p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Article title (`#` in the module doc renders as h2).
+   Selectors mirror literate.css's own (same specificity) so that
+   loading later is what decides. */
+.code-content > .md-text.mod-doc h2,
+.code-content > .verso-text.mod-doc h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  border-bottom: none;
+  margin: 4px 0 8px;
+  padding-bottom: 0;
+}
+
+/* Section headings (`##`). */
+.code-content > .md-text.mod-doc h3,
+.code-content > .verso-text.mod-doc h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 24px 0 8px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--pv-border-subtle);
+}
+
+/* Subsection headings (`###`). */
+.code-content > .md-text.mod-doc h4,
+.code-content > .verso-text.mod-doc h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 16px 0 5px;
+}
+
+/* Inline code chips. */
+.code-content > .md-text.mod-doc code,
+.code-content > .verso-text.mod-doc code {
+  font-family: var(--pv-mono);
+  font-size: 11.5px;
+  background: var(--verso-inline-code-bg);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+/* ── Declaration docstrings as prose (technical-reference style) ── */
+
+/* (Docstrings rendered as text carry both `md-text mod-doc` classes and
+   an `--indent` inline style; that style is what distinguishes them from
+   the module docstring prose.) */
+.code-content > .md-text[style*="--indent"],
+.code-content > .verso-text[style*="--indent"] {
+  font-family: var(--pv-font);
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--verso-text-color);
+  border-left: 2px solid var(--verso-border-color);
+  padding-left: 10px;
+  margin-bottom: 8px;
+  max-width: none;
+}
+
+.code-content > .md-text[style*="--indent"] p {
+  text-align: left;
+}
+
+/* ── Code boxes: bordered cards ─────────────────────────────────── */
+
+.code-box {
+  border: 1px solid var(--verso-code-box-border-color);
+  border-radius: 6px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+/* ── Lean syntax highlighting palette ───────────────────────────── */
+
+.hl.lean .keyword.token {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.hl.lean .const.token { color: #0056b3; }
+.hl.lean .module-name.token { color: #0a7ea4; }
+.hl.lean .literal.string.token { color: #2e7d32; }
+.hl.lean .literal.number.token { color: #b45309; }
+.hl.lean .comment.token,
+.hl.lean .comment.block.token,
+.hl.lean .comment.delimiter.token {
+  color: var(--pv-text-2);
+  font-style: italic;
+}
+
+.hl.lean .var.token { color: #1a1a1a; font-style: italic; }
+.hl.lean .level-var.token { color: #b45309; font-style: italic; }
+.hl.lean .sort.token { color: #c2185b; }
+
+.hl.lean .punctuation.token,
+.hl.lean .built-in.delim.token {
+  color: var(--pv-text-2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .hl.lean .keyword.token { color: #c792ea; }
+  .hl.lean .const.token { color: #82aaff; }
+  .hl.lean .module-name.token { color: #6ec6dd; }
+  .hl.lean .literal.string.token { color: #c3e88d; }
+  .hl.lean .literal.number.token { color: #f7b06c; }
+  .hl.lean .var.token { color: #e0e0e0; }
+  .hl.lean .level-var.token { color: #f7b06c; }
+  .hl.lean .sort.token { color: #f48fb1; }
+}
+
+/* ── Imports drawer ─────────────────────────────────────────────── */
+
+.imports-list summary {
+  font-family: var(--pv-font);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--pv-text-3);
+}
+
+/* ── In-page table of contents (right rail) ─────────────────────── */
+
+.page-toc {
+  font-family: var(--pv-font);
+  font-size: 11.5px;
+  border-left: 1px solid var(--verso-border-color);
+}
+
+.page-toc-title {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--pv-text-3);
+}
+
+.page-toc a { color: var(--pv-text-2); }
+.page-toc a:hover { color: var(--pv-accent); }
+
+/* ── Landing page (hero + cards, built by wiki.js) ──────────────── */
+
+body.pv-landing main.landing-page {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+  font-family: var(--pv-font);
+  width: 100%;
+  overflow-y: auto;
+}
+
+body.pv-landing .layout { display: block; }
+
+.pv-hero {
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--pv-border-subtle);
+}
+
+.pv-kicker {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--pv-text-3);
+  margin-bottom: 7px;
+}
+
+.pv-hero-title {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 8px;
+  color: var(--verso-text-color);
+}
+
+.pv-hero-sub {
+  font-size: 13px;
+  color: var(--pv-text-2);
+  line-height: 1.55;
+  max-width: 620px;
+}
+
+.pv-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 24px 0 10px;
+  color: var(--verso-text-color);
+}
+
+.pv-hero + .pv-section-title { margin-top: 0; }
+
+.pv-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 10px;
+}
+
+.pv-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--verso-border-color);
+  border-radius: 6px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: inherit;
+  min-height: 72px;
+  transition: border-color 0.12s;
+}
+
+.pv-card:hover {
+  border-color: var(--pv-text-3);
+  text-decoration: none;
+}
+
+.pv-card-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--verso-text-color);
+}
+
+.pv-card-path {
+  font-family: var(--pv-mono);
+  font-size: 10px;
+  color: var(--pv-text-3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Math ───────────────────────────────────────────────────────── */
+
+.katex { font-size: 1.05em; }
+
+.pv-math-display {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  overflow-x: auto;
+}
+
+/* ── Alpha markers ──────────────────────────────────────────────── */
+
+/* Sidebar rows merged in from PhyslibAlpha get a small α marker. */
+.pv-tree .leaf.pv-alpha-node > a::after,
+.pv-tree summary.pv-alpha-node::after {
+  content: "α";
+  font-size: 9px;
+  font-weight: 600;
+  color: #e65100;
+  margin-left: 5px;
+  vertical-align: super;
+}
+
+/* Landing cards for alpha modules. */
+.pv-chip-alpha {
+  display: inline-block;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #e65100;
+  background: #fff3e0;
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-left: 6px;
+  vertical-align: 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pv-tree .leaf.pv-alpha-node > a::after,
+  .pv-tree summary.pv-alpha-node::after { color: #ffb74d; }
+
+  .pv-chip-alpha {
+    color: #ffb74d;
+    background: rgba(230, 81, 0, 0.15);
+  }
+}
+
+/* ── Concept cross-reference links in prose ─────────────────────── */
+
+a.pv-xref { text-decoration: none; }
+
+a.pv-xref code {
+  color: var(--pv-accent);
+  cursor: pointer;
+}
+
+a.pv-xref:hover code { text-decoration: underline; }
+
+/* ── Callouts: open problems and informal statements ────────────── */
+
+.pv-callout {
+  border: 1px solid var(--verso-border-color);
+  border-left-width: 3px;
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  max-width: 78ch;
+  font-family: var(--pv-font);
+}
+
+.pv-callout-kicker {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.pv-callout-title {
+  font-family: var(--pv-mono);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--verso-text-color);
+  margin-bottom: 4px;
+  overflow-wrap: anywhere;
+}
+
+.pv-callout-body {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--verso-text-color);
+}
+
+.pv-callout-body + .pv-callout-body { margin-top: 6px; }
+
+.pv-callout-deps {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 10.5px;
+  color: var(--pv-text-3);
+}
+
+.pv-callout-deps code {
+  font-family: var(--pv-mono);
+  font-size: 10.5px;
+  background: var(--verso-inline-code-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* Open problems: blue, like paperview's accent panels. */
+.pv-callout-todo { border-left-color: #1565c0; background: rgba(227, 242, 253, 0.45); }
+.pv-callout-todo .pv-callout-kicker { color: #1565c0; }
+
+/* Informal definitions: green. */
+.pv-callout-informal-definition { border-left-color: #2e7d32; background: rgba(232, 245, 233, 0.45); }
+.pv-callout-informal-definition .pv-callout-kicker { color: #2e7d32; }
+
+/* Informal lemmas: purple. */
+.pv-callout-informal-lemma { border-left-color: #7c3aed; background: rgba(243, 232, 255, 0.35); }
+.pv-callout-informal-lemma .pv-callout-kicker { color: #7c3aed; }
+
+@media (prefers-color-scheme: dark) {
+  .pv-callout-todo { background: rgba(21, 101, 192, 0.12); }
+  .pv-callout-todo .pv-callout-kicker { color: #90caf9; }
+
+  .pv-callout-informal-definition { background: rgba(46, 125, 50, 0.12); }
+  .pv-callout-informal-definition .pv-callout-kicker { color: #a5d6a7; }
+
+  .pv-callout-informal-lemma { background: rgba(124, 58, 237, 0.14); }
+  .pv-callout-informal-lemma .pv-callout-kicker { color: #ce93d8; }
+}
+
+/* ── Suggest-edit buttons and modal ─────────────────────────────── */
+
+.pv-editable { position: relative; }
+
+.pv-edit-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid var(--verso-border-color);
+  border-radius: 4px;
+  background: var(--verso-background-color);
+  color: var(--pv-text-3);
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.12s, color 0.12s;
+}
+
+.pv-editable:hover .pv-edit-btn { opacity: 1; }
+
+.pv-edit-btn:hover {
+  color: var(--pv-accent);
+  border-color: var(--pv-accent);
+}
+
+.pv-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.pv-modal {
+  width: min(720px, 100%);
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--verso-background-color);
+  border: 1px solid var(--verso-border-color);
+  border-radius: 8px;
+  padding: 16px 18px;
+  font-family: var(--pv-font);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+}
+
+.pv-modal-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--verso-text-color);
+}
+
+.pv-modal-sub {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--pv-text-2);
+}
+
+.pv-modal-sub code {
+  font-family: var(--pv-mono);
+  font-size: 11px;
+  background: var(--verso-inline-code-bg);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.pv-modal-text {
+  width: 100%;
+  min-height: 220px;
+  resize: vertical;
+  font-family: var(--pv-mono);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--verso-text-color);
+  background: var(--verso-surface-color);
+  border: 1px solid var(--verso-border-color);
+  border-radius: 6px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.pv-modal-text:focus { border-color: var(--pv-accent); }
+
+.pv-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.pv-btn {
+  font-family: var(--pv-font);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--verso-border-color);
+  background: var(--verso-background-color);
+  color: var(--verso-text-color);
+  cursor: pointer;
+}
+
+.pv-btn:hover { border-color: var(--pv-text-3); }
+
+.pv-btn-primary {
+  background: var(--pv-accent);
+  border-color: var(--pv-accent);
+  color: #fff;
+}
+
+.pv-btn-primary:hover {
+  opacity: 0.9;
+  border-color: var(--pv-accent);
+}
