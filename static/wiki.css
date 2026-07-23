@@ -622,13 +622,38 @@ body.pv-has-banner .layout {
 
 /* ── Landing page (hero + cards, built by wiki.js) ──────────────── */
 
+/* The landing page has no .layout wrapper — <main> is a direct child of
+   <body>, which Verso pins to the viewport with overflow: hidden. So make
+   the body itself the column (banner, header, then main) and let main be
+   the scrolling region; otherwise the cards below the fold are clipped
+   with no way to reach them. */
+body.pv-landing {
+  display: flex;
+  flex-direction: column;
+}
+
+body.pv-landing .pv-wip-banner,
+body.pv-landing .pv-header {
+  flex-shrink: 0;
+}
+
+/* Full-width scroller (so the scrollbar sits at the window edge) with the
+   content column centred inside it. */
 body.pv-landing main.landing-page {
-  max-width: 1020px;
-  margin: 0 auto;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 28px 32px 60px;
   font-family: var(--pv-font);
+}
+
+body.pv-landing main.landing-page > * {
   width: 100%;
-  overflow-y: auto;
+  max-width: 1020px;
+  flex-shrink: 0;
 }
 
 body.pv-landing .layout { display: block; }

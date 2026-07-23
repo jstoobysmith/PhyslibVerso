@@ -572,9 +572,108 @@
     }
 
     /* ── 6. Capture prose sources, then render TeX math ─────────── */
+
+    /* Serialize a rendered docstring back to its Markdown source, so the
+       edit box shows `code`, *emphasis*, headings and lists rather than
+       flattened text. Two Verso-isms: a docstring's `#` heading renders as
+       <h2> (so levels shift down by one), and list items are direct <p>
+       children of <ul>/<ol> — there are no <li> elements. Math is left
+       alone: this runs before KaTeX, so `$…$` is still literal text. */
+    function mdInline(node) {
+      var out = '';
+      Array.prototype.forEach.call(node.childNodes, function (n) {
+        if (n.nodeType === 3) { out += n.nodeValue; return; }
+        if (n.nodeType !== 1) return;
+        var tag = n.tagName;
+        if (tag === 'CODE') out += '`' + n.textContent + '`';
+        else if (tag === 'EM' || tag === 'I') out += '*' + mdInline(n) + '*';
+        else if (tag === 'STRONG' || tag === 'B') out += '**' + mdInline(n) + '**';
+        else if (tag === 'A') {
+          var href = n.getAttribute('href') || '';
+          var label = mdInline(n);
+          /* <url> autolinks render with the URL as their own label. */
+          out += label.trim() === href ? '<' + href + '>' : '[' + label + '](' + href + ')';
+        } else if (tag === 'BR') out += '\n';
+        else if (tag === 'BUTTON') { /* the injected ✎ button */ }
+        else out += mdInline(n);
+      });
+      return out;
+    }
+
+    /* Indent every line after the first, so wrapped list items and nested
+       blocks stay inside their item. */
+    function mdHang(text, pad) {
+      return text.split('\n').join('\n' + pad);
+    }
+
+    function mdList(list) {
+      var ordered = list.tagName === 'OL';
+      var nestPad = ordered ? '   ' : '  ';
+      var lines = [];
+      var count = 0;
+      Array.prototype.forEach.call(list.children, function (child) {
+        var tag = child.tagName;
+        if (tag === 'P' || tag === 'LI') {
+          count += 1;
+          var marker = ordered ? count + '. ' : '- ';
+          var body = tag === 'LI' ? mdBlocks(child) : mdInline(child).trim();
+          var pad = new Array(marker.length + 1).join(' ');
+          lines.push(marker + mdHang(body.trim(), pad));
+        } else if (tag === 'UL' || tag === 'OL') {
+          lines.push(nestPad + mdHang(mdList(child), nestPad));
+        } else {
+          var other = mdBlocks(child).trim();
+          if (other) lines.push(other);
+        }
+      });
+      return lines.join('\n');
+    }
+
+    function mdBlocks(node) {
+      var out = [];
+      var push = function (text, kind) {
+        if (text) out.push({ text: text, kind: kind });
+      };
+      Array.prototype.forEach.call(node.childNodes, function (n) {
+        if (n.nodeType === 3) {
+          push(n.nodeValue.trim(), 'para');
+          return;
+        }
+        if (n.nodeType !== 1) return;
+        var tag = n.tagName;
+        if (/^H[1-6]$/.test(tag)) {
+          var level = Math.max(1, parseInt(tag.charAt(1), 10) - 1);
+          push(new Array(level + 1).join('#') + ' ' + mdInline(n).trim(), 'head');
+        } else if (tag === 'P') {
+          push(mdInline(n).trim(), 'para');
+        } else if (tag === 'UL' || tag === 'OL') {
+          push(mdList(n), 'list');
+        } else if (tag === 'PRE') {
+          push('```\n' + n.textContent.replace(/^\n+|\n+$/g, '') + '\n```', 'pre');
+        } else if (tag === 'HR') {
+          push('---', 'rule');
+        } else if (tag === 'BLOCKQUOTE') {
+          push(mdBlocks(n).split('\n').map(function (line) {
+            return line ? '> ' + line : '>';
+          }).join('\n'), 'quote');
+        } else if (tag === 'BUTTON') {
+          /* skip injected UI */
+        } else {
+          push(mdBlocks(n).trim(), 'para');
+        }
+      });
+      /* A list directly under its introducing paragraph stays tight, the way
+         it is written in the docstring; everything else gets a blank line. */
+      return out.map(function (item, i) {
+        if (!i) return item.text;
+        var tight = item.kind === 'list' && out[i - 1].kind === 'para';
+        return (tight ? '\n' : '\n\n') + item.text;
+      }).join('');
+    }
+
     var proseBlocks = Array.prototype.slice.call(
       document.querySelectorAll('.code-content > .md-text, .code-content > .verso-text'));
-    proseBlocks.forEach(function (b) { b.pvSource = b.innerText.trim(); });
+    proseBlocks.forEach(function (b) { b.pvSource = mdBlocks(b).trim(); });
 
     function renderMathIn(container) {
       if (typeof katex === 'undefined') return;
@@ -696,7 +795,8 @@
         '**Module:** `' + modName + '`\n' +
         '**Source file:** https://github.com/' + GITHUB_REPO +
         '/blob/master/' + srcPath + '\n\n' +
-        'Suggested change to the rendered documentation text:\n\n' +
+        'Suggested change to the docstring Markdown (reconstructed from the ' +
+        'rendered page, so formatting may differ slightly from the source):\n\n' +
         '```diff\n' + diffLines(original, suggestion) + '\n```\n\n' +
         '---\n*Suggested from the Physlib wiki.*\n';
       var url = 'https://github.com/' + GITHUB_REPO + '/issues/new' +
@@ -722,9 +822,10 @@
       modal.className = 'pv-modal';
       modal.innerHTML =
         '<div class="pv-modal-title">Suggest an edit</div>' +
-        '<div class="pv-modal-sub">Edits open a prefilled GitHub issue on ' +
-        '<code>' + GITHUB_REPO + '</code> showing the diff against the ' +
-        'current text of <code>' + modName + '</code>.</div>';
+        '<div class="pv-modal-sub">Edit the Markdown below — it opens a ' +
+        'prefilled GitHub issue on <code>' + GITHUB_REPO + '</code> showing ' +
+        'the diff against the current docstring of <code>' + modName +
+        '</code>.</div>';
       var ta = document.createElement('textarea');
       ta.className = 'pv-modal-text';
       ta.value = block.pvSource || '';

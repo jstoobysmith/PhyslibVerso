@@ -151,3 +151,6 @@ Source: GitHub Actions**.
    link the two: wiki pages to wiphy keywords, and formalized lemmas to the
    corresponding claims. This could be done with the API as part of https://wiphy.org/, 
    but also if necessary via AI. 
+2. Have the ability to see those claims which are not associated with anything, and those which are in the halo 
+    of Physlib (i.e. could be formalized next).
+3. Have a 'reviewed' tag on everything in Physlib but not PhyslibAlpha. 
