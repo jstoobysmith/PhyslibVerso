@@ -144,3 +144,10 @@ Source: GitHub Actions**.
 - Finer-grained rules live in [`static/wiki.css`](./static/wiki.css), linked
   after Verso's own stylesheet and using Verso's CSS variables so dark mode
   keeps working.
+
+## Things to do
+
+1. **Connect the wiki to [wiphy.org](https://wiphy.org/).** Find the best way to
+   link the two: wiki pages to wiphy keywords, and formalized lemmas to the
+   corresponding claims. This could be done with the API as part of https://wiphy.org/, 
+   but also if necessary via AI. 
