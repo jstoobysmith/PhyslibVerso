@@ -25,6 +25,7 @@ For a corpus of knowledge, a node of that corpus should contain a result from ph
 2. An informal reviewed node. 
 3. A formal non-reviewed node. 
 4. A formal reviewed node. 
+Two different axis here informal--formal and non-reviewed--reviewed.
 Associated with each node should be information related to its 
 traditional source (e.g. book, paper, stack-exchange post) (if any exist). 
 
@@ -38,7 +39,7 @@ Physlib (corresponding to 4) and PhyslibAlpha (3) are naturally organized like t
 
 If we organize the claims in [wiphy.org](https://wiphy.org/) into buckets with the same sort of heirarchical structure, this could form the source of nodes for 1. 
 
-Each bucket should have associated with it its own meta-data. This should include an overview of what results live in that bucket, and should ideally be the module doc-string of ./Physlib. The metadata should also include where it sits within the graph of such buckets (which can be derived from the directory structure), and where concept references. 
+Each bucket should have associated with it its own meta-data. This should include an overview of what results live in that bucket, and should ideally be the module doc-string of ./Physlib. The metadata should also include where it sits within the graph of such buckets (which can be derived from the directory structure), and concept references. 
 
 The above describes the underlying archtecture. What we want to sit on top is a way to view and explore this achetecture. There are a couple of ways to do this: 
 1. For each bucket show the 'wiki' page containing the bucket overview, 
