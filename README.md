@@ -11,11 +11,43 @@ wiki: prose from the modules' documentation comments, interleaved with the
 (syntax-highlighted, hoverable) Lean code, with a navigation sidebar, per-page
 table of contents, search, KaTeX math, and light/dark themes.
 
-This repository carries **no physics content of its own**. Physlib is an
+This repository carries **almost no physics content of its own**. Physlib is an
 external git dependency (see `lakefile.lean`); pages are rendered directly from
 Physlib's source files, so there are no per-page files to write and no
 post-processing step. Adding a module to Physlib gives it a page here
-automatically on the next build.
+automatically on the next build. (The one exception is the small
+[`UnformalizedClaims/`](./UnformalizedClaims/) corpus described below.)
+
+## The corpus: one body of physics, at several levels of certainty
+
+For a corpus of knowledge, a node of that corpus should contain a result from physics. It seems useful to have a couple of different types of nodes: 
+1. An informal non-reviewed node. 
+2. An informal reviewed node. 
+3. A formal non-reviewed node. 
+4. A formal reviewed node. 
+Associated with each node should be information related to its 
+traditional source (e.g. book, paper, stack-exchange post) (if any exist). 
+
+The nodes themselves should be connected somehow. The natural idea would be to form a knowledge-graph. However, unlike in mathematics where such a graph makes concrete sense from the point of view of mathematical dependencies, it does not in physics. 
+
+So instead, it makes sense to think about buckets of nodes, where each bucket corresponds to one high-level concept in physics. This should be at the right level so there is a limit on the number of nodes each bucket can contain (buckets with too many nodes should be split into smaller buckets). 
+
+The buckets themselves can then sit in a knowledge graph, or tree. 
+
+Physlib (corresponding to 4) and PhyslibAlpha (3) are naturally organized like this already. Each file corresponds to a bucket, and the declerations (definitions and lemmas) in each file are the corresponding nodes in that bucket. 
+
+If we organize the claims in [wiphy.org](https://wiphy.org/) into buckets with the same sort of heirarchical structure, this could form the source of nodes for 1. 
+
+Each bucket should have associated with it its own meta-data. This should include an overview of what results live in that bucket, and should ideally be the module doc-string of ./Physlib. The metadata should also include where it sits within the graph of such buckets (which can be derived from the directory structure), and where concept references. 
+
+The above describes the underlying archtecture. What we want to sit on top is a way to view and explore this achetecture. There are a couple of ways to do this: 
+1. For each bucket show the 'wiki' page containing the bucket overview, 
+  and all of the nodes which sit in it. (A first-pass example of this is:  https://jstoobysmith.github.io/PhyslibVerso/Physlib/ClassicalMechanics/Mass/MassUnit/) 
+2. A graph which shows the buckets and the nodes which are in them (a first-order pass at this is: https://jstoobysmith.github.io/PhyslibVerso/roadmap/)
+
+It should also be possible to edit the documentation, references etc, of each of these sources from the webview, similar to how it is possible to edit articles on Wikipedia. 
+
+
 
 ## Structure
 
