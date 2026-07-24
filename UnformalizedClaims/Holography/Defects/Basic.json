@@ -1,0 +1,93 @@
+{
+  "doc": "# Basic — Defects\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “defect CFT holography”).",
+  "claims": [
+    {
+      "name": "cone_holography_obtained_zerovolume_limit",
+      "statement": "Cone holography can be obtained as the zero-volume limit of holographic defect CFT.",
+      "sources": [
+        {
+          "arxiv": "2101.10031",
+          "url": "https://arxiv.org/abs/2101.10031",
+          "title": "Codimension-n Holography for Cones"
+        }
+      ]
+    },
+    {
+      "name": "braid_group_representations_defect_operators",
+      "statement": "Braid group representations, defect operators, and holography are connected within the AdS/CFT framework.",
+      "sources": [
+        {
+          "arxiv": "2505.16817",
+          "url": "https://arxiv.org/abs/2505.16817",
+          "title": "Braid Group Representations and Defect Operators in AdS/CFT Correspondence"
+        }
+      ]
+    },
+    {
+      "name": "ads_defect_cft_correspondence_provides",
+      "statement": "AdS/defect CFT correspondence provides a framework that joins holography, integrability, supersymmetric localization, and the conformal bootstrap program for defects in real-world systems.",
+      "sources": [
+        {
+          "arxiv": "2005.02117",
+          "url": "https://arxiv.org/abs/2005.02117",
+          "title": "Solving holographic defects"
+        }
+      ]
+    },
+    {
+      "name": "text_ads_text_cft_holography",
+      "statement": "In $\\text{AdS}_3/\\text{CFT}_2$ holography with $U(1)$ Chern-Simons theory, a $U(1)$ Wilson line defect anchored at entangling region endpoints generates Aharonov-Bohm flux and determines symmetry-resolved entanglement entropy.",
+      "sources": [
+        {
+          "arxiv": "2012.11274",
+          "url": "https://arxiv.org/abs/2012.11274",
+          "title": "Symmetry-Resolved Entanglement in AdS${}_3$/CFT${}_2$ coupled to $U(1)$ Chern-Simons Theory"
+        }
+      ]
+    },
+    {
+      "name": "double_holography_entanglement_entropy_defect",
+      "statement": "In double holography, the entanglement entropy of a defect subregion on the boundary of a CFT$_3$ is determined from the brane perspective by the quantum extremal surface anchored at the two endpoints of the subregion.",
+      "sources": [
+        {
+          "arxiv": "2312.08025",
+          "url": "https://arxiv.org/abs/2312.08025",
+          "title": "Entanglement of defect subregions in double holography"
+        }
+      ]
+    },
+    {
+      "name": "dual_mathcal_cft_side_paper",
+      "statement": "From the dual $\\mathcal{W}_{(3|2)}$ CFT side, the paper computes the full quantum BPS bounds and matches their semiclassical limit to extremal black hole or conical defect solutions in the 3d bulk, tying the higher-spin extremality analysis to holography.",
+      "sources": [
+        {
+          "arxiv": "1512.00073",
+          "url": "https://arxiv.org/abs/1512.00073",
+          "title": "Extremal Higher Spin Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "paper_finds_defectsubregion_quantum_extremal",
+      "statement": "The paper finds that defect-subregion quantum extremal surfaces in double holography have two distinct phases and undergo an entanglement phase transition controlled by the brane degrees of freedom. A semi-ellipse shrinking procedure numerically separates a shrinking phase, where the defect entanglement wedge collapses to zero as the CFT$_3$ is removed, from a stable phase where the wedge remains nearly constant.",
+      "sources": [
+        {
+          "arxiv": "2312.08025",
+          "url": "https://arxiv.org/abs/2312.08025",
+          "title": "Entanglement of defect subregions in double holography"
+        }
+      ]
+    },
+    {
+      "name": "paper_constructs_family_dualities_between",
+      "statement": "The paper constructs a family of dualities between certain non-supersymmetric self-dual gauge theories on 4d self-dual asymptotically flat backgrounds and the large-$N$ limit of an independently defined 2d chiral defect CFT via twisted holography for the type I topological string on a Calabi-Yau five-fold fibred over twistor space. Within this duality, single-trace defect-CFT operators are put in bijection with celestial chiral algebra states, and their operator products reproduce self-dual gauge-theory collinear splitting amplitudes up to one loop.",
+      "sources": [
+        {
+          "arxiv": "2412.02680",
+          "url": "https://arxiv.org/abs/2412.02680",
+          "title": "Self-Dual Gauge Theory from the Top Down"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "doc": "# Counter Terms — Renormalization\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic counterterms”).",
+  "claims": [
+    {
+      "name": "holographic_renormalization_finite_counterterms_require",
+      "statement": "Holographic renormalization and finite counterterms require careful treatment.",
+      "sources": [
+        {
+          "arxiv": "1801.00730",
+          "url": "https://arxiv.org/abs/1801.00730",
+          "title": "Mass deformations of 5d SCFTs via holography"
+        }
+      ]
+    },
+    {
+      "name": "subtleties_related_holographic_counterterms_clarified",
+      "statement": "Subtleties related to holographic counterterms are clarified in this context.",
+      "sources": [
+        {
+          "arxiv": "1904.04408",
+          "url": "https://arxiv.org/abs/1904.04408",
+          "title": "Comments on Holographic Entanglement Entropy in TT Deformed CFTs"
+        }
+      ]
+    },
+    {
+      "name": "boundary_supersymmetry_also_requires_infinite",
+      "statement": "Boundary supersymmetry also requires infinite counterterms consistent with holographic renormalization.",
+      "sources": [
+        {
+          "arxiv": "1611.01888",
+          "url": "https://arxiv.org/abs/1611.01888",
+          "title": "Boundary Terms and Three-Point Functions: An AdS/CFT Puzzle Resolved"
+        }
+      ]
+    },
+    {
+      "name": "holographic_counterterms_purely_imaginary_when",
+      "statement": "Holographic counterterms are purely imaginary when expressed in terms of wavefunction coefficients.",
+      "sources": [
+        {
+          "arxiv": "2511.04511",
+          "url": "https://arxiv.org/abs/2511.04511",
+          "title": "Holographic Cosmology at Finite Time"
+        }
+      ]
+    },
+    {
+      "name": "five_dimensions_no_choice_standard",
+      "statement": "In five dimensions, no choice of standard holographic counterterms is compatible with supersymmetry.",
+      "sources": [
+        {
+          "arxiv": "1612.06761",
+          "url": "https://arxiv.org/abs/1612.06761",
+          "title": "Holographic renormalization and supersymmetry"
+        }
+      ]
+    },
+    {
+      "name": "holographic_renormalization_yields_renormalized_boundary",
+      "statement": "Holographic renormalization yields the renormalized boundary action with counterterms for the deformed scalar field theory.",
+      "sources": [
+        {
+          "arxiv": "1701.00341",
+          "url": "https://arxiv.org/abs/1701.00341",
+          "title": "Generalized Uncertainty Principle as a Consequence of the Effective Field Theory"
+        }
+      ]
+    },
+    {
+      "name": "scheme_dependence_holographic_rg_arising",
+      "statement": "Scheme dependence of the holographic RG arising from finite local counterterms is analyzed in detail.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0103219",
+          "url": "https://arxiv.org/abs/hep-th/0103219",
+          "title": "A Field-theoretical Interpretation of the Holographic Renormalization Group"
+        }
+      ]
+    },
+    {
+      "name": "some_other_classes_dilaton_gravities",
+      "statement": "Some other classes of dilaton gravities have their asymptotic symmetries analyzed without constructing holographic counterterms.",
+      "sources": [
+        {
+          "arxiv": "2106.08006",
+          "url": "https://arxiv.org/abs/2106.08006",
+          "title": "2D holography beyond the Jackiw-Teitelboim model"
+        }
+      ]
+    },
+    {
+      "name": "onshell_action_divergent_requires_counterterms",
+      "statement": "The on-shell action is divergent and requires counterterms for a finite holographic energy-momentum tensor.",
+      "sources": [
+        {
+          "arxiv": "2010.12955",
+          "url": "https://arxiv.org/abs/2010.12955",
+          "title": "On aspects of 2-dim dilaton gravity, dimensional reduction and holography"
+        }
+      ]
+    },
+    {
+      "name": "holographic_renormalization_works_presence_marginally",
+      "statement": "Holographic renormalization works in the presence of the marginally relevant operator without explicitly introducing cutoff-dependent counterterms.",
+      "sources": [
+        {
+          "arxiv": "1311.4539",
+          "url": "https://arxiv.org/abs/1311.4539",
+          "title": "On the Marginally Relevant Operator in z=2 Lifshitz Holography"
+        }
+      ]
+    },
+    {
+      "name": "tt_flow_equation_maps_semiclassical",
+      "statement": "$TT$ flow equation maps to semiclassical limit of Wheeler-DeWitt equation, matching partition functions up to holographic counterterms",
+      "sources": [
+        {
+          "arxiv": "1902.10893",
+          "url": "https://arxiv.org/abs/1902.10893",
+          "title": "Sphere partition functions and cut-off AdS"
+        }
+      ]
+    },
+    {
+      "name": "local_terms_added_mathscr_pm",
+      "statement": "The local terms added at $\\mathscr{I}^\\pm$ are analogues of the AdS covariant counterterms of holographic renormalisation.",
+      "sources": [
+        {
+          "arxiv": "2512.14243",
+          "url": "https://arxiv.org/abs/2512.14243",
+          "title": "Gravitational charges and radiation in asymptotically locally de Sitter spacetimes"
+        }
+      ]
+    },
+    {
+      "name": "complexity_action_ca_proposal_einstein",
+      "statement": "In the Complexity=Action (CA) proposal in Einstein gravity, new counterterms can remove all UV divergences of holographic complexity.",
+      "sources": [
+        {
+          "arxiv": "1906.09561",
+          "url": "https://arxiv.org/abs/1906.09561",
+          "title": "On the Role of Counterterms in Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "applying_null_counterterms_yields_holographic",
+      "statement": "Applying the null counterterms yields the holographic complexity and the complexity of formation for an AdS-Schwarzschild black hole.",
+      "sources": [
+        {
+          "arxiv": "1906.09561",
+          "url": "https://arxiv.org/abs/1906.09561",
+          "title": "On the Role of Counterterms in Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "alternative_approach_holographic_renormalization_based",
+      "statement": "The alternative approach to holographic renormalization based on the Hamilton-Jacobi formulation of gravity generates exact ansatz of counterterms.",
+      "sources": [
+        {
+          "arxiv": "2208.10012",
+          "url": "https://arxiv.org/abs/2208.10012",
+          "title": "Holographic renormalization by Hamilton-Jacobi formulation with generated ansatz"
+        }
+      ]
+    },
+    {
+      "name": "algorithm_could_implemented_computer_code",
+      "statement": "The algorithm could be implemented in computer code to calculate the counterterms and the holographic Weyl anomaly for any dimension.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0404176",
+          "url": "https://arxiv.org/abs/hep-th/0404176",
+          "title": "AdS/CFT correspondence and Geometry"
+        }
+      ]
+    },
+    {
+      "name": "show_no_new_counterterms_needed",
+      "statement": "We show that no new counterterms are needed and the holographic 1-point functions are continuous across the matching surface.",
+      "sources": [
+        {
+          "arxiv": "0812.2909",
+          "url": "https://arxiv.org/abs/0812.2909",
+          "title": "Real-time gauge/gravity duality: Prescription, Renormalization and Examples"
+        }
+      ]
+    },
+    {
+      "name": "paper_develops_precision_holographic_renormalization",
+      "statement": "The paper develops precision holographic renormalization for non-conformal p-branes with 16 supersymmetries ($p \\le 4$), computing general asymptotic solutions, counterterms, and holographic 1- and 2-point functions.",
+      "sources": [
+        {
+          "arxiv": "0807.3324",
+          "url": "https://arxiv.org/abs/0807.3324",
+          "title": "Precision holography for non-conformal branes"
+        }
+      ]
+    }
+  ]
+}

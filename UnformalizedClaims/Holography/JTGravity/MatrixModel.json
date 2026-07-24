@@ -1,0 +1,203 @@
+{
+  "doc": "# Matrix Model — JTGravity\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “matrix model JT gravity”).",
+  "claims": [
+    {
+      "name": "colored_jackiwteitelboim_jt_gravity_twodimensional",
+      "statement": "Colored Jackiw-Teitelboim (JT) gravity is the two-dimensional dilaton gravity model with matrix-valued fields.",
+      "sources": [
+        {
+          "arxiv": "2204.10214",
+          "url": "https://arxiv.org/abs/2204.10214",
+          "title": "Color decorations of Jackiw-Teitelboim gravity"
+        }
+      ]
+    },
+    {
+      "name": "refined_nyi_negativity_defined_within",
+      "statement": "The refined Rényi negativity is defined within the matrix model of Jackiw-Teitelboim (JT) gravity.",
+      "sources": [
+        {
+          "arxiv": "2312.11860",
+          "url": "https://arxiv.org/abs/2312.11860",
+          "title": "Negativity and its capacity in JT gravity"
+        }
+      ]
+    },
+    {
+      "name": "two_models_particular_note_jt",
+      "statement": "Two models of particular note are the JT supergravity theory defined as a (1,2) Altland-Zirnbauer matrix ensemble and the Saad-Shenker-Stanford matrix model of ordinary JT gravity.",
+      "sources": [
+        {
+          "arxiv": "2008.13120",
+          "url": "https://arxiv.org/abs/2008.13120",
+          "title": "Low Energy Thermodynamics of JT Gravity and Supergravity"
+        }
+      ]
+    },
+    {
+      "name": "full_nonperturbative_physics_jt_gravity",
+      "statement": "The full non-perturbative physics of JT gravity can be extracted using double-scaled matrix model definitions.",
+      "sources": [
+        {
+          "arxiv": "2006.10959",
+          "url": "https://arxiv.org/abs/2006.10959",
+          "title": "Explorations of Non-Perturbative JT Gravity and Supergravity"
+        }
+      ]
+    },
+    {
+      "name": "higher_genus_corrections_eigenvalue_density",
+      "statement": "Higher genus corrections to the eigenvalue density of JT gravity are computed using hermitian matrix model techniques.",
+      "sources": [
+        {
+          "arxiv": "2602.22335",
+          "url": "https://arxiv.org/abs/2602.22335",
+          "title": "Resurgence in the Virasoro Minimal String and 3d Gravity"
+        }
+      ]
+    },
+    {
+      "name": "bosonic_virasoro_minimal_string_relates",
+      "statement": "The (bosonic) Virasoro minimal string relates worldsheet string theory to a deformation of the JT gravity matrix model.",
+      "sources": [
+        {
+          "arxiv": "2505.08892",
+          "url": "https://arxiv.org/abs/2505.08892",
+          "title": "Towards the super Virasoro minimal string"
+        }
+      ]
+    },
+    {
+      "name": "duality_between_jt_gravity_doublescaled",
+      "statement": "The duality between JT gravity and the double-scaled matrix model can be studied together with their respective deformations.",
+      "sources": [
+        {
+          "arxiv": "2107.02773",
+          "url": "https://arxiv.org/abs/2107.02773",
+          "title": "Deformations of JT Gravity via Topological Gravity and Applications"
+        }
+      ]
+    },
+    {
+      "name": "genus_expansion_de_sitter_jt",
+      "statement": "The genus expansion of de Sitter JT gravity coincides with the genus expansion of observables in a double-scaled matrix model, with the matrix model providing a non-perturbative completion.",
+      "sources": [
+        {
+          "arxiv": "1905.03780",
+          "url": "https://arxiv.org/abs/1905.03780",
+          "title": "Low-dimensional de Sitter quantum gravity"
+        }
+      ]
+    },
+    {
+      "name": "large_random_matrix_model_framework",
+      "statement": "A large $N$ random matrix model framework is examined as a route beyond the ordinary JT gravity topological expansion to non-perturbative physics.",
+      "sources": [
+        {
+          "arxiv": "2112.00766",
+          "url": "https://arxiv.org/abs/2112.00766",
+          "title": "Consistency Conditions for Non-Perturbative Completions of JT Gravity"
+        }
+      ]
+    },
+    {
+      "name": "correspondence_between_jt_gravity_dual",
+      "statement": "The correspondence between JT gravity and its dual matrix-model description is sharpened at finite radial cutoff $\\lambda$ via the $ T\\overline{T} $ deformation.",
+      "sources": [
+        {
+          "arxiv": "2202.03454",
+          "url": "https://arxiv.org/abs/2202.03454",
+          "title": "$T\\overline{T}$-deformed free energy of the Airy model"
+        }
+      ]
+    },
+    {
+      "name": "continuous_spectrum_spectral_edge_randommatrix",
+      "statement": "The continuous spectrum at the spectral edge of the random-matrix theory (RMT) dual of Jackiw-Teitelboim (JT) gravity is universally described by the Airy model.",
+      "sources": [
+        {
+          "arxiv": "2510.07804",
+          "url": "https://arxiv.org/abs/2510.07804",
+          "title": "Exploring the Spectral Edge in SYK Models"
+        }
+      ]
+    },
+    {
+      "name": "paper_constructs_complex_matrix_model",
+      "statement": "The paper constructs a complex matrix model that provides a stable, unambiguous nonperturbative low-energy completion for Jackiw-Teitelboim (JT) gravity while preserving the correct high-energy perturbative physics. This formulation naturally incorporates spacetime features analogous to Ramond-Ramond fluxes and includes a deformation parameter that interpolates between this nonperturbative JT theory and super JT gravity.",
+      "sources": [
+        {
+          "arxiv": "1912.03637",
+          "url": "https://arxiv.org/abs/1912.03637",
+          "title": "Non-Perturbative JT Gravity"
+        }
+      ]
+    },
+    {
+      "name": "authors_generalize_saadshenkerstanford_duality_jt",
+      "statement": "The authors generalize the Saad-Shenker-Stanford duality to JT gravity coupled to higher spin fields, proposing a dual matrix model of $N - 1$ commuting matrices to account for deviations from conventional random matrix theory.",
+      "sources": [
+        {
+          "arxiv": "2204.09685",
+          "url": "https://arxiv.org/abs/2204.09685",
+          "title": "Higher spin JT gravity and a matrix model dual"
+        }
+      ]
+    },
+    {
+      "name": "lowestenergy_eigenvalue_distribution_quantumcompleted_jt",
+      "statement": "The lowest-energy eigenvalue distribution of quantum-completed JT gravity is fully described by a non-linear ordinary differential equation derived from a non-perturbative special random Hermitian matrix model.",
+      "sources": [
+        {
+          "arxiv": "2206.00692",
+          "url": "https://arxiv.org/abs/2206.00692",
+          "title": "The Distribution of Ground State Energies in JT Gravity"
+        }
+      ]
+    },
+    {
+      "name": "further_identifies_matrixmodel_dual_twodimensional",
+      "statement": "It further identifies a matrix-model dual for this two-dimensional string theory as a specific time-dependent background of $c=1$ matrix quantum mechanics, and extends the correspondence to the two-dimensional de-Sitter JT gravity case.",
+      "sources": [
+        {
+          "arxiv": "2108.12096",
+          "url": "https://arxiv.org/abs/2108.12096",
+          "title": "JT Gravity Limit of Liouville CFT and Matrix Model"
+        }
+      ]
+    },
+    {
+      "name": "abel_integral_equation_extra_confining",
+      "statement": "The Abel’s integral equation for the extra confining potential is identical to the string equation of the matrix model in the Saad-Shenker-Stanford (SSS) duality formulation of Jackiw-Teitelboim (JT) gravity.",
+      "sources": [
+        {
+          "arxiv": "2503.00346",
+          "url": "https://arxiv.org/abs/2503.00346",
+          "title": "Discrete Bulk Spectrum in Jackiw-Teitelboim Theory"
+        }
+      ]
+    },
+    {
+      "name": "article_argue_deformation_jt_gravity",
+      "statement": "In this article, we argue that a deformation of JT gravity with bulk action $ -\\frac{1}{2}\\int {\\mathrm d}^2x \\sqrt g(\\phi R+W(\\phi))$ is likewise dual to a matrix model.",
+      "sources": [
+        {
+          "arxiv": "2006.13414",
+          "url": "https://arxiv.org/abs/2006.13414",
+          "title": "Matrix Models and Deformations of JT Gravity"
+        }
+      ]
+    },
+    {
+      "name": "show_partition_function_jt_gravity",
+      "statement": "We show that the partition function of JT gravity is written as the expectation value of a macroscopic loop operator in the old matrix model of 2d gravity in the background where infinitely many couplings are turned on in a specific way.",
+      "sources": [
+        {
+          "arxiv": "1911.01659",
+          "url": "https://arxiv.org/abs/1911.01659",
+          "title": "JT gravity, KdV equations and macroscopic loop operators"
+        }
+      ]
+    }
+  ]
+}

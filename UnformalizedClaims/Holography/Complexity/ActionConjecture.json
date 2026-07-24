@@ -1,0 +1,203 @@
+{
+  "doc": "# Action Conjecture — Complexity\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “complexity equals action”).",
+  "claims": [
+    {
+      "name": "within_framework_minimal_complexity_equals",
+      "statement": "Within this framework, Minimal Complexity equals Least Action.",
+      "sources": [
+        {
+          "arxiv": "1803.02356",
+          "url": "https://arxiv.org/abs/1803.02356",
+          "title": "Complexity Functionals and Complexity Growth Limits in Continuous MERA Circuits"
+        }
+      ]
+    },
+    {
+      "name": "hypothesis_complexity_equals_action_implies",
+      "statement": "The hypothesis that complexity equals action implies that the rate of growth of complexity equals the auxiliary Lagrangian L_a = K, so complexity grows as C = Kt.",
+      "sources": [
+        {
+          "arxiv": "1701.01107",
+          "url": "https://arxiv.org/abs/1701.01107",
+          "title": "The Second Law of Quantum Complexity"
+        }
+      ]
+    },
+    {
+      "name": "proposal_connected_complexity_equals_action",
+      "statement": "The proposal is connected to the complexity equals action program.",
+      "sources": [
+        {
+          "arxiv": "1811.03113",
+          "url": "https://arxiv.org/abs/1811.03113",
+          "title": "Minimal Purifications, Wormhole Geometries, and the Complexity=Action Proposal"
+        }
+      ]
+    },
+    {
+      "name": "holographic_complexity_hyperscaling_violating_theories",
+      "statement": "Holographic complexity for hyperscaling violating theories at finite cutoff is studied using the complexity equals action proposal.",
+      "sources": [
+        {
+          "arxiv": "1905.10740",
+          "url": "https://arxiv.org/abs/1905.10740",
+          "title": "Complexity of Hyperscaling Violating Theories at Finite Cutoff"
+        }
+      ]
+    },
+    {
+      "name": "unambiguous_scheme_calculating_holographic_quantum",
+      "statement": "An unambiguous scheme for calculating holographic quantum complexity is formulated through the complexity equals action (CA) proposal.",
+      "sources": [
+        {
+          "arxiv": "2408.06055",
+          "url": "https://arxiv.org/abs/2408.06055",
+          "title": "Quantum Complexity of $T\\bar{T}$-deformation and Its Implications"
+        }
+      ]
+    },
+    {
+      "name": "effect_probe_string_black_hole",
+      "statement": "The effect of a probe string on black hole complexity is studied using the complexity equals action conjecture.",
+      "sources": [
+        {
+          "arxiv": "1807.01088",
+          "url": "https://arxiv.org/abs/1807.01088",
+          "title": "Complexity growth of rotating black holes with a probe string"
+        }
+      ]
+    },
+    {
+      "name": "latetime_complexity_growth_rate_under",
+      "statement": "The late-time complexity growth rate under the complexity equals action conjecture is enhanced when non-commutativity is turned on.",
+      "sources": [
+        {
+          "arxiv": "1710.07833",
+          "url": "https://arxiv.org/abs/1710.07833",
+          "title": "Holographic complexity and non-commutative gauge theory"
+        }
+      ]
+    },
+    {
+      "name": "complexity_action_duality_states_quantum",
+      "statement": "The complexity = action duality states that quantum complexity equals the action of stationary AdS black holes within the Wheeler-DeWitt patch at late time approximation.",
+      "sources": [
+        {
+          "arxiv": "1703.10468",
+          "url": "https://arxiv.org/abs/1703.10468",
+          "title": "Complexity growth rates for AdS black holes in massive gravity and $f(R)$ gravity"
+        }
+      ]
+    },
+    {
+      "name": "influence_probe_string_braneworld_complexity",
+      "statement": "The influence of a probe string on braneworld complexity is analyzed within the CA (Complexity equals action) conjecture in Horndeski gravity.",
+      "sources": [
+        {
+          "arxiv": "2210.11596",
+          "url": "https://arxiv.org/abs/2210.11596",
+          "title": "Holographic complexity of braneworld in Horndeski gravity"
+        }
+      ]
+    },
+    {
+      "name": "computational_complexity_computed_via_complexity",
+      "statement": "Computational complexity is computed via the Complexity equals Action conjecture in a setup with a boundary particle dual to a bulk fundamental string.",
+      "sources": [
+        {
+          "arxiv": "2010.10942",
+          "url": "https://arxiv.org/abs/2010.10942",
+          "title": "Complexity of four-dimensional hairy Anti-de-Sitter black holes with a rotating string and shear viscosity in generalized scalar-tensor theories"
+        }
+      ]
+    },
+    {
+      "name": "complexity_equals_action_approach_holographic",
+      "statement": "In the ``complexity equals action'' approach, holographic complexity is reconsidered by relaxing the requirement of reparameterization invariance of the action and imposing that the action vanish in any static, vacuum causal diamond.",
+      "sources": [
+        {
+          "arxiv": "2101.10909",
+          "url": "https://arxiv.org/abs/2101.10909",
+          "title": "Reparameterization Dependence is Useful for Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "circuit_complexity_quantum_gravity_state",
+      "statement": "Circuit complexity of a quantum gravity state equals the gravitational action of a certain patch of spacetime.",
+      "sources": [
+        {
+          "arxiv": "1706.00965",
+          "url": "https://arxiv.org/abs/1706.00965",
+          "title": "Einstein's Equations from Varying Complexity"
+        }
+      ]
+    },
+    {
+      "name": "calculation_holographic_complexity_black_holes",
+      "statement": "The calculation of holographic complexity of black holes in the complexity equals action approach is refined by imposing that the action of any causal diamond in static vacuum regions vanishes identically.",
+      "sources": [
+        {
+          "arxiv": "2106.01897",
+          "url": "https://arxiv.org/abs/2106.01897",
+          "title": "Reparameterization Dependence and Holographic Complexity of Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "complexity_time_dependence_evaluated_charged",
+      "statement": "The complexity and its time dependence are evaluated for charged AdS black holes of EMAD theories in diverse dimensions via the complexity equals action (CA) conjecture.",
+      "sources": [
+        {
+          "arxiv": "2112.10725",
+          "url": "https://arxiv.org/abs/2112.10725",
+          "title": "Complexity growth in Gubser-Rocha models with momentum relaxation"
+        }
+      ]
+    },
+    {
+      "name": "earlier_paper_complexity_equals_action",
+      "statement": "The earlier paper ``Complexity Equals Action'' conjectured that the quantum computational complexity of a holographic state is given by the classical action of a region in the bulk, the ``Wheeler-DeWitt'' patch.",
+      "sources": [
+        {
+          "arxiv": "1512.04993",
+          "url": "https://arxiv.org/abs/1512.04993",
+          "title": "Complexity, action, and black holes"
+        }
+      ]
+    },
+    {
+      "name": "complexity_equals_action_proposal_used",
+      "statement": "The complexity equals action proposal can be used to calculate the rate of complexity growth for field theories that are the holographic duals of asymptotically flat spacetimes.",
+      "sources": [
+        {
+          "arxiv": "1806.07273",
+          "url": "https://arxiv.org/abs/1806.07273",
+          "title": "Complexity Growth in Flat Spacetimes"
+        }
+      ]
+    },
+    {
+      "name": "original_complexity_equals_action_ca",
+      "statement": "The original complexity equals action (CA) conjecture is applied to perturbative Einsteinian cubic gravity and nonperturbative Einstein-Weyl gravity.",
+      "sources": [
+        {
+          "arxiv": "1903.05476",
+          "url": "https://arxiv.org/abs/1903.05476",
+          "title": "Modified \"complexity equals action\" conjecture"
+        }
+      ]
+    },
+    {
+      "name": "complexity_equals_action_conjecture_applied",
+      "statement": "The complexity equals action conjecture is applied to charged and neutral AdS black branes in Einstein-Maxwell-axion theory.",
+      "sources": [
+        {
+          "arxiv": "2009.01340",
+          "url": "https://arxiv.org/abs/2009.01340",
+          "title": "Holographic complexity for black branes with momentum relaxation"
+        }
+      ]
+    }
+  ]
+}

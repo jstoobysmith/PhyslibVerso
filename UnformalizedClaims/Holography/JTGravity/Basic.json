@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — JTGravity\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “JT gravity”).",
+  "claims": [
+    {
+      "name": "ds_jt_gravity_formally_analytic",
+      "statement": "dS JT gravity is formally an analytic continuation of AdS JT gravity.",
+      "sources": [
+        {
+          "arxiv": "2401.01925",
+          "url": "https://arxiv.org/abs/2401.01925",
+          "title": "Non-perturbative de Sitter Jackiw-Teitelboim gravity"
+        }
+      ]
+    },
+    {
+      "name": "factorization_problem_differs_between_pure",
+      "statement": "The factorization problem differs between pure JT gravity and JT gravity with matter.",
+      "sources": [
+        {
+          "arxiv": "2303.04701",
+          "url": "https://arxiv.org/abs/2303.04701",
+          "title": "von Neumann algebras in JT gravity"
+        }
+      ]
+    },
+    {
+      "name": "paper_computes_holographic_central_charge",
+      "statement": "The paper computes the holographic central charge \\(c_{sDG}\\) of sine dilaton gravity in the semiclassical limit and also the central charge \\(c_{JT}\\) in the JT gravity limit. It finds \\(c_{sDG} > c_{JT}\\) and interprets this inequality as a consequence of JT gravity's UV completion by sine dilaton gravity.",
+      "sources": [
+        {
+          "arxiv": "2502.13884",
+          "url": "https://arxiv.org/abs/2502.13884",
+          "title": "Holographic central charge for sine dilaton gravity"
+        }
+      ]
+    },
+    {
+      "name": "gravity_path_integral_formalism_jt",
+      "statement": "The gravity path integral formalism of JT gravity is revisited.",
+      "sources": [
+        {
+          "arxiv": "2310.16081",
+          "url": "https://arxiv.org/abs/2310.16081",
+          "title": "Revisiting the second order formalism of JT gravity"
+        }
+      ]
+    },
+    {
+      "name": "nyi_entropies_computed_jt_gravity",
+      "statement": "Rényi entropies are computed for JT gravity.",
+      "sources": [
+        {
+          "arxiv": "2105.07002",
+          "url": "https://arxiv.org/abs/2105.07002",
+          "title": "Real-time gravitational replicas: Low dimensional examples"
+        }
+      ]
+    },
+    {
+      "name": "bf_theory_equivalent_jt_gravity",
+      "statement": "BF theory is equivalent to JT gravity.",
+      "sources": [
+        {
+          "arxiv": "2503.18954",
+          "url": "https://arxiv.org/abs/2503.18954",
+          "title": "A holographic description on half planes and wedges for N = 1 SUSY BF theory in 2D"
+        }
+      ]
+    },
+    {
+      "name": "propose_alternative_uv_completion_pure",
+      "statement": "We propose alternative UV completion of pure JT gravity as well as CFT coupled to JT gravity, via a class of deformed 2D CFT.",
+      "sources": [
+        {
+          "arxiv": "2507.17889",
+          "url": "https://arxiv.org/abs/2507.17889",
+          "title": "JT gravity and deformed CFTs"
+        }
+      ]
+    },
+    {
+      "name": "super_jt_gravity_described_particle",
+      "statement": "The (super)JT gravity can be described by a particle moving on the isometry group satisfying constraints from boundary conditions of (super)JT gravity.",
+      "sources": [
+        {
+          "arxiv": "2606.30725",
+          "url": "https://arxiv.org/abs/2606.30725",
+          "title": "Constrained particle on a group: from propagators to correlators"
+        }
+      ]
+    },
+    {
+      "name": "class_ii_precisely_reproduces_usual",
+      "statement": "Class II precisely reproduces the usual JT gravity.",
+      "sources": [
+        {
+          "arxiv": "2011.02108",
+          "url": "https://arxiv.org/abs/2011.02108",
+          "title": "Gauge Theory Formulation of Hyperbolic Gravity"
+        }
+      ]
+    },
+    {
+      "name": "obtained_model_corresponds_jt_gravity",
+      "statement": "The obtained model corresponds to 2d JT gravity within symmetric teleparallel gravity.",
+      "sources": [
+        {
+          "arxiv": "2410.20747",
+          "url": "https://arxiv.org/abs/2410.20747",
+          "title": "Non-metricity approach to Jackiw-Teitelboim gravity"
+        }
+      ]
+    },
+    {
+      "name": "random_geometry_formulation_jt_gravity",
+      "statement": "The random geometry formulation of JT gravity and the understanding of random critical maps yields the discovery of a new family of deformations of JT gravity.",
+      "sources": [
+        {
+          "arxiv": "2401.16248",
+          "url": "https://arxiv.org/abs/2401.16248",
+          "title": "Random Geometry and Quantum Spacetime: From scale-invariant random geometries and asymptotic safety to random hyperbolic surfaces and JT gravity"
+        }
+      ]
+    },
+    {
+      "name": "though_jt_gravity_plus_cft",
+      "statement": "Though JT gravity plus a CFT probably does not define a complete quantum gravity theory, it seems likely that well defined theories could be approximated by JT gravity plus a CFT.",
+      "sources": [
+        {
+          "arxiv": "1911.12333",
+          "url": "https://arxiv.org/abs/1911.12333",
+          "title": "Replica Wormholes and the Entropy of Hawking Radiation"
+        }
+      ]
+    },
+    {
+      "name": "generalized_jt_gravity_exhibits_black",
+      "statement": "Generalized JT gravity exhibits a black hole phase transition.",
+      "sources": [
+        {
+          "arxiv": "2012.11871",
+          "url": "https://arxiv.org/abs/2012.11871",
+          "title": "Phase Transition in JT Gravity and $T\\bar{T}$ Deformation"
+        }
+      ]
+    },
+    {
+      "name": "scaling_limit_reduces_model_jt",
+      "statement": "A scaling limit reduces the model to JT gravity and yields a novel equivariant-localization computation of JT partition functions.",
+      "sources": [
+        {
+          "arxiv": "2204.09789",
+          "url": "https://arxiv.org/abs/2204.09789",
+          "title": "Off-shell Partition Functions in 3d Gravity"
+        }
+      ]
+    },
+    {
+      "name": "one_parameter_deformation_jt_gravity",
+      "statement": "This one parameter deformation of JT gravity can be rewritten as Liouville gravity.",
+      "sources": [
+        {
+          "arxiv": "2312.00871",
+          "url": "https://arxiv.org/abs/2312.00871",
+          "title": "The q-Schwarzian and Liouville gravity"
+        }
+      ]
+    },
+    {
+      "name": "paper_also_identifies_scaling_limit",
+      "statement": "The paper also identifies a scaling limit in which the chiral-gravity model reduces to JT gravity, giving a new equivariant-localization method for computing JT partition functions.",
+      "sources": [
+        {
+          "arxiv": "2204.09789",
+          "url": "https://arxiv.org/abs/2204.09789",
+          "title": "Off-shell Partition Functions in 3d Gravity"
+        }
+      ]
+    },
+    {
+      "name": "method_applies_jt_gravity_other",
+      "statement": "The method applies to JT gravity and to other two-dimensional dilaton gravity theories.",
+      "sources": [
+        {
+          "arxiv": "2111.06912",
+          "url": "https://arxiv.org/abs/2111.06912",
+          "title": "Microcanonical Action and the Entropy of Hawking Radiation"
+        }
+      ]
+    },
+    {
+      "name": "introducing_fluctuation_reduces_gravity_brane",
+      "statement": "Introducing a fluctuation reduces the gravity on the brane to a JT gravity model.",
+      "sources": [
+        {
+          "arxiv": "2510.04054",
+          "url": "https://arxiv.org/abs/2510.04054",
+          "title": "Fluctuations of the AdS3 C-metric"
+        }
+      ]
+    }
+  ]
+}

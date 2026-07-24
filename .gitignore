@@ -1,1 +1,4 @@
 /.lake/
+# Generated from the built site's xref.json by scripts/roadmap-data.mjs
+# (regenerated during the build); not committed.
+/roadmap-data.json

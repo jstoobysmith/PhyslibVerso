@@ -1,0 +1,203 @@
+{
+  "doc": "# Turbulence — Fluids\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic turbulence”).",
+  "claims": [
+    {
+      "name": "numerical_simulation_shows_egb_holographic",
+      "statement": "Numerical simulation shows that EGB holographic turbulence has qualitative features similar to Einstein-gravity holographic turbulence.",
+      "sources": [
+        {
+          "arxiv": "1804.05182",
+          "url": "https://arxiv.org/abs/1804.05182",
+          "title": "Holographic Turbulence in Einstein-Gauss-Bonnet Gravity at Large $D$"
+        }
+      ]
+    },
+    {
+      "name": "forced_fluid_flows_exhibit_turbulence",
+      "statement": "Forced fluid flows can exhibit turbulence, making holographic duals of forced fluid dynamics particularly relevant for steady-state turbulence.",
+      "sources": [
+        {
+          "arxiv": "1309.6325",
+          "url": "https://arxiv.org/abs/1309.6325",
+          "title": "Forced Fluid Dynamics from Gravity in Arbitrary Dimensions"
+        }
+      ]
+    },
+    {
+      "name": "scaling_power_laws_scalar_driven",
+      "statement": "The scaling power laws of scalar driven holographic turbulence agree with previous simulations of two-dimensional turbulence in compressible fluids.",
+      "sources": [
+        {
+          "arxiv": "2510.12198",
+          "url": "https://arxiv.org/abs/2510.12198",
+          "title": "Holographic Turbulence and Numerical Estimate of the Fractal Dimension of the Turbulent Horizon"
+        }
+      ]
+    },
+    {
+      "name": "holographic_duality_provides_systematic_approach",
+      "statement": "Holographic duality provides a systematic approach to studying quantum turbulence",
+      "sources": [
+        {
+          "arxiv": "1212.0281",
+          "url": "https://arxiv.org/abs/1212.0281",
+          "title": "Holographic Vortex Liquids and Superfluid Turbulence"
+        }
+      ]
+    },
+    {
+      "name": "holographic_superfluid_turbulence_vortex_cluster",
+      "statement": "In holographic superfluid turbulence, vortex cluster formation is driven by quantum dissipation properties unique to the holographic system.",
+      "sources": [
+        {
+          "arxiv": "2402.17980",
+          "url": "https://arxiv.org/abs/2402.17980",
+          "title": "Emergence of Large-Scale Structures in Holographic Superfluid Turbulence"
+        }
+      ]
+    },
+    {
+      "name": "local_energy_dissipation_local_fluid",
+      "statement": "The local energy dissipation and the local fluid velocity distribution provide measures of holographic fluid turbulence.",
+      "sources": [
+        {
+          "arxiv": "2402.08471",
+          "url": "https://arxiv.org/abs/2402.08471",
+          "title": "Holographic Turbulence From a Random Gravitational Potential"
+        }
+      ]
+    },
+    {
+      "name": "gaussbonnet_term_contributes_two_extra",
+      "statement": "The Gauss-Bonnet term contributes two extra terms in the equations of motion whose effect on holographic turbulence is analyzed.",
+      "sources": [
+        {
+          "arxiv": "1804.05182",
+          "url": "https://arxiv.org/abs/1804.05182",
+          "title": "Holographic Turbulence in Einstein-Gauss-Bonnet Gravity at Large $D$"
+        }
+      ]
+    },
+    {
+      "name": "observed_patterns_match_holographic_superfluid",
+      "statement": "The observed patterns match holographic superfluid at the standard quantization and suggest universal features for quantum turbulence at temperatures order of the critical temperature.",
+      "sources": [
+        {
+          "arxiv": "1605.01193",
+          "url": "https://arxiv.org/abs/1605.01193",
+          "title": "Towards Quantum Turbulence in Finite Temperature Bose-Einstein Condensates"
+        }
+      ]
+    },
+    {
+      "name": "weak_turbulence_mesons_found_meson",
+      "statement": "A weak turbulence of mesons is found at a meson melting transition in holographic QCD with critical embeddings of probe D-branes in gravity duals.",
+      "sources": [
+        {
+          "arxiv": "1504.07836",
+          "url": "https://arxiv.org/abs/1504.07836",
+          "title": "Universal turbulence on branes in holography"
+        }
+      ]
+    },
+    {
+      "name": "paper_proposes_holographic_scheme_studying",
+      "statement": "The paper proposes a holographic scheme for studying pattern formation in $1+1$-dimensional reaction-diffusion systems via the dynamics of a neutral complex scalar field in a $2+1$-dimensional black hole background. Within this setup it realizes plane waves, defect turbulence, phase turbulence, spatiotemporal intermittency, and coherent structures, and derives a phase diagram from plane-wave instability that identifies the holographic Benjamin-Feir-Newell instability.",
+      "sources": [
+        {
+          "arxiv": "2404.04274",
+          "url": "https://arxiv.org/abs/2404.04274",
+          "title": "Pattern formation from Gauge/Gravity Duality"
+        }
+      ]
+    },
+    {
+      "name": "authors_implement_alternative_quantization_dynamical",
+      "statement": "The authors implement alternative quantization in a dynamical holographic superfluid and conduct long-time stable numerical simulations to investigate quantum turbulence in finite-temperature Bose-Einstein condensates. By observing two-body vortex decay, Kolmogorov scaling, and a direct energy cascade, they suggest that these patterns reflect universal features of quantum turbulence near the critical temperature.",
+      "sources": [
+        {
+          "arxiv": "1605.01193",
+          "url": "https://arxiv.org/abs/1605.01193",
+          "title": "Towards Quantum Turbulence in Finite Temperature Bose-Einstein Condensates"
+        }
+      ]
+    },
+    {
+      "name": "paper_also_finds_decay_rate",
+      "statement": "The paper also finds that the decay rate near the critical temperature agrees with the recently developed effective theory of 2D superfluid turbulence, linking the holographic dynamics to the effective description.",
+      "sources": [
+        {
+          "arxiv": "1412.8417",
+          "url": "https://arxiv.org/abs/1412.8417",
+          "title": "Holographic Thermal Relaxation in Superfluid Turbulence"
+        }
+      ]
+    },
+    {
+      "name": "paper_further_shows_alpha_mesonturbulence",
+      "statement": "The paper further shows that the $\\alpha=-5$ meson-turbulence scaling is universal across multiple routes to deconfinement, including near-critical static electric fields, electric-field quenches, and quark-mass quenches. This identifies a common spectral signature of the deconfinement transition in the holographic setup.",
+      "sources": [
+        {
+          "arxiv": "1412.4964",
+          "url": "https://arxiv.org/abs/1412.4964",
+          "title": "Meson turbulence at quark deconfinement from AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "holographic_correspondence_used_study_ensembleaveraged",
+      "statement": "The holographic correspondence is used to study the ensemble-averaged energy-momentum tensor in a stochastic gravitational background; numerically solving the associated Einstein equations and mapping to the boundary theory reveals that the non-relativistic energy power spectrum exhibits Kolmogorov-Kraichnan power-law behavior, connecting gravity and turbulence.",
+      "sources": [
+        {
+          "arxiv": "2105.01551",
+          "url": "https://arxiv.org/abs/2105.01551",
+          "title": "Stochastic gravity and turbulence"
+        }
+      ]
+    },
+    {
+      "name": "stifffluid_cosmologies_rho_including_holographic",
+      "statement": "For stiff-fluid cosmologies with $p=\\rho$, including the Holographic Universe, the paper computes scalar and tensor perturbations without a microphysical model and finds a scale-invariant spectrum only for modes deep inside the Hubble horizon, while infrared modes acquire oscillatory and logarithmic distortions. It also shows that growing vector perturbations can drive turbulence and anisotropy, implying that any post-holographic inflationary phase cannot be much shorter than in standard inflation.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0408154",
+          "url": "https://arxiv.org/abs/hep-th/0408154",
+          "title": "Perturbations in a Holographic Universe and in Other Stiff Fluid Cosmologies"
+        }
+      ]
+    },
+    {
+      "name": "paper_demonstrates_vortex_clusters_inverse",
+      "statement": "The paper demonstrates that vortex clusters and inverse energy cascades emerge near absolute zero in a holographic superfluid turbulence model based on a near-extreme Reissner-Nordstr$\\ddot{o}$m black hole. This formation is driven by unique quantum dissipation properties involving the near immobilization of vortex dipoles, distinguishing it from conventional quantum fluids.",
+      "sources": [
+        {
+          "arxiv": "2402.17980",
+          "url": "https://arxiv.org/abs/2402.17980",
+          "title": "Emergence of Large-Scale Structures in Holographic Superfluid Turbulence"
+        }
+      ]
+    },
+    {
+      "name": "holographic_duality_provides_systematic_framework",
+      "statement": "Holographic duality provides a systematic framework for simulating the decaying (<math display=\"inline\"><mrow><mn>3</mn><mo>+</mo><mn>1</mn></mrow></math>)-dimensional quantum turbulence by numerically solving the dual Abelian-Higgs theory in a (<math display=\"inline\"><mrow><mn>4</mn><mo>+</mo><mn>1</mn></mrow></math>)-dimensional black hole background.",
+      "sources": [
+        {
+          "arxiv": "2408.13620",
+          "url": "https://arxiv.org/abs/2408.13620",
+          "title": "Dissipation and Decay of Three Dimensional Holographic Quantum Turbulence"
+        }
+      ]
+    },
+    {
+      "name": "largespatialdimension_limit_paper_shows_relativistic",
+      "statement": "In the large-spatial-dimension limit, the paper shows that relativistic hydrodynamics simplifies under certain restrictions, and that large-$D$ holographic theories obey these restrictions so their dynamics are captured by a naturally truncated hydrodynamic derivative expansion. It then uses analytic and numerical studies of two- and three-dimensional turbulence to connect the resulting fluid flows to geometric data.",
+      "sources": [
+        {
+          "arxiv": "1707.08973",
+          "url": "https://arxiv.org/abs/1707.08973",
+          "title": "Holographic Turbulence in a Large Number of Dimensions"
+        }
+      ]
+    }
+  ]
+}

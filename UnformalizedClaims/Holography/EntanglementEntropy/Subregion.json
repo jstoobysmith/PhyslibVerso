@@ -1,0 +1,71 @@
+{
+  "doc": "# Subregion — Entanglement Entropy\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “subregion duality holography”).",
+  "claims": [
+    {
+      "name": "subregion_duality_realized_within_framework",
+      "statement": "Subregion duality is realized within the framework of bilocal holography.",
+      "sources": [
+        {
+          "arxiv": "2604.27425",
+          "url": "https://arxiv.org/abs/2604.27425",
+          "title": "Bulk Reconstruction in Bilocal Holography"
+        }
+      ]
+    },
+    {
+      "name": "holographic_quantum_errorcorrecting_codes_capture",
+      "statement": "Holographic quantum error-correcting codes capture key features of holography, including subregion duality, operator reconstruction, and complementary recovery, by encoding bulk information into highly entangled boundary degrees of freedom.",
+      "sources": [
+        {
+          "arxiv": "2506.06577",
+          "url": "https://arxiv.org/abs/2506.06577",
+          "title": "Angular $k$-uniformity and the Hyperinvariance of Holographic Codes"
+        }
+      ]
+    },
+    {
+      "name": "essay_offers_reviewstyle_synthesis_how",
+      "statement": "This essay offers a review-style synthesis of how de Sitter holography departs from the better-understood AdS/CFT picture. It emphasizes that the boundary interpretation of Wheeler-DeWitt states is unclear in de Sitter, bulk reconstruction and subregion duality do not transfer straightforwardly from AdS/CFT, and a formulation of emergence and subregion-subalgebra duality in de Sitter is still lacking.",
+      "sources": [
+        {
+          "arxiv": "2404.00070",
+          "url": "https://arxiv.org/abs/2404.00070",
+          "title": "The Canvas of Holography in (A)dS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "paper_derives_remarkably_local_bulk",
+      "statement": "The paper derives a remarkably local bulk reconstruction formula within bilocal holography and shows that, after matching boundary data and gauge-fixed variables, it agrees with standard bulk reconstruction. It also clarifies how subregion duality is realized in this gauge-fixed higher-spin holographic framework.",
+      "sources": [
+        {
+          "arxiv": "2604.27425",
+          "url": "https://arxiv.org/abs/2604.27425",
+          "title": "Bulk Reconstruction in Bilocal Holography"
+        }
+      ]
+    },
+    {
+      "name": "paper_proposes_hyperbolic_fracton_models",
+      "statement": "The paper proposes hyperbolic fracton models with subsystem symmetry as classical toy models for holography and shows that they reproduce key holographic features on a hyperbolic lattice. For connected boundary regions, the model realizes the expected subregion duality and a geometric Ryu-Takayanagi relation for mutual information.",
+      "sources": [
+        {
+          "arxiv": "1807.05942",
+          "url": "https://arxiv.org/abs/1807.05942",
+          "title": "Hyperbolic Fracton Model, Subsystem Symmetry, and Holography"
+        }
+      ]
+    },
+    {
+      "name": "paper_proposes_subregionsubalgebra_duality_general",
+      "statement": "The paper proposes subregion-subalgebra duality for general causally complete bulk regions in holography, giving a framework for how spacetime subregions, time notions, and causal structure emerge from the dual CFT. It sharpens entanglement-wedge reconstruction with an entropy-free, mathematically precise formulation and explains wedge geometry through superadditivity of boundary algebras.",
+      "sources": [
+        {
+          "arxiv": "2212.13266",
+          "url": "https://arxiv.org/abs/2212.13266",
+          "title": "Subregion-subalgebra duality: emergence of space and time in holography"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "# Friedmann equations\n\nCosmology claims; Physlib's Cosmology area is sparse, so these are prime formalization candidates (halo).",
+  "claims": [
+    {
+      "name": "friedmann_firstEquation",
+      "statement": "For an FLRW metric, $H^2 = \\tfrac{8\\pi G}{3}\\rho - \\tfrac{k}{a^2} + \\tfrac{\\Lambda}{3}$.",
+      "sources": [
+        {
+          "title": "Cosmological dynamics",
+          "arxiv": "astro-ph/0004075",
+          "url": "https://arxiv.org/abs/astro-ph/0004075"
+        }
+      ]
+    },
+    {
+      "name": "friedmann_acceleration",
+      "statement": "$\\ddot a/a = -\\tfrac{4\\pi G}{3}(\\rho + 3p) + \\tfrac{\\Lambda}{3}$.",
+      "sources": [
+        {
+          "title": "The accelerating universe",
+          "arxiv": "astro-ph/9805201",
+          "url": "https://arxiv.org/abs/astro-ph/9805201"
+        }
+      ]
+    }
+  ]
+}

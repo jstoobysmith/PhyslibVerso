@@ -1,0 +1,203 @@
+{
+  "doc": "# Correlators — Ad SCFT\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic correlation functions”).",
+  "claims": [
+    {
+      "name": "computed_padic_correlation_functions_match",
+      "statement": "Computed p-adic correlation functions match ordinary holographic correlation functions when written with local zeta functions.",
+      "sources": [
+        {
+          "arxiv": "1605.01061",
+          "url": "https://arxiv.org/abs/1605.01061",
+          "title": "$p$-adic AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "certain_holographic_correlation_functions_necessarily",
+      "statement": "Certain holographic correlation functions are necessarily real.",
+      "sources": [
+        {
+          "arxiv": "2304.00589",
+          "url": "https://arxiv.org/abs/2304.00589",
+          "title": "A Paradox and its Resolution Illustrate Principles of de Sitter Holography"
+        }
+      ]
+    },
+    {
+      "name": "boundary_holographic_twopoint_correlation_functions",
+      "statement": "Boundary holographic two-point correlation functions match higher-rank LCFT two-point functions.",
+      "sources": [
+        {
+          "arxiv": "1201.0449",
+          "url": "https://arxiv.org/abs/1201.0449",
+          "title": "Unitary Truncations and Critical Gravity: a Toy Model"
+        }
+      ]
+    },
+    {
+      "name": "second_compute_holographic_defect_correlation",
+      "statement": "Second, we compute holographic defect correlation functions with semiclassical strings.",
+      "sources": [
+        {
+          "arxiv": "2501.11985",
+          "url": "https://arxiv.org/abs/2501.11985",
+          "title": "String theory methods for defect CFTs"
+        }
+      ]
+    },
+    {
+      "name": "operator_correlation_functions_determined_holographic",
+      "statement": "Operator correlation functions determined by holographic dictionary for Lifshitz backgrounds",
+      "sources": [
+        {
+          "arxiv": "1512.03554",
+          "url": "https://arxiv.org/abs/1512.03554",
+          "title": "Lifshitz holography"
+        }
+      ]
+    },
+    {
+      "name": "fourpoint_functions_holographic_correlation_functions",
+      "statement": "Four-point functions in holographic correlation functions simplify drastically when expressed in Mellin space",
+      "sources": [
+        {
+          "arxiv": "1608.06624",
+          "url": "https://arxiv.org/abs/1608.06624",
+          "title": "Mellin amplitudes for $AdS_5\\times S^5$"
+        }
+      ]
+    },
+    {
+      "name": "magnetic_monopoles_induce_friedel_oscillations",
+      "statement": "Magnetic monopoles induce Friedel oscillations in holographic density-density correlation functions.",
+      "sources": [
+        {
+          "arxiv": "1207.4208",
+          "url": "https://arxiv.org/abs/1207.4208",
+          "title": "Friedel oscillations and horizon charge in 1D holographic liquids"
+        }
+      ]
+    },
+    {
+      "name": "correlation_functions_scalar_operators_computed",
+      "statement": "Correlation functions of scalar operators are computed using holographic real-time techniques.",
+      "sources": [
+        {
+          "arxiv": "1004.3752",
+          "url": "https://arxiv.org/abs/1004.3752",
+          "title": "Aging and Holography"
+        }
+      ]
+    },
+    {
+      "name": "holographic_formulae_relate_all_cosmological",
+      "statement": "Holographic formulae relate all cosmological 3-point correlation functions, including scalar and tensor perturbations, to stress-energy correlation functions of a dual three-dimensional quantum field theory.",
+      "sources": [
+        {
+          "arxiv": "1104.3894",
+          "url": "https://arxiv.org/abs/1104.3894",
+          "title": "Cosmological 3-point correlators from holography"
+        }
+      ]
+    },
+    {
+      "name": "novel_definition_holographic_correlation_functions",
+      "statement": "A novel definition of holographic correlation functions on the celestial sphere was recently introduced as the extrapolation of bulk time-ordered correlation functions to the celestial sphere.",
+      "sources": [
+        {
+          "arxiv": "2502.03087",
+          "url": "https://arxiv.org/abs/2502.03087",
+          "title": "Conformal Partial Wave Expansion of Celestial Correlators"
+        }
+      ]
+    },
+    {
+      "name": "natural_set_observables_associated_theories",
+      "statement": "A natural set of observables is associated to these theories, including holographic correlation functions.",
+      "sources": [
+        {
+          "arxiv": "1901.01426",
+          "url": "https://arxiv.org/abs/1901.01426",
+          "title": "Formal Higher Spin Gravities"
+        }
+      ]
+    },
+    {
+      "name": "resulting_correlation_functions_relevant_capturing",
+      "statement": "The resulting correlation functions are relevant for capturing the switchback effect of holographic complexity.",
+      "sources": [
+        {
+          "arxiv": "2506.19013",
+          "url": "https://arxiv.org/abs/2506.19013",
+          "title": "Geometry of Chord Intertwiner, Multiple Shocks and Switchback in Double-Scaled SYK"
+        }
+      ]
+    },
+    {
+      "name": "twopoint_correlation_functions_boundary_operators",
+      "statement": "Two-point correlation functions of boundary operators are computed by non-relativistic holographic methods.",
+      "sources": [
+        {
+          "arxiv": "1106.6277",
+          "url": "https://arxiv.org/abs/1106.6277",
+          "title": "A Non-relativistic Logarithmic Conformal Field Theory from a Holographic Point of View"
+        }
+      ]
+    },
+    {
+      "name": "numerical_results_holographic_correlation_functions",
+      "statement": "Numerical results for the holographic correlation functions in anisotropic plasma reveal direction-dependent corrections.",
+      "sources": [
+        {
+          "arxiv": "2606.25613",
+          "url": "https://arxiv.org/abs/2606.25613",
+          "title": "Holographic correlation functions of fermions in anisotropic plasma"
+        }
+      ]
+    },
+    {
+      "name": "exact_holographic_match_all_sphere",
+      "statement": "An exact holographic match of all sphere correlation functions of meson operators is proposed.",
+      "sources": [
+        {
+          "arxiv": "2603.08783",
+          "url": "https://arxiv.org/abs/2603.08783",
+          "title": "Interface Minimal Model Holography and Topological String Theory"
+        }
+      ]
+    },
+    {
+      "name": "correlation_functions_monopole_operators_serve",
+      "statement": "Correlation functions of monopole operators serve as a diagnostic for the holographic phase diagram.",
+      "sources": [
+        {
+          "arxiv": "1607.04059",
+          "url": "https://arxiv.org/abs/1607.04059",
+          "title": "Monopole correlation functions and holographic phases of matter in 2+1 dimensions"
+        }
+      ]
+    },
+    {
+      "name": "holographic_calculations_yield_new_predictions",
+      "statement": "The holographic calculations yield new predictions for correlation functions in CFTs with null boundaries.",
+      "sources": [
+        {
+          "arxiv": "2509.00652",
+          "url": "https://arxiv.org/abs/2509.00652",
+          "title": "Flat Space Holography via AdS/BCFT"
+        }
+      ]
+    },
+    {
+      "name": "holographic_methods_applied_bubbling_backgrounds",
+      "statement": "Holographic methods applied to the bubbling backgrounds reproduce the gauge-theory Wilson-loop correlation functions.",
+      "sources": [
+        {
+          "arxiv": "0807.3330",
+          "url": "https://arxiv.org/abs/0807.3330",
+          "title": "Wilson loop correlators at strong coupling: from matrices to bubbling geometries"
+        }
+      ]
+    }
+  ]
+}

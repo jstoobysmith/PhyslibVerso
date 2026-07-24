@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Ad SCFT\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “AdS/CFT correspondence”).",
+  "claims": [
+    {
+      "name": "ads_cft_correspondence_deduced_ads",
+      "statement": "The $AdS_2/CFT$ correspondence can be deduced from the $AdS_3/CFT$.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9906078",
+          "url": "https://arxiv.org/abs/hep-th/9906078",
+          "title": "Two Dimensional Anti-de Sitter Space and Discrete Light Cone Quantization"
+        }
+      ]
+    },
+    {
+      "name": "kerr_cft_correspondence_generalizes_kerrnewmanadsds",
+      "statement": "The Kerr/CFT correspondence generalizes to the Kerr-Newman-AdS-dS/CFT correspondence in four dimensions.",
+      "sources": [
+        {
+          "arxiv": "0811.4393",
+          "url": "https://arxiv.org/abs/0811.4393",
+          "title": "CFT Duals for Extreme Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "cft_operators_match_kk_states",
+      "statement": "CFT operators match KK states in the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0002199",
+          "url": "https://arxiv.org/abs/hep-th/0002199",
+          "title": "Supergravity Predictions on Conformal Field Theories"
+        }
+      ]
+    },
+    {
+      "name": "via_ads_cft_correspondence_cft",
+      "statement": "Via the AdS/CFT correspondence, CFT Mellin amplitudes correspond to scattering in AdS$_{d+1}$.",
+      "sources": [
+        {
+          "arxiv": "1911.05974",
+          "url": "https://arxiv.org/abs/1911.05974",
+          "title": "Froissart bound for/from CFT Mellin amplitudes"
+        }
+      ]
+    },
+    {
+      "name": "ads_singletons_clarify_role_ads",
+      "statement": "AdS singletons clarify the role in the AdS/CFT correspondence",
+      "sources": [
+        {
+          "arxiv": "hep-th/0108152",
+          "url": "https://arxiv.org/abs/hep-th/0108152",
+          "title": "D-brane Charges in Five-brane backgrounds"
+        }
+      ]
+    },
+    {
+      "name": "ads_qcd_application_ads_cft",
+      "statement": "AdS/QCD is an application of the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "0806.0568",
+          "url": "https://arxiv.org/abs/0806.0568",
+          "title": "Kaon Decays from AdS/QCD"
+        }
+      ]
+    },
+    {
+      "name": "calculation_uses_ads_cft_correspondence",
+      "statement": "The calculation uses the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9805162",
+          "url": "https://arxiv.org/abs/hep-th/9805162",
+          "title": "Interacting Spinors-Scalars and AdS/CFT Correspondence"
+        }
+      ]
+    },
+    {
+      "name": "ads_cft_correspondence_follows_symmetry",
+      "statement": "AdS/CFT correspondence follows from this symmetry.",
+      "sources": [
+        {
+          "arxiv": "0706.1163",
+          "url": "https://arxiv.org/abs/0706.1163",
+          "title": "AdS/CFT Correspondence as a Consequence of Scale Invariance"
+        }
+      ]
+    },
+    {
+      "name": "model_uses_ads_cft_correspondence",
+      "statement": "The model uses the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "1911.06262",
+          "url": "https://arxiv.org/abs/1911.06262",
+          "title": "Current-driven tricritical point in large-$N_{c}$ gauge theory"
+        }
+      ]
+    },
+    {
+      "name": "argument_uses_ads_cft_correspondence",
+      "statement": "The argument uses the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0011092",
+          "url": "https://arxiv.org/abs/hep-th/0011092",
+          "title": "Scale Invariance and the AdS/CFT Correspondence"
+        }
+      ]
+    },
+    {
+      "name": "nonrelativistic_ads_cft_correspondence_requires",
+      "statement": "The non-relativistic AdS/CFT correspondence requires a strongly interacting CFT.",
+      "sources": [
+        {
+          "arxiv": "0808.0399",
+          "url": "https://arxiv.org/abs/0808.0399",
+          "title": "Shear Viscosity of a Non-Relativistic Conformal Gas in Two Dimensions"
+        }
+      ]
+    },
+    {
+      "name": "ds_cft_correspondence_ads_cft",
+      "statement": "The dS/CFT correspondence and the AdS/CFT correspondence are strikingly similar in several respects despite key differences.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0110062",
+          "url": "https://arxiv.org/abs/hep-th/0110062",
+          "title": "Exploring the Similarities of the dS/CFT and Ads/CFT Correspondences"
+        }
+      ]
+    },
+    {
+      "name": "ads_context_motivates_relevance_ads",
+      "statement": "The AdS$_4$ context motivates relevance to the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "1312.2766",
+          "url": "https://arxiv.org/abs/1312.2766",
+          "title": "Supersymmetric Black Holes in AdS4 from Very Special Geometry"
+        }
+      ]
+    },
+    {
+      "name": "effective_action_cft_obtained_ads",
+      "statement": "The effective action of the CFT is obtained from AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0101164",
+          "url": "https://arxiv.org/abs/hep-th/0101164",
+          "title": "Strongly Coupled CFT in FRW Universe from AdS/CFT Correspondence"
+        }
+      ]
+    },
+    {
+      "name": "hamiltonian_formulation_ads_cft_correspondence",
+      "statement": "A Hamiltonian formulation of the $AdS_2/CFT_1$ correspondence is examined as a toy model for the Hamiltonian formalism of the $AdS/CFT$ correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9812047",
+          "url": "https://arxiv.org/abs/hep-th/9812047",
+          "title": "Comments On Hamiltonian Formalism Of $AdS/CFT$ correspondence"
+        }
+      ]
+    },
+    {
+      "name": "cs_cft_correspondence_more_fundamental",
+      "statement": "The $CS_{2+1}/CFT_1$ correspondence is more fundamental than the conjectured $AdS_{2+1}/CFT_2$ correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9811033",
+          "url": "https://arxiv.org/abs/hep-th/9811033",
+          "title": "Symmetry Algebras in Chern-Simons Theories with Boundary: Canonical Approach"
+        }
+      ]
+    },
+    {
+      "name": "kerr_cft_correspondence_follows_decoupling",
+      "statement": "The Kerr/CFT correspondence follows as a decoupling of the standard AdS/CFT correspondence applied to rotating black holes.",
+      "sources": [
+        {
+          "arxiv": "2012.02797",
+          "url": "https://arxiv.org/abs/2012.02797",
+          "title": "Retarded Green's Function from Rotating AdS Black Holes: Emergent CFT$_2$ and Viscosity"
+        }
+      ]
+    },
+    {
+      "name": "result_consistent_ads_cft_correspondence",
+      "statement": "The result is consistent with AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "0912.1084",
+          "url": "https://arxiv.org/abs/0912.1084",
+          "title": "On Large N Solution of ABJM Theory"
+        }
+      ]
+    }
+  ]
+}

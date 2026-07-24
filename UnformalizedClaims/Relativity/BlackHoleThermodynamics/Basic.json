@@ -1,0 +1,27 @@
+{
+  "doc": "# Black hole thermodynamics\n\nClaims from wiphy.org for the planned black-hole-thermodynamics module.",
+  "claims": [
+    {
+      "name": "blackHoleEntropy_as_entanglement",
+      "statement": "Black hole entropy is studied as entanglement entropy.",
+      "sources": [
+        {
+          "title": "Black Hole Entropy and Gravity Cutoff",
+          "arxiv": "0806.3976",
+          "url": "https://arxiv.org/abs/0806.3976"
+        }
+      ]
+    },
+    {
+      "name": "ads2_entropy_from_ads3",
+      "statement": "The entropy of the $AdS_2$ black hole is derived from the entropy of the $AdS_3$ black hole.",
+      "sources": [
+        {
+          "title": "Two Dimensional Anti-de Sitter Space and Discrete Light Cone Quantization",
+          "arxiv": "hep-th/9906078",
+          "url": "https://arxiv.org/abs/hep-th/9906078"
+        }
+      ]
+    }
+  ]
+}

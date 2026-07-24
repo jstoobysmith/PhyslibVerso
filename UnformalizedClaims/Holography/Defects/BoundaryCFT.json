@@ -1,0 +1,203 @@
+{
+  "doc": "# Boundary CFT — Defects\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “boundary CFT holographic dual”).",
+  "claims": [
+    {
+      "name": "holographic_description_alternate_boundary_conditions",
+      "statement": "In the 3D holographic description, alternate boundary conditions correspond to a modified $ {\\tilde{\\mathrm{CFT}}}_3 $ obtained by Chern-Simons gauging of the standard-boundary-condition CFT$_{3}$ dual.",
+      "sources": [
+        {
+          "arxiv": "1809.07331",
+          "url": "https://arxiv.org/abs/1809.07331",
+          "title": "AdS Asymptotic Symmetries from CFT Mirrors"
+        }
+      ]
+    },
+    {
+      "name": "holographic_dual_boundary_conformal_field",
+      "statement": "The holographic dual of a boundary conformal field theory is obtained by generalizing AdS/CFT to AdS/BCFT.",
+      "sources": [
+        {
+          "arxiv": "1204.2450",
+          "url": "https://arxiv.org/abs/1204.2450",
+          "title": "Entanglement Entropy from a Holographic Viewpoint"
+        }
+      ]
+    },
+    {
+      "name": "observations_final_vacuum_organized_into",
+      "statement": "Observations in the final vacuum are organized into a holographic dual Euclidean 2D CFT living on the asymptotic boundary.",
+      "sources": [
+        {
+          "arxiv": "0908.3844",
+          "url": "https://arxiv.org/abs/0908.3844",
+          "title": "Census Taking in the Hat: FRW/CFT Duality"
+        }
+      ]
+    },
+    {
+      "name": "holographic_inflation_scenario_models_dual",
+      "statement": "In the holographic inflation scenario, these models are dual to a deformed CFT boundary theory with $D$ mutually uncorrelated deformation operators.",
+      "sources": [
+        {
+          "arxiv": "1509.07339",
+          "url": "https://arxiv.org/abs/1509.07339",
+          "title": "$δN$ formalism from superpotential and holography"
+        }
+      ]
+    },
+    {
+      "name": "holographic_cft_double_excitation_dual",
+      "statement": "In holographic CFT, a double excitation is dual to anti-de Sitter space with two massive particles injected from the boundary.",
+      "sources": [
+        {
+          "arxiv": "1908.03351",
+          "url": "https://arxiv.org/abs/1908.03351",
+          "title": "Entanglement Entropy after Double-Excitation as Interaction Measure"
+        }
+      ]
+    },
+    {
+      "name": "bulk_dual_overline_deformed_holographic",
+      "statement": "A bulk dual of a $T\\overline{T}$-deformed holographic CFT is a gravitational system with a finite-area cutoff boundary.",
+      "sources": [
+        {
+          "arxiv": "2503.19854",
+          "url": "https://arxiv.org/abs/2503.19854",
+          "title": "$T\\overline{T}$ and the black hole interior"
+        }
+      ]
+    },
+    {
+      "name": "holographic_dual_picture_coordinatetransformed_boundary",
+      "statement": "The holographic dual picture of coordinate-transformed boundary metrics describes a CFT at a temperature different from that of the horizon.",
+      "sources": [
+        {
+          "arxiv": "2012.13443",
+          "url": "https://arxiv.org/abs/2012.13443",
+          "title": "Entropy of Thermal CFTs on Curved Backgrounds"
+        }
+      ]
+    },
+    {
+      "name": "holographic_bulk_dual_action_euclidean",
+      "statement": "A holographic bulk dual action in Euclidean AdS space can be constructed from first principles for a Euclidean CFT on the boundary.",
+      "sources": [
+        {
+          "arxiv": "2408.00628",
+          "url": "https://arxiv.org/abs/2408.00628",
+          "title": "Mapping from Exact RG to Holographic RG in Flat Space"
+        }
+      ]
+    },
+    {
+      "name": "entire_physics_should_ultimately_dual",
+      "statement": "The entire physics on $H$ should ultimately be dual to a $2+1$ dimensional CFT on $\\partial Y$, reducing the holographic dual of the global bulk space-time to a CFT on $Y$ with boundary dynamics at $\\partial Y$.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0112080",
+          "url": "https://arxiv.org/abs/hep-th/0112080",
+          "title": "Holographic Domains of Anti-de Sitter Space"
+        }
+      ]
+    },
+    {
+      "name": "different_boundarycondition_choices_lead_physically",
+      "statement": "Different boundary-condition choices lead to physically distinct holographic scenarios, and the dual CFT may contain an additional scalar field with or without background charge.",
+      "sources": [
+        {
+          "arxiv": "1110.5644",
+          "url": "https://arxiv.org/abs/1110.5644",
+          "title": "Conformal Chern-Simons holography - lock, stock and barrel"
+        }
+      ]
+    },
+    {
+      "name": "adding_relevant_doubletrace_deformation_int",
+      "statement": "Adding a relevant double-trace deformation $f \\int O^{2}$ to a holographic CFT action is dual to imposing mixed Neumann/Dirichlet boundary conditions for the field dual to $O$ in AdS.",
+      "sources": [
+        {
+          "arxiv": "2305.10779",
+          "url": "https://arxiv.org/abs/2305.10779",
+          "title": "Mixed boundary conditions and Double-trace like deformations in Celestial holography and Wedge-like holography"
+        }
+      ]
+    },
+    {
+      "name": "ads_gravity_coupled_ds_endoftheworld",
+      "statement": "AdS$_3$ gravity coupled to dS$_2$ end-of-the-world branes is dual to a unitary holographic CFT$_2$ with non-unitary conformal boundary conditions.",
+      "sources": [
+        {
+          "arxiv": "2606.31705",
+          "url": "https://arxiv.org/abs/2606.31705",
+          "title": "Monitoring a de Sitter universe through an anti-de Sitter window"
+        }
+      ]
+    },
+    {
+      "name": "holographic_dual_bar_deformation_cft",
+      "statement": "The holographic dual of a $J\\bar T$ deformation of a 2D CFT is AdS$_3$ with modified boundary conditions mixing the metric and Chern-Simons gauge field.",
+      "sources": [
+        {
+          "arxiv": "1803.09753",
+          "url": "https://arxiv.org/abs/1803.09753",
+          "title": "The holographic interpretation of $J \\bar T$-deformed CFTs"
+        }
+      ]
+    },
+    {
+      "name": "context_relating_ads_cft_quantum",
+      "statement": "In the context of relating AdS/CFT to quantum information theory, we propose a holographic dual of Fisher information metric for mixed states in the boundary field theory.",
+      "sources": [
+        {
+          "arxiv": "1701.02319",
+          "url": "https://arxiv.org/abs/1701.02319",
+          "title": "Connecting Fisher information to bulk entanglement in holography"
+        }
+      ]
+    },
+    {
+      "name": "action_dual_theory_boundary_exactly",
+      "statement": "The action of the dual theory on the boundary t=0 is exactly the holographic dual of conformally coupled scalars on d+1 dimensional (Euclidean anti) de Sitter space obtained in (A)dS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0404067",
+          "url": "https://arxiv.org/abs/hep-th/0404067",
+          "title": "dS/CFT Correspondence from a Holographic Description of Massless Scalar Fields in Minkowski Space-Time"
+        }
+      ]
+    },
+    {
+      "name": "rindler_static_de_sitter_frw",
+      "statement": "For Rindler, static de Sitter, and FRW boundary metrics, the holographic stress-energy tensor of the dual CFT is computed and has the correct form including conformal anomaly effects.",
+      "sources": [
+        {
+          "arxiv": "1106.2492",
+          "url": "https://arxiv.org/abs/1106.2492",
+          "title": "Entropy from AdS(3)/CFT(2)"
+        }
+      ]
+    },
+    {
+      "name": "check_quantitatively_whether_holographic_bound",
+      "statement": "To check quantitatively whether the holographic bound manifests itself in the dual CFT, one must compute the CFT's number of degrees of freedom, $N$, which must not exceed the boundary area, $A$, in ten-dimensional Planck units.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0203101",
+          "url": "https://arxiv.org/abs/hep-th/0203101",
+          "title": "The holographic principle"
+        }
+      ]
+    },
+    {
+      "name": "amplitude_large_deformations_conformal_boundary",
+      "statement": "The amplitude of large deformations of the conformal boundary geometry is highly suppressed in the holographic measure because the dual CFT action includes a conformal coupling term $R\\phi^{2}$.",
+      "sources": [
+        {
+          "arxiv": "1707.07702",
+          "url": "https://arxiv.org/abs/1707.07702",
+          "title": "A Smooth Exit from Eternal Inflation?"
+        }
+      ]
+    }
+  ]
+}

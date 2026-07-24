@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Bulk Reconstruction\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “bulk reconstruction”).",
+  "claims": [
+    {
+      "name": "when_bulk_operator_ryutakayanagi_surface",
+      "statement": "When bulk operator is on the Ryu-Takayanagi surface, reconstruction only depends on bulk-to-boundary correlator without requiring explicit bulk modular flow",
+      "sources": [
+        {
+          "arxiv": "1704.05464",
+          "url": "https://arxiv.org/abs/1704.05464",
+          "title": "Bulk locality from modular flow"
+        }
+      ]
+    },
+    {
+      "name": "bulk_operators_entanglement_wedge_reconstructed",
+      "statement": "Bulk operators in the entanglement wedge can be reconstructed from low-energy operators localized in the boundary region using modular flow",
+      "sources": [
+        {
+          "arxiv": "1704.05464",
+          "url": "https://arxiv.org/abs/1704.05464",
+          "title": "Bulk locality from modular flow"
+        }
+      ]
+    },
+    {
+      "name": "bulk_operators_entanglement_wedge_have",
+      "statement": "Bulk operators in the entanglement wedge have natural boundary dual operators with fixed modular frequency, with smearing function determined by modular Hamiltonian kernel convolution",
+      "sources": [
+        {
+          "arxiv": "1704.05464",
+          "url": "https://arxiv.org/abs/1704.05464",
+          "title": "Bulk locality from modular flow"
+        }
+      ]
+    },
+    {
+      "name": "when_bulk_geometry_ads_cft",
+      "statement": "When the bulk geometry in AdS/CFT contains a black hole, boundary subregions may be sufficient to reconstruct bulk operators if and only if the black hole microstate is known",
+      "sources": [
+        {
+          "arxiv": "1807.06041",
+          "url": "https://arxiv.org/abs/1807.06041",
+          "title": "Learning the Alpha-bits of Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "ads_cft_provides_global_map",
+      "statement": "AdS/CFT provides a global map from bulk to boundary states, requiring construction of local recovery maps for entanglement wedge reconstruction",
+      "sources": [
+        {
+          "arxiv": "1704.05839",
+          "url": "https://arxiv.org/abs/1704.05839",
+          "title": "Entanglement Wedge Reconstruction via Universal Recovery Channels"
+        }
+      ]
+    },
+    {
+      "name": "ads_cft_bulk_operators_reconstructed",
+      "statement": "In AdS/CFT, bulk operators can be reconstructed in boundary region $A$ only if the state of the black hole is known, but no single boundary operator works for all microstates",
+      "sources": [
+        {
+          "arxiv": "1807.06041",
+          "url": "https://arxiv.org/abs/1807.06041",
+          "title": "Learning the Alpha-bits of Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "operators_bulk_region_recovered_boundary",
+      "statement": "Operators in a bulk region $C$ can be recovered from a boundary region $A$ if and only if $C$ is included in the entanglement wedge $E_A$ of $A$.",
+      "sources": [
+        {
+          "arxiv": "1601.01694",
+          "url": "https://arxiv.org/abs/1601.01694",
+          "title": "Holographic duality from random tensor networks"
+        }
+      ]
+    },
+    {
+      "name": "bulk_operator_given_boundary_regions",
+      "statement": "A bulk operator in a given boundary region's entanglement wedge can be expressed as the response of the boundary region's modular Hamiltonian to a perturbation of the bulk state",
+      "sources": [
+        {
+          "arxiv": "1704.05839",
+          "url": "https://arxiv.org/abs/1704.05839",
+          "title": "Entanglement Wedge Reconstruction via Universal Recovery Channels"
+        }
+      ]
+    },
+    {
+      "name": "bulk_operators_entanglement_wedge_written",
+      "statement": "Bulk operators in the entanglement wedge can be written in a basis where the modular extrapolate dictionary acts naturally",
+      "sources": [
+        {
+          "arxiv": "1704.05464",
+          "url": "https://arxiv.org/abs/1704.05464",
+          "title": "Bulk locality from modular flow"
+        }
+      ]
+    },
+    {
+      "name": "correlation_functions_bulk_operators_computed",
+      "statement": "Correlation functions of bulk operators can be computed from boundary reconstructions of individual operators with error bounded by $\\frac{1}{2} \\epsilon n(3n-1) \\prod_i \\|\\phi_i\\|$",
+      "sources": [
+        {
+          "arxiv": "1704.05839",
+          "url": "https://arxiv.org/abs/1704.05839",
+          "title": "Entanglement Wedge Reconstruction via Universal Recovery Channels"
+        }
+      ]
+    },
+    {
+      "name": "any_bulk_operator_lying_between",
+      "statement": "Any bulk operator lying between two minimal surfaces can be reconstructed as a boundary operator for any subspace of black-hole microstates of dimension $d<e^{\\alpha S}$ where $S=\\mathcal{A}_{0}/4G_{N}$ is the Bekenstein–Hawking entropy and $\\alpha=\\dfrac{\\mathcal{A}_{2}-\\mathcal{A}_{1}}{\\mathcal{A}_{0}}$",
+      "sources": [
+        {
+          "arxiv": "1807.06041",
+          "url": "https://arxiv.org/abs/1807.06041",
+          "title": "Learning the Alpha-bits of Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "ads_cft_any_causal_wedge",
+      "statement": "In AdS/CFT, any causal wedge $\\mathcal{W}_C[A]$ that contains the locations of the bulk fields $\\phi_i(x)$ used in defining the code subspace $\\mathcal{H}_{\\mathcal{C}}$ admits, via AdS-Rindler reconstruction, a set of operators $\\phi_{A,i}(x)$ with support only on $A$ whose action on $\\mathcal{H}_{\\mathcal{C}}$ is the same as that of $\\phi_i(x)$.",
+      "sources": [
+        {
+          "arxiv": "1411.7041",
+          "url": "https://arxiv.org/abs/1411.7041",
+          "title": "Bulk Locality and Quantum Error Correction in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "show_bulk_operators_lying_between",
+      "statement": "We show that bulk operators lying between the outermost extremal surface and the asymptotic boundary admit a simple boundary reconstruction in the classical limit.",
+      "sources": [
+        {
+          "arxiv": "2102.07774",
+          "url": "https://arxiv.org/abs/2102.07774",
+          "title": "A World without Pythons would be so Simple"
+        }
+      ]
+    },
+    {
+      "name": "rindler_wedge_reconstruction_achieved_using",
+      "statement": "Rindler wedge reconstruction can be achieved using recovery formula and global HKLL with bulk operators expressed as mode expansions on the Rindler wedge",
+      "sources": [
+        {
+          "arxiv": "1704.05839",
+          "url": "https://arxiv.org/abs/1704.05839",
+          "title": "Entanglement Wedge Reconstruction via Universal Recovery Channels"
+        }
+      ]
+    },
+    {
+      "name": "explicit_formulas_bulk_operators_require",
+      "statement": "Explicit formulas for bulk operators require complete understanding of bulk modular flow action",
+      "sources": [
+        {
+          "arxiv": "1704.05464",
+          "url": "https://arxiv.org/abs/1704.05464",
+          "title": "Bulk locality from modular flow"
+        }
+      ]
+    },
+    {
+      "name": "onesided_bulk_reconstruction_access_interior",
+      "statement": "The one-sided bulk reconstruction can access the interior region of the black hole",
+      "sources": [
+        {
+          "arxiv": "1807.03916",
+          "url": "https://arxiv.org/abs/1807.03916",
+          "title": "Expanding the Black Hole Interior: Partially Entangled Thermal States in SYK"
+        }
+      ]
+    },
+    {
+      "name": "boundary_operator_computed_response_boundary",
+      "statement": "The boundary operator can be computed as the response of the boundary modular Hamiltonian to a perturbation in the direction of the bulk operator",
+      "sources": [
+        {
+          "arxiv": "1704.05839",
+          "url": "https://arxiv.org/abs/1704.05839",
+          "title": "Entanglement Wedge Reconstruction via Universal Recovery Channels"
+        }
+      ]
+    },
+    {
+      "name": "bulk_reconstruction_ads_cft_necessarily",
+      "statement": "Bulk reconstruction in AdS/CFT is necessarily only approximate, with non-perturbative lower bounds on the error",
+      "sources": [
+        {
+          "arxiv": "1807.06041",
+          "url": "https://arxiv.org/abs/1807.06041",
+          "title": "Learning the Alpha-bits of Black Holes"
+        }
+      ]
+    }
+  ]
+}

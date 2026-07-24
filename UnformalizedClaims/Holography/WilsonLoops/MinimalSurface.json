@@ -1,0 +1,203 @@
+{
+  "doc": "# Minimal Surface — Wilson Loops\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “minimal surface Wilson loop”).",
+  "claims": [
+    {
+      "name": "searching_worldsheet_minimal_surface_numerically",
+      "statement": "Searching the world-sheet minimal surface numerically determines the Wilson loop expectation value.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0303141",
+          "url": "https://arxiv.org/abs/hep-th/0303141",
+          "title": "Confinement of N=1 Super Yang-Mills from Supergravity"
+        }
+      ]
+    },
+    {
+      "name": "minimal_area_surface_used_dual",
+      "statement": "The minimal area surface is used as the dual probe of Wilson-loop expectation values.",
+      "sources": [
+        {
+          "arxiv": "1305.4841",
+          "url": "https://arxiv.org/abs/1305.4841",
+          "title": "Holographic thermalization in Gauss-Bonnet gravity"
+        }
+      ]
+    },
+    {
+      "name": "minimal_surface_dual_cusped_wilson",
+      "statement": "The minimal surface is dual to a cusped Wilson loop in the dual field theory.",
+      "sources": [
+        {
+          "arxiv": "1412.8156",
+          "url": "https://arxiv.org/abs/1412.8156",
+          "title": "Holographic Cusped Wilson loops in $q$-deformed $AdS_5\\times S^5$ Spacetime"
+        }
+      ]
+    },
+    {
+      "name": "scattering_amplitude_wilson_loop_duality",
+      "statement": "In the scattering amplitude/Wilson loop duality, the minimal surface ends on a light-like polygonal Wilson loop at the boundary of anti-de Sitter (AdS) space.",
+      "sources": [
+        {
+          "arxiv": "2412.02147",
+          "url": "https://arxiv.org/abs/2412.02147",
+          "title": "A short review on TBA equation and scattering amplitude/Wilson loop duality"
+        }
+      ]
+    },
+    {
+      "name": "minimal_surface_ads_supposed_describe",
+      "statement": "The minimal surface in $AdS_5$ is supposed to describe the Wilson loop for large coupling $\\lambda$.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9904191",
+          "url": "https://arxiv.org/abs/hep-th/9904191",
+          "title": "Wilson Loops and Minimal Surfaces"
+        }
+      ]
+    },
+    {
+      "name": "circular_minimalsurface_solution_reduces_bps",
+      "statement": "The circular minimal-surface solution reduces to a $1/2$ BPS circular Wilson loop in the $q\\to 1$ limit.",
+      "sources": [
+        {
+          "arxiv": "1410.5544",
+          "url": "https://arxiv.org/abs/1410.5544",
+          "title": "Minimal surfaces in $q$-deformed AdS$_5\\times$S$^5$ with Poincare coordinates"
+        }
+      ]
+    },
+    {
+      "name": "thermalization_boundary_quantum_field_theory",
+      "statement": "Thermalization in the boundary quantum field theory is probed by a minimal area surface dual to Wilson-loop expectation values.",
+      "sources": [
+        {
+          "arxiv": "1503.04518",
+          "url": "https://arxiv.org/abs/1503.04518",
+          "title": "Effect of phantom dark energy on the holographic thermalization"
+        }
+      ]
+    },
+    {
+      "name": "circular_wilson_loop_minimal_surface",
+      "statement": "For the circular Wilson loop minimal surface, the induced worldsheet metric is again that of $AdS_2$ with $\\mathcal{R}=-2$.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0001204",
+          "url": "https://arxiv.org/abs/hep-th/0001204",
+          "title": "Green-Schwarz String in AdS_5 x S^5: Semiclassical Partition Function"
+        }
+      ]
+    },
+    {
+      "name": "condensed_phase_wilson_loop_average",
+      "statement": "In the condensed phase, the Wilson loop average can be approximated by a solitonic saddle point localized around the minimal surface.",
+      "sources": [
+        {
+          "arxiv": "2211.03006",
+          "url": "https://arxiv.org/abs/2211.03006",
+          "title": "The infrared Yang-Mills wave functional due to percolating center vortices"
+        }
+      ]
+    },
+    {
+      "name": "if_wilson_loop_plane_curve",
+      "statement": "If the Wilson loop is a plane curve, the relevant minimal surface lies in hyperbolic space $\\mathbb{H}_{3}$ (Euclidean AdS$_{3}$).",
+      "sources": [
+        {
+          "arxiv": "1406.4945",
+          "url": "https://arxiv.org/abs/1406.4945",
+          "title": "Wilson loops and minimal area surfaces in hyperbolic space"
+        }
+      ]
+    },
+    {
+      "name": "perturbation_theory_latitude_angle_provides",
+      "statement": "Perturbation theory in the latitude angle provides an expansion near the AdS$_{2}$ minimal surface representing the 1/2 BPS circular Wilson loop.",
+      "sources": [
+        {
+          "arxiv": "1702.02164",
+          "url": "https://arxiv.org/abs/1702.02164",
+          "title": "Perturbative computation of string one-loop corrections to Wilson loop minimal surfaces in $AdS_5 \\times S^5$"
+        }
+      ]
+    },
+    {
+      "name": "wilson_line_wilson_loop_correlation",
+      "statement": "Wilson line and Wilson loop correlation functions in the AdS/CFT framework exhibit a relation between minimal surface problems in $AdS_5$ metrics and reggeization in gauge field theory at strong coupling.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0003059",
+          "url": "https://arxiv.org/abs/hep-th/0003059",
+          "title": "Minimal surfaces and Reggeization in the AdS/CFT correspondence"
+        }
+      ]
+    },
+    {
+      "name": "supersymmetric_wilson_loop_expectation_value",
+      "statement": "A supersymmetric Wilson loop expectation value is represented by a type-IIA string partition function expanded around an $AdS_2 \\subset AdS_3$ minimal surface.",
+      "sources": [
+        {
+          "arxiv": "2603.25590",
+          "url": "https://arxiv.org/abs/2603.25590",
+          "title": "Wilson loop in AdS$_3 \\times S^3 \\times T^4$ from quantum M2 brane"
+        }
+      ]
+    },
+    {
+      "name": "loop_string_correction_latitude_minimal",
+      "statement": "The 1-loop string correction to the latitude minimal surface in AdS$_{5}$ × S$^{5}$ is revisited for the 1/4 BPS Wilson loop in planar $ \\mathcal{N}=4 $ SYM theory.",
+      "sources": [
+        {
+          "arxiv": "1702.02164",
+          "url": "https://arxiv.org/abs/1702.02164",
+          "title": "Perturbative computation of string one-loop corrections to Wilson loop minimal surfaces in $AdS_5 \\times S^5$"
+        }
+      ]
+    },
+    {
+      "name": "minimal_surface_solution_associated_bps",
+      "statement": "The minimal surface solution associated with the 1/4 BPS Wilson loop depends on an arbitrary point on $S^3$, giving exactly three moduli as predicted by supersymmetry.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0205160",
+          "url": "https://arxiv.org/abs/hep-th/0205160",
+          "title": "Supersymmetric Wilson loops"
+        }
+      ]
+    },
+    {
+      "name": "if_interested_computing_wilson_loop",
+      "statement": "If we are interested in computing the Wilson loop expectation value, considering quantum fluctuations about such a minimal surface will not change the boundary conditions of the fields.",
+      "sources": [
+        {
+          "arxiv": "0908.0684",
+          "url": "https://arxiv.org/abs/0908.0684",
+          "title": "Scattering into the fifth dimension of N=4 super Yang-Mills"
+        }
+      ]
+    },
+    {
+      "name": "if_wilson_loop_euclidean_lies",
+      "statement": "If a Wilson loop is Euclidean and lies in a $(t,x)$ plane, the dual minimal surface is Euclidean and lies in Lorentzian AdS$_{3}$ inside AdS$_{5}$.",
+      "sources": [
+        {
+          "arxiv": "1507.02787",
+          "url": "https://arxiv.org/abs/1507.02787",
+          "title": "Euclidean Wilson loops and Minimal Area Surfaces in Minkowski AdS3"
+        }
+      ]
+    },
+    {
+      "name": "field_theories_dual_lifshitz_spacetimes",
+      "statement": "For field theories dual to Lifshitz spacetimes, the leading IR singularity in the scattering amplitude is determined from the bulk minimal surface of the simplest cusp Wilson loop.",
+      "sources": [
+        {
+          "arxiv": "1406.6389",
+          "url": "https://arxiv.org/abs/1406.6389",
+          "title": "Scattering amplitudes in Lifshitz spacetime"
+        }
+      ]
+    }
+  ]
+}

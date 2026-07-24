@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Black Hole Information\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “black hole information paradox”).",
+  "claims": [
+    {
+      "name": "cornucopion_resolution_information_paradox_realizes",
+      "statement": "The cornucopion resolution of the information paradox realizes Hawking's proposal that information is lost in black hole evaporation, but occurs in the context of completely unitary quantum mechanical evolution, at least at the level of the semiclassical approximation for the metric.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9211030",
+          "url": "https://arxiv.org/abs/hep-th/9211030",
+          "title": "Black Hole Remnants and the Information Puzzle"
+        }
+      ]
+    },
+    {
+      "name": "firewall_paradox_onesided_evaporating_black",
+      "statement": "The firewall paradox for one-sided evaporating black holes is resolved because after the Page time, interior modes with which late-time Hawking radiation is entangled are themselves encoded in the early Hawking radiation reservoir, with no contradiction between entanglement and unitarity.",
+      "sources": [
+        {
+          "arxiv": "1905.08255",
+          "url": "https://arxiv.org/abs/1905.08255",
+          "title": "Entanglement Wedge Reconstruction and the Information Paradox"
+        }
+      ]
+    },
+    {
+      "name": "if_pure_states_continue_evolve",
+      "statement": "If pure states continue to evolve to mixed states in a fully quantum treatment of the gravitational field, then some aspect of the classical singularity as a place where information is lost must persist in quantum gravity; this is the black hole information paradox.",
+      "sources": [
+        {
+          "arxiv": "gr-qc/9901033",
+          "url": "https://arxiv.org/abs/gr-qc/9901033",
+          "title": "Gravitation, Thermodynamics, and Quantum Theory"
+        }
+      ]
+    },
+    {
+      "name": "under_assumptions_nearly_pure_initial",
+      "statement": "Under the assumptions of a nearly pure initial state, unitary evaporation, and negligible interaction with other systems, the von Neumann entropy of the evaporating black hole equals that of the emitted Hawking radiation.",
+      "sources": [
+        {
+          "arxiv": "1301.4995",
+          "url": "https://arxiv.org/abs/1301.4995",
+          "title": "Time Dependence of Hawking Radiation Entropy"
+        }
+      ]
+    },
+    {
+      "name": "horowitzmaldacena_hm_finalstate_proposal_black",
+      "statement": "In the Horowitz-Maldacena (HM) final-state proposal for black hole evaporation, departures from unitarity can arise due to interactions between the collapsing body and the infalling Hawking radiation inside the event horizon; the amount of information lost depends on the extent to which these interactions are entangling.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0311269",
+          "url": "https://arxiv.org/abs/hep-th/0311269",
+          "title": "Comment on \"The black hole final state\""
+        }
+      ]
+    },
+    {
+      "name": "informationfree_horizon_inconsistent_unitarity_every",
+      "statement": "An information-free horizon is inconsistent with unitarity at every step of the evaporation process, including before and after Page time.",
+      "sources": [
+        {
+          "arxiv": "1210.6996",
+          "url": "https://arxiv.org/abs/1210.6996",
+          "title": "Unitarity and fuzzball complementarity: \"Alice fuzzes but may not even know it!\""
+        }
+      ]
+    },
+    {
+      "name": "string_theory_black_hole_exist",
+      "statement": "In string theory the black hole can exist as a pure state and Hawking radiation is not thermal, so in principle the initial state can be reconstructed from the final state, resolving the information paradox.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0203048",
+          "url": "https://arxiv.org/abs/hep-th/0203048",
+          "title": "Microscopic Formulation of Black Holes in String Theory"
+        }
+      ]
+    },
+    {
+      "name": "hawking_radiation_presents_puzzle_information",
+      "statement": "Hawking radiation presents a puzzle of information loss that brings the unitarity of quantum mechanics into question.",
+      "sources": [
+        {
+          "arxiv": "1510.00621",
+          "url": "https://arxiv.org/abs/1510.00621",
+          "title": "Observation of quantum Hawking radiation and its entanglement in an analogue black hole"
+        }
+      ]
+    },
+    {
+      "name": "black_hole_evaporation_need_not",
+      "statement": "Black hole evaporation need not violate the normal laws of quantum mechanics; several ways of reconciling the irreversible flow of information through the horizon with unitary quantum mechanics exist, some requiring new quantum-mechanical internal states called quantum hair.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9201059",
+          "url": "https://arxiv.org/abs/hep-th/9201059",
+          "title": "Quantum Hair on Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "when_black_hole_evaporates_ingoing",
+      "statement": "When a black hole evaporates, ingoing negative-energy Hawking radiation causes the trapping horizon to shrink and become temporal, so that information can cross it in both directions; there is therefore no black-hole information paradox, only a misunderstanding arising from defining black holes by event horizons.",
+      "sources": [
+        {
+          "arxiv": "gr-qc/0408008",
+          "url": "https://arxiv.org/abs/gr-qc/0408008",
+          "title": "Energy and entropy conservation for dynamical black holes"
+        }
+      ]
+    },
+    {
+      "name": "postulates_dictate_entropy_entanglement_returns",
+      "statement": "Postulates 1 and 3 dictate that the entropy of entanglement returns to zero in a more or less definite way as the black hole evaporates, leaving no room for a stable or very long-lived remnant storing the incident information.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9306069",
+          "url": "https://arxiv.org/abs/hep-th/9306069",
+          "title": "The Stretched Horizon and Black Hole Complementarity"
+        }
+      ]
+    },
+    {
+      "name": "avoid_black_hole_information_paradox",
+      "statement": "To avoid the black hole information paradox a principle of local quantum field theory must be sacrificed, and since violation of unitary evolution appears inconsistent with observation, the only obvious alternative is sacrifice of locality.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0606146",
+          "url": "https://arxiv.org/abs/hep-th/0606146",
+          "title": "(Non)perturbative gravity, nonlocality, and nice slices"
+        }
+      ]
+    },
+    {
+      "name": "if_black_hole_starts_pure",
+      "statement": "If a black hole starts in a pure quantum state and evaporates completely by a unitary process, the von Neumann entropy of the Hawking radiation initially increases and then decreases back to zero when the black hole has disappeared.",
+      "sources": [
+        {
+          "arxiv": "1301.4995",
+          "url": "https://arxiv.org/abs/1301.4995",
+          "title": "Time Dependence of Hawking Radiation Entropy"
+        }
+      ]
+    },
+    {
+      "name": "thermality_hawking_radiation_suggests_one",
+      "statement": "The thermality of Hawking radiation suggests that one cannot obtain information about the inside of a black hole, which is the basis of the information paradox.",
+      "sources": [
+        {
+          "arxiv": "1809.00913",
+          "url": "https://arxiv.org/abs/1809.00913",
+          "title": "Observation of thermal Hawking radiation at the Hawking temperature in an analogue black hole"
+        }
+      ]
+    },
+    {
+      "name": "preserve_unitarity_black_hole_evaporation",
+      "statement": "To preserve unitarity in black hole evaporation, the information carried by infalling matter must not be transferred to a second asymptotic region inside the black hole; in the standard Hawking computation the interior is effectively treated as such a second unobserved asymptotic region.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0310281",
+          "url": "https://arxiv.org/abs/hep-th/0310281",
+          "title": "The black hole final state"
+        }
+      ]
+    },
+    {
+      "name": "reversible_parikhwilczek_framework_black_hole",
+      "statement": "In the reversible Parikh--Wilczek framework, as the black hole radiates the entropy of the black hole decreases but the total entropy of the black hole plus outside is constant; information is conserved as a result of the reversibility and the first law of black hole thermodynamics.",
+      "sources": [
+        {
+          "arxiv": "gr-qc/0512153",
+          "url": "https://arxiv.org/abs/gr-qc/0512153",
+          "title": "Charged particles' tunnelling from the Kerr-Newman black hole"
+        }
+      ]
+    },
+    {
+      "name": "following_three_statements_cannot_all",
+      "statement": "The following three statements cannot all be true: (i) Hawking radiation is in a pure state, (ii) the information carried by the radiation is emitted from the region near the horizon, with low energy effective field theory valid beyond some microscopic distance from the horizon, and (iii) the infalling observer encounters nothing unusual at the horizon.",
+      "sources": [
+        {
+          "arxiv": "1207.3123",
+          "url": "https://arxiv.org/abs/1207.3123",
+          "title": "Black Holes: Complementarity or Firewalls?"
+        }
+      ]
+    },
+    {
+      "name": "given_assumptions_about_microstructure_stretched",
+      "statement": "Given the assumptions about the microstructure of the stretched horizon, no real loss of information takes place during black hole evaporation, yet it remains unclear how the large amount of initial data is stored in the outgoing thermalized radiation.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9306069",
+          "url": "https://arxiv.org/abs/hep-th/9306069",
+          "title": "The Stretched Horizon and Black Hole Complementarity"
+        }
+      ]
+    }
+  ]
+}

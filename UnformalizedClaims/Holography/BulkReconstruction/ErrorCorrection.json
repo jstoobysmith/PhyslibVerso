@@ -1,0 +1,203 @@
+{
+  "doc": "# Error Correction — Bulk Reconstruction\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic quantum error correction”).",
+  "claims": [
+    {
+      "name": "errorcorrection_behavior_closely_related_modeling",
+      "statement": "The error-correction behavior is closely related to modeling the holographic map as a quantum error correction code.",
+      "sources": [
+        {
+          "arxiv": "2012.14001",
+          "url": "https://arxiv.org/abs/2012.14001",
+          "title": "Real-space RG, error correction and Petz map"
+        }
+      ]
+    },
+    {
+      "name": "superadditivity_proposed_mechanism_explaining_success",
+      "statement": "Superadditivity is proposed as the mechanism explaining success of holographic quantum error-correction models.",
+      "sources": [
+        {
+          "arxiv": "2411.04183",
+          "url": "https://arxiv.org/abs/2411.04183",
+          "title": "Superadditivity in large $N$ field theories and performance of quantum tasks"
+        }
+      ]
+    },
+    {
+      "name": "holographicslice_picture_related_idea_holographic",
+      "statement": "The holographic-slice picture is related to the idea that the holographic dictionary works as quantum error correction.",
+      "sources": [
+        {
+          "arxiv": "2008.01755",
+          "url": "https://arxiv.org/abs/2008.01755",
+          "title": "Coarse-Graining Holographic States: A Semiclassical Flow in General Spacetimes"
+        }
+      ]
+    },
+    {
+      "name": "argue_manypartite_entanglement_ubiquitous_holography",
+      "statement": "We argue that many-partite entanglement is ubiquitous in holography and holographic quantum error correction codes.",
+      "sources": [
+        {
+          "arxiv": "2504.01625",
+          "url": "https://arxiv.org/abs/2504.01625",
+          "title": "Why many-partite entanglement is essential for holography"
+        }
+      ]
+    },
+    {
+      "name": "entanglementwedge_reconstruction_based_holographic_quantum",
+      "statement": "Entanglement-wedge reconstruction based on holographic quantum error correction is argued invalid under nonperturbative finite-$N$ or quantum-gravity effects.",
+      "sources": [
+        {
+          "arxiv": "2309.04231",
+          "url": "https://arxiv.org/abs/2309.04231",
+          "title": "Subregion Complementarity in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "sandwiched_renyi_relative_entropy_plays",
+      "statement": "Sandwiched Renyi relative entropy plays a role in AdS/CFT and in finite-dimensional models of holographic quantum error correction.",
+      "sources": [
+        {
+          "arxiv": "2204.07694",
+          "url": "https://arxiv.org/abs/2204.07694",
+          "title": "Sandwiched Renyi Relative Entropy in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "quantum_causal_influence_exhibited_hamiltonian",
+      "statement": "Quantum causal influence is exhibited in Hamiltonian evolution, quantum error correction codes, quantum teleportation, holographic tensor networks, and the final state projection model of black holes.",
+      "sources": [
+        {
+          "arxiv": "1811.05485",
+          "url": "https://arxiv.org/abs/1811.05485",
+          "title": "Quantum Causal Influence"
+        }
+      ]
+    },
+    {
+      "name": "geometric_deformations_warped_curved_text",
+      "statement": "Geometric deformations in warped and curved $\\text{AdS}_3$ backgrounds influence holographic duals in relation to entanglement and quantum error correction.",
+      "sources": [
+        {
+          "arxiv": "2505.17611",
+          "url": "https://arxiv.org/abs/2505.17611",
+          "title": "Anyonic Excitations in Warped and Curved AdS Backgrounds"
+        }
+      ]
+    },
+    {
+      "name": "holographic_quantum_errorcorrecting_codes_logarithmic",
+      "statement": "In holographic quantum error-correcting codes, the logarithmic negativity is equivalent to the cross-sectional area of entanglement wedges with a bulk quantum correction term.",
+      "sources": [
+        {
+          "arxiv": "1808.00446",
+          "url": "https://arxiv.org/abs/1808.00446",
+          "title": "Entanglement negativity and minimal entanglement wedge cross sections in holographic theories"
+        }
+      ]
+    },
+    {
+      "name": "holographic_codes_have_specific_advantage",
+      "statement": "Holographic codes have a specific advantage over topological codes due to no-go theorems regarding fractal noise in topological quantum error correction.",
+      "sources": [
+        {
+          "arxiv": "2203.01379",
+          "url": "https://arxiv.org/abs/2203.01379",
+          "title": "Code Properties of the Holographic Sierpinski Triangle"
+        }
+      ]
+    },
+    {
+      "name": "sandwiched_renyi_relative_entropy_defined",
+      "statement": "The sandwiched Renyi relative entropy defined in terms of modular operators is naturally suited to finite-dimensional models of holographic quantum error correction.",
+      "sources": [
+        {
+          "arxiv": "2204.07694",
+          "url": "https://arxiv.org/abs/2204.07694",
+          "title": "Sandwiched Renyi Relative Entropy in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "restriction_strength_holographic_quantum_error",
+      "statement": "The restriction on the strength of the holographic quantum error correction procedure is partially removed when the transition to a deconfined phase occurs.",
+      "sources": [
+        {
+          "arxiv": "1811.02889",
+          "url": "https://arxiv.org/abs/1811.02889",
+          "title": "Holographic quantum information and (de)confinement"
+        }
+      ]
+    },
+    {
+      "name": "brane_configuration_bulk_corresponding_confinement",
+      "statement": "The brane configuration in the bulk corresponding to the confinement phase imposes a restriction on the strength of the holographic quantum error correction procedure.",
+      "sources": [
+        {
+          "arxiv": "1811.02889",
+          "url": "https://arxiv.org/abs/1811.02889",
+          "title": "Holographic quantum information and (de)confinement"
+        }
+      ]
+    },
+    {
+      "name": "point_out_connection_between_emergence",
+      "statement": "We point out a connection between the emergence of bulk locality in AdS/CFT and the theory of quantum error correction. Bulk notions such as Bogoliubov transformations, location in the radial direction, and the holographic entropy bound all have natural CFT interpretations in the language of quantum error correction.",
+      "sources": [
+        {
+          "arxiv": "1411.7041",
+          "url": "https://arxiv.org/abs/1411.7041",
+          "title": "Bulk Locality and Quantum Error Correction in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "quantum_null_energy_condition_used",
+      "statement": "The quantum null energy condition is used to address storage of quantum information at finite temperature with minimal active error correction in two-dimensional holographic conformal field theories.",
+      "sources": [
+        {
+          "arxiv": "2202.00022",
+          "url": "https://arxiv.org/abs/2202.00022",
+          "title": "Erasure tolerant quantum memory and the quantum null energy condition in holographic systems"
+        }
+      ]
+    },
+    {
+      "name": "boundary_subregion_shape_sierpinski_gasket",
+      "statement": "A boundary subregion in the shape of the Sierpinski gasket in $\\text{AdS}_5/\\text{CFT}_4$ does not possess holographic quantum error correction properties.",
+      "sources": [
+        {
+          "arxiv": "2203.01379",
+          "url": "https://arxiv.org/abs/2203.01379",
+          "title": "Code Properties of the Holographic Sierpinski Triangle"
+        }
+      ]
+    },
+    {
+      "name": "when_bulk_operator_order_ads",
+      "statement": "When a bulk operator is of order an AdS radius distance from the causal wedge $\\mathcal{W}_C[\\overline{A}]$, the approximate equivalence between conventional quantum error correction and operator algebra quantum error correction requires sub-AdS scale bulk locality, a special property of those CFTs that have local holographic duals.",
+      "sources": [
+        {
+          "arxiv": "1411.7041",
+          "url": "https://arxiv.org/abs/1411.7041",
+          "title": "Bulk Locality and Quantum Error Correction in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "holographic_theories_interpreted_via_quantum",
+      "statement": "In holographic theories interpreted via quantum error correction, entanglement wedge reconstruction, the Jafferis-Lewkowycz-Maldacena-Suh formula, radial commutativity, and the Ryu-Takayanagi formula are taken to be equivalent.",
+      "sources": [
+        {
+          "arxiv": "2411.06361",
+          "url": "https://arxiv.org/abs/2411.06361",
+          "title": "Adding the algebraic Ryu-Takayanagi formula to the algebraic reconstruction theorem"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "# Bispinors — literature claims\n\nClaims from wiphy.org, merging into `Physlib.Relativity.Bispinors.Basic`.",
+  "claims": [
+    {
+      "name": "spinorHelicity_compact_amplitudes",
+      "statement": "The spinor helicity formalism expresses n-point amplitudes in compact forms under special helicity choices.",
+      "sources": [
+        {
+          "title": "General expressions for extra-dimensional tree amplitudes and all-plus 1-loop integrands in Q-cut representaion",
+          "arxiv": "1610.05013",
+          "url": "https://arxiv.org/abs/1610.05013"
+        }
+      ]
+    },
+    {
+      "name": "spinorHelicity_11d_supergravity",
+      "statement": "Spinor helicity formalisms are established for 11D supergravity.",
+      "sources": [
+        {
+          "title": "On 10D SYM superamplitudes",
+          "arxiv": "1712.02857",
+          "url": "https://arxiv.org/abs/1712.02857"
+        }
+      ]
+    }
+  ]
+}

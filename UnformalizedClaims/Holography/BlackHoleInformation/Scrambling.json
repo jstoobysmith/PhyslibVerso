@@ -1,0 +1,93 @@
+{
+  "doc": "# Scrambling — Black Hole Information\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “black hole scrambling chaos”).",
+  "claims": [
+    {
+      "name": "black_hole_information_scrambling_blackholestructure",
+      "statement": "Black hole information scrambling and black-hole-structure echoes are framed as distinct but related phenomena linked to AdS/CFT chaos arguments and potential LIGO/Virgo observables.",
+      "sources": [
+        {
+          "arxiv": "1906.02653",
+          "url": "https://arxiv.org/abs/1906.02653",
+          "title": "Quantum Nature of Black Holes: Fast Scrambling versus Echoes"
+        }
+      ]
+    },
+    {
+      "name": "scrambling_acts_diagnostic_quantum_chaos",
+      "statement": "Scrambling acts as a diagnostic of quantum chaos in strongly coupled systems and plays a central role in the holographic description of black hole dynamics.",
+      "sources": [
+        {
+          "arxiv": "2511.03633",
+          "url": "https://arxiv.org/abs/2511.03633",
+          "title": "Scrambling or Stalling: Angular Momentum Barriers to Chaos in Holographic CFTs"
+        }
+      ]
+    },
+    {
+      "name": "if_fast_scrambling_sufficient_blackhole",
+      "statement": "If fast scrambling is sufficient for black-hole duality, the OTO protocol provides a sharp experimental test for the presence of a black hole by revealing a universal Lyapunov exponent that can be compared with the chaos bound.",
+      "sources": [
+        {
+          "arxiv": "1602.06271",
+          "url": "https://arxiv.org/abs/1602.06271",
+          "title": "Measuring the scrambling of quantum information"
+        }
+      ]
+    },
+    {
+      "name": "causality_bounds_black_hole_information",
+      "statement": "Causality bounds on black hole information flow depend only on a single thermal cell with a geometrical interpretation via the optical metric's thickness (Rindler region). An effective kinetic model of scrambling as a compact hyperbolic billiard suggests that classical chaos at large N reconciles fast scrambling with causality saturation.",
+      "sources": [
+        {
+          "arxiv": "1105.2581",
+          "url": "https://arxiv.org/abs/1105.2581",
+          "title": "Chaotic Fast Scrambling At Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "pedagogical_review_synthesizes_quantum_computational",
+      "statement": "This pedagogical review synthesizes quantum computational complexity as a bridge between quantum information, QFT/CFT state preparation, and black-hole physics. It presents Nielsen's geometric approach for defining complexity in generic quantum systems, reviews its proposed role in the holographic dictionary, and discusses evidence linking complexity to black-hole interior growth, chaos, and scrambling.",
+      "sources": [
+        {
+          "arxiv": "2110.14672",
+          "url": "https://arxiv.org/abs/2110.14672",
+          "title": "Quantum Computational Complexity -- From Quantum Information to Black Holes and Back"
+        }
+      ]
+    },
+    {
+      "name": "using_holography_rotating_charged_shock",
+      "statement": "Using holography for rotating and charged shock waves on the dyonic Kerr-Sen-$\\mathrm{AdS}_4$ black hole, the paper computes scrambling and delay times and finds that at large entropy the leading scrambling time grows logarithmically with entropy, supporting fast scrambling and indicating chaos in this EMDA system. It also derives a bound on the instantaneous minimal Lyapunov index, shows near-extremal solutions come close to saturating it, and finds that electric and magnetic shock-wave charges produce an additional scrambling delay.",
+      "sources": [
+        {
+          "arxiv": "2304.08751",
+          "url": "https://arxiv.org/abs/2304.08751",
+          "title": "Chaos and fast scrambling delays of dyonic Kerr-Sen-AdS$_4$ black hole and its ultra-spinning version"
+        }
+      ]
+    },
+    {
+      "name": "geometry_dual_typical_ads_blackhole",
+      "statement": "The geometry dual to a typical AdS black-hole microstate is conjectured to correspond to the extended AdS-Schwarzschild geometry, with a spacelike region described by mirror operators; state-dependent Hamiltonian deformations probe this conjecture via out-of-time-order correlators that must show scrambling-time chaos.",
+      "sources": [
+        {
+          "arxiv": "1901.08527",
+          "url": "https://arxiv.org/abs/1901.08527",
+          "title": "Probing typical black hole microstates"
+        }
+      ]
+    },
+    {
+      "name": "paper_develops_unitary_gauge_construction",
+      "statement": "The paper develops the unitary gauge construction of black hole interiors, in which black hole formation is marked by a stretched horizon with quantum chaos, fast scrambling, and low-energy universality. Using these properties and the relevant 'hard modes' in the zone, it explicitly constructs interior operators without relying on microscopic details and gives a prescription for computing interior correlators in a finite effective spacetime region.",
+      "sources": [
+        {
+          "arxiv": "2010.15827",
+          "url": "https://arxiv.org/abs/2010.15827",
+          "title": "Black Hole Interior in Unitary Gauge Construction"
+        }
+      ]
+    }
+  ]
+}

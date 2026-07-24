@@ -39,6 +39,11 @@ jobs:
       - name: Render the wiki
         run: lake query :wiki
 
+      # The roadmap is a standalone page Verso does not emit; build its data
+      # from the rendered site's xref.json and copy its assets in.
+      - name: Install the roadmap page
+        run: node scripts/install-roadmap.mjs
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

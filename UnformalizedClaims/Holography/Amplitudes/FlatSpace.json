@@ -1,0 +1,203 @@
+{
+  "doc": "# Flat Space — Amplitudes\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “flat space holography”).",
+  "claims": [
+    {
+      "name": "study_initiates_flatspace_holography_mmg",
+      "statement": "The study initiates flat-space holography for MMG.",
+      "sources": [
+        {
+          "arxiv": "1411.1970",
+          "url": "https://arxiv.org/abs/1411.1970",
+          "title": "Minimal Massive 3D Gravity Unitarity Redux"
+        }
+      ]
+    },
+    {
+      "name": "potential_applications_include_tensionless_strings",
+      "statement": "Potential applications include tensionless strings and flat-space holography.",
+      "sources": [
+        {
+          "arxiv": "2203.13197",
+          "url": "https://arxiv.org/abs/2203.13197",
+          "title": "Carroll covariant scalar fields in two dimensions"
+        }
+      ]
+    },
+    {
+      "name": "carroll_fracton_symmetries_important_flatspace",
+      "statement": "Carroll and fracton symmetries are important for flat-space holography.",
+      "sources": [
+        {
+          "arxiv": "2307.05674",
+          "url": "https://arxiv.org/abs/2307.05674",
+          "title": "Quantum Carroll/fracton particles"
+        }
+      ]
+    },
+    {
+      "name": "holographic_match_provides_further_evidence",
+      "statement": "The holographic match provides further evidence for flat space holography.",
+      "sources": [
+        {
+          "arxiv": "2106.07649",
+          "url": "https://arxiv.org/abs/2106.07649",
+          "title": "Non-Lorentzian Chaos and Cosmological Holography"
+        }
+      ]
+    },
+    {
+      "name": "celestial_holography_provides_new_way",
+      "statement": "Celestial holography provides a new way to understand flat-space amplitudes.",
+      "sources": [
+        {
+          "arxiv": "2401.02760",
+          "url": "https://arxiv.org/abs/2401.02760",
+          "title": "Celestial self-dual Yang-Mills theory: a new formula and the OPE limit"
+        }
+      ]
+    },
+    {
+      "name": "theories_under_consideration_appear_context",
+      "statement": "The theories under consideration appear in the context of flat space holography.",
+      "sources": [
+        {
+          "arxiv": "1907.06650",
+          "url": "https://arxiv.org/abs/1907.06650",
+          "title": "Local quantum energy conditions in non-Lorentz-invariant quantum field theories"
+        }
+      ]
+    },
+    {
+      "name": "cfunction_obtained_theory_using_flatspace",
+      "statement": "A C-function is obtained for this theory using flat-space holography.",
+      "sources": [
+        {
+          "arxiv": "1511.01774",
+          "url": "https://arxiv.org/abs/1511.01774",
+          "title": "Aspects of Ultra-Relativistic Field Theories via Flat-space Holography"
+        }
+      ]
+    },
+    {
+      "name": "realizing_carrollian_duals_gravitational_theories",
+      "statement": "Realizing Carrollian duals to gravitational theories poses challenges for flat space holography.",
+      "sources": [
+        {
+          "arxiv": "2504.12289",
+          "url": "https://arxiv.org/abs/2504.12289",
+          "title": "A finite Carrollian critical point"
+        }
+      ]
+    },
+    {
+      "name": "nontrivial_cft_correlators_used_study",
+      "statement": "Non-trivial CFT correlators can be used to study non-trivial scattering processes in asymptotically flat space-times via flat-space holography.",
+      "sources": [
+        {
+          "arxiv": "1905.02729",
+          "url": "https://arxiv.org/abs/1905.02729",
+          "title": "Flat space physics from AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "conformal_chernsimons_gravity_admits_antide",
+      "statement": "Conformal Chern-Simons gravity admits Anti-de Sitter, Lobachevsky, and flat-space holography.",
+      "sources": [
+        {
+          "arxiv": "1404.1919",
+          "url": "https://arxiv.org/abs/1404.1919",
+          "title": "Holographic Chern-Simons Theories"
+        }
+      ]
+    },
+    {
+      "name": "results_have_implications_flat_space",
+      "statement": "The results have implications for flat space holography and the BMS charges at $I^{+}$.",
+      "sources": [
+        {
+          "arxiv": "1709.08632",
+          "url": "https://arxiv.org/abs/1709.08632",
+          "title": "Asymptotic Charges Cannot Be Measured in Finite Time"
+        }
+      ]
+    },
+    {
+      "name": "asymptotic_causal_diamonds_provide_organizing",
+      "statement": "Asymptotic causal diamonds provide a organizing structure for bulk locality in flat space holography.",
+      "sources": [
+        {
+          "arxiv": "1902.06709",
+          "url": "https://arxiv.org/abs/1902.06709",
+          "title": "Bulk Locality and Asymptotic Causal Diamonds"
+        }
+      ]
+    },
+    {
+      "name": "checks_flat_space_holography_summarized",
+      "statement": "Checks of flat space holography are summarized in the context of topologically massive gravity.",
+      "sources": [
+        {
+          "arxiv": "1509.08505",
+          "url": "https://arxiv.org/abs/1509.08505",
+          "title": "Free energy of topologically massive gravity and flat space holography"
+        }
+      ]
+    },
+    {
+      "name": "resulting_theory_obtained_flat_space",
+      "statement": "The resulting theory can be obtained as a flat space limit of $NAdS_2$ holography and provides a solution to flat space JT gravity.",
+      "sources": [
+        {
+          "arxiv": "1706.06604",
+          "url": "https://arxiv.org/abs/1706.06604",
+          "title": "Asymptotic Fragility, Near $AdS_2$ Holography and $T\\bar{T}$"
+        }
+      ]
+    },
+    {
+      "name": "null_boundary_field_theory_flat",
+      "statement": "The null boundary field theory in flat space admits a first-principle intrinsic derivation independent of bulk considerations, supporting flat-space holography and dimensional reduction.",
+      "sources": [
+        {
+          "arxiv": "2504.10304",
+          "url": "https://arxiv.org/abs/2504.10304",
+          "title": "Extended-BMS Anomalies and Flat Space Holography"
+        }
+      ]
+    },
+    {
+      "name": "explicit_map_gravity_established_yielding",
+      "statement": "An explicit map with 3d gravity is established, yielding new predictions for flat space holography.",
+      "sources": [
+        {
+          "arxiv": "2212.04512",
+          "url": "https://arxiv.org/abs/2212.04512",
+          "title": "$T\\bar T + Λ_2$ from a 2d gravity path integral"
+        }
+      ]
+    },
+    {
+      "name": "ebg_nonrelativistic_analogue_einstein_gravity",
+      "statement": "EBG is the non-relativistic analogue of Einstein gravity in flat space-time and can be used to study flat-space holography in non-relativistic limit.",
+      "sources": [
+        {
+          "arxiv": "1604.08042",
+          "url": "https://arxiv.org/abs/1604.08042",
+          "title": "Three-Dimensional Extended Bargmann Supergravity"
+        }
+      ]
+    },
+    {
+      "name": "flat_space_holography_point_function",
+      "statement": "For flat space holography, the 2-point function of stress tensor in flat space Einstein gravity gives central charge $c=6k=\\frac{3\\ell}{2G_{N}}$",
+      "sources": [
+        {
+          "arxiv": "1507.05620",
+          "url": "https://arxiv.org/abs/1507.05620",
+          "title": "Stress tensor correlators in three-dimensional gravity"
+        }
+      ]
+    }
+  ]
+}

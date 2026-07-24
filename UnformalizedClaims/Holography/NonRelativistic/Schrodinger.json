@@ -1,0 +1,38 @@
+{
+  "doc": "# Schrodinger — Non Relativistic\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “Schrodinger spacetime holography”).",
+  "claims": [
+    {
+      "name": "nonequilibrium_steadystate_phase_transition_occurs",
+      "statement": "A non-equilibrium steady-state phase transition occurs from probe brane holography in $z = 2$ Schrödinger spacetime.",
+      "sources": [
+        {
+          "arxiv": "1811.05823",
+          "url": "https://arxiv.org/abs/1811.05823",
+          "title": "Non-Equilibrium Critical Phenomena From Probe Brane Holography in Schrödinger Spacetime"
+        }
+      ]
+    },
+    {
+      "name": "euler_heisenberg_effective_lagrangian_nonrelativistic",
+      "statement": "The Euler–Heisenberg effective Lagrangian for the non-relativistic strongly correlated quantum theory is derivable from probe branes holography in Schrödinger spacetime.",
+      "sources": [
+        {
+          "arxiv": "1710.05309",
+          "url": "https://arxiv.org/abs/1710.05309",
+          "title": "Ground State Instability in Non-relativistic QFT and Euler-Heisenberg Lagrangian via Holography"
+        }
+      ]
+    },
+    {
+      "name": "paper_constructs_geometric_realization_nonrelativistic",
+      "statement": "The paper constructs a geometric realization of the nonrelativistic conformal (Schrödinger) group as a spacetime symmetry to explore nonrelativistic holography. It argues that free fermions and fermions at unitarity map to the same bulk theory via different choices for near-boundary asymptotics, and describes a holographically realized extended nonrelativistic general coordinate invariance.",
+      "sources": [
+        {
+          "arxiv": "0804.3972",
+          "url": "https://arxiv.org/abs/0804.3972",
+          "title": "Toward an AdS/cold atoms correspondence: a geometric realization of the Schroedinger symmetry"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "doc": "# SYK — JTGravity\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “SYK model”).",
+  "claims": [
+    {
+      "name": "framework_applied_multipartite_entanglement_syk",
+      "statement": "The framework is applied to multipartite entanglement in SYK$_4$, SYK$_2$, mass-deformed SYK, sparse SYK, and $\\mathcal{N}=2$ supersymmetric SYK model.",
+      "sources": [
+        {
+          "arxiv": "2510.19922",
+          "url": "https://arxiv.org/abs/2510.19922",
+          "title": "Probing the Hierarchy of Genuine Multipartite Entanglement with Generalized Latent Entropy"
+        }
+      ]
+    },
+    {
+      "name": "generalized_syk_model_has_same",
+      "statement": "The generalized SYK model has the same zero temperature entropy at each site as the SYK model.",
+      "sources": [
+        {
+          "arxiv": "1609.07832",
+          "url": "https://arxiv.org/abs/1609.07832",
+          "title": "Local criticality, diffusion and chaos in generalized Sachdev-Ye-Kitaev models"
+        }
+      ]
+    },
+    {
+      "name": "syk_lattice_spatially_local_generalisation",
+      "statement": "The SYK lattice is a spatially local generalisation of the SYK model.",
+      "sources": [
+        {
+          "arxiv": "2604.18675",
+          "url": "https://arxiv.org/abs/2604.18675",
+          "title": "All-order fluctuating hydrodynamics of the SYK lattice"
+        }
+      ]
+    },
+    {
+      "name": "generalgraph_syk_model_includes_original",
+      "statement": "The general-graph SYK model includes the original SYK model and the (1+1)-d chain model as special cases.",
+      "sources": [
+        {
+          "arxiv": "1609.07832",
+          "url": "https://arxiv.org/abs/1609.07832",
+          "title": "Local criticality, diffusion and chaos in generalized Sachdev-Ye-Kitaev models"
+        }
+      ]
+    },
+    {
+      "name": "doublescaling_syk_dssyk_model_controlled",
+      "statement": "The double-scaling SYK (DS-SYK) model is controlled by a parameter $q$.",
+      "sources": [
+        {
+          "arxiv": "2212.13668",
+          "url": "https://arxiv.org/abs/2212.13668",
+          "title": "Quantum groups, non-commutative $AdS_2$, and chords in the double-scaled SYK model"
+        }
+      ]
+    },
+    {
+      "name": "specific_supersymmetric_model_interpolates_between",
+      "statement": "A specific supersymmetric model interpolates between the chaotic $\\mathcal{N}=2$ SYK model and an integrable $\\mathcal{N}=2$ \"commuting\" SYK model.",
+      "sources": [
+        {
+          "arxiv": "2605.20913",
+          "url": "https://arxiv.org/abs/2605.20913",
+          "title": "Chaos-Integrability Transition in the BPS Subspace of the $\\mathcal{N}=2$ SYK Model"
+        }
+      ]
+    },
+    {
+      "name": "syk_model_maximally_chaotic",
+      "statement": "The SYK model is maximally chaotic.",
+      "sources": [
+        {
+          "arxiv": "1601.06768",
+          "url": "https://arxiv.org/abs/1601.06768",
+          "title": "The Spectrum in the Sachdev-Ye-Kitaev Model"
+        }
+      ]
+    },
+    {
+      "name": "connection_between_sachdevyekitaev_syk_model",
+      "statement": "The connection between the Sachdev-Ye-Kitaev (SYK) model and the random coupling model provides new physical contexts in which to realize the SYK model.",
+      "sources": [
+        {
+          "arxiv": "2303.03421",
+          "url": "https://arxiv.org/abs/2303.03421",
+          "title": "Random coupling model of turbulence as a classical Sachdev-Ye-Kitaev model"
+        }
+      ]
+    },
+    {
+      "name": "nonhermitian_two_coupled_sachdevyekitaev_syk",
+      "statement": "A non-Hermitian two coupled Sachdev-Ye-Kitaev (SYK) model can have thermodynamic structure equivalent to a Hermitian two coupled SYK model.",
+      "sources": [
+        {
+          "arxiv": "2208.10800",
+          "url": "https://arxiv.org/abs/2208.10800",
+          "title": "Non-Hermitian quantum system generated from two coupled Sachdev-Ye-Kitaev models"
+        }
+      ]
+    },
+    {
+      "name": "show_sre_mathrm_syk_model",
+      "statement": "We show that the SRE for the $\\mathrm{SYK_2}$ model equilibrates rapidly, but that in the steady-state the interacting chaotic SYK model has more magic than the simple $\\mathrm{SYK_2}$.",
+      "sources": [
+        {
+          "arxiv": "2502.01582",
+          "url": "https://arxiv.org/abs/2502.01582",
+          "title": "Non-Stabilizerness of Sachdev-Ye-Kitaev Model"
+        }
+      ]
+    },
+    {
+      "name": "syk_boundary_states_provide_variational",
+      "statement": "SYK boundary states provide a variational approximation to the ground state of the mass-deformed SYK model.",
+      "sources": [
+        {
+          "arxiv": "1912.12302",
+          "url": "https://arxiv.org/abs/1912.12302",
+          "title": "Quantum Chaos, Thermodynamics and Black Hole Microstates in the mass deformed SYK model"
+        }
+      ]
+    },
+    {
+      "name": "syk_model_exhibits_chaotic_dynamics",
+      "statement": "The 2D SYK model exhibits chaotic dynamics.",
+      "sources": [
+        {
+          "arxiv": "2201.05054",
+          "url": "https://arxiv.org/abs/2201.05054",
+          "title": "Mapping SYK to the Sky"
+        }
+      ]
+    },
+    {
+      "name": "syk_model_exhibits_conformal_invariance",
+      "statement": "The 2D SYK model exhibits conformal invariance.",
+      "sources": [
+        {
+          "arxiv": "2201.05054",
+          "url": "https://arxiv.org/abs/2201.05054",
+          "title": "Mapping SYK to the Sky"
+        }
+      ]
+    },
+    {
+      "name": "syk_model_has_been_proposed",
+      "statement": "The SYK model has been proposed as a model of holography.",
+      "sources": [
+        {
+          "arxiv": "1601.06768",
+          "url": "https://arxiv.org/abs/1601.06768",
+          "title": "The Spectrum in the Sachdev-Ye-Kitaev Model"
+        }
+      ]
+    },
+    {
+      "name": "hypercube_model_not_local_unlike",
+      "statement": "The hypercube model is not $p$-local, unlike the SYK model.",
+      "sources": [
+        {
+          "arxiv": "2310.12335",
+          "url": "https://arxiv.org/abs/2310.12335",
+          "title": "Parisi's hypercube, Fock-space fluxes, and the microscopics of near-AdS$_2$/near-CFT$_1$ duality"
+        }
+      ]
+    },
+    {
+      "name": "fermions_sachdevyekitaev_syk_model_coupled",
+      "statement": "Fermions in the Sachdev-Ye-Kitaev (SYK) model coupled weakly to a bath of another SYK model are prepared in the thermofield double (TFD) state.",
+      "sources": [
+        {
+          "arxiv": "2512.04318",
+          "url": "https://arxiv.org/abs/2512.04318",
+          "title": "Probing Evaporating Black Holes with Modular Flow in SYK"
+        }
+      ]
+    },
+    {
+      "name": "partially_disorderaveraged_syk_model_introduced",
+      "statement": "A partially disorder-averaged SYK model is introduced with a real parameter that smoothly interpolates between the ordinary totally disorder-averaged SYK model and the totally fixed-coupling model.",
+      "sources": [
+        {
+          "arxiv": "2111.11705",
+          "url": "https://arxiv.org/abs/2111.11705",
+          "title": "Factorizing Wormholes in a Partially Disorder-Averaged SYK Model"
+        }
+      ]
+    },
+    {
+      "name": "statistics_supersymmetric_syk_model_interpreted",
+      "statement": "The statistics of the supersymmetric SYK model can be interpreted as random matrix theory ensembles with a different eight-fold classification from the original SYK model",
+      "sources": [
+        {
+          "arxiv": "1702.01738",
+          "url": "https://arxiv.org/abs/1702.01738",
+          "title": "Supersymmetric SYK model and random matrix theory"
+        }
+      ]
+    }
+  ]
+}

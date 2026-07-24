@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Wilson Loops\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “Wilson loop holographic”).",
+  "claims": [
+    {
+      "name": "holographic_maldacenawilson_loop_analyzed_deformed",
+      "statement": "The holographic Maldacena--Wilson loop is analyzed in this deformed background.",
+      "sources": [
+        {
+          "arxiv": "1809.01915",
+          "url": "https://arxiv.org/abs/1809.01915",
+          "title": "Wilson loop in a $T\\bar{T}$ like deformed $\\rm{CFT}_2$"
+        }
+      ]
+    },
+    {
+      "name": "oneloop_determinant_fluctuation_modes_holographic",
+      "statement": "The one-loop determinant for fluctuation modes of a holographic Wilson loop in AdS4xCP3 is computed.",
+      "sources": [
+        {
+          "arxiv": "1203.6343",
+          "url": "https://arxiv.org/abs/1203.6343",
+          "title": "One-loop corrections to holographic Wilson loop in AdS4xCP3"
+        }
+      ]
+    },
+    {
+      "name": "holographic_thermalization_studied_through_twopoint",
+      "statement": "Holographic thermalization is studied through the two-point function, the Wilson loop and the holographic entanglement entropy.",
+      "sources": [
+        {
+          "arxiv": "1412.7073",
+          "url": "https://arxiv.org/abs/1412.7073",
+          "title": "Holographic thermalization in Gauss-Bonnet gravity with de Sitter boundary"
+        }
+      ]
+    },
+    {
+      "name": "nearhorizon_quantum_gravitational_fluctuations_significantly",
+      "statement": "Near-horizon quantum gravitational fluctuations significantly modify holographic Wilson loop expectation values.",
+      "sources": [
+        {
+          "arxiv": "2412.11107",
+          "url": "https://arxiv.org/abs/2412.11107",
+          "title": "Quantum-Corrected Holographic Wilson Loop Expectation Values and Super-Yang-Mills Confinement"
+        }
+      ]
+    },
+    {
+      "name": "using_holographic_prescription_wilson_loop",
+      "statement": "Using the holographic prescription, the Wilson loop is computed on the gravity side.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0003050",
+          "url": "https://arxiv.org/abs/hep-th/0003050",
+          "title": "RG Flow, Wilson Loops and the Dilaton Tadpole"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_entropy_wilson_loop_function",
+      "statement": "Entanglement entropy and Wilson loop function as probes of the holographic superconductor phase transition.",
+      "sources": [
+        {
+          "arxiv": "1209.1019",
+          "url": "https://arxiv.org/abs/1209.1019",
+          "title": "Entanglement Entropy and Wilson Loop in Stückelberg Holographic Insulator/Superconductor Model"
+        }
+      ]
+    },
+    {
+      "name": "results_used_probe_holographic_duality",
+      "statement": "The results are used to probe the holographic duality through exact Wilson-loop observables.",
+      "sources": [
+        {
+          "arxiv": "1406.5129",
+          "url": "https://arxiv.org/abs/1406.5129",
+          "title": "Exact probes of orientifolds"
+        }
+      ]
+    },
+    {
+      "name": "effect_marginal_deformations_holographic_entanglement",
+      "statement": "The effect of these marginal deformations on holographic entanglement measures and the Wilson loop is studied.",
+      "sources": [
+        {
+          "arxiv": "1608.08781",
+          "url": "https://arxiv.org/abs/1608.08781",
+          "title": "Non-local Probes in Holographic Theories with Momentum Relaxation"
+        }
+      ]
+    },
+    {
+      "name": "derived_dilaton_potential_satisfies_standard",
+      "statement": "The derived dilaton potential satisfies standard IHQCD constraints and yields quark confinement in the holographic Wilson loop.",
+      "sources": [
+        {
+          "arxiv": "2108.08091",
+          "url": "https://arxiv.org/abs/2108.08091",
+          "title": "Deriving dilaton potential in improved holographic QCD from meson spectrum"
+        }
+      ]
+    },
+    {
+      "name": "finite_holographic_result_matches_corresponding",
+      "statement": "The finite holographic result matches the corresponding ratio of Wilson loop vevs on the gauge theory side.",
+      "sources": [
+        {
+          "arxiv": "2111.15493",
+          "url": "https://arxiv.org/abs/2111.15493",
+          "title": "Precision Holography for 5D Super Yang-Mills"
+        }
+      ]
+    },
+    {
+      "name": "matrix_model_holographic_calculations_entanglement",
+      "statement": "The matrix model and holographic calculations of the entanglement entropy agree completely for these Wilson loop configurations.",
+      "sources": [
+        {
+          "arxiv": "1407.5629",
+          "url": "https://arxiv.org/abs/1407.5629",
+          "title": "Entanglement entropy of Wilson loops: Holography and matrix models"
+        }
+      ]
+    },
+    {
+      "name": "totally_symmetric_wilson_loop_new",
+      "statement": "For the totally symmetric Wilson loop, new contributions are found that improve agreement with the dual holographic computation at one-loop order in the appropriate regime.",
+      "sources": [
+        {
+          "arxiv": "1708.06288",
+          "url": "https://arxiv.org/abs/1708.06288",
+          "title": "Comments on Higher Rank Wilson Loops in ${\\cal N}=2^*$"
+        }
+      ]
+    },
+    {
+      "name": "phase_structures_shown_equaltime_twoheavyoperator",
+      "statement": "Phase structures shown by equal-time two-heavy-operator correlation function are consistent with holographic entanglement entropy and Wilson loop.",
+      "sources": [
+        {
+          "arxiv": "1608.04208",
+          "url": "https://arxiv.org/abs/1608.04208",
+          "title": "Holographic Van der Waals-like phase transition in the Gauss-Bonnet gravity"
+        }
+      ]
+    },
+    {
+      "name": "supersymmetric_brane_configuration_determines_holographic",
+      "statement": "A supersymmetric M2-brane configuration determines the holographic dual of a BPS Wilson loop for a Hopf circle in $S^3$.",
+      "sources": [
+        {
+          "arxiv": "1304.0784",
+          "url": "https://arxiv.org/abs/1304.0784",
+          "title": "Wilson loops and the geometry of matrix models in AdS_4/CFT_3"
+        }
+      ]
+    },
+    {
+      "name": "moduli_space_generic_double_concentric",
+      "statement": "The moduli space of a generic double concentric Wilson loop features circles separated in the holographic direction of the confining background.",
+      "sources": [
+        {
+          "arxiv": "1803.06318",
+          "url": "https://arxiv.org/abs/1803.06318",
+          "title": "Holographic meson decays via worldsheet instantons"
+        }
+      ]
+    },
+    {
+      "name": "gauss_bonnet_corrections_entanglement_entropy",
+      "statement": "Gauss–Bonnet corrections to entanglement entropy, $n$-partite information, and Wilson loop are analyzed in a holographic model with momentum relaxation.",
+      "sources": [
+        {
+          "arxiv": "1610.08080",
+          "url": "https://arxiv.org/abs/1610.08080",
+          "title": "Higher-curvature Corrections to Holographic Entanglement with Momentum Dissipation"
+        }
+      ]
+    },
+    {
+      "name": "first_exact_matching_overall_numerical",
+      "statement": "This is the first exact matching of the overall numerical prefactor in a Wilson loop expectation value against the dual holographic result.",
+      "sources": [
+        {
+          "arxiv": "2303.15207",
+          "url": "https://arxiv.org/abs/2303.15207",
+          "title": "Wilson loops at large $N$ and the quantum M2 brane"
+        }
+      ]
+    },
+    {
+      "name": "holographic_dual_description_wilson_loop",
+      "statement": "The holographic dual description of a Wilson loop is a fundamental string embedded in asymptotically AdS spaces, at zero and nonzero temperature.",
+      "sources": [
+        {
+          "arxiv": "2204.10828",
+          "url": "https://arxiv.org/abs/2204.10828",
+          "title": "Holographic RG flow and reparametrization invariance of Wilson Loops"
+        }
+      ]
+    }
+  ]
+}

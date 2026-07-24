@@ -1,0 +1,27 @@
+{
+  "doc": "# Entanglement entropy\n\nClaims from wiphy.org for the planned entanglement-entropy module.",
+  "claims": [
+    {
+      "name": "entanglementEntropy_areaProportional",
+      "statement": "Entanglement entropy is typically proportional to area.",
+      "sources": [
+        {
+          "title": "When is an area law not an area law?",
+          "arxiv": "1511.02996",
+          "url": "https://arxiv.org/abs/1511.02996"
+        }
+      ]
+    },
+    {
+      "name": "generalizedEntropy_area_plus_entanglement",
+      "statement": "The generalized entropy is the sum of area and entanglement entropy.",
+      "sources": [
+        {
+          "title": "Generalized Second Law for Cosmology",
+          "arxiv": "1510.02099",
+          "url": "https://arxiv.org/abs/1510.02099"
+        }
+      ]
+    }
+  ]
+}

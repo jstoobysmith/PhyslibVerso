@@ -1,0 +1,181 @@
+{
+  "doc": "# Basic — Tensor Networks\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “tensor network holography”).",
+  "claims": [
+    {
+      "name": "tensor_network_models_holography_presented",
+      "statement": "Tensor network models of holography are presented",
+      "sources": [
+        {
+          "arxiv": "1802.01040",
+          "url": "https://arxiv.org/abs/1802.01040",
+          "title": "TASI Lectures on the Emergence of the Bulk in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "planar_tensor_network_tensor_constraints",
+      "statement": "A planar tensor network with tensor constraints is used as a model for holography.",
+      "sources": [
+        {
+          "arxiv": "1806.05007",
+          "url": "https://arxiv.org/abs/1806.05007",
+          "title": "Quantum error correction and entanglement spectrum in tensor networks"
+        }
+      ]
+    },
+    {
+      "name": "deriving_membrane_theory_holography_puts",
+      "statement": "Deriving membrane theory from holography puts connection between holography and tensor networks on firm footing; tensor network description emerges after reducing time direction.",
+      "sources": [
+        {
+          "arxiv": "1803.10244",
+          "url": "https://arxiv.org/abs/1803.10244",
+          "title": "Membrane theory of entanglement dynamics from holography"
+        }
+      ]
+    },
+    {
+      "name": "random_tensor_network_toy_models",
+      "statement": "Random tensor network toy models provide a setting to illustrate bulk reconstruction in holography.",
+      "sources": [
+        {
+          "arxiv": "2006.12601",
+          "url": "https://arxiv.org/abs/2006.12601",
+          "title": "Petz reconstruction in random tensor networks"
+        }
+      ]
+    },
+    {
+      "name": "first_explain_our_formula_viewpoint",
+      "statement": "First, we explain our formula from the viewpoint of a tensor network model of holography.",
+      "sources": [
+        {
+          "arxiv": "1803.10539",
+          "url": "https://arxiv.org/abs/1803.10539",
+          "title": "Towards Entanglement of Purification for Conformal Field Theories"
+        }
+      ]
+    },
+    {
+      "name": "give_heuristic_argument_supports_identification",
+      "statement": "We give a heuristic argument that supports this identification based on a tensor network interpretation of holography.",
+      "sources": [
+        {
+          "arxiv": "1708.09393",
+          "url": "https://arxiv.org/abs/1708.09393",
+          "title": "Holographic Entanglement of Purification"
+        }
+      ]
+    },
+    {
+      "name": "derivation_relies_known_facts_about",
+      "statement": "The derivation relies on known facts about holography and properties of tensor network renormalization, an algorithm for coarse-graining and optimizing tensor networks.",
+      "sources": [
+        {
+          "arxiv": "1706.00965",
+          "url": "https://arxiv.org/abs/1706.00965",
+          "title": "Einstein's Equations from Varying Complexity"
+        }
+      ]
+    },
+    {
+      "name": "existing_tensor_network_models_holography",
+      "statement": "Existing tensor network models of holography are limited to representing the geometry of constant time slices of static spacetimes.",
+      "sources": [
+        {
+          "arxiv": "1611.06220",
+          "url": "https://arxiv.org/abs/1611.06220",
+          "title": "Tensor networks for dynamic spacetimes"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_negativity_quantum_errorcorrecting_codes",
+      "statement": "The entanglement negativity in quantum error-correcting codes and tensor network models of holography is captured by the minimal cross-sectional area of the entanglement wedge.",
+      "sources": [
+        {
+          "arxiv": "1808.00446",
+          "url": "https://arxiv.org/abs/1808.00446",
+          "title": "Entanglement negativity and minimal entanglement wedge cross sections in holographic theories"
+        }
+      ]
+    },
+    {
+      "name": "reviewing_holography_finitearea_causal_diamonds",
+      "statement": "Reviewing holography for finite-area causal diamonds, the paper argues that the operator algebra of such a diamond is well defined in a UV-cutoff tensor network construction, while not being simply related to any infinite von Neumann subalgebra of the boundary algebra or its cross product. A key ingredient is a tensor-network construction that preserves rotation invariance.",
+      "sources": [
+        {
+          "arxiv": "2308.13360",
+          "url": "https://arxiv.org/abs/2308.13360",
+          "title": "Holography for Small Values of the Cosmological Constant"
+        }
+      ]
+    },
+    {
+      "name": "dissertation_also_identifies_operational_meaning",
+      "statement": "The dissertation also identifies an operational meaning for entanglement structure in generic tensor networks and establishes a correct prescription for AdS/BCFT with a local operator quench. Together these results broaden the toolkit for bottom-up generalizations of holography across tensor-network and boundary-CFT settings.",
+      "sources": [
+        {
+          "arxiv": "2308.09758",
+          "url": "https://arxiv.org/abs/2308.09758",
+          "title": "Entanglement structure in quantum many-body systems, field theories, and holography"
+        }
+      ]
+    },
+    {
+      "name": "using_random_tensor_network_toy",
+      "statement": "Using random tensor network toy models of holography, the paper demonstrates that the Petz reconstruction map can recover bulk operators from boundary data, with the analysis carried out via the replica trick. It also clarifies that coarse-graining and random projections are distinct operations in this setting.",
+      "sources": [
+        {
+          "arxiv": "2006.12601",
+          "url": "https://arxiv.org/abs/2006.12601",
+          "title": "Petz reconstruction in random tensor networks"
+        }
+      ]
+    },
+    {
+      "name": "review_synthesizes_recent_progress_how",
+      "statement": "This review synthesizes recent progress on how local semiclassical bulk physics emerges in AdS/CFT, focusing on criteria for when a conformal field theory admits a semiclassical dual and on the main frameworks for bulk reconstruction. It organizes the subject around the quantum error-correction view of the correspondence, tensor-network holography, and the quantum Ryu-Takayanagi formula.",
+      "sources": [
+        {
+          "arxiv": "1802.01040",
+          "url": "https://arxiv.org/abs/1802.01040",
+          "title": "TASI Lectures on the Emergence of the Bulk in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "relative_entropy_generalized_entropy_diagnostics",
+      "statement": "Relative entropy and generalized entropy diagnostics (Petz/sandwiched Rényi relative entropies, fidelities, trace distances) distinguish random Wishart-ensemble states from black hole microstates, revealing hidden structures in their state space. These techniques characterize random tensor networks where locality-induced phenomena sharpen the holography–random-tensor-network relationship, establish the subsystem eigenstate thermalization hypothesis for chaotic systems on subsystems smaller than half-size, and illuminate state dependence in Hawking radiation and the black hole information problem.",
+      "sources": [
+        {
+          "arxiv": "2108.00011",
+          "url": "https://arxiv.org/abs/2108.00011",
+          "title": "Distinguishing Random and Black Hole Microstates"
+        }
+      ]
+    },
+    {
+      "name": "nonperturbative_rg_flows_preserve_symmetries",
+      "statement": "Non-perturbative RG flows that preserve symmetries can be expressed as quantum path integrals of the SymTFT in one higher dimension; when symmetries include Virasoro defect lines, these flows correspond to 3D quantum gravitational path integrals. A universal SymQRG kernel built from quantum 6j symbols appears as an exact, analytical holographic tensor network, providing evidence that non-perturbative AdS/CFT is a maximal form of topological holography.",
+      "sources": [
+        {
+          "arxiv": "2412.12045",
+          "url": "https://arxiv.org/abs/2412.12045",
+          "title": "QG from SymQRG: AdS$_3$/CFT$_2$ Correspondence as Topological Symmetry-Preserving Quantum RG Flow"
+        }
+      ]
+    },
+    {
+      "name": "paper_proposes_explicit_discreteholography_construction",
+      "statement": "The paper proposes an explicit discrete-holography construction in which regular tilings of the hyperbolic Poincaré disk generate boundary Hamiltonians for aperiodic spin chains through an inflation rule, with an aperiodic spin-$1/2$ XXZ chain as the main example. Using strong-disorder renormalization group, it builds a tensor-network ground state interpreted as discrete bulk reconstruction and finds logarithmic entanglement growth, with effective central charges controlled by bulk discretization parameters.",
+      "sources": [
+        {
+          "arxiv": "2205.05693",
+          "url": "https://arxiv.org/abs/2205.05693",
+          "title": "Towards Explicit Discrete Holography: Aperiodic Spin Chains from Hyperbolic Tilings"
+        }
+      ]
+    }
+  ]
+}

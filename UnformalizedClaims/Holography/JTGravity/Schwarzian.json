@@ -1,0 +1,203 @@
+{
+  "doc": "# Schwarzian — JTGravity\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “Schwarzian theory”).",
+  "claims": [
+    {
+      "name": "schwarzian_theory_studied_universal_lowenergy",
+      "statement": "The 1d Schwarzian theory is studied as the universal low-energy limit of Sachdev-Ye-Kitaev models using link with 2d Liouville theory.",
+      "sources": [
+        {
+          "arxiv": "1801.09605",
+          "url": "https://arxiv.org/abs/1801.09605",
+          "title": "The Schwarzian Theory - Origins"
+        }
+      ]
+    },
+    {
+      "name": "effective_action_syk_reparametrization_modes",
+      "statement": "The effective action for SYK reparametrization modes is governed by Schwarzian derivative $\\{f(\\tau),\\tau\\}$ with coefficient of order $(\\beta\\mathcal{J})^{-1}$.",
+      "sources": [
+        {
+          "arxiv": "1604.07818",
+          "url": "https://arxiv.org/abs/1604.07818",
+          "title": "Comments on the Sachdev-Ye-Kitaev model"
+        }
+      ]
+    },
+    {
+      "name": "jt_gravity_manifold_two_schwarzian",
+      "statement": "JT gravity on a manifold with two Schwarzian boundaries can be written in terms of Schwarzian quantum mechanics on both boundaries, identical to the double-scaling Schwarzian limit of the full Liouville path integral.",
+      "sources": [
+        {
+          "arxiv": "1812.00918",
+          "url": "https://arxiv.org/abs/1812.00918",
+          "title": "Fine Structure of Jackiw-Teitelboim Quantum Gravity"
+        }
+      ]
+    },
+    {
+      "name": "schwarzian_describes_strongly_coupled_gravitational",
+      "statement": "The Schwarzian describes strongly coupled gravitational dynamics in the throat of near-extremal rotating BTZ black holes, which can be reduced to Jackiw-Teitelboim (JT) gravity interacting with a $U(1)$ field associated to transverse rotations.",
+      "sources": [
+        {
+          "arxiv": "1912.07654",
+          "url": "https://arxiv.org/abs/1912.07654",
+          "title": "A universal Schwarzian sector in two-dimensional conformal field theories"
+        }
+      ]
+    },
+    {
+      "name": "performing_dimensional_reduction_obtain_effective",
+      "statement": "By performing a dimensional reduction, we obtain an effective Jackiw–Teitelboim (JT) gravity theory, whose quantum fluctuations are captured by the Schwarzian action.",
+      "sources": [
+        {
+          "arxiv": "2506.22945",
+          "url": "https://arxiv.org/abs/2506.22945",
+          "title": "Quantum Gravity Corrections to the Scalar Quasi-Normal Modes in Near-Extremal Reissener-Nordström Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "effective_action_rm_eff_frac",
+      "statement": "The effective action is $I_{1,\\rm eff}[f] = - \\frac{s_d \\Phi_1}{\\kappa^2} \\int_0^{1/T} d\\tau \\, \\{ \\tan (\\pi T f(\\tau)), \\tau\\}$ where $\\{ \\tan (\\pi T f(\\tau)), \\tau\\}$ is the Schwarzian",
+      "sources": [
+        {
+          "arxiv": "1902.04078",
+          "url": "https://arxiv.org/abs/1902.04078",
+          "title": "Universal low temperature theory of charged black holes with AdS$_2$ horizons"
+        }
+      ]
+    },
+    {
+      "name": "flatspace_analogue_schwarzian_action_textrm",
+      "statement": "Flat-space analogue of Schwarzian action: $I^{\\textrm{\\tiny{tw}}}[h,\\,g]=\\kappa\\int_{0}^{\\beta} d\\tau\\,\\Bigl( m\\,h^{\\prime\\,2} - g'\\bigl(i q\\,h^{\\prime}+\\frac{h''}{h'}\\bigr) + g''\\Bigr)$",
+      "sources": [
+        {
+          "arxiv": "1911.05739",
+          "url": "https://arxiv.org/abs/1911.05739",
+          "title": "Flat space holography and complex SYK"
+        }
+      ]
+    },
+    {
+      "name": "gravity_context_nontrivial_syk_saddle",
+      "statement": "In the gravity context, nontrivial SYK saddle points at low energies are described by two copies of the Schwarzian theory, corresponding to a Lorentzian wormhole in bulk JT dilaton theory with periodic time identification",
+      "sources": [
+        {
+          "arxiv": "1806.06840",
+          "url": "https://arxiv.org/abs/1806.06840",
+          "title": "A semiclassical ramp in SYK and in gravity"
+        }
+      ]
+    },
+    {
+      "name": "onshell_action_jt_gravity_naturally",
+      "statement": "The on-shell action in JT gravity can be naturally reformulated as a Schwarzian boundary action.",
+      "sources": [
+        {
+          "arxiv": "1708.08471",
+          "url": "https://arxiv.org/abs/1708.08471",
+          "title": "Menagerie of AdS$\\boldsymbol{_2}$ boundary conditions"
+        }
+      ]
+    },
+    {
+      "name": "zero_modes_nearly_ads_acquire",
+      "statement": "Zero modes of nearly $AdS_2$ acquire an action determined by the Schwarzian derivative: $I = -\\frac{1}{8\\pi G}\\int du\\, \\phi_r(u)\\, {\\rm Sch}(t,u)$ where ${\\rm Sch}(t,u) \\equiv -\\frac{1}{2}\\frac{t''^{\\,2}}{t'^{\\,2}} + \\left(\\frac{t''}{t'}\\right)'$.",
+      "sources": [
+        {
+          "arxiv": "1606.01857",
+          "url": "https://arxiv.org/abs/1606.01857",
+          "title": "Conformal symmetry and its breaking in two dimensional Nearly Anti-de-Sitter space"
+        }
+      ]
+    },
+    {
+      "name": "correlation_functions_schwarzian_quantum_mechanics",
+      "statement": "Correlation functions in Schwarzian quantum mechanics can be viewed as boundary-anchored Wilson line correlators in Jackiw-Teitelboim gravity.",
+      "sources": [
+        {
+          "arxiv": "1806.07765",
+          "url": "https://arxiv.org/abs/1806.07765",
+          "title": "The Schwarzian Theory - A Wilson Line Perspective"
+        }
+      ]
+    },
+    {
+      "name": "schwarzian_derivative_renormalized_action_manifests",
+      "statement": "The Schwarzian derivative in the renormalized action manifests the conformal anomaly from time reparameterization transformations, analogous to 2D CFT.",
+      "sources": [
+        {
+          "arxiv": "1608.07018",
+          "url": "https://arxiv.org/abs/1608.07018",
+          "title": "AdS$_2$ Holographic Dictionary"
+        }
+      ]
+    },
+    {
+      "name": "dirichlet_boundary_condition_both_faces",
+      "statement": "Dirichlet boundary condition on both faces yields defect quantum mechanics effectively described by Schwarzian action",
+      "sources": [
+        {
+          "arxiv": "2007.06800",
+          "url": "https://arxiv.org/abs/2007.06800",
+          "title": "Codimension two holography for wedges"
+        }
+      ]
+    },
+    {
+      "name": "show_boundary_dynamics_schwarzian_mode",
+      "statement": "We show that the boundary dynamics is the Schwarzian mode coupled to a free particle on $U(1)$, matching the universal low-energy effective action of the complex SYK model.",
+      "sources": [
+        {
+          "arxiv": "2601.07911",
+          "url": "https://arxiv.org/abs/2601.07911",
+          "title": "Unimodular time in JT gravity: a holographic clock"
+        }
+      ]
+    },
+    {
+      "name": "obtain_exact_expressions_general_class",
+      "statement": "We obtain exact expressions for a general class of correlation functions in the 1D quantum mechanical model described by the Schwarzian action, that arises as the low energy limit of the SYK model.",
+      "sources": [
+        {
+          "arxiv": "1705.08408",
+          "url": "https://arxiv.org/abs/1705.08408",
+          "title": "Solving the Schwarzian via the Conformal Bootstrap"
+        }
+      ]
+    },
+    {
+      "name": "linearized_schwarzian_theory_tau_varepsilon",
+      "statement": "In the linearized Schwarzian theory with $\\tau(u)=u+\\varepsilon(u)$, the action is $I_{\\mathrm{Sch}}=\\frac{C}{2}\\int_{0}^{2\\pi}du (\\varepsilon''^{\\,2}-\\varepsilon'^{\\,2})$.",
+      "sources": [
+        {
+          "arxiv": "1711.08482",
+          "url": "https://arxiv.org/abs/1711.08482",
+          "title": "AdS$_2$ holography and the SYK model"
+        }
+      ]
+    },
+    {
+      "name": "schwarzian_theory_emerges_effective_description",
+      "statement": "The Schwarzian theory emerges as an effective description of a non-relativistic particle on hyperbolic space $H_2^+$ in a constant magnetic field $B$ in the limit $B\\to\\infty$.",
+      "sources": [
+        {
+          "arxiv": "1905.02726",
+          "url": "https://arxiv.org/abs/1905.02726",
+          "title": "An exact quantization of Jackiw-Teitelboim gravity"
+        }
+      ]
+    },
+    {
+      "name": "when_solely_focusing_contribution_surfaces",
+      "statement": "When solely focusing on the contribution from surfaces with disk topology, we show that the gravitational gauge theory is described by the Schwarzian theory coupled to a particle moving on the gauge group manifold.",
+      "sources": [
+        {
+          "arxiv": "1909.05253",
+          "url": "https://arxiv.org/abs/1909.05253",
+          "title": "On 2D gauge theories in Jackiw-Teitelboim gravity"
+        }
+      ]
+    }
+  ]
+}

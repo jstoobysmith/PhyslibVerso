@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Thermalization\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic thermalization”).",
+  "claims": [
+    {
+      "name": "graviton_mass_parameter_increases_holographic",
+      "statement": "The graviton mass parameter increases the holographic thermalization process.",
+      "sources": [
+        {
+          "arxiv": "1611.00677",
+          "url": "https://arxiv.org/abs/1611.00677",
+          "title": "Holographic Thermalization and Generalized Vaidya-AdS Solutions in Massive Gravity"
+        }
+      ]
+    },
+    {
+      "name": "gauss_bonnet_coupling_affects_holographic",
+      "statement": "The Gauss–Bonnet coupling affects the holographic thermalization process.",
+      "sources": [
+        {
+          "arxiv": "1710.05712",
+          "url": "https://arxiv.org/abs/1710.05712",
+          "title": "Effect of massive potentials on the holographic thermalization"
+        }
+      ]
+    },
+    {
+      "name": "holographic_thermalization_analyzed_einsteinmaxwellgaussbonnet_gravity",
+      "statement": "Holographic thermalization is analyzed in Einstein-Maxwell-Gauss-Bonnet gravity.",
+      "sources": [
+        {
+          "arxiv": "1311.0718",
+          "url": "https://arxiv.org/abs/1311.0718",
+          "title": "Holographic thermalization with a chemical potential in Gauss-Bonnet gravity"
+        }
+      ]
+    },
+    {
+      "name": "thermalization_jet_quenching_treated_within",
+      "statement": "Thermalization and jet quenching are treated within a holographic framework.",
+      "sources": [
+        {
+          "arxiv": "1208.6368",
+          "url": "https://arxiv.org/abs/1208.6368",
+          "title": "Jet Quenching and Holographic Thermalization"
+        }
+      ]
+    },
+    {
+      "name": "using_holographic_methods_paper_probes",
+      "statement": "Using holographic methods, the paper probes thermalization in gravitational collapse within noncommutative geometry and finds that larger noncommutative parameters delay thermalization, examining how the noncommutative parameter affects thermalization velocity and acceleration.",
+      "sources": [
+        {
+          "arxiv": "1407.5262",
+          "url": "https://arxiv.org/abs/1407.5262",
+          "title": "Holographic thermalization in noncommutative geometry"
+        }
+      ]
+    },
+    {
+      "name": "analysis_carried_out_within_framework",
+      "statement": "The analysis is carried out within the framework of dynamical holographic thermalization.",
+      "sources": [
+        {
+          "arxiv": "1305.2237",
+          "url": "https://arxiv.org/abs/1305.2237",
+          "title": "Quantum corrections to dynamical holographic thermalization: entanglement entropy and other non-local observables"
+        }
+      ]
+    },
+    {
+      "name": "holographic_thermalization_time_observer_dependent",
+      "statement": "The holographic thermalization time is observer dependent and has no unambiguous definition.",
+      "sources": [
+        {
+          "arxiv": "1212.5728",
+          "url": "https://arxiv.org/abs/1212.5728",
+          "title": "Jet Quenching and Holographic Thermalization with a Chemical Potential"
+        }
+      ]
+    },
+    {
+      "name": "paper_also_finds_thermalization_times",
+      "statement": "The paper also finds that thermalization times extracted from the falling charged shell do not generically track those inferred from non-local observables, implying that holographic thermalization time is observer dependent rather than uniquely defined. This reframes thermalization in charged holographic plasmas as a probe-dependent notion.",
+      "sources": [
+        {
+          "arxiv": "1212.5728",
+          "url": "https://arxiv.org/abs/1212.5728",
+          "title": "Jet Quenching and Holographic Thermalization with a Chemical Potential"
+        }
+      ]
+    },
+    {
+      "name": "link_between_gravitational_evolution_global",
+      "statement": "A link between gravitational evolution in global AdS and holographic thermalization is clarified.",
+      "sources": [
+        {
+          "arxiv": "1410.1880",
+          "url": "https://arxiv.org/abs/1410.1880",
+          "title": "Position space analysis of the AdS (in)stability problem"
+        }
+      ]
+    },
+    {
+      "name": "computed_modes_provide_benchmarks_holographic",
+      "statement": "The computed modes provide benchmarks for holographic thermalization codes with the appropriate symmetries.",
+      "sources": [
+        {
+          "arxiv": "1508.06993",
+          "url": "https://arxiv.org/abs/1508.06993",
+          "title": "Quasinormal modes of magnetic and electric black branes versus far from equilibrium anisotropic fluids"
+        }
+      ]
+    },
+    {
+      "name": "effect_massive_graviton_holographic_thermalization",
+      "statement": "The effect of a massive graviton on the holographic thermalization process is investigated.",
+      "sources": [
+        {
+          "arxiv": "1611.00677",
+          "url": "https://arxiv.org/abs/1611.00677",
+          "title": "Holographic Thermalization and Generalized Vaidya-AdS Solutions in Massive Gravity"
+        }
+      ]
+    },
+    {
+      "name": "holographic_thermalization_investigated_einstein_gravity",
+      "statement": "Holographic thermalization is investigated in Einstein gravity coupled to Born-Infeld nonlinear electrodynamics.",
+      "sources": [
+        {
+          "arxiv": "1412.3878",
+          "url": "https://arxiv.org/abs/1412.3878",
+          "title": "Holographic thermalization with a chemical potential from Born-Infeld electrodynamics"
+        }
+      ]
+    },
+    {
+      "name": "holographic_entanglement_entropy_gives_dominant",
+      "statement": "The holographic entanglement entropy gives the dominant effect in the thermalization time shift.",
+      "sources": [
+        {
+          "arxiv": "1412.7073",
+          "url": "https://arxiv.org/abs/1412.7073",
+          "title": "Holographic thermalization in Gauss-Bonnet gravity with de Sitter boundary"
+        }
+      ]
+    },
+    {
+      "name": "holographic_mutual_information_size_kinks",
+      "statement": "The holographic mutual information and size of the kinks appearing in a large interval are dynamic features of holographic thermalization.",
+      "sources": [
+        {
+          "arxiv": "1710.05712",
+          "url": "https://arxiv.org/abs/1710.05712",
+          "title": "Effect of massive potentials on the holographic thermalization"
+        }
+      ]
+    },
+    {
+      "name": "thinshell_collapse_asymptotically_ads_spaces",
+      "statement": "Thin-shell collapse in asymptotically AdS spaces provides a dynamical model of holographic thermalization.",
+      "sources": [
+        {
+          "arxiv": "1212.5234",
+          "url": "https://arxiv.org/abs/1212.5234",
+          "title": "Dynamics of holographic thermalization"
+        }
+      ]
+    },
+    {
+      "name": "thermalization_multi_stress_tensor_operators",
+      "statement": "Thermalization of multi stress tensor operators is verified in holographic and free CFT examples.",
+      "sources": [
+        {
+          "arxiv": "2102.04953",
+          "url": "https://arxiv.org/abs/2102.04953",
+          "title": "Thermalization in Large-N CFTs"
+        }
+      ]
+    },
+    {
+      "name": "holographic_thermalization_borninfeld_electrodynamics_increasing",
+      "statement": "In holographic thermalization with Born-Infeld electrodynamics, increasing charge delays thermalization (consistent with Maxwell electrodynamics), while increasing Born-Infeld nonlinearity accelerates it; both effects on thermalization velocity and the phase transition between accelerating and decelerating regimes are characterized.",
+      "sources": [
+        {
+          "arxiv": "1412.3878",
+          "url": "https://arxiv.org/abs/1412.3878",
+          "title": "Holographic thermalization with a chemical potential from Born-Infeld electrodynamics"
+        }
+      ]
+    },
+    {
+      "name": "timeevolution_analysis_provides_more_detailed",
+      "statement": "The time-evolution analysis provides more detailed information on thermalization in systems with holographic duals.",
+      "sources": [
+        {
+          "arxiv": "2001.03172",
+          "url": "https://arxiv.org/abs/2001.03172",
+          "title": "Black holes often saturate entanglement entropy the fastest"
+        }
+      ]
+    }
+  ]
+}

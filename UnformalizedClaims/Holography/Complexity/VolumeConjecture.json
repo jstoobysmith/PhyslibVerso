@@ -1,0 +1,203 @@
+{
+  "doc": "# Volume Conjecture — Complexity\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “complexity equals volume”).",
+  "claims": [
+    {
+      "name": "holographic_complexity_analyzed_using_both",
+      "statement": "Holographic complexity is analyzed using both the complexity-equals-action and complexity-equals-volume conjectures.",
+      "sources": [
+        {
+          "arxiv": "2010.11203",
+          "url": "https://arxiv.org/abs/2010.11203",
+          "title": "Holographic complexity of rotating black holes"
+        }
+      ]
+    },
+    {
+      "name": "within_complexity_volume_conjecture_subregion",
+      "statement": "Within the complexity = volume conjecture, subregion complexity equals holographic purification complexity.",
+      "sources": [
+        {
+          "arxiv": "1811.10650",
+          "url": "https://arxiv.org/abs/1811.10650",
+          "title": "Holographic Purification Complexity"
+        }
+      ]
+    },
+    {
+      "name": "within_complexity_spacetime_volume_conjecture",
+      "statement": "Within the complexity = spacetime volume conjecture, subregion complexity equals holographic purification complexity.",
+      "sources": [
+        {
+          "arxiv": "1811.10650",
+          "url": "https://arxiv.org/abs/1811.10650",
+          "title": "Holographic Purification Complexity"
+        }
+      ]
+    },
+    {
+      "name": "complexity_computed_using_complexity_equals",
+      "statement": "The complexity is computed using the complexity equals volume (CV) conjecture.",
+      "sources": [
+        {
+          "arxiv": "2302.07522",
+          "url": "https://arxiv.org/abs/2302.07522",
+          "title": "Complexity and Multi-boundary Wormholes"
+        }
+      ]
+    },
+    {
+      "name": "conjecture_implies_proposals_complexity_equals",
+      "statement": "The conjecture implies that the proposals 'complexity equals action' and 'complexity equals volume' can represent the same physics.",
+      "sources": [
+        {
+          "arxiv": "1703.01337",
+          "url": "https://arxiv.org/abs/1703.01337",
+          "title": "Holographic Cavalieri Principle as a Universal relation between Holographic Complexity and Holographic Entanglement Entropy"
+        }
+      ]
+    },
+    {
+      "name": "both_complexity_equals_action_complexity",
+      "statement": "In both complexity equals action and complexity equals volume prescriptions, the relative complexity between subextremal and extremal AdS black holes diverges logarithmically.",
+      "sources": [
+        {
+          "arxiv": "2604.20170",
+          "url": "https://arxiv.org/abs/2604.20170",
+          "title": "Holographic Complexity, Extremality, and Cosmic Censorship"
+        }
+      ]
+    },
+    {
+      "name": "evaluate_complexity_equals_volume_cv",
+      "statement": "We evaluate the Complexity equals Volume (CV) conjecture and extend the analysis to codimension-zero proposals, specifically Complexity equals Spacetime Volume (CV2.0) and Complexity equals Action (CA), through the Wheeler-DeWitt (WDW) patch we construct.",
+      "sources": [
+        {
+          "arxiv": "2606.03049",
+          "url": "https://arxiv.org/abs/2606.03049",
+          "title": "Holographic complexity of de-Sitter black holes"
+        }
+      ]
+    },
+    {
+      "name": "thermodynamic_volume_rather_than_entropy",
+      "statement": "The thermodynamic volume, rather than the entropy, is suggested to control the complexity of formation of large black holes in both the complexity equals action and complexity equals volume proposals.",
+      "sources": [
+        {
+          "arxiv": "2008.09138",
+          "url": "https://arxiv.org/abs/2008.09138",
+          "title": "Holographic Complexity and Thermodynamic Volume"
+        }
+      ]
+    },
+    {
+      "name": "quantum_complexity_overline_deformation_evaluated",
+      "statement": "The quantum complexity of $ T\\overline{T} $-deformation is evaluated via holography using the complexity equals volume (CV) and complexity equals action (CA) proposals.",
+      "sources": [
+        {
+          "arxiv": "2408.06055",
+          "url": "https://arxiv.org/abs/2408.06055",
+          "title": "Quantum Complexity of $T\\bar{T}$-deformation and Its Implications"
+        }
+      ]
+    },
+    {
+      "name": "both_complexity_equals_volume_cv",
+      "statement": "Both the complexity equals volume (CV) and complexity equals action (CA) conjectures are used to track the post-quench evolution.",
+      "sources": [
+        {
+          "arxiv": "1803.11162",
+          "url": "https://arxiv.org/abs/1803.11162",
+          "title": "Holographic local quench and effective complexity"
+        }
+      ]
+    },
+    {
+      "name": "analysis_follows_complexityequalsvolume_cv_conjecture",
+      "statement": "The analysis follows the complexity-equals-volume (CV) conjecture.",
+      "sources": [
+        {
+          "arxiv": "1903.00613",
+          "url": "https://arxiv.org/abs/1903.00613",
+          "title": "On the Complexity of a $2+1$--dimensional Holographic Superconductor"
+        }
+      ]
+    },
+    {
+      "name": "comparison_complexity_equals_volume_cv",
+      "statement": "Comparison with the “complexity equals volume” (CV) proposal shows that generalized volume complexity probes a more complete black hole interior.",
+      "sources": [
+        {
+          "arxiv": "2506.10398",
+          "url": "https://arxiv.org/abs/2506.10398",
+          "title": "Complexity equals anything for multi-horizon black holes"
+        }
+      ]
+    },
+    {
+      "name": "solitons_tested_holographic_complexity_equals",
+      "statement": "The solitons are tested in the holographic complexity equals action and complexity equals volume conjectures as examples with nontrivial rotation and topology.",
+      "sources": [
+        {
+          "arxiv": "1912.07637",
+          "url": "https://arxiv.org/abs/1912.07637",
+          "title": "Chemistry and Complexity for Solitons in AdS$_5$"
+        }
+      ]
+    },
+    {
+      "name": "holographic_complexity_slowly_accelerating_kerrads",
+      "statement": "Holographic complexity of a slowly accelerating Kerr-AdS black hole is investigated using the complexity equals action (CA) and complexity equals volume (CV) conjectures in bulk Einstein gravity.",
+      "sources": [
+        {
+          "arxiv": "2212.05902",
+          "url": "https://arxiv.org/abs/2212.05902",
+          "title": "Holographic complexity of rotating black holes with conical deficits"
+        }
+      ]
+    },
+    {
+      "name": "deformation_produces_strong_signal_supporting",
+      "statement": "The deformation produces a strong signal supporting the complexity equals volume conjecture.",
+      "sources": [
+        {
+          "arxiv": "1910.08082",
+          "url": "https://arxiv.org/abs/1910.08082",
+          "title": "$T\\bar{T}$ Deformation and the Complexity=Volume Conjecture"
+        }
+      ]
+    },
+    {
+      "name": "ads_gravitational_solitons_display_black",
+      "statement": "AdS₅ gravitational solitons display black hole-like mass and thermodynamic properties, including a topologically induced thermodynamic volume. In both the complexity-equals-action and complexity-equals-volume conjectures, their complexity of formation scales as $V^{3/4}$, identical to large black holes.",
+      "sources": [
+        {
+          "arxiv": "1912.07637",
+          "url": "https://arxiv.org/abs/1912.07637",
+          "title": "Chemistry and Complexity for Solitons in AdS$_5$"
+        }
+      ]
+    },
+    {
+      "name": "rotating_black_holes_thermodynamic_volume",
+      "statement": "For rotating black holes, the thermodynamic volume—not the entropy—is proposed to control the complexity of formation in both complexity equals action and complexity equals volume conjectures; this proposal reproduces known entropy-based results when volume and entropy are dependent and establishes that the complexity is bounded below by entropy for large black holes.",
+      "sources": [
+        {
+          "arxiv": "2008.09138",
+          "url": "https://arxiv.org/abs/2008.09138",
+          "title": "Holographic Complexity and Thermodynamic Volume"
+        }
+      ]
+    },
+    {
+      "name": "using_complexityequalsaction_complexityequalsvolume_proposals_odddimensional",
+      "statement": "Using the complexity-equals-action and complexity-equals-volume proposals for odd-dimensional equal-spinning rotating black holes, the paper finds that the complexity of formation is directly connected to thermodynamic volume for large black holes. It also shows that the late-time complexity growth rate approaches a constant while generically violating Lloyd's bound.",
+      "sources": [
+        {
+          "arxiv": "2010.11203",
+          "url": "https://arxiv.org/abs/2010.11203",
+          "title": "Holographic complexity of rotating black holes"
+        }
+      ]
+    }
+  ]
+}

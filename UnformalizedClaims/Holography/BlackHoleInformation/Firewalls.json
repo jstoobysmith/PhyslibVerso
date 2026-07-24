@@ -1,0 +1,203 @@
+{
+  "doc": "# Firewalls — Black Hole Information\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “firewall black hole”).",
+  "claims": [
+    {
+      "name": "firewall_argument_prescribes_discarding_equivalence",
+      "statement": "The firewall argument prescribes discarding the equivalence principle in favor of an energy barrier (or firewall) at the black hole horizon.",
+      "sources": [
+        {
+          "arxiv": "1603.07569",
+          "url": "https://arxiv.org/abs/1603.07569",
+          "title": "Black holes and information: A new take on an old paradox"
+        }
+      ]
+    },
+    {
+      "name": "nofirewall_black_hole_setup_assumed",
+      "statement": "A no-firewall black hole setup is assumed for information-retrieval discussion.",
+      "sources": [
+        {
+          "arxiv": "1507.03592",
+          "url": "https://arxiv.org/abs/1507.03592",
+          "title": "How to Recover a Qubit That Has Fallen Into a Black Hole"
+        }
+      ]
+    },
+    {
+      "name": "old_black_hole_tunnel_into",
+      "statement": "An old black hole can tunnel into a white hole/firewall by emitting large baby universes.",
+      "sources": [
+        {
+          "arxiv": "2401.04476",
+          "url": "https://arxiv.org/abs/2401.04476",
+          "title": "Firewalls from wormholes in higher genus"
+        }
+      ]
+    },
+    {
+      "name": "firewall_puzzle_shows_much_remains",
+      "statement": "The firewall puzzle shows much remains unclear about black hole information and complementarity.",
+      "sources": [
+        {
+          "arxiv": "1609.04036",
+          "url": "https://arxiv.org/abs/1609.04036",
+          "title": "The Black Hole Information Problem"
+        }
+      ]
+    },
+    {
+      "name": "results_have_interesting_relationship_discussions",
+      "statement": "The results have an interesting relationship with discussions of the black hole firewall problem.",
+      "sources": [
+        {
+          "arxiv": "1802.08794",
+          "url": "https://arxiv.org/abs/1802.08794",
+          "title": "Quantum entanglement in de Sitter space with a wall, and the decoherence of bubble universes"
+        }
+      ]
+    },
+    {
+      "name": "black_hole_firewall_problem_motivates",
+      "statement": "The black hole firewall problem motivates the study of entangled wavepackets in the vacuum.",
+      "sources": [
+        {
+          "arxiv": "1707.04954",
+          "url": "https://arxiv.org/abs/1707.04954",
+          "title": "Entangled wavepackets in the vacuum"
+        }
+      ]
+    },
+    {
+      "name": "black_hole_complementarity_does_not",
+      "statement": "Black hole complementarity does not by itself imply a firewall for infalling observers at the horizon.",
+      "sources": [
+        {
+          "arxiv": "1211.4620",
+          "url": "https://arxiv.org/abs/1211.4620",
+          "title": "Black holes without firewalls"
+        }
+      ]
+    },
+    {
+      "name": "black_hole_soft_hair_hps",
+      "statement": "Black hole soft hair in the HPS framework is central to resolving the AMPS firewall tension.",
+      "sources": [
+        {
+          "arxiv": "2012.03850",
+          "url": "https://arxiv.org/abs/2012.03850",
+          "title": "HPS meets AMPS: How Soft Hair Dissolves the Firewall"
+        }
+      ]
+    },
+    {
+      "name": "loop_effects_alter_geometry_boundary",
+      "statement": "Loop effects alter the geometry and boundary conditions in black hole spacetimes under the Firewall proposal.",
+      "sources": [
+        {
+          "arxiv": "1909.10048",
+          "url": "https://arxiv.org/abs/1909.10048",
+          "title": "On Firewalls in quantum-corrected General Relativity"
+        }
+      ]
+    },
+    {
+      "name": "results_have_implications_black_hole",
+      "statement": "The results have implications for black hole complementarity, the quantum equivalence principle, and the firewall phenomenon.",
+      "sources": [
+        {
+          "arxiv": "1803.01672",
+          "url": "https://arxiv.org/abs/1803.01672",
+          "title": "On the observer dependence of the Hilbert space near the horizon of black holes"
+        }
+      ]
+    },
+    {
+      "name": "modern_versions_hawkings_black_hole",
+      "statement": "Modern versions of Hawking's black hole information paradox lead to exotic alternatives to classical black hole horizons such as the fuzzball and firewall paradigms.",
+      "sources": [
+        {
+          "arxiv": "1612.00266",
+          "url": "https://arxiv.org/abs/1612.00266",
+          "title": "Echoes from the Abyss: Tentative evidence for Planck-scale structure at black hole horizons"
+        }
+      ]
+    },
+    {
+      "name": "show_very_old_black_hole",
+      "statement": "We show that a very old black hole can tunnel to a white hole/firewall by emitting a large baby universe.",
+      "sources": [
+        {
+          "arxiv": "2208.01625",
+          "url": "https://arxiv.org/abs/2208.01625",
+          "title": "Firewalls from wormholes"
+        }
+      ]
+    },
+    {
+      "name": "decoupling_early_late_radiation_mechanism",
+      "statement": "Decoupling early and late radiation is a mechanism used to avoid the firewall in black hole evaporation.",
+      "sources": [
+        {
+          "arxiv": "2108.10177",
+          "url": "https://arxiv.org/abs/2108.10177",
+          "title": "Evaporating black holes and late-stage loss of soft hair"
+        }
+      ]
+    },
+    {
+      "name": "alternative_firewall_experiment_performed_within",
+      "statement": "An alternative firewall experiment can be performed within a black hole's lifetime by precomputing the unscrambling of information on a quantum memory before black hole formation.",
+      "sources": [
+        {
+          "arxiv": "1401.1523",
+          "url": "https://arxiv.org/abs/1401.1523",
+          "title": "Firewalls and flat mirrors: An alternative to the AMPS experiment which evades the Harlow-Hayden obstacle"
+        }
+      ]
+    },
+    {
+      "name": "whether_bobs_black_hole_has",
+      "statement": "Whether Bob's black hole has a firewall depends on what Alice does with the entangled partner system.",
+      "sources": [
+        {
+          "arxiv": "1306.0533",
+          "url": "https://arxiv.org/abs/1306.0533",
+          "title": "Cool horizons for entangled black holes"
+        }
+      ]
+    },
+    {
+      "name": "correlations_between_hawking_partner_particles",
+      "statement": "The correlations between the Hawking and partner particles imply that the analogue black hole has no analogue firewall.",
+      "sources": [
+        {
+          "arxiv": "1809.00913",
+          "url": "https://arxiv.org/abs/1809.00913",
+          "title": "Observation of thermal Hawking radiation at the Hawking temperature in an analogue black hole"
+        }
+      ]
+    },
+    {
+      "name": "framework_allows_quantitative_study_transition",
+      "statement": "The framework allows quantitative study of the transition into the firewall regime of maximally mixed black hole states",
+      "sources": [
+        {
+          "arxiv": "1211.6913",
+          "url": "https://arxiv.org/abs/1211.6913",
+          "title": "Black Hole Entanglement and Quantum Error Correction"
+        }
+      ]
+    },
+    {
+      "name": "black_hole_claimed_amps_shielded",
+      "statement": "The black hole is claimed by AMPS to be shielded by a firewall no later than Page time.",
+      "sources": [
+        {
+          "arxiv": "1208.2026",
+          "url": "https://arxiv.org/abs/1208.2026",
+          "title": "Is Alice burning or fuzzing?"
+        }
+      ]
+    }
+  ]
+}

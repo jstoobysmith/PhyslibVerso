@@ -1,0 +1,203 @@
+{
+  "doc": "# Replica — Black Hole Information\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “replica wormhole”).",
+  "claims": [
+    {
+      "name": "integer_replica_index_global_symmetry",
+      "statement": "At integer replica index, global symmetry violating effects manifest themselves as charge flowing through the replica wormhole.",
+      "sources": [
+        {
+          "arxiv": "2011.06005",
+          "url": "https://arxiv.org/abs/2011.06005",
+          "title": "Signatures of global symmetry violation in relative entropies and replica wormholes"
+        }
+      ]
+    },
+    {
+      "name": "wormhole_saddle_connects_different_boundaries",
+      "statement": "A wormhole saddle connects different boundaries through the AdS bulk, analogous to a 3d replica wormhole.",
+      "sources": [
+        {
+          "arxiv": "2208.13783",
+          "url": "https://arxiv.org/abs/2208.13783",
+          "title": "Holographic BCFT with a Defect on the End-of-the-World Brane"
+        }
+      ]
+    },
+    {
+      "name": "replicawormhole_derivation_given_first_proposal",
+      "statement": "A replica-wormhole derivation is given for the first proposal.",
+      "sources": [
+        {
+          "arxiv": "2012.03983",
+          "url": "https://arxiv.org/abs/2012.03983",
+          "title": "Islands for Entanglement Negativity"
+        }
+      ]
+    },
+    {
+      "name": "replica_wormhole_saddle_reproduces_entropy",
+      "statement": "The replica wormhole saddle reproduces the entropy of the island rule.",
+      "sources": [
+        {
+          "arxiv": "1911.12333",
+          "url": "https://arxiv.org/abs/1911.12333",
+          "title": "Replica Wormholes and the Entropy of Hawking Radiation"
+        }
+      ]
+    },
+    {
+      "name": "replica_wormhole_topology_has_saddle",
+      "statement": "The replica wormhole topology has a saddle point at finite $n$.",
+      "sources": [
+        {
+          "arxiv": "1911.12333",
+          "url": "https://arxiv.org/abs/1911.12333",
+          "title": "Replica Wormholes and the Entropy of Hawking Radiation"
+        }
+      ]
+    },
+    {
+      "name": "holographic_duality_longtime_solution_corresponds",
+      "statement": "In holographic duality, the long-time solution corresponds to a replica wormhole.",
+      "sources": [
+        {
+          "arxiv": "2003.13147",
+          "url": "https://arxiv.org/abs/2003.13147",
+          "title": "Replica wormhole and information retrieval in the SYK model coupled to Majorana chains"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_islands_arise_connected_wormhole",
+      "statement": "Entanglement islands arise from connected wormhole saddles in a gravitational replica trick.",
+      "sources": [
+        {
+          "arxiv": "2506.04311",
+          "url": "https://arxiv.org/abs/2506.04311",
+          "title": "An apologia for islands"
+        }
+      ]
+    },
+    {
+      "name": "replica_wormhole_saddle_gives_textrm",
+      "statement": "The replica wormhole saddle gives $\\textrm{Tr}[\\rho^{2}]|_{\\rm Wormhole~saddle}= (\\textrm{Tr}[\\rho])^{2}$ and therefore has zero entropy.",
+      "sources": [
+        {
+          "arxiv": "2006.06872",
+          "url": "https://arxiv.org/abs/2006.06872",
+          "title": "The entropy of Hawking radiation"
+        }
+      ]
+    },
+    {
+      "name": "general_structure_resulting_realtime_replica",
+      "statement": "The general structure of the resulting real-time replica wormhole saddles is described.",
+      "sources": [
+        {
+          "arxiv": "2012.00828",
+          "url": "https://arxiv.org/abs/2012.00828",
+          "title": "Real-time gravitational replicas: Formalism and a variational principle"
+        }
+      ]
+    },
+    {
+      "name": "replica_wormhole_regarded_transition_between",
+      "statement": "The replica wormhole can be regarded as a transition between different degenerate vacua.",
+      "sources": [
+        {
+          "arxiv": "2304.09432",
+          "url": "https://arxiv.org/abs/2304.09432",
+          "title": "Replica wormhole as a vacuum-to-vacuum transition"
+        }
+      ]
+    },
+    {
+      "name": "replica_wormhole_geometries_multiple_qes",
+      "statement": "Replica wormhole geometries with multiple QES are described using the theory of Fuchsian uniformisation.",
+      "sources": [
+        {
+          "arxiv": "2406.16339",
+          "url": "https://arxiv.org/abs/2406.16339",
+          "title": "Replica Rényi Wormholes and Generalised Modular Entropy in JT Gravity"
+        }
+      ]
+    },
+    {
+      "name": "paper_argues_spacetimewormhole_contributions_replicabased",
+      "statement": "The paper argues that spacetime-wormhole contributions to replica-based entropy and correlator calculations are controlled by wormhole calculus plus standard quantum prescriptions, yielding definite and restricted replica-connection rules rather than a sum over all replica-connecting topologies. This challenges the assumption that all such topologies must be included.",
+      "sources": [
+        {
+          "arxiv": "2004.02900",
+          "url": "https://arxiv.org/abs/2004.02900",
+          "title": "Wormhole calculus, replicas, and entropies"
+        }
+      ]
+    },
+    {
+      "name": "late_times_twointerval_replica_wormhole",
+      "statement": "At late times in the two-interval replica wormhole for eternal black holes, the wormhole factorizes into two copies of the one-interval solution.",
+      "sources": [
+        {
+          "arxiv": "2011.09043",
+          "url": "https://arxiv.org/abs/2011.09043",
+          "title": "Replica wormholes for an evaporating 2D black hole"
+        }
+      ]
+    },
+    {
+      "name": "violation_stems_operator_insertions_forming",
+      "statement": "The violation stems from operator insertions forming singlets on replica wormhole while disconnected contribution vanishes",
+      "sources": [
+        {
+          "arxiv": "2011.09444",
+          "url": "https://arxiv.org/abs/2011.09444",
+          "title": "A violation of global symmetries from replica wormholes and the fate of black hole remnants"
+        }
+      ]
+    },
+    {
+      "name": "explicit_replica_wormhole_identified_mechanism",
+      "statement": "An explicit replica wormhole is identified as the mechanism diagnosing the island and restoring unitarity.",
+      "sources": [
+        {
+          "arxiv": "2111.06298",
+          "url": "https://arxiv.org/abs/2111.06298",
+          "title": "The Entanglement Wedge of Unknown Couplings"
+        }
+      ]
+    },
+    {
+      "name": "quantitative_notion_irreversibility_hawking_radiation",
+      "statement": "A quantitative notion of irreversibility in Hawking radiation is formulated using the replica--wormhole paradigm.",
+      "sources": [
+        {
+          "arxiv": "2511.10106",
+          "url": "https://arxiv.org/abs/2511.10106",
+          "title": "Zeno's paradox and black hole information loss problem"
+        }
+      ]
+    },
+    {
+      "name": "replica_wormhole_introduces_nontrivial_entanglement",
+      "statement": "The replica wormhole introduces a non-trivial entanglement wedge for the bath after Page time.",
+      "sources": [
+        {
+          "arxiv": "2306.10801",
+          "url": "https://arxiv.org/abs/2306.10801",
+          "title": "Theory dependence of black hole interior reconstruction and the extended strong subadditivity"
+        }
+      ]
+    },
+    {
+      "name": "equations_control_replica_wormhole_saddle",
+      "statement": "The equations that control the replica wormhole saddle point can be analytically continued to non-integer $n$ and used to define the replica limit $n \\to 1$.",
+      "sources": [
+        {
+          "arxiv": "1911.12333",
+          "url": "https://arxiv.org/abs/1911.12333",
+          "title": "Replica Wormholes and the Entropy of Hawking Radiation"
+        }
+      ]
+    }
+  ]
+}

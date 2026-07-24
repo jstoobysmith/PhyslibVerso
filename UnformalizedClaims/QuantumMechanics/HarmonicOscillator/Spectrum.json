@@ -1,0 +1,27 @@
+{
+  "doc": "# QHO spectrum\n\nClaims overlapping `Physlib.QuantumMechanics.HarmonicOscillator`.",
+  "claims": [
+    {
+      "name": "qho_energyLevels",
+      "statement": "The quantum harmonic oscillator has energy levels $E_n = \\hbar\\omega(n + \\tfrac12)$.",
+      "sources": [
+        {
+          "title": "Ladder operators and the oscillator spectrum",
+          "arxiv": "hep-th/9302097",
+          "url": "https://arxiv.org/abs/hep-th/9302097"
+        }
+      ]
+    },
+    {
+      "name": "qho_zeroPointEnergy",
+      "statement": "The ground-state energy is $\\tfrac12\\hbar\\omega > 0$.",
+      "sources": [
+        {
+          "title": "Zero-point energy",
+          "arxiv": "hep-th/9302097",
+          "url": "https://arxiv.org/abs/hep-th/9302097"
+        }
+      ]
+    }
+  ]
+}

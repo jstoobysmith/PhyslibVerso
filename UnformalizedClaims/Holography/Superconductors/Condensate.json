@@ -1,0 +1,203 @@
+{
+  "doc": "# Condensate — Superconductors\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic condensate scalar”).",
+  "claims": [
+    {
+      "name": "scalar_bifundamental_field_provides_holographic",
+      "statement": "The scalar bifundamental field provides the holographic dual of the chiral condensate.",
+      "sources": [
+        {
+          "arxiv": "1503.04820",
+          "url": "https://arxiv.org/abs/1503.04820",
+          "title": "Baryon and chiral symmetry breaking in holographic QCD"
+        }
+      ]
+    },
+    {
+      "name": "compared_holographic_superconductors_ionic_lattices",
+      "statement": "Compared with holographic superconductors on ionic lattices, Q-lattices suppress the scalar condensate and lower the critical temperature.",
+      "sources": [
+        {
+          "arxiv": "1410.6761",
+          "url": "https://arxiv.org/abs/1410.6761",
+          "title": "Holographic Superconductor on Q-lattice"
+        }
+      ]
+    },
+    {
+      "name": "energy_dissipation_motion_scalar_condensate",
+      "statement": "Energy dissipation from motion of the scalar condensate is studied in a holographic superconductor built from a charged scalar coupled to a Maxwell field.",
+      "sources": [
+        {
+          "arxiv": "1012.0202",
+          "url": "https://arxiv.org/abs/1012.0202",
+          "title": "Vortex flow for a holographic superconductor"
+        }
+      ]
+    },
+    {
+      "name": "holographic_qcd_model_used_determine",
+      "statement": "A holographic QCD model is used to determine how the gluon condensate affects the spectrum and melting of scalar mesons.",
+      "sources": [
+        {
+          "arxiv": "1809.03508",
+          "url": "https://arxiv.org/abs/1809.03508",
+          "title": "Melting of scalar mesons and black-hole quasinormal modes in a holographic QCD model"
+        }
+      ]
+    },
+    {
+      "name": "holographic_superconductors_order_parameter_phase",
+      "statement": "For holographic superconductors, the order parameter of the phase transition is the scalar condensate $\\langle \\mathcal{O} \\rangle$, which is dual to the scalar field $\\Psi$.",
+      "sources": [
+        {
+          "arxiv": "0904.1914",
+          "url": "https://arxiv.org/abs/0904.1914",
+          "title": "Universality class of holographic superconductors"
+        }
+      ]
+    },
+    {
+      "name": "vortex_lattice_solution_dimensional_holographic",
+      "statement": "The vortex lattice solution in a (2+1)-dimensional holographic model of superconductors, constructed from a charged scalar condensate, is investigated.",
+      "sources": [
+        {
+          "arxiv": "0910.4475",
+          "url": "https://arxiv.org/abs/0910.4475",
+          "title": "Vortex lattice for a holographic superconductor"
+        }
+      ]
+    },
+    {
+      "name": "charged_scalar_field_condensate_ads",
+      "statement": "A charged scalar field condensate in an AdS_4-Schwarzschild background realizes the holographic superconductor model of Hartnoll, Herzog, and Horowitz.",
+      "sources": [
+        {
+          "arxiv": "0809.3079",
+          "url": "https://arxiv.org/abs/0809.3079",
+          "title": "Characteristic length of an AdS/CFT superconductor"
+        }
+      ]
+    },
+    {
+      "name": "simulating_holographic_heavy_ion_collisions",
+      "statement": "By simulating holographic heavy ion collisions in non-conformal gauge theories, the paper shows that hydrodynamization, EoSization, isotropization, and condensate relaxation can occur in various orderings, with the scalar condensate potentially remaining out of equilibrium long after hydrodynamization.",
+      "sources": [
+        {
+          "arxiv": "1703.09681",
+          "url": "https://arxiv.org/abs/1703.09681",
+          "title": "Paths to equilibrium in non-conformal collisions"
+        }
+      ]
+    },
+    {
+      "name": "many_holographic_setups_dynamical_endpoint",
+      "statement": "In many holographic setups the dynamical endpoint of a long-wavelength instability is a new equilibrium phase with a nonlinear scalar hair condensate outside the black hole horizon.",
+      "sources": [
+        {
+          "arxiv": "1704.05454",
+          "url": "https://arxiv.org/abs/1704.05454",
+          "title": "Unstable horizons and singularity development in holography"
+        }
+      ]
+    },
+    {
+      "name": "unitbaryoncharge_soliton_constructed_holographic_qcd",
+      "statement": "A unit-baryon-charge soliton is constructed in holographic QCD in the presence of a nonzero mean value of the scalar bifundamental field dual to the chiral condensate.",
+      "sources": [
+        {
+          "arxiv": "1503.04820",
+          "url": "https://arxiv.org/abs/1503.04820",
+          "title": "Baryon and chiral symmetry breaking in holographic QCD"
+        }
+      ]
+    },
+    {
+      "name": "holographic_superfluid_phases_considered_here",
+      "statement": "The holographic superfluid phases considered here exhibit semi-local criticality in the IR at zero temperature, with all charge carried by the scalar condensate outside the black hole horizon.",
+      "sources": [
+        {
+          "arxiv": "1612.03466",
+          "url": "https://arxiv.org/abs/1612.03466",
+          "title": "Spectral weight and spatially modulated instabilities in holographic superfluids"
+        }
+      ]
+    },
+    {
+      "name": "paper_constructs_unitbaryon_holographic_soliton",
+      "statement": "The paper constructs a unit-baryon holographic soliton in the presence of a nonzero scalar bifundamental expectation value dual to the chiral condensate, and derives a relation between the chiral condensate and the baryon mass. It further shows that at large condensate the soliton leaves the IR wall and splits into two halves localized symmetrically on the left and right flavor branes.",
+      "sources": [
+        {
+          "arxiv": "1503.04820",
+          "url": "https://arxiv.org/abs/1503.04820",
+          "title": "Baryon and chiral symmetry breaking in holographic QCD"
+        }
+      ]
+    },
+    {
+      "name": "using_holographic_qcd_model_paper",
+      "statement": "Using a holographic QCD model, the paper shows that the gluon condensate strongly affects both the scalar-meson spectrum and thermal behavior: the confinement/deconfinement transition temperature depends sensitively on the condensate, while low-temperature spectral functions exhibit mesonic quasiparticle peaks that disappear as temperature rises, signaling melting. In the dual gravity picture, these scalar mesons are encoded as black-hole quasinormal modes whose spectra and dispersion relations also depend on the gluon-condensate parameter.",
+      "sources": [
+        {
+          "arxiv": "1809.03508",
+          "url": "https://arxiv.org/abs/1809.03508",
+          "title": "Melting of scalar mesons and black-hole quasinormal modes in a holographic QCD model"
+        }
+      ]
+    },
+    {
+      "name": "holographic_superconductors_scalar_hair_mass",
+      "statement": "For holographic superconductors with scalar hair mass near the Breitenlohner-Freedman bound, this paper analytically demonstrates that when the bound is saturated, the condensate exhibits a mild divergence at low temperatures scaling as $|\\\\ln T|^\\\\delta$.",
+      "sources": [
+        {
+          "arxiv": "1011.2938",
+          "url": "https://arxiv.org/abs/1011.2938",
+          "title": "Holographic superconductors near the Breitenlohner-Freedman bound"
+        }
+      ]
+    },
+    {
+      "name": "holographic_formalism_applied_compute_effective",
+      "statement": "The holographic formalism is applied to compute effective potentials for scalar glueball operators, with three versions defined and their potentials calculated; for the trace of the stress tensor, the potential is fixed by scale covariance and the conformal anomaly, yielding predictions for the glueball condensate in Improved Holographic QCD.",
+      "sources": [
+        {
+          "arxiv": "1410.1091",
+          "url": "https://arxiv.org/abs/1410.1091",
+          "title": "On the gluon operator effective potential in holographic Yang-Mills theory"
+        }
+      ]
+    },
+    {
+      "name": "system_two_mutually_interacting_massive",
+      "statement": "A system of two mutually interacting massive scalar fields in holographic backgrounds exhibits a second-order quantum critical phase transition where turning on the source for one scalar drives condensation of the other. The phase diagram and condensate are computed numerically for AdS$_4$ and AdS soliton backgrounds.",
+      "sources": [
+        {
+          "arxiv": "1409.4959",
+          "url": "https://arxiv.org/abs/1409.4959",
+          "title": "Holographic quantum phase transitions and interacting bulk scalars"
+        }
+      ]
+    },
+    {
+      "name": "paper_constructs_fivedimensional_holographic_model",
+      "statement": "The paper constructs a five-dimensional holographic model with a scalar field dual to a chiral symmetry breaking condensate coupled to the RR 4-form via a topological Wess-Zumino term. This coupling elegantly realizes both scalar condensation at high density and color Higgsing in the condensed phase.",
+      "sources": [
+        {
+          "arxiv": "2501.16472",
+          "url": "https://arxiv.org/abs/2501.16472",
+          "title": "Revisiting color superconductors in bottom-up holography"
+        }
+      ]
+    },
+    {
+      "name": "holographic_sis_josephson_junction_constructed",
+      "statement": "A holographic SIS Josephson junction is constructed in the AdS soliton background using a complex scalar field coupled to Maxwell field, recovering the sine relation and the expected parametric dependence of maximal current on condensate dimension and junction width.",
+      "sources": [
+        {
+          "arxiv": "1205.4406",
+          "url": "https://arxiv.org/abs/1205.4406",
+          "title": "Holographic SIS Josephson Junction"
+        }
+      ]
+    }
+  ]
+}

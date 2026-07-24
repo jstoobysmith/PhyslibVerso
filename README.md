@@ -99,8 +99,72 @@ python3 -m http.server 8000 --directory .lake/build/literate-html
 
 and open <http://localhost:8000>.
 
-> Opening `index.html` via `file://` mostly works, but search and some hover
-> popups need an HTTP server, so prefer the command above.
+> Opening `index.html` via `file://` mostly works, but search, the roadmap,
+> and some hover popups need an HTTP server (they `fetch` JSON), so prefer the
+> command above.
+
+To include the roadmap in a local build, run the install step once after
+rendering (it reads the site's `xref.json`):
+
+```sh
+node scripts/install-roadmap.mjs
+```
+
+then reload; the header gains a **Roadmap** link.
+
+## Roadmap
+
+`/roadmap/` is a [paperview-style](https://paperview.org/roadmap/index.html)
+radial concept map of **every result** across three sources, whose structure is
+the union of their **directory trees**, merged by relative path with siblings
+alphabetical:
+
+1. `Physlib` and `PhyslibAlpha` — formalized declarations, read from the built
+   site's `xref.json`;
+2. [`UnformalizedClaims/`](./UnformalizedClaims/) — **fake test data** in the
+   shape of [wiphy.org](https://wiphy.org/): atomic physics claims with arXiv
+   provenance, laid out in a Physlib-like file tree. A path present in more
+   than one source lands in the same tile, so formalized results and
+   unformalized claims sit side by side (e.g.
+   `Relativity/LorentzGroup/Basic`).
+
+The composition matches paperview's roadmap: a **phylogenetic tree** of
+branches radiating from the hub to a thick coloured **band per area** (name
+curved along the band), thinner bands for subdirectories, and outside them one
+**tile per file** holding one **dot per declaration/claim**, coloured by source
+(Physlib blue, PhyslibAlpha orange, UnformalizedClaims red — validated
+colourblind-safe in both modes). Tiles come from a polar treemap, so they stay
+near-square; the layout is deterministic (no force-simulation jitter).
+
+An **always-on sidebar** shows, on click:
+
+- **a dot** — the result's name, source badge, path, its *statement* (for
+  claims), an "Open in the wiki" link (for formalized results), its
+  **Traditional sources** (arXiv links), and *Contribute* actions that open
+  prefilled GitHub issues: **suggest a source**, and **suggest a docstring
+  edit** (the target repos are the `REPOS` constant at the top of
+  [`static/roadmap.js`](./static/roadmap.js));
+- **a tile (file)** — the file's docstring (the Lean module's `/-! … -/` block,
+  or the claim file's `doc`), source badges, and the same suggest-an-edit
+  action.
+
+The header has a search filter, per-source legend toggles, and an explicit
+theme toggle (auto → dark → light, persisted). Clicking any band or box
+focuses the view on it; the ~10k dots are always visible, and tiles whose
+results are mostly PhyslibAlpha or unformalized claims are additionally tinted
+by that source. Vendored [D3](./static/d3.v7.min.js) is loaded only on this
+page; nothing is fetched from a CDN at runtime.
+
+The data is generated, not hand-written:
+
+```sh
+node scripts/roadmap-data.mjs      # merges xref.json + UnformalizedClaims → roadmap-data.json
+node scripts/install-roadmap.mjs   # regenerates it + copies the page into the built site
+```
+
+`install-roadmap.mjs` is what the deploy workflow runs after `lake query :wiki`;
+`roadmap-data.json` (currently ~2.5 MB — 10,060 results, 18 areas) is
+git-ignored and rebuilt each time.
 
 ## Publishing to GitHub Pages
 
@@ -155,3 +219,20 @@ Source: GitHub Actions**.
     of Physlib (i.e. could be formalized next).
 3. Have a 'reviewed' tag on everything in Physlib but not PhyslibAlpha. 
 4. New pages have to be added via adding Lean code to Physlib or PhyslibAlpha. Can we try and do this from the wiki?
+5. There should be a graph showing the declerations: 
+  - The graph should be similar in style to: 
+    https://paperview.org/roadmap/index.html
+  - It should have the same philogentic tree structure as paperview.
+  - The overall structure should be determined by the 
+    file structure of: 
+    1. ./Physlib 
+    2. ./PhyslibAlpha 
+    3. ./UnformalizedClaims (not made yet, but to include 
+      essentially the data of: https://wiphy.org in a 
+      file structure similar to ./Physlib - we should make some fake data here to test this) 
+  - The dots of the graph should correspond to the 
+    invidual results in these repositories. 
+  - There should be a side bar which is always on. 
+  - On clickng a dot, the sidebar should give the relevant information. Part of which should be "Traditional sources". 
+  - It should be possible for people to e.g. suggest edits of doc-strings from the graph, or suggest adding sources etc. 
+  - On clicking a file the sidebar should show the doc-string of that file.

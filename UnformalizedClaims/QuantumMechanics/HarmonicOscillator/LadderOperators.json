@@ -1,0 +1,27 @@
+{
+  "doc": "# Ladder operators — literature claims\n\nClaims from wiphy.org, merging into `Physlib.QuantumMechanics.HarmonicOscillator.LadderOperators`.",
+  "claims": [
+    {
+      "name": "ladderOperator_generalizes_annihilation",
+      "statement": "The ladder-operator method generalizes the annihilation-operator technique for coherent states of symmetry systems.",
+      "sources": [
+        {
+          "title": "Squeezed States for General Systems",
+          "arxiv": "hep-th/9308029",
+          "url": "https://arxiv.org/abs/hep-th/9308029"
+        }
+      ]
+    },
+    {
+      "name": "repulsiveOscillator_ladder_solutions",
+      "statement": "The repulsive-oscillator ladder-operator formalism reproduces the known analytic solutions.",
+      "sources": [
+        {
+          "title": "Ladder Operators in Repulsive Harmonic Oscillator with Application to the Schwinger Effect",
+          "arxiv": "1912.00657",
+          "url": "https://arxiv.org/abs/1912.00657"
+        }
+      ]
+    }
+  ]
+}

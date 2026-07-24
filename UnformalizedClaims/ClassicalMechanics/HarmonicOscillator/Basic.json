@@ -1,0 +1,27 @@
+{
+  "doc": "# The harmonic oscillator (claims)\n\nLiterature claims overlapping `Physlib.ClassicalMechanics.HarmonicOscillator.Basic`.",
+  "claims": [
+    {
+      "name": "harmonicOscillator_energyConserved",
+      "statement": "The total mechanical energy of an undamped harmonic oscillator is conserved along trajectories.",
+      "sources": [
+        {
+          "title": "Classical mechanics, elementary examples",
+          "arxiv": "hep-th/9302097",
+          "url": "https://arxiv.org/abs/hep-th/9302097"
+        }
+      ]
+    },
+    {
+      "name": "harmonicOscillator_period",
+      "statement": "The period $T = 2\\pi\\sqrt{m/k}$ is independent of amplitude.",
+      "sources": [
+        {
+          "title": "Nonlinear oscillations",
+          "arxiv": "1907.00514",
+          "url": "https://arxiv.org/abs/1907.00514"
+        }
+      ]
+    }
+  ]
+}

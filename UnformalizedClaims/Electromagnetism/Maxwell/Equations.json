@@ -1,0 +1,27 @@
+{
+  "doc": "# Maxwell's equations\n\nClaims overlapping `Physlib.Electromagnetism`.",
+  "claims": [
+    {
+      "name": "maxwell_waveEquation",
+      "statement": "In vacuum, each component of $\\mathbf E$ and $\\mathbf B$ satisfies the wave equation with speed $c$.",
+      "sources": [
+        {
+          "title": "Classical electrodynamics",
+          "arxiv": "physics/0503066",
+          "url": "https://arxiv.org/abs/physics/0503066"
+        }
+      ]
+    },
+    {
+      "name": "maxwell_chargeConservation",
+      "statement": "Maxwell's equations imply the continuity equation $\\partial_t\\rho + \\nabla\\cdot\\mathbf J = 0$.",
+      "sources": [
+        {
+          "title": "Gauge fields and charge conservation",
+          "arxiv": "2001.02631",
+          "url": "https://arxiv.org/abs/2001.02631"
+        }
+      ]
+    }
+  ]
+}

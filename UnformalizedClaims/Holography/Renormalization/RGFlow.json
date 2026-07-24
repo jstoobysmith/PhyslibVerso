@@ -1,0 +1,203 @@
+{
+  "doc": "# RGFlow — Renormalization\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic RG flow”).",
+  "claims": [
+    {
+      "name": "every_holographic_rg_flow_ads",
+      "statement": "For every holographic RG flow in AdS3, there is a corresponding holographic RG flow in flat space.",
+      "sources": [
+        {
+          "arxiv": "2309.11539",
+          "url": "https://arxiv.org/abs/2309.11539",
+          "title": "Carrollian c-functions and flat space holographic RG flows in BMS3/CCFT2"
+        }
+      ]
+    },
+    {
+      "name": "overline_operator_factorizes_along_holographic",
+      "statement": "The $T\\overline{T}$ operator factorizes along the holographic RG flow for an exact RG flow solution.",
+      "sources": [
+        {
+          "arxiv": "2511.21558",
+          "url": "https://arxiv.org/abs/2511.21558",
+          "title": "Zoo of flows in a 3d gauged supergravity with periodic potential"
+        }
+      ]
+    },
+    {
+      "name": "holographic_rg_flow_consistency_supports",
+      "statement": "Holographic RG flow consistency supports the dS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0201210",
+          "url": "https://arxiv.org/abs/hep-th/0201210",
+          "title": "Asymptotically de Sitter dilatonic space-time, holographic RG flow and conformal anomaly from (dilatonic) dS/CFT correspondence"
+        }
+      ]
+    },
+    {
+      "name": "large_rg_flows_interpreted_flow",
+      "statement": "Large $N$ RG flows are interpreted as flow velocities in holographic RG in two dimensions.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0610008",
+          "url": "https://arxiv.org/abs/hep-th/0610008",
+          "title": "2D Black Hole and Holographic Renormalization Group"
+        }
+      ]
+    },
+    {
+      "name": "holographic_rg_flow_identifies_wilsonian",
+      "statement": "Holographic RG flow identifies $z$ with the Wilsonian cutoff scale.",
+      "sources": [
+        {
+          "arxiv": "2603.27824",
+          "url": "https://arxiv.org/abs/2603.27824",
+          "title": "Higher-spin composites and emergent AdS$_3$ geometry in the $(1+1)$-dimensional Gross-Neveu model"
+        }
+      ]
+    },
+    {
+      "name": "paper_studies_holographic_entanglement_entropy",
+      "statement": "The paper studies holographic entanglement entropy under bulk RG flow.",
+      "sources": [
+        {
+          "arxiv": "2308.07952",
+          "url": "https://arxiv.org/abs/2308.07952",
+          "title": "Holographic entanglement from the UV to the IR"
+        }
+      ]
+    },
+    {
+      "name": "ricci_flow_equation_boundary_theory",
+      "statement": "A Ricci flow equation of the boundary theory is obtained as the holographic RG flow.",
+      "sources": [
+        {
+          "arxiv": "0905.0473",
+          "url": "https://arxiv.org/abs/0905.0473",
+          "title": "Horava-Lifshitz Holography"
+        }
+      ]
+    },
+    {
+      "name": "holographic_rg_flow_equations_holographic",
+      "statement": "From holographic RG flow equations, the holographic $4d$ conformal anomaly with dilatonic contributions is calculated.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0201210",
+          "url": "https://arxiv.org/abs/hep-th/0201210",
+          "title": "Asymptotically de Sitter dilatonic space-time, holographic RG flow and conformal anomaly from (dilatonic) dS/CFT correspondence"
+        }
+      ]
+    },
+    {
+      "name": "holographic_rg_flow_solutions_smooth",
+      "statement": "The holographic RG flow solutions are smooth and preserve four supercharges.",
+      "sources": [
+        {
+          "arxiv": "1605.00656",
+          "url": "https://arxiv.org/abs/1605.00656",
+          "title": "Holography for $\\mathcal{N}=1^*$ on $S^4$"
+        }
+      ]
+    },
+    {
+      "name": "symmetrybroken_viscosities_satisfy_nontrivial_holographic",
+      "statement": "The symmetry-broken viscosities satisfy non-trivial holographic $RG$-flow equations.",
+      "sources": [
+        {
+          "arxiv": "1201.5605",
+          "url": "https://arxiv.org/abs/1201.5605",
+          "title": "Running Shear Viscosities in Anisotropic Holographic Superfluids"
+        }
+      ]
+    },
+    {
+      "name": "holographic_gfunction_monotonically_nonincreasing_along",
+      "statement": "The holographic g-function is monotonically non-increasing along the RG flow.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0207171",
+          "url": "https://arxiv.org/abs/hep-th/0207171",
+          "title": "Holographic RG Flow on the Defect and g-Theorem"
+        }
+      ]
+    },
+    {
+      "name": "holographic_techniques_used_interpret_moduli",
+      "statement": "Holographic techniques are used to interpret the moduli flow as an RG flow towards the IR attractor horizon.",
+      "sources": [
+        {
+          "arxiv": "0711.0036",
+          "url": "https://arxiv.org/abs/0711.0036",
+          "title": "Moduli flow and non-supersymmetric AdS attractors"
+        }
+      ]
+    },
+    {
+      "name": "holographic_dual_geometry_encodes_whole",
+      "statement": "The holographic dual geometry encodes the whole RG flow of the gauge theory.",
+      "sources": [
+        {
+          "arxiv": "0708.0596",
+          "url": "https://arxiv.org/abs/0708.0596",
+          "title": "Geometric Metastability, Quivers and Holography"
+        }
+      ]
+    },
+    {
+      "name": "analytic_holographic_rg_flow_interpolates",
+      "statement": "An analytic holographic RG flow interpolates between the two $AdS_5$ critical points.",
+      "sources": [
+        {
+          "arxiv": "1811.01608",
+          "url": "https://arxiv.org/abs/1811.01608",
+          "title": "Holographic RG flows and $AdS_5$ black strings from 5D half-maximal gauged supergravity"
+        }
+      ]
+    },
+    {
+      "name": "superpotential_approach_used_analyze_holographic",
+      "statement": "The superpotential approach is used to analyze the holographic renormalization group (RG) flow.",
+      "sources": [
+        {
+          "arxiv": "2105.13208",
+          "url": "https://arxiv.org/abs/2105.13208",
+          "title": "Higher order curvature corrections and holographic renormalization group flow"
+        }
+      ]
+    },
+    {
+      "name": "axionic_holographic_rg_flow_solutions",
+      "statement": "Axionic holographic RG flow solutions are analyzed in general Einstein-axion-dilaton theories.",
+      "sources": [
+        {
+          "arxiv": "1905.03663",
+          "url": "https://arxiv.org/abs/1905.03663",
+          "title": "Axion RG flows and the holographic dynamics of instanton densities"
+        }
+      ]
+    },
+    {
+      "name": "computed_kk_couplings_encode_all",
+      "statement": "Computed KK couplings encode all two-point correlators along the holographic RG flow.",
+      "sources": [
+        {
+          "arxiv": "2306.11789",
+          "url": "https://arxiv.org/abs/2306.11789",
+          "title": "A holographic RG flow from the squashed to the round $S^7$"
+        }
+      ]
+    },
+    {
+      "name": "fgpw_flow_example_holographic_rg",
+      "statement": "The FGPW flow is an example of a holographic RG flow in a field theory on a flat background.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0207024",
+          "url": "https://arxiv.org/abs/hep-th/0207024",
+          "title": "The holographic RG flow in a field theory on a curved background"
+        }
+      ]
+    }
+  ]
+}

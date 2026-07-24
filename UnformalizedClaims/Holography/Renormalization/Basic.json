@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Renormalization\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic renormalization”).",
+  "claims": [
+    {
+      "name": "holographic_renormalization_method_illustrated_detail",
+      "statement": "The holographic renormalization method is illustrated in detail for a massive scalar field on anti-de Sitter spacetime, including the derivation of the on-shell renormalized action, holographic Ward identities, anomalies and RG equations, and the computation of renormalized one-, two- and four-point functions.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0209067",
+          "url": "https://arxiv.org/abs/hep-th/0209067",
+          "title": "Lecture Notes on Holographic Renormalization"
+        }
+      ]
+    },
+    {
+      "name": "holographic_renormalization_prescription_cancel_infinite",
+      "statement": "Holographic Renormalization is a prescription to cancel the infinite contact terms by adding to $S_{\\text{bulk}}$ the local, intrinsic boundary counterterm $\\Delta S = S_{\\text{c.t.}} = -\\Delta_-\\,\\frac{\\kappa}{2L}\\int_{\\partial\\text{AdS},\\,z=\\epsilon}\\sqrt{\\gamma}\\,\\phi^{2}(z,x)$.",
+      "sources": [
+        {
+          "arxiv": "0909.0518",
+          "url": "https://arxiv.org/abs/0909.0518",
+          "title": "Holographic duality with a view toward many-body physics"
+        }
+      ]
+    },
+    {
+      "name": "any_renormalization_procedure_cft_side",
+      "statement": "Any renormalization procedure on the CFT side by adding local counter-terms $W[\\hat{\\mathcal{O}}]\\to W[\\hat{\\mathcal{O}}]+R[\\hat{\\mathcal{O}}]$ translates directly to the gravity side as $W[\\psi]\\to W[\\psi]+R[\\psi]$, so CFT renormalization and holographic renormalization are in one-to-one correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0203168",
+          "url": "https://arxiv.org/abs/hep-th/0203168",
+          "title": "A Note on Multi-trace Deformations and AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "fundamental_holographic_relation_bare_relation",
+      "statement": "The fundamental holographic relation is a bare relation because both sides are divergent: there are UV divergences on the QFT side and IR infinite volume divergences on the gravitational side. So appropriate renormalization is needed to make this relation well-defined. In this section, we will show that the procedure of holographic renormalization for the spaces under consideration is {\\it a priori} more complicated, but that none of these complications enter in the final result. Therefore, the formulas presented in for example for the holographically computed correlation functions remain valid in the context of our real-time prescription as well.",
+      "sources": [
+        {
+          "arxiv": "0812.2909",
+          "url": "https://arxiv.org/abs/0812.2909",
+          "title": "Real-time gauge/gravity duality: Prescription, Renormalization and Examples"
+        }
+      ]
+    },
+    {
+      "name": "holographic_renormalization_procedure_defines_renormalized",
+      "statement": "The holographic renormalization procedure defines a renormalized action from which correlation functions are obtained by functional differentiation.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0112119",
+          "url": "https://arxiv.org/abs/hep-th/0112119",
+          "title": "Holographic Renormalization"
+        }
+      ]
+    },
+    {
+      "name": "holographic_renormalization_relates_logarithmic_counterterm",
+      "statement": "holographic renormalization relates the logarithmic counterterm to another, quadratic counterterm and implies detailed balance",
+      "sources": [
+        {
+          "arxiv": "1112.5660",
+          "url": "https://arxiv.org/abs/1112.5660",
+          "title": "Conformal Lifshitz Gravity from Holography"
+        }
+      ]
+    },
+    {
+      "name": "hamiltonian_approach_holographic_renormalization_developed",
+      "statement": "A Hamiltonian approach to holographic renormalization is developed, with the radial coordinate playing the role of time, in which regularized correlation functions are related to canonical momenta and near-boundary expansions are replaced by covariant expansions organized by dilatation weight. This yields universal expressions for counterterms and one-point functions valid in all dimensions.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0404176",
+          "url": "https://arxiv.org/abs/hep-th/0404176",
+          "title": "AdS/CFT correspondence and Geometry"
+        }
+      ]
+    },
+    {
+      "name": "holographic_renormalization_divergences_cutoff_action",
+      "statement": "In holographic renormalization, divergences of the cutoff action are fully determined in terms of sources by near-boundary analysis and can be expressed as boundary counterterms; the renormalized action $S_{\\rm ren}= S_{\\rm reg}+ S_{\\rm ct}$ is finite as $\\epsilon \\rightarrow 0$.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0105276",
+          "url": "https://arxiv.org/abs/hep-th/0105276",
+          "title": "How to go with an RG Flow"
+        }
+      ]
+    },
+    {
+      "name": "hamiltonian_version_holographic_renormalization_developed",
+      "statement": "A Hamiltonian version of holographic renormalization is developed that is more efficient than previous methods; a key simplification is that only the contribution of counterterms to specific correlators needs to be computed, rather than performing a general counterterm analysis.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0407071",
+          "url": "https://arxiv.org/abs/hep-th/0407071",
+          "title": "Correlation Functions in Holographic RG Flows"
+        }
+      ]
+    },
+    {
+      "name": "coherent_approach_correlation_functions_stress",
+      "statement": "A coherent approach to correlation functions of the stress tensor in holographic RG flows is developed; holographic renormalization is valid for all solutions of a given bulk action.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0105276",
+          "url": "https://arxiv.org/abs/hep-th/0105276",
+          "title": "How to go with an RG Flow"
+        }
+      ]
+    },
+    {
+      "name": "hamiltonian_approach_holographic_renormalization_yields",
+      "statement": "The Hamiltonian approach to holographic renormalization yields universal recursion relations for asymptotic solutions and counterterms that are valid in all dimensions, providing a faster algorithm for determining counterterms and correlation functions.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0404176",
+          "url": "https://arxiv.org/abs/hep-th/0404176",
+          "title": "AdS/CFT correspondence and Geometry"
+        }
+      ]
+    },
+    {
+      "name": "both_gravitational_matter_conformal_anomalies",
+      "statement": "Both the gravitational and matter conformal anomalies of the boundary theory are correctly reproduced by the holographic renormalization method.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0002230",
+          "url": "https://arxiv.org/abs/hep-th/0002230",
+          "title": "Holographic Reconstruction of Spacetime and Renormalization in the AdS/CFT Correspondence"
+        }
+      ]
+    },
+    {
+      "name": "systematic_method_renormalizing_ads_cft",
+      "statement": "A systematic method for renormalizing the AdS/CFT prescription for computing correlation functions consists of regularizing the bulk on-shell supergravity action in a covariant way, computing all divergences, adding counterterms to cancel them, and then removing the regulator.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0002230",
+          "url": "https://arxiv.org/abs/hep-th/0002230",
+          "title": "Holographic Reconstruction of Spacetime and Renormalization in the AdS/CFT Correspondence"
+        }
+      ]
+    },
+    {
+      "name": "appropriate_counterterms_needed_holographic_renormalization",
+      "statement": "Appropriate counterterms needed for holographic renormalization are obtained.",
+      "sources": [
+        {
+          "arxiv": "0906.4926",
+          "url": "https://arxiv.org/abs/0906.4926",
+          "title": "Topologically Massive Gravity and the AdS/CFT Correspondence"
+        }
+      ]
+    },
+    {
+      "name": "holographic_renormalization_procedure_carried_out",
+      "statement": "The holographic renormalization procedure is carried out explicitly for two known RG flows obtained from the maximal gauged D=5 supergravity theory.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0112119",
+          "url": "https://arxiv.org/abs/hep-th/0112119",
+          "title": "Holographic Renormalization"
+        }
+      ]
+    },
+    {
+      "name": "procedure_holographic_renormalization_systematically_developed",
+      "statement": "The procedure of holographic renormalization can be systematically developed for RG flows dual to asymptotically AdS domain walls.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0112119",
+          "url": "https://arxiv.org/abs/hep-th/0112119",
+          "title": "Holographic Renormalization"
+        }
+      ]
+    },
+    {
+      "name": "paper_performs_holographic_renormalization_fermions",
+      "statement": "The paper performs holographic renormalization for fermions in AdS.",
+      "sources": [
+        {
+          "arxiv": "1003.1134",
+          "url": "https://arxiv.org/abs/1003.1134",
+          "title": "Fermionic Operator Mixing in Holographic p-wave Superfluids"
+        }
+      ]
+    },
+    {
+      "name": "hj_method_holographic_renormalization_removes",
+      "statement": "The HJ method of holographic renormalization removes ambiguities from the dBVV descent-equation method and consistently determines all logarithmic counterterms. Power divergences are completely removed by the first step, and the HJ method yields exactly identical counterterms to the standard method, with scheme dependence reflected only in finite counterterms.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0205061",
+          "url": "https://arxiv.org/abs/hep-th/0205061",
+          "title": "Holographic Renormalization and Ward Identities with the Hamilton-Jacobi Method"
+        }
+      ]
+    }
+  ]
+}

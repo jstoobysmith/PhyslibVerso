@@ -1,0 +1,203 @@
+{
+  "doc": "# Spin Chain — Integrability\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “spin chain N=4 super Yang-Mills”).",
+  "claims": [
+    {
+      "name": "construction_extends_so_spin_chain",
+      "statement": "This construction extends the $SO(6)$ spin chain picture of $N=4$ super Yang-Mills theory.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0510189",
+          "url": "https://arxiv.org/abs/hep-th/0510189",
+          "title": "Integrable Spin Chains on the Conformal Moose"
+        }
+      ]
+    },
+    {
+      "name": "classical_sl_spin_chain_arises",
+      "statement": "The classical SL(2,R) spin chain arises in the large-spin limit of N=4 Super Yang-Mills theory.",
+      "sources": [
+        {
+          "arxiv": "0805.4387",
+          "url": "https://arxiv.org/abs/0805.4387",
+          "title": "A Spin Chain from String Theory"
+        }
+      ]
+    },
+    {
+      "name": "superconformal_determination_spinchain_hamiltonian_analogous",
+      "statement": "The superconformal determination of the spin-chain Hamiltonian is analogous to the situation in $N=4$ Super Yang-Mills.",
+      "sources": [
+        {
+          "arxiv": "1111.5290",
+          "url": "https://arxiv.org/abs/1111.5290",
+          "title": "The Complete One-loop Spin Chain of N =1 SQCD"
+        }
+      ]
+    },
+    {
+      "name": "construction_includes_super_spin_chain",
+      "statement": "The construction includes the super spin chain of planar $ \\mathcal{N}=4 $ super Yang-Mills theory at one loop with a diagonal twist.",
+      "sources": [
+        {
+          "arxiv": "1706.02320",
+          "url": "https://arxiv.org/abs/1706.02320",
+          "title": "Evaluation of the operatorial Q-system for non-compact super spin chains"
+        }
+      ]
+    },
+    {
+      "name": "reflection_amplitudes_magnon_boundstates_off",
+      "statement": "Reflection amplitudes of magnon bound-states off giant gravitons are computed in the $N=4$ super Yang-Mills spin chain.",
+      "sources": [
+        {
+          "arxiv": "0712.4144",
+          "url": "https://arxiv.org/abs/0712.4144",
+          "title": "Reflecting Magnon Bound States"
+        }
+      ]
+    },
+    {
+      "name": "wrapping_obstructs_spinchain_formulation_operator",
+      "statement": "Wrapping obstructs the spin-chain formulation of the operator spectrum in $N=4$ super Yang-Mills theory for short chain length at high loop order.",
+      "sources": [
+        {
+          "arxiv": "0712.3513",
+          "url": "https://arxiv.org/abs/0712.3513",
+          "title": "Boxing with Konishi"
+        }
+      ]
+    },
+    {
+      "name": "complete_oneloop_planar_dilatation_generator",
+      "statement": "The complete one-loop planar dilatation generator of $\\mathcal{N}=4$ super Yang-Mills is described by an integrable $\\mathfrak{su}(2,2|4)$ super spin chain.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0307042",
+          "url": "https://arxiv.org/abs/hep-th/0307042",
+          "title": "The N=4 SYM Integrable Super Spin Chain"
+        }
+      ]
+    },
+    {
+      "name": "derive_investigate_smatrix_su_dynamic",
+      "statement": "We derive and investigate the S-matrix for the su(2|3) dynamic spin chain and for planar N=4 super Yang-Mills.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0511082",
+          "url": "https://arxiv.org/abs/hep-th/0511082",
+          "title": "The su(2|2) Dynamic S-Matrix"
+        }
+      ]
+    },
+    {
+      "name": "operators_mathcal_super_yang_mills",
+      "statement": "Operators in $\\mathcal{N}=4$ super Yang Mills with large R-charge can be studied via spin chain problems in the planar limit.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0604135",
+          "url": "https://arxiv.org/abs/hep-th/0604135",
+          "title": "Giant Magnons"
+        }
+      ]
+    },
+    {
+      "name": "integrable_structure_appears_planar_superyangmills",
+      "statement": "Integrable structure appears in planar $N = 4$ super-Yang-Mills as the identification of the dilatation generator with an integrable quantum spin-chain Hamiltonian.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0410282",
+          "url": "https://arxiv.org/abs/hep-th/0410282",
+          "title": "Quantum string integrability and AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "first_nontrivial_conserved_charge_spin",
+      "statement": "The first non-trivial conserved charge of the spin chain translates into an ``axial’’ symmetry of $\\mathcal{N}=4$ Super Yang-Mills theory at $N=\\infty\\,. $",
+      "sources": [
+        {
+          "arxiv": "hep-th/0303060",
+          "url": "https://arxiv.org/abs/hep-th/0303060",
+          "title": "The Dilatation Operator of Conformal N=4 Super Yang-Mills Theory"
+        }
+      ]
+    },
+    {
+      "name": "continuum_limit_planar_fishnet_diagrams",
+      "statement": "The continuum limit of 4d planar fishnet diagrams is considered using integrable spin chain methods borrowed from the $ \\mathcal{N} $ = 4 Super-Yang-Mills theory.",
+      "sources": [
+        {
+          "arxiv": "1806.04105",
+          "url": "https://arxiv.org/abs/1806.04105",
+          "title": "Continuum limit of fishnet graphs and AdS sigma model"
+        }
+      ]
+    },
+    {
+      "name": "standard_bethe_ansatze_may_remain",
+      "statement": "Standard Bethe Ansatze may remain applicable to spin-chain descriptions of deformed $\\mathcal N=4$ Super-Yang-Mills theory dual to non-diagonal TsT models.",
+      "sources": [
+        {
+          "arxiv": "2406.09811",
+          "url": "https://arxiv.org/abs/2406.09811",
+          "title": "Regularising Spectral Curves for Homogeneous Yang-Baxter strings"
+        }
+      ]
+    },
+    {
+      "name": "sigma_model_describes_thermodynamic_limit",
+      "statement": "That sigma model describes the thermodynamic limit of the spin-chain Hamiltonian from the complete one-loop dilatation operator of $N=4$ super Yang-Mills theory.",
+      "sources": [
+        {
+          "arxiv": "0704.1460",
+          "url": "https://arxiv.org/abs/0704.1460",
+          "title": "Landau-Lifshitz sigma-models, fermions and the AdS/CFT correspondence"
+        }
+      ]
+    },
+    {
+      "name": "quantum_bethe_equations_reproduce_quantum",
+      "statement": "The quantum Bethe equations reproduce a quantum homogeneous spin chain similar to the one describing the bosonic sector of one-loop N=4 super Yang-Mills theory.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0603043",
+          "url": "https://arxiv.org/abs/hep-th/0603043",
+          "title": "Strings as Multi-Particle States of Quantum Sigma-Models"
+        }
+      ]
+    },
+    {
+      "name": "undeformed_seed_model_sector_mathfrak",
+      "statement": "The undeformed seed model is a sector of the $ \\mathfrak{psu} $(2, 2|4)-invariant spin-chain encoding the one-loop planar spectral problem of $ \\mathcal{N} $ = 4 super Yang-Mills.",
+      "sources": [
+        {
+          "arxiv": "2503.24223",
+          "url": "https://arxiv.org/abs/2503.24223",
+          "title": "Jordanian deformation of the non-compact and $\\mathfrak{sl}_2 $-invariant $XXX_{-1/2}$ spin-chain"
+        }
+      ]
+    },
+    {
+      "name": "planar_limit_superyangmills_theory_operator",
+      "statement": "In the planar limit of $N=4$ super-Yang--Mills theory, operator dimensions can be simplified by mapping the dilatation generator to the Hamiltonian of an integrable spin chain.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0407096",
+          "url": "https://arxiv.org/abs/hep-th/0407096",
+          "title": "Lattice Super Yang-Mills: A Virial Approach to Operator Dimensions"
+        }
+      ]
+    },
+    {
+      "name": "one_loop_mixing_matrix_anomalous",
+      "statement": "The one loop mixing matrix for anomalous dimensions in $\\mathcal{N}=4$ Super Yang-Mills can be identified with the Hamiltonian of an integrable $SO(6)$ spin chain with vector sites.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0212208",
+          "url": "https://arxiv.org/abs/hep-th/0212208",
+          "title": "The Bethe-Ansatz for N=4 Super Yang-Mills"
+        }
+      ]
+    }
+  ]
+}

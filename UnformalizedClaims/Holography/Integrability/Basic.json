@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Integrability\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “integrability AdS/CFT”).",
+  "claims": [
+    {
+      "name": "whole_arsenal_ads_cft_integrability",
+      "statement": "The whole arsenal of AdS/CFT integrability remains applicable",
+      "sources": [
+        {
+          "arxiv": "1512.06704",
+          "url": "https://arxiv.org/abs/1512.06704",
+          "title": "New integrable non-gauge 4D QFTs from strongly deformed planar N=4 SYM"
+        }
+      ]
+    },
+    {
+      "name": "dressing_factor_plays_central_role",
+      "statement": "The dressing factor plays a central role in AdS/CFT integrability.",
+      "sources": [
+        {
+          "arxiv": "1012.3992",
+          "url": "https://arxiv.org/abs/1012.3992",
+          "title": "Review of AdS/CFT Integrability, Chapter III.3: The dressing factor"
+        }
+      ]
+    },
+    {
+      "name": "yangian_symmetry_underlies_integrability_ads",
+      "statement": "Yangian symmetry underlies the integrability of the AdS/CFT spectral problem.",
+      "sources": [
+        {
+          "arxiv": "1104.2474",
+          "url": "https://arxiv.org/abs/1104.2474",
+          "title": "Yangians, S-matrices and AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "integrability_has_added_substantially_credibility",
+      "statement": "Integrability has added substantially to the credibility of the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "1012.3982",
+          "url": "https://arxiv.org/abs/1012.3982",
+          "title": "Review of AdS/CFT Integrability: An Overview"
+        }
+      ]
+    },
+    {
+      "name": "result_enables_complete_investigation_ads",
+      "statement": "The result enables a complete investigation of $AdS_3/\\mathrm{CFT}_2$ integrability.",
+      "sources": [
+        {
+          "arxiv": "1403.4543",
+          "url": "https://arxiv.org/abs/1403.4543",
+          "title": "All-loop worldsheet S matrix for AdS_3 x S^3 x T^4"
+        }
+      ]
+    },
+    {
+      "name": "longrange_spin_chains_relevant_integrability",
+      "statement": "Long-range spin chains are relevant to integrability in the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "1012.3985",
+          "url": "https://arxiv.org/abs/1012.3985",
+          "title": "Review of AdS/CFT Integrability, Chapter I.3: Long-range spin chains"
+        }
+      ]
+    },
+    {
+      "name": "construction_provides_ads_cft_test",
+      "statement": "The construction provides an AdS/CFT test method that does not require integrability.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0607204",
+          "url": "https://arxiv.org/abs/hep-th/0607204",
+          "title": "BPS Condensates, Matrix Models and Emergent String Theory"
+        }
+      ]
+    },
+    {
+      "name": "review_synthesizes_construction_ads_cft",
+      "statement": "This review synthesizes the construction of the AdS/CFT dressing factor, emphasizing its analytic properties and the main checks supporting its validity within AdS/CFT integrability.",
+      "sources": [
+        {
+          "arxiv": "1012.3992",
+          "url": "https://arxiv.org/abs/1012.3992",
+          "title": "Review of AdS/CFT Integrability, Chapter III.3: The dressing factor"
+        }
+      ]
+    },
+    {
+      "name": "ads_cft_planar_spectral_problem",
+      "statement": "The AdS$_5$/CFT$_4$ planar spectral problem is further optimized and generalized via integrability.",
+      "sources": [
+        {
+          "arxiv": "1812.09238",
+          "url": "https://arxiv.org/abs/1812.09238",
+          "title": "The full spectrum of AdS$_5$/CFT$_4$ II: Weak coupling expansion via the quantum spectral curve"
+        }
+      ]
+    },
+    {
+      "name": "integrability_emphasized_central_tool_direct",
+      "statement": "Integrability is emphasized as a central tool for direct tests of the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0405172",
+          "url": "https://arxiv.org/abs/hep-th/0405172",
+          "title": "On the Integrability of String Theory in AdS_5 x S^5"
+        }
+      ]
+    },
+    {
+      "name": "string_motion_symmetric_space_target",
+      "statement": "String motion on symmetric space target spaces underlies the integrability of the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "1006.3667",
+          "url": "https://arxiv.org/abs/1006.3667",
+          "title": "The Relativistic Avatars of Giant Magnons and their S-Matrix"
+        }
+      ]
+    },
+    {
+      "name": "review_synthesizes_integrability_twodimensional_sigmamodels",
+      "statement": "This review synthesizes integrability in two-dimensional sigma-models within AdS/CFT, with emphasis on the classical and quantum integrability of the type IIB superstring on \\(AdS_5 \\times S^5\\) in pure spinor and Green-Schwarz formulations, and on the integrability of the type IIA superstring on \\(AdS_4 \\times CP^3\\) in the \\(AdS_4/CFT_3\\) duality.",
+      "sources": [
+        {
+          "arxiv": "1006.3494",
+          "url": "https://arxiv.org/abs/1006.3494",
+          "title": "On string integrability. A journey through the two-dimensional hidden symmetries in the AdS/CFT dualities"
+        }
+      ]
+    },
+    {
+      "name": "framework_established_calculating_hagedorn_temperature",
+      "statement": "A framework is established for calculating the Hagedorn temperature of AdS$_5$/CFT$_4$ via integrability.",
+      "sources": [
+        {
+          "arxiv": "1706.03074",
+          "url": "https://arxiv.org/abs/1706.03074",
+          "title": "The Hagedorn temperature of AdS5/CFT4 via integrability"
+        }
+      ]
+    },
+    {
+      "name": "possible_connections_highlighted_thermal_bootstrap",
+      "statement": "Possible connections are highlighted to the thermal bootstrap, multiloop calculations, integrability, AdS/CFT, and string theory.",
+      "sources": [
+        {
+          "arxiv": "2508.16718",
+          "url": "https://arxiv.org/abs/2508.16718",
+          "title": "The thermal representation of conformal ladder integrals"
+        }
+      ]
+    },
+    {
+      "name": "ads_cft_correspondence_investigated_theories",
+      "statement": "The AdS(3)/CFT(2) correspondence is investigated for theories with 16 supercharges using the integrability approach.",
+      "sources": [
+        {
+          "arxiv": "0912.1723",
+          "url": "https://arxiv.org/abs/0912.1723",
+          "title": "Integrability and the AdS(3)/CFT(2) correspondence"
+        }
+      ]
+    },
+    {
+      "name": "conformal_ladder_integrals_possess_potential",
+      "statement": "Conformal ladder integrals possess potential connections to the thermal bootstrap, multiloop calculations, integrability, AdS/CFT, and string theory.",
+      "sources": [
+        {
+          "arxiv": "2606.30596",
+          "url": "https://arxiv.org/abs/2606.30596",
+          "title": "A thermal representation for conformal ladder integrals"
+        }
+      ]
+    },
+    {
+      "name": "computations_both_sides_ads_cft",
+      "statement": "Computations on both sides of the AdS/CFT holographic correspondence are performed using the integrability of both theories.",
+      "sources": [
+        {
+          "arxiv": "1711.09993",
+          "url": "https://arxiv.org/abs/1711.09993",
+          "title": "Spinning strings and correlation functions in the AdS/CFT correspondence"
+        }
+      ]
+    },
+    {
+      "name": "concept_spectral_curve_generalized_open",
+      "statement": "The concept of spectral curve is generalized to open strings in AdS/CFT with integrability preserving boundary conditions.",
+      "sources": [
+        {
+          "arxiv": "1311.7280",
+          "url": "https://arxiv.org/abs/1311.7280",
+          "title": "Spectral curve for open strings attached to the Y=0 brane"
+        }
+      ]
+    }
+  ]
+}

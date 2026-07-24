@@ -1,0 +1,203 @@
+{
+  "doc": "# Dictionary — Ad SCFT\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic dictionary bulk boundary”).",
+  "claims": [
+    {
+      "name": "holographic_dictionary_lifshitz_backgrounds_establishes",
+      "statement": "Holographic dictionary for Lifshitz backgrounds establishes relationship between bulk fields and boundary operators",
+      "sources": [
+        {
+          "arxiv": "1512.03554",
+          "url": "https://arxiv.org/abs/1512.03554",
+          "title": "Lifshitz holography"
+        }
+      ]
+    },
+    {
+      "name": "bulkboundary_symmetry_dictionary_examined_detail",
+      "statement": "The bulk-boundary symmetry dictionary is examined in detail using holographic superconductors as the working example.",
+      "sources": [
+        {
+          "arxiv": "1005.2431",
+          "url": "https://arxiv.org/abs/1005.2431",
+          "title": "On two pieces of folklore in the AdS/CFT duality"
+        }
+      ]
+    },
+    {
+      "name": "holographic_dictionary_identifies_bulk_condensate",
+      "statement": "The holographic dictionary identifies the bulk condensate with boundary magnetic catalysis involving a double-trace operator.",
+      "sources": [
+        {
+          "arxiv": "1204.6029",
+          "url": "https://arxiv.org/abs/1204.6029",
+          "title": "A Gapless Hard Wall: Magnetic Catalysis in Bulk and Boundary"
+        }
+      ]
+    },
+    {
+      "name": "holographic_mapping_defined_random_tensor",
+      "statement": "The holographic mapping defined by a random tensor network gives a bulk-boundary correspondence consistent with the usual dictionary of holographic duality.",
+      "sources": [
+        {
+          "arxiv": "1601.01694",
+          "url": "https://arxiv.org/abs/1601.01694",
+          "title": "Holographic duality from random tensor networks"
+        }
+      ]
+    },
+    {
+      "name": "flat_space_holographic_dualities_constructed",
+      "statement": "Flat space holographic dualities can be constructed by applying the AdS/CFT bulk-to-boundary dictionary slice by slice.",
+      "sources": [
+        {
+          "arxiv": "2605.03155",
+          "url": "https://arxiv.org/abs/2605.03155",
+          "title": "Flat Space Physics from AdS Actions"
+        }
+      ]
+    },
+    {
+      "name": "review_synthesizes_recent_progress_holographic",
+      "statement": "This review synthesizes recent progress in holographic modeling of Lifshitz-symmetric field theories by organizing the holographic dictionary for Lifshitz backgrounds. It explains how the dictionary relates bulk fields to boundary operators, determines operator correlation functions, clarifies the underlying geometric structure, and helps identify the universality classes of strongly coupled Lifshitz theories realized by gravitational models.",
+      "sources": [
+        {
+          "arxiv": "1512.03554",
+          "url": "https://arxiv.org/abs/1512.03554",
+          "title": "Lifshitz holography"
+        }
+      ]
+    },
+    {
+      "name": "introduce_somewhat_holographic_dictionary_between",
+      "statement": "We introduce a — somewhat holographic — dictionary between gravitational observables for scattering processes (measured at the boundary) and adiabatic invariants for bound orbits (in the bulk), to all orders in the Post-Minkowskian (PM) expansion.",
+      "sources": [
+        {
+          "arxiv": "1910.03008",
+          "url": "https://arxiv.org/abs/1910.03008",
+          "title": "From Boundary Data to Bound States"
+        }
+      ]
+    },
+    {
+      "name": "paper_proposes_holographic_dictionary_derived",
+      "statement": "The paper proposes a holographic dictionary derived from reducing bulk theories in asymptotically flat spacetime to null infinity. The boundary theory is characterized by fundamental and descendant fields, while Carrollian Hamiltonians coincide with bulk fluxes and realize the symmetry algebra with a regularizable central charge.",
+      "sources": [
+        {
+          "arxiv": "2401.11223",
+          "url": "https://arxiv.org/abs/2401.11223",
+          "title": "Holographic dictionary from bulk reduction"
+        }
+      ]
+    },
+    {
+      "name": "paper_develops_holographic_thermodynamic_dictionary",
+      "statement": "The paper develops a holographic thermodynamic dictionary for black holes with Lifshitz and hyperscaling-violating asymptotics, extending the anti-de Sitter case. Using this dictionary, it shows that the holographic Euler equation matches a generalized Smarr formula and that the extended bulk and boundary first laws agree, with the central-charge entry depending on the hyperscaling-violating parameter but not the Lifshitz exponent.",
+      "sources": [
+        {
+          "arxiv": "2410.16145",
+          "url": "https://arxiv.org/abs/2410.16145",
+          "title": "Holographic dictionary for Lifshitz and hyperscaling violating black holes"
+        }
+      ]
+    },
+    {
+      "name": "authors_propose_large_filter_holographic",
+      "statement": "The authors propose a large-$N$ filter for the holographic dictionary that projects out erratic $N$-dependence of CFT quantities when mapping them to semiclassical bulk physics. This filter provides an intrinsic boundary definition of gravitational averages and a boundary explanation for Euclidean wormhole contributions.",
+      "sources": [
+        {
+          "arxiv": "2512.13807",
+          "url": "https://arxiv.org/abs/2512.13807",
+          "title": "\"Filtering\" CFTs at large N: Euclidean Wormholes, Closed Universes, and Black Hole Interiors"
+        }
+      ]
+    },
+    {
+      "name": "using_ads_cft_dictionary_paper",
+      "statement": "Using the AdS/CFT dictionary, the paper derives a bulk dual of the boundary two-point-measurement work distribution and thereby formulates the Tasaki-Crooks fluctuation theorem in the bulk. It further argues that this holographic object captures the mean energy change and fluctuations of bulk real-time dynamics associated with the measurement protocol.",
+      "sources": [
+        {
+          "arxiv": "2511.10305",
+          "url": "https://arxiv.org/abs/2511.10305",
+          "title": "Work distribution and fluctuation theorem in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "paper_develops_holographic_dictionary_probing",
+      "statement": "The paper develops a holographic dictionary for probing anti-de Sitter spacetimes with boundary CFT data by relating bulk field configurations and operator expansions to boundary operators. Using this framework, it describes local bulk probes and shows that radial motion in AdS maps to motion in boundary scale, providing a scale-radius duality and a basis for discussing black hole horizons holographically.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9808017",
+          "url": "https://arxiv.org/abs/hep-th/9808017",
+          "title": "Holographic Probes of Anti-de Sitter Spacetimes"
+        }
+      ]
+    },
+    {
+      "name": "paper_shows_growth_rate_krylov",
+      "statement": "The paper shows that the growth rate of Krylov operator complexity in the $CFT_d$ closely follows the proper radial momentum of a bulk probe particle, revealing a concrete holographic relation between complexity growth and bulk dynamics. This correspondence becomes exact only for insertions at the asymptotic boundary or in the horizon limit, supporting the role of finite-bulk-location thermal ensembles in the holographic dictionary.",
+      "sources": [
+        {
+          "arxiv": "2506.03273",
+          "url": "https://arxiv.org/abs/2506.03273",
+          "title": "Krylov operator complexity in holographic CFTs: Smeared boundary reconstruction and the dual proper radial momentum"
+        }
+      ]
+    },
+    {
+      "name": "paper_advances_bmsbased_holographic_picture",
+      "statement": "The paper advances a BMS-based holographic picture for asymptotically flat space-times in which future and past null infinity act as holographic screens in an S-matrix framework, and the infrared sectors of gravity are tied to representations of the BMS group. It argues that the bulk-boundary symmetry map is much less universal and more intricate than in AdS/CFT, complicating any direct bulk-boundary field dictionary.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0312186",
+          "url": "https://arxiv.org/abs/hep-th/0312186",
+          "title": "Holography in asymptotically flat space-times and the BMS group"
+        }
+      ]
+    },
+    {
+      "name": "paper_explicitly_reconstructs_bulk_gravity",
+      "statement": "The paper explicitly reconstructs the bulk gravity metric from boundary field theory entanglement entropies using the Ryu-Takayanagi formula across various conformal field theories. This direct reconstruction naturally derives the standard holographic dictionary relations without requiring them to be imposed by hand.",
+      "sources": [
+        {
+          "arxiv": "1311.4516",
+          "url": "https://arxiv.org/abs/1311.4516",
+          "title": "Constructing Space From Entanglement Entropy"
+        }
+      ]
+    },
+    {
+      "name": "paper_identifies_bulk_shadows_holographic",
+      "statement": "The paper identifies bulk 'shadows' in holographic reconstruction: regions not reached by the bulk probe surfaces under study. It quantifies the size of these shadow regions near black-hole horizons and sufficiently dense stars, and argues that their existence exposes missing elements in the bulk-boundary dictionary by prompting a search for CFT observables sensitive to those regions.",
+      "sources": [
+        {
+          "arxiv": "1412.5175",
+          "url": "https://arxiv.org/abs/1412.5175",
+          "title": "Casting Shadows on Holographic Reconstruction"
+        }
+      ]
+    },
+    {
+      "name": "review_synthesizes_recent_progress_holographic_",
+      "statement": "This review synthesizes recent progress in Holographic Black Hole Chemistry, highlighting the development of an exact bulk/CFT thermodynamic dictionary for black holes with pressure and vacuum energy. It presents the subject as an emerging full bulk/boundary correspondence that also clarifies how CFT phase behaviour maps to black-hole phase structure.",
+      "sources": [
+        {
+          "arxiv": "2403.02864",
+          "url": "https://arxiv.org/abs/2403.02864",
+          "title": "Recent Developments in Holographic Black Hole Chemistry"
+        }
+      ]
+    },
+    {
+      "name": "flat_cft_holographic_dictionary_systematically",
+      "statement": "A flat/CFT holographic dictionary is systematically developed, establishing that a single bulk scalar field dualizes to two series of operators on the celestial sphere with scaling dimensions on the principal series. The bulk's real-time structure is encoded in boundary correlation functions, with the operator series interpreted as ingoing and outgoing waves.",
+      "sources": [
+        {
+          "arxiv": "2309.04307",
+          "url": "https://arxiv.org/abs/2309.04307",
+          "title": "Flat holography and celestial shockwaves"
+        }
+      ]
+    }
+  ]
+}

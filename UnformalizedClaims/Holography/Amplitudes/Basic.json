@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Amplitudes\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic scattering amplitude”).",
+  "claims": [
+    {
+      "name": "twopion_scattering_amplitude_computed_directly",
+      "statement": "The two-pion scattering amplitude is computed directly in the holographic dual through tree-level Witten diagrams.",
+      "sources": [
+        {
+          "arxiv": "2203.05916",
+          "url": "https://arxiv.org/abs/2203.05916",
+          "title": "Revisiting the chiral effective action in holographic models"
+        }
+      ]
+    },
+    {
+      "name": "branch_cut_string_scattering_amplitude",
+      "statement": "The branch cut in the string scattering amplitude arises from the dependence of the string tension on the holographic radial coordinate.",
+      "sources": [
+        {
+          "arxiv": "2307.13454",
+          "url": "https://arxiv.org/abs/2307.13454",
+          "title": "String amplitudes and mutual information in confining backgrounds: the partonic behavior"
+        }
+      ]
+    },
+    {
+      "name": "closed_string_amplitude_used_model",
+      "statement": "The closed string amplitude is used to model Pomeron exchange in proton-proton scattering because the Pomeron trajectory is a closed string trajectory in holographic duals of QCD.",
+      "sources": [
+        {
+          "arxiv": "0907.1084",
+          "url": "https://arxiv.org/abs/0907.1084",
+          "title": "The Pomeron contribution to p p and p bar p scattering in AdS/QCD"
+        }
+      ]
+    },
+    {
+      "name": "rmatrix_related_gravitational_scattering_amplitude",
+      "statement": "The R-matrix, related to the gravitational scattering amplitude near the horizon of a dS3 black hole, corresponds on the holographic projection side to a crossing kernel in the Schwarzian Model.",
+      "sources": [
+        {
+          "arxiv": "1905.06673",
+          "url": "https://arxiv.org/abs/1905.06673",
+          "title": "Conformal Bootstrap in dS/CFT and Topological Quantum Gravity"
+        }
+      ]
+    },
+    {
+      "name": "show_collinear_regime_fixed_holographic",
+      "statement": "We show that, in the collinear regime, the fixed--$j$ holographic double deeply virtual Compton scattering (DDVCS) amplitude contains the same hypergeometric hard kernel as the $\\pm$-basis Wilson coefficients of perturbative QCD.",
+      "sources": [
+        {
+          "arxiv": "2604.12038",
+          "url": "https://arxiv.org/abs/2604.12038",
+          "title": "Holographic Open/Closed Exchange in Double Deeply Virtual Compton Scattering: Fixed-$j$ Structural Matching to the $\\pm$-Basis Wilson Kernels"
+        }
+      ]
+    },
+    {
+      "name": "paper_also_proposes_scattering_amplitude",
+      "statement": "The paper also proposes that a scattering amplitude can be understood as the change in entanglement entropy, through a generalization of the Ryu-Takayanagi holographic entanglement entropy construction to regions separated in spacetime.",
+      "sources": [
+        {
+          "arxiv": "1404.0794",
+          "url": "https://arxiv.org/abs/1404.0794",
+          "title": "EPR = ER and Scattering Amplitude as Entanglement Entropy Change"
+        }
+      ]
+    },
+    {
+      "name": "paper_computes_meson_scattering_amplitudes",
+      "statement": "The paper computes meson scattering amplitudes through the holographic duality between confining gauge theories and string theory, obtaining holographic corrections to the Veneziano amplitude and related higher-point functions. Although the effect is qualitative, it is presented as generic across confining holographic backgrounds and is reproduced in both four-point and higher-point amplitudes.",
+      "sources": [
+        {
+          "arxiv": "1611.00342",
+          "url": "https://arxiv.org/abs/1611.00342",
+          "title": "Holographic Corrections to Meson Scattering Amplitudes"
+        }
+      ]
+    },
+    {
+      "name": "paper_conjectures_factorization_properties_scattering",
+      "statement": "The paper conjectures that the factorization properties of scattering amplitudes are connected to the separability of space-time in holographic quantum entanglement. This frames amplitude factorization in geometric-entanglement terms rather than as an isolated combinatorial property.",
+      "sources": [
+        {
+          "arxiv": "2101.03823",
+          "url": "https://arxiv.org/abs/2101.03823",
+          "title": "The associahedron as a holographic entanglement polytope"
+        }
+      ]
+    },
+    {
+      "name": "paper_provides_systematic_derivation_highenergy",
+      "statement": "The paper provides a systematic derivation of the high-energy Froissart-Martin bound for flat space scattering amplitudes directly from the 4-point Mellin amplitude of a holographic conformal field theory. The holographic derivation yields the exact Froissart-Martin bound in four spacetime dimensions but produces weaker bounds in higher dimensions.",
+      "sources": [
+        {
+          "arxiv": "2211.15594",
+          "url": "https://arxiv.org/abs/2211.15594",
+          "title": "Explorations in the Space of S-Matrices"
+        }
+      ]
+    },
+    {
+      "name": "investigating_holographic_thermalization_via_homogeneous",
+      "statement": "Investigating holographic thermalization via homogeneous energy injection in the hard wall model using an amplitude expansion, the authors find that black brane formation occurs for sufficiently fast energy injection. In contrast, a scattering wave solution emerges when the energy injection is sufficiently slow.",
+      "sources": [
+        {
+          "arxiv": "1311.7560",
+          "url": "https://arxiv.org/abs/1311.7560",
+          "title": "Gravitational collapse and thermalization in the hard wall model"
+        }
+      ]
+    },
+    {
+      "name": "develop_holographic_method_derive_lowenergy",
+      "statement": "We develop a holographic method to derive low-energy effective actions of confining gauge theories by identifying IR-boundary bulk fields with lightest modes. Applied to AdS/QCD, this yields a closed form for the four-pion scattering amplitude to all orders in momentum.",
+      "sources": [
+        {
+          "arxiv": "1402.5204",
+          "url": "https://arxiv.org/abs/1402.5204",
+          "title": "On Effective Actions from Holography"
+        }
+      ]
+    },
+    {
+      "name": "paper_derives_relation_between_mellin",
+      "statement": "The paper derives a relation between the Mellin amplitude for AdS/CFT correlation functions and the bulk S-matrix in the flat spacetime limit, proving a conjecture of Penedones. It explores this analyticity to show how poles and branch cuts of scattering amplitudes emerge from the holographic description.",
+      "sources": [
+        {
+          "arxiv": "1111.6972",
+          "url": "https://arxiv.org/abs/1111.6972",
+          "title": "Analyticity and the Holographic S-Matrix"
+        }
+      ]
+    },
+    {
+      "name": "paper_argues_ads_cft_holographic",
+      "statement": "The paper argues that, in the AdS/CFT holographic S-matrix, energy-momentum conservation does not follow naturally from conformal invariance in the large $N$ limit. It further predicts a new singularity in the four-point correlation function of a marginal operator, while the explicitly computed two-point scattering amplitude matches expectations.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9904164",
+          "url": "https://arxiv.org/abs/hep-th/9904164",
+          "title": "Energy-Momentum Conservation and Holographic S-Matrix"
+        }
+      ]
+    },
+    {
+      "name": "computing_twopion_scattering_amplitude_via",
+      "statement": "By computing the two-pion scattering amplitude via tree-level Witten diagrams in the Witten-Sakai-Sugimoto model, the paper extracts the pion decay constant and fourth derivative coefficients. The authors demonstrate that the standard procedure of integrating out massive vector bosons misses finite 't Hooft coupling corrections in the holographic chiral action.",
+      "sources": [
+        {
+          "arxiv": "2203.05916",
+          "url": "https://arxiv.org/abs/2203.05916",
+          "title": "Revisiting the chiral effective action in holographic models"
+        }
+      ]
+    },
+    {
+      "name": "authors_perform_holographic_computation_meson",
+      "statement": "The authors perform a holographic computation of $2\\\\to2$ meson scattering in a curved string background dual to a QCD-like theory, successfully recovering the Veneziano amplitude. They compute a perturbative correction arising from the background curvature, which implies a small deviation from a linear trajectory consistent with the UV regime of QCD.",
+      "sources": [
+        {
+          "arxiv": "1607.04422",
+          "url": "https://arxiv.org/abs/1607.04422",
+          "title": "Holographic Corrections to the Veneziano Amplitude"
+        }
+      ]
+    },
+    {
+      "name": "paper_constructs_maximaltranscendentalweight_part_stresstensormultiplet",
+      "statement": "The paper constructs the maximal-transcendental-weight part of the stress-tensor-multiplet four-point correlator in strongly coupled large-$N$ ${\\cal N}=4$ super Yang-Mills at order $N^{-6}$, in its holographic description related to four-graviton scattering on $AdS_5\\times S^5$. By comparing this result with the flat-space limit of the corresponding two-loop amplitude, it proposes correlator/amplitude structures expected to persist to all loop orders.",
+      "sources": [
+        {
+          "arxiv": "2002.04604",
+          "url": "https://arxiv.org/abs/2002.04604",
+          "title": "Towards All Loop Supergravity Amplitudes on $AdS_5 \\times S^5$"
+        }
+      ]
+    },
+    {
+      "name": "paper_demonstrates_fixed_holographic_double",
+      "statement": "The paper demonstrates that the fixed-$j$ holographic double deeply virtual Compton scattering (DDVCS) amplitude provides a fixed-scale structural match to the $\\pm$-basis Wilson kernels of perturbative QCD. By matching the lower Witten vertex to constrained conformal moments, this approach organizes the DVCS/DDVCS deconvolution problem into a physical operator basis rather than using arbitrary $x$-space profiles.",
+      "sources": [
+        {
+          "arxiv": "2604.12038",
+          "url": "https://arxiv.org/abs/2604.12038",
+          "title": "Holographic Open/Closed Exchange in Double Deeply Virtual Compton Scattering: Fixed-$j$ Structural Matching to the $\\pm$-Basis Wilson Kernels"
+        }
+      ]
+    },
+    {
+      "name": "paper_calculates_alpha_corrections_nonabelian",
+      "statement": "This paper calculates the ${\\alpha'}^4$ corrections to the non-Abelian DBI action on the D8-brane in the holographic dual of large $N_c$ QCD, identifying uniquely determined four-derivative contact terms for the pion field. Using these corrections, the near-threshold pion-pion scattering amplitude is computed and shown to respect unitarity and qualitatively agree with experimental data.",
+      "sources": [
+        {
+          "arxiv": "0707.0512",
+          "url": "https://arxiv.org/abs/0707.0512",
+          "title": "$(α')^4$ Corrections in Holographic Large N_c QCD and $π- π$ Scattering"
+        }
+      ]
+    }
+  ]
+}

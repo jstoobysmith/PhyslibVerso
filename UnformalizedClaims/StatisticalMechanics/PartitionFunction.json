@@ -1,0 +1,27 @@
+{
+  "doc": "# Partition functions\n\nClaims from wiphy.org; sits beside the existing statistical-mechanics modules.",
+  "claims": [
+    {
+      "name": "partitionFunction_fermion_polynomial",
+      "statement": "Partition function is a polynomial of degree $N$ in fugacity $x$ characterizing fermion excitations despite superficial singularities",
+      "sources": [
+        {
+          "title": "Line defects and 5d instanton partition functions",
+          "arxiv": "1601.06841",
+          "url": "https://arxiv.org/abs/1601.06841"
+        }
+      ]
+    },
+    {
+      "name": "grandCanonical_counts_bpsStates",
+      "statement": "Entropy from saddle-point of partition function: $e^{S(q_a,j_i)} = c(q_a,j_i)= \\int \\frac{d\\Delta_a}{2\\pi}\\,\\frac{d\\omega_i}{2\\pi}\\,\\mathcal{Z}(\\Delta_a,\\omega_i)\\,e^{-i\\bigl(\\Delta_a q_a+\\omega_i j_i\\bigr)}$",
+      "sources": [
+        {
+          "title": "Lectures on AdS Black Holes, Holography and Localization",
+          "arxiv": "1902.07176",
+          "url": "https://arxiv.org/abs/1902.07176"
+        }
+      ]
+    }
+  ]
+}

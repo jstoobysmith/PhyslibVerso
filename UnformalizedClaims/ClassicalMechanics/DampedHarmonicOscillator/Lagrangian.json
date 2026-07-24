@@ -1,0 +1,27 @@
+{
+  "doc": "# Damped oscillator Lagrangians\n\nClaims about variational formulations of dissipative systems.",
+  "claims": [
+    {
+      "name": "dampedOscillator_caldirolaKanai",
+      "statement": "The Caldirola–Kanai Lagrangian $L = e^{\\gamma t}(\\tfrac12 m\\dot x^2 - \\tfrac12 k x^2)$ reproduces the damped equation of motion.",
+      "sources": [
+        {
+          "title": "Two Lagrangian formulations of the damped harmonic oscillator",
+          "arxiv": "2203.01651",
+          "url": "https://arxiv.org/abs/2203.01651"
+        }
+      ]
+    },
+    {
+      "name": "dampedOscillator_krylovComplexity",
+      "statement": "Krylov complexity exhibits dissipative features for the damped harmonic oscillator.",
+      "sources": [
+        {
+          "title": "Krylov complexity of open systems",
+          "arxiv": "2509.14810",
+          "url": "https://arxiv.org/abs/2509.14810"
+        }
+      ]
+    }
+  ]
+}

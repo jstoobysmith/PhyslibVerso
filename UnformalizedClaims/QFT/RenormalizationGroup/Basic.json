@@ -1,0 +1,27 @@
+{
+  "doc": "# Renormalization group\n\nClaims from wiphy.org for the planned RG module.",
+  "claims": [
+    {
+      "name": "rgFlow_nonGaussian_irFixedPoint",
+      "statement": "The renormalization group flow exhibits a non-Gaussian infrared fixed point.",
+      "sources": [
+        {
+          "title": "Vanishing beta function for Grosse-Wulkenhaar model in a magnetic field",
+          "arxiv": "0805.4362",
+          "url": "https://arxiv.org/abs/0805.4362"
+        }
+      ]
+    },
+    {
+      "name": "rgFunctions_nonanalytic_atFixedPoint",
+      "statement": "The renormalization-group functions are nonanalytic at the fixed point.",
+      "sources": [
+        {
+          "title": "Nonanalyticity of the beta-function and systematic errors in field-theoretic calculations of critical quantities",
+          "arxiv": "hep-th/0010228",
+          "url": "https://arxiv.org/abs/hep-th/0010228"
+        }
+      ]
+    }
+  ]
+}

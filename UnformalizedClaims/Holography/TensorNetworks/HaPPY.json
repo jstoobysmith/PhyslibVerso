@@ -1,0 +1,60 @@
+{
+  "doc": "# Ha PPY — Tensor Networks\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “HaPPY code holographic”).",
+  "claims": [
+    {
+      "name": "consequence_show_tripartite_entanglement_happy",
+      "statement": "As a consequence, we show that tripartite entanglement in the HaPPY code is not holographic.",
+      "sources": [
+        {
+          "arxiv": "2510.08520",
+          "url": "https://arxiv.org/abs/2510.08520",
+          "title": "Tripartite entanglement in the HaPPY code is not holographic"
+        }
+      ]
+    },
+    {
+      "name": "generalization_pastawskiyoshidaharlowpreskill_happy_holographic_code",
+      "statement": "A generalization of the Pastawski-Yoshida-Harlow-Preskill (HaPPY) holographic code provides a toy model for bulk gauge fields or linearized gravitons.",
+      "sources": [
+        {
+          "arxiv": "1611.05841",
+          "url": "https://arxiv.org/abs/1611.05841",
+          "title": "Living on the Edge: A Toy Model for Holographic Reconstruction of Algebras with Centers"
+        }
+      ]
+    },
+    {
+      "name": "paper_generalizes_happy_holographic_code",
+      "statement": "The paper generalizes the HaPPY holographic code by adding edge degrees of freedom linked by isometries to further HaPPY-code copies, producing a toy model for bulk gauge fields or linearized gravitons. In this model, boundary regions reconstruct bulk algebras with central elements on interior edges of the greedy entanglement wedge, and complementary boundary regions can reconstruct those same central elements as well.",
+      "sources": [
+        {
+          "arxiv": "1611.05841",
+          "url": "https://arxiv.org/abs/1611.05841",
+          "title": "Living on the Edge: A Toy Model for Holographic Reconstruction of Algebras with Centers"
+        }
+      ]
+    },
+    {
+      "name": "initiate_systematic_study_stabiliser_codes",
+      "statement": "We initiate a systematic study of stabiliser codes for higher-dimensional holographic geometries, constructing AdS$_4$ analogues of the HaPPY code via cellulations and showing that absolutely maximally entangled codes preserving polytope symmetry cannot exist above two dimensions.",
+      "sources": [
+        {
+          "arxiv": "2112.12468",
+          "url": "https://arxiv.org/abs/2112.12468",
+          "title": "Holography, cellulations and error correcting codes"
+        }
+      ]
+    },
+    {
+      "name": "using_ghzforbidding_inequality_built_reflected",
+      "statement": "Using the GHZ-forbidding inequality built from reflected entropy and tripartite multi-entropy, the paper shows that stabilizer states are either violated or saturated, never strictly satisfying the holographic condition. It concludes in particular that the tripartite entanglement structure of the HaPPY code is not holographic.",
+      "sources": [
+        {
+          "arxiv": "2510.08520",
+          "url": "https://arxiv.org/abs/2510.08520",
+          "title": "Tripartite entanglement in the HaPPY code is not holographic"
+        }
+      ]
+    }
+  ]
+}

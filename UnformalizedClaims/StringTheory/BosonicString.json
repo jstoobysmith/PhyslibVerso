@@ -1,0 +1,27 @@
+{
+  "doc": "# The bosonic string\n\nClaims from wiphy.org; the string-theory area exists in Physlib, this file does not yet.",
+  "claims": [
+    {
+      "name": "bosonicString_criticalDimension_26",
+      "statement": "The critical dimension of the bosonic string is $D= 26$.",
+      "sources": [
+        {
+          "title": "Worldsheet Covariant Path Integral Quantization of Strings",
+          "arxiv": "hep-th/0606017",
+          "url": "https://arxiv.org/abs/hep-th/0606017"
+        }
+      ]
+    },
+    {
+      "name": "dirichletString_criticalDimension_26",
+      "statement": "In the bosonic Dirichlet string, the critical dimension remains 26.",
+      "sources": [
+        {
+          "title": "Dirichlet Strings",
+          "arxiv": "hep-th/9307122",
+          "url": "https://arxiv.org/abs/hep-th/9307122"
+        }
+      ]
+    }
+  ]
+}

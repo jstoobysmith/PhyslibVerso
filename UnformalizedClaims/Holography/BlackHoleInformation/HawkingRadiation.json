@@ -1,0 +1,203 @@
+{
+  "doc": "# Hawking Radiation — Black Hole Information\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “Hawking radiation unitarity”).",
+  "claims": [
+    {
+      "name": "corrected_hawking_radiation_potentially_compatible",
+      "statement": "Corrected Hawking radiation is potentially compatible with unitarity.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0208004",
+          "url": "https://arxiv.org/abs/hep-th/0208004",
+          "title": "Late-time correlators in semiclassical particle-black hole scattering"
+        }
+      ]
+    },
+    {
+      "name": "unitarity_held_even_hawking_radiation",
+      "statement": "Unitarity is held even for the Hawking radiation from noncommutative black holes.",
+      "sources": [
+        {
+          "arxiv": "1312.3032",
+          "url": "https://arxiv.org/abs/1312.3032",
+          "title": "Noncommutative information is revealed from Hawking radiation as tunneling"
+        }
+      ]
+    },
+    {
+      "name": "hawking_radiation_tunneling_consistent_unitarity",
+      "statement": "Hawking radiation as tunneling is consistent with unitarity as required by quantum mechanics.",
+      "sources": [
+        {
+          "arxiv": "0906.5033",
+          "url": "https://arxiv.org/abs/0906.5033",
+          "title": "Entropy is Conserved in Hawking Radiation as Tunneling: a Revisit of the Black Hole Information Loss Paradox"
+        }
+      ]
+    },
+    {
+      "name": "page_curve_entanglement_entropy_hawking",
+      "statement": "The Page curve for the entanglement entropy of Hawking radiation agrees with expectations from unitarity.",
+      "sources": [
+        {
+          "arxiv": "2604.12980",
+          "url": "https://arxiv.org/abs/2604.12980",
+          "title": "State counting in gravity and maximal entropy principle"
+        }
+      ]
+    },
+    {
+      "name": "teleportation_does_not_violate_unitarity",
+      "statement": "Teleportation does not violate unitarity because it generates new interior–exterior entanglement analogous to Hawking radiation.",
+      "sources": [
+        {
+          "arxiv": "2504.01058",
+          "url": "https://arxiv.org/abs/2504.01058",
+          "title": "It costs nothing to teleport information into a black hole"
+        }
+      ]
+    },
+    {
+      "name": "scheme_consistent_quantum_unitarity_motivated",
+      "statement": "A scheme consistent with quantum unitarity is motivated by a detailed analysis of Hawking radiation in a Schwarzschild background.",
+      "sources": [
+        {
+          "arxiv": "1009.6190",
+          "url": "https://arxiv.org/abs/1009.6190",
+          "title": "The hidden horizon and black hole unitarity"
+        }
+      ]
+    },
+    {
+      "name": "tension_exists_ads_cft_between",
+      "statement": "A tension exists in AdS/CFT between boundary unitarity and the production of mixed state Hawking radiation in the bulk.",
+      "sources": [
+        {
+          "arxiv": "2601.22077",
+          "url": "https://arxiv.org/abs/2601.22077",
+          "title": "A Reverse Black Hole Information Problem"
+        }
+      ]
+    },
+    {
+      "name": "high_degeneracy_hamiltonian_allows_local",
+      "statement": "High degeneracy of the Hamiltonian allows local non-unitary evolution without violating energy-momentum conservation, resolving claims that Hawking radiation non-unitarity necessarily violates locality or conservation laws. Explicit Lindblad operators for non-unitary Hawking radiation are calculated and shown to conserve energy-momentum, establishing consistency with soft unitarity violations.",
+      "sources": [
+        {
+          "arxiv": "1502.04324",
+          "url": "https://arxiv.org/abs/1502.04324",
+          "title": "Violation of unitarity by Hawking radiation does not violate energy-momentum conservation"
+        }
+      ]
+    },
+    {
+      "name": "black_hole_final_state_proposal",
+      "statement": "The black hole final state proposal reconciles the infalling vacuum with the unitarity of the Hawking radiation only for some experiments.",
+      "sources": [
+        {
+          "arxiv": "1310.7457",
+          "url": "https://arxiv.org/abs/1310.7457",
+          "title": "Measurements without Probabilities in the Final State Proposal"
+        }
+      ]
+    },
+    {
+      "name": "quantum_information_hawking_radiation_has",
+      "statement": "The quantum information in Hawking radiation has been calculated, verifying a key aspect of black-hole evaporation consistent with quantum-mechanical unitarity.",
+      "sources": [
+        {
+          "arxiv": "2201.03096",
+          "url": "https://arxiv.org/abs/2201.03096",
+          "title": "Snowmass White Paper: Quantum Aspects of Black Holes and the Emergence of Spacetime"
+        }
+      ]
+    },
+    {
+      "name": "topological_phase_transition_ryutakayanagi_surface",
+      "statement": "The topological phase transition of the Ryu-Takayanagi surface in time reproduces the Page curve of the Hawking radiation consistent with unitarity.",
+      "sources": [
+        {
+          "arxiv": "2405.14872",
+          "url": "https://arxiv.org/abs/2405.14872",
+          "title": "Replica Wormholes and Entanglement Islands in the Karch-Randall Braneworld"
+        }
+      ]
+    },
+    {
+      "name": "purity_hawking_radiation_implies_horizon",
+      "statement": "Purity of the Hawking radiation implies that the horizon cannot be 'information-free'; that is, unitarity of Hawking evaporation requires $O(1)$ corrections to low-energy evolution at the horizon.",
+      "sources": [
+        {
+          "arxiv": "1207.3123",
+          "url": "https://arxiv.org/abs/1207.3123",
+          "title": "Black Holes: Complementarity or Firewalls?"
+        }
+      ]
+    },
+    {
+      "name": "unitarity_cft_strongly_suggests_all",
+      "statement": "Unitarity of the CFT strongly suggests that all information about an initial state that forms a black hole is returned in the Hawking radiation.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9903237",
+          "url": "https://arxiv.org/abs/hep-th/9903237",
+          "title": "AdS/CFT and the Information Paradox"
+        }
+      ]
+    },
+    {
+      "name": "departures_unitarity_arise_horowitzmaldacena_scenario",
+      "statement": "Departures from unitarity can arise in the Horowitz-Maldacena scenario due to interactions between the collapsing body and infalling Hawking radiation inside the event horizon.",
+      "sources": [
+        {
+          "arxiv": "1210.5186",
+          "url": "https://arxiv.org/abs/1210.5186",
+          "title": "Does HM mechanism work in string theory?"
+        }
+      ]
+    },
+    {
+      "name": "reanalyzing_hawking_radiation_tunneling_schwarzschild",
+      "statement": "Reanalyzing Hawking radiation as tunneling for a Schwarzschild black hole in noncommutative spacetime, the paper obtains a non-thermal emission probability and identifies correlations in the spectrum that can encode information about the noncommutativity. It further argues that entropy is conserved throughout the radiation process, supporting unitarity for Hawking radiation from noncommutative black holes.",
+      "sources": [
+        {
+          "arxiv": "1312.3032",
+          "url": "https://arxiv.org/abs/1312.3032",
+          "title": "Noncommutative information is revealed from Hawking radiation as tunneling"
+        }
+      ]
+    },
+    {
+      "name": "but_unitarity_requires_same_system",
+      "statement": "But unitarity requires that the same system $\\mathcal{H}_B$ be maximally entangled with its complement in $H_{\\rm out}$, the early Hawking radiation $\\mathcal{H}_R$.",
+      "sources": [
+        {
+          "arxiv": "1207.5192",
+          "url": "https://arxiv.org/abs/1207.5192",
+          "title": "Complementarity Is Not Enough"
+        }
+      ]
+    },
+    {
+      "name": "they_study_shell_collapse_ads",
+      "statement": "They study shell collapse in AdS spacetime using the Gauss–Codazzi method and functional Schrödinger formalism to compute particle spectra. The late-time radiation matches Hawking results and reproduces the Hawking-Page transition, with the density matrix off-diagonals crucial for preserving unitarity.",
+      "sources": [
+        {
+          "arxiv": "1711.08182",
+          "url": "https://arxiv.org/abs/1711.08182",
+          "title": "Gravitational collapse and Hawking-like radiation of the shell in AdS spacetime"
+        }
+      ]
+    },
+    {
+      "name": "hm_proposal_restores_unitarity_only",
+      "statement": "The HM proposal restores unitarity only if the final state inside the horizon is maximally entangled and the two subsystems are noninteracting or interact in a special way; even weak interactions between the collapsing body and infalling Hawking radiation result in weak violations of unitarity.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0311269",
+          "url": "https://arxiv.org/abs/hep-th/0311269",
+          "title": "Comment on \"The black hole final state\""
+        }
+      ]
+    }
+  ]
+}

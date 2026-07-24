@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Fluids\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “fluid gravity correspondence”).",
+  "claims": [
+    {
+      "name": "freelance_fluid_gravity_combines_freelance",
+      "statement": "Freelance fluid/gravity combines freelance holography with the fluid/gravity correspondence.",
+      "sources": [
+        {
+          "arxiv": "2601.04115",
+          "url": "https://arxiv.org/abs/2601.04115",
+          "title": "Freelance Fluid/Gravity Correspondence, 3d Analysis"
+        }
+      ]
+    },
+    {
+      "name": "gauge_gravity_correspondence_admits_fluid",
+      "statement": "Gauge/gravity correspondence admits a fluid/gravity correspondence limit, where the gauge theory side is well described by a fluid.",
+      "sources": [
+        {
+          "arxiv": "2601.04115",
+          "url": "https://arxiv.org/abs/2601.04115",
+          "title": "Freelance Fluid/Gravity Correspondence, 3d Analysis"
+        }
+      ]
+    },
+    {
+      "name": "fluid_gravity_correspondence_relates_fluid",
+      "statement": "Fluid/gravity correspondence relates fluid flows to black brane dynamics.",
+      "sources": [
+        {
+          "arxiv": "1308.1651",
+          "url": "https://arxiv.org/abs/1308.1651",
+          "title": "Holographic Vorticity in the Fluid/Gravity Correspondence"
+        }
+      ]
+    },
+    {
+      "name": "special_cases_null_fluid_gravity",
+      "statement": "Special cases of the null fluid/gravity correspondence are obtained as an ultra-relativistic limit of the usual fluid/gravity correspondence.",
+      "sources": [
+        {
+          "arxiv": "2602.20268",
+          "url": "https://arxiv.org/abs/2602.20268",
+          "title": "Null fluid/gravity correspondence"
+        }
+      ]
+    },
+    {
+      "name": "conformal_fluid_boundary_conditions_classified",
+      "statement": "Conformal fluid boundary conditions are classified by utilizing the fluid/gravity correspondence in the AdS/BCFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "2507.15250",
+          "url": "https://arxiv.org/abs/2507.15250",
+          "title": "Fluid Boundary Conditions from AdS/BCFT"
+        }
+      ]
+    },
+    {
+      "name": "fluidgravity_correspondence_used_construct_dual",
+      "statement": "The fluid-gravity correspondence is used to construct dual gravity solutions.",
+      "sources": [
+        {
+          "arxiv": "1011.3822",
+          "url": "https://arxiv.org/abs/1011.3822",
+          "title": "On Dumb Holes and their Gravity Duals"
+        }
+      ]
+    },
+    {
+      "name": "conjectured_null_fluid_gravity_correspondence",
+      "statement": "The conjectured null fluid/gravity correspondence is used to propose an embedding of the fluid Hopfion in gravity.",
+      "sources": [
+        {
+          "arxiv": "1812.08630",
+          "url": "https://arxiv.org/abs/1812.08630",
+          "title": "Hopfion solutions in gravity and a null fluid/gravity conjecture"
+        }
+      ]
+    },
+    {
+      "name": "gravity_fluid_correspondence_useful_tool",
+      "statement": "The gravity/fluid correspondence is a useful tool for extracting properties of the boundary fluid dual to bulk gravity.",
+      "sources": [
+        {
+          "arxiv": "1311.3974",
+          "url": "https://arxiv.org/abs/1311.3974",
+          "title": "Gravity/Fluid Correspondence and Its Application on Bulk Gravity with $U(1)$ Gauge Field"
+        }
+      ]
+    },
+    {
+      "name": "fluidgravity_correspondence_extends_incorporate_matter",
+      "statement": "The fluid-gravity correspondence extends to incorporate matter fields.",
+      "sources": [
+        {
+          "arxiv": "0905.4352",
+          "url": "https://arxiv.org/abs/0905.4352",
+          "title": "Gravity & Hydrodynamics: Lectures on the fluid-gravity correspondence"
+        }
+      ]
+    },
+    {
+      "name": "fluidgravity_correspondence_extends_nonrelativistic_systems",
+      "statement": "The fluid-gravity correspondence extends to non-relativistic systems.",
+      "sources": [
+        {
+          "arxiv": "0905.4352",
+          "url": "https://arxiv.org/abs/0905.4352",
+          "title": "Gravity & Hydrodynamics: Lectures on the fluid-gravity correspondence"
+        }
+      ]
+    },
+    {
+      "name": "construction_related_fluid_gravity_correspondence",
+      "statement": "The construction is related to the fluid/gravity correspondence.",
+      "sources": [
+        {
+          "arxiv": "1605.01404",
+          "url": "https://arxiv.org/abs/1605.01404",
+          "title": "The holographic dual of a Riemann problem in a large number of dimensions"
+        }
+      ]
+    },
+    {
+      "name": "hydrodynamic_properties_analyzed_using_fluidgravity",
+      "statement": "Hydrodynamic properties are analyzed using fluid-gravity correspondence ideas.",
+      "sources": [
+        {
+          "arxiv": "1003.0797",
+          "url": "https://arxiv.org/abs/1003.0797",
+          "title": "Charged, conformal non-relativistic hydrodynamics"
+        }
+      ]
+    },
+    {
+      "name": "gravity_fluid_correspondence_established_nonminimally",
+      "statement": "The gravity/fluid correspondence is established in nonminimally coupled scalar–tensor gravity.",
+      "sources": [
+        {
+          "arxiv": "1401.6487",
+          "url": "https://arxiv.org/abs/1401.6487",
+          "title": "Holographic fluid from nonminimally coupled scalar-tensor theory of gravity"
+        }
+      ]
+    },
+    {
+      "name": "boundary_stressenergy_tensor_describes_magnetizing",
+      "statement": "The boundary stress-energy tensor describes a magnetizing conformal fluid in the fluid/gravity correspondence.",
+      "sources": [
+        {
+          "arxiv": "2310.17092",
+          "url": "https://arxiv.org/abs/2310.17092",
+          "title": "Magnetized AdS/BCFT Correspondence in Horndeski Gravity"
+        }
+      ]
+    },
+    {
+      "name": "gravity_fluid_correspondence_long_wavelength",
+      "statement": "The gravity/fluid correspondence is the long wavelength limit of the AdS/CFT correspondence.",
+      "sources": [
+        {
+          "arxiv": "1311.3974",
+          "url": "https://arxiv.org/abs/1311.3974",
+          "title": "Gravity/Fluid Correspondence and Its Application on Bulk Gravity with $U(1)$ Gauge Field"
+        }
+      ]
+    },
+    {
+      "name": "work_contributes_understanding_quantum_microphysics",
+      "statement": "Work contributes to understanding quantum microphysics underlying fluid-gravity correspondence",
+      "sources": [
+        {
+          "arxiv": "0812.5112",
+          "url": "https://arxiv.org/abs/0812.5112",
+          "title": "Brownian motion in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "fluid_gravity_correspondence_linearized_navierstokes",
+      "statement": "By fluid/gravity correspondence, linearized Navier-Stokes equations are derived.",
+      "sources": [
+        {
+          "arxiv": "1302.5060",
+          "url": "https://arxiv.org/abs/1302.5060",
+          "title": "Fermionic Corrections to Fluid Dynamics from BTZ Black Hole"
+        }
+      ]
+    },
+    {
+      "name": "chamblin_reall_gravity_nonconformal_platform",
+      "statement": "The Chamblin–Reall gravity is a non-conformal platform for the fluid/gravity correspondence.",
+      "sources": [
+        {
+          "arxiv": "2412.01146",
+          "url": "https://arxiv.org/abs/2412.01146",
+          "title": "Forced non-conformal relativistic fluid from the Chamblin-Reall gravity"
+        }
+      ]
+    }
+  ]
+}

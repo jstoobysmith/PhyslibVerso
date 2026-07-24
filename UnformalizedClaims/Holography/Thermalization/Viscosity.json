@@ -1,0 +1,203 @@
+{
+  "doc": "# Viscosity — Thermalization\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “shear viscosity entropy ratio”).",
+  "claims": [
+    {
+      "name": "shear_viscosity_satisfies_universal_shearviscosity",
+      "statement": "The shear viscosity satisfies the universal shear-viscosity to entropy ratio in this holographic dual.",
+      "sources": [
+        {
+          "arxiv": "0711.3763",
+          "url": "https://arxiv.org/abs/0711.3763",
+          "title": "The quark-gluon plasma and D6-branes on the conifold"
+        }
+      ]
+    },
+    {
+      "name": "lowerdimensional_shear_viscosity_entropy_density",
+      "statement": "The lower-dimensional shear viscosity to entropy density ratio is temperature independent, and the bulk viscosity to shear viscosity ratio is $\\frac{\\bar\\zeta}{\\bar\\eta}=\\delta^{2}$.",
+      "sources": [
+        {
+          "arxiv": "1206.1499",
+          "url": "https://arxiv.org/abs/1206.1499",
+          "title": "Higher-derivative scalar-vector-tensor theories: black holes, Galileons, singularity cloaking and holography"
+        }
+      ]
+    },
+    {
+      "name": "shear_viscosity_entropy_density_ratio",
+      "statement": "The shear viscosity to entropy density ratio is explicitly computed.",
+      "sources": [
+        {
+          "arxiv": "2004.12191",
+          "url": "https://arxiv.org/abs/2004.12191",
+          "title": "Causality of black holes in 4-dimensional Einstein-Gauss-Bonnet-Maxwell theory"
+        }
+      ]
+    },
+    {
+      "name": "bulk_viscosity_vanishes_while_shearviscositytoentropy",
+      "statement": "The bulk viscosity vanishes, while the shear-viscosity-to-entropy ratio matches the relativistic case.",
+      "sources": [
+        {
+          "arxiv": "1611.04773",
+          "url": "https://arxiv.org/abs/1611.04773",
+          "title": "Hyperscaling-Violating Lifshitz hydrodynamics from black-holes: Part II"
+        }
+      ]
+    },
+    {
+      "name": "shear_viscosity_entropy_density_ratio_",
+      "statement": "The shear viscosity to entropy density ratio is universally $1/4\\pi$.",
+      "sources": [
+        {
+          "arxiv": "1207.5309",
+          "url": "https://arxiv.org/abs/1207.5309",
+          "title": "Holographic Charged Fluid with Anomalous Current at Finite Cutoff Surface in Einstein-Maxwell Gravity"
+        }
+      ]
+    },
+    {
+      "name": "universality_contrasted_shear_viscosity_entropy",
+      "statement": "This universality is contrasted with the shear viscosity to entropy density ratio.",
+      "sources": [
+        {
+          "arxiv": "1211.1979",
+          "url": "https://arxiv.org/abs/1211.1979",
+          "title": "Universality of second order transport in Gauss-Bonnet gravity"
+        }
+      ]
+    },
+    {
+      "name": "shear_viscosity_entropy_density_ratio__",
+      "statement": "The shear viscosity to entropy density ratio is calculated for this solution.",
+      "sources": [
+        {
+          "arxiv": "1810.09242",
+          "url": "https://arxiv.org/abs/1810.09242",
+          "title": "Einstein-Yang-Mills AdS Black Brane Solution in Massive Gravity and Viscosity Bound"
+        }
+      ]
+    },
+    {
+      "name": "ratio_shear_viscosity_entropy_density",
+      "statement": "The ratio of shear viscosity to entropy density saturates the universal bound.",
+      "sources": [
+        {
+          "arxiv": "1211.5972",
+          "url": "https://arxiv.org/abs/1211.5972",
+          "title": "Transport in non-conformal holographic fluids"
+        }
+      ]
+    },
+    {
+      "name": "lhcenergy_analyses_including_both_bulk",
+      "statement": "The LHC-energy analyses including both bulk and shear viscosity lead to a shear viscosity to entropy density ratio of eta/s = 0.095.",
+      "sources": [
+        {
+          "arxiv": "1509.06738",
+          "url": "https://arxiv.org/abs/1509.06738",
+          "title": "The production of photons in relativistic heavy-ion collisions"
+        }
+      ]
+    },
+    {
+      "name": "shear_viscosity_entropy_density_ratio___",
+      "statement": "The shear viscosity to entropy density ratio is $\\eta/s = 1/4\\pi$.",
+      "sources": [
+        {
+          "arxiv": "0807.2377",
+          "url": "https://arxiv.org/abs/0807.2377",
+          "title": "Shear Viscosity from AdS Born-Infeld Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "shear_viscositytoentropydensity_ratio_takes_value",
+      "statement": "The shear viscosity-to-entropy-density ratio takes the value $\\hbar/4\\pi$.",
+      "sources": [
+        {
+          "arxiv": "0809.2020",
+          "url": "https://arxiv.org/abs/0809.2020",
+          "title": "Black holes and non-relativistic quantum systems"
+        }
+      ]
+    },
+    {
+      "name": "ratio_shear_viscosity_entropy_density_",
+      "statement": "The ratio of shear viscosity to entropy density is computed in this background.",
+      "sources": [
+        {
+          "arxiv": "1109.4592",
+          "url": "https://arxiv.org/abs/1109.4592",
+          "title": "Analytic Approaches to anisotropic Holographic Superfluids"
+        }
+      ]
+    },
+    {
+      "name": "ratio_shear_viscosity_entropy_obtained",
+      "statement": "The ratio of shear viscosity to entropy is obtained using the diffusion constant.",
+      "sources": [
+        {
+          "arxiv": "1011.2291",
+          "url": "https://arxiv.org/abs/1011.2291",
+          "title": "The effect of higher derivative correction on $η/s$ and conductivities in STU model"
+        }
+      ]
+    },
+    {
+      "name": "shear_viscosity_entropy_density_ratio____",
+      "statement": "The shear viscosity to entropy density ratio, $\\frac{\\eta }{s}$, is calculated holographically.",
+      "sources": [
+        {
+          "arxiv": "2512.08491",
+          "url": "https://arxiv.org/abs/2512.08491",
+          "title": "Viscosity of $R^2$ Modified AdS Black Brane"
+        }
+      ]
+    },
+    {
+      "name": "lloyd_bound_reduced_shear_viscosity",
+      "statement": "The Lloyd bound is reduced to the shear viscosity to entropy ratio (SVER).",
+      "sources": [
+        {
+          "arxiv": "2203.15832",
+          "url": "https://arxiv.org/abs/2203.15832",
+          "title": "Computational Complexity in Analogue Gravity"
+        }
+      ]
+    },
+    {
+      "name": "proposed_general_bound_concerns_ratio",
+      "statement": "The proposed general bound concerns the ratio of shear viscosity to entropy density.",
+      "sources": [
+        {
+          "arxiv": "0711.2664",
+          "url": "https://arxiv.org/abs/0711.2664",
+          "title": "Response to D.T. Son's comment on ``Is there a `most perfect fluid' consistent with quantum field theory?''"
+        }
+      ]
+    },
+    {
+      "name": "shear_viscosity_bound_violation_einstein",
+      "statement": "The shear viscosity bound violation in Einstein gravity for anisotropic black branes is analyzed with the aim of constraining the deviation of the shear viscosity-entropy density ratio from the shear viscosity bound.",
+      "sources": [
+        {
+          "arxiv": "1510.06861",
+          "url": "https://arxiv.org/abs/1510.06861",
+          "title": "Notes on shear viscosity bound violation in anisotropic models"
+        }
+      ]
+    },
+    {
+      "name": "ratio_shear_viscosity_entropy_density__",
+      "statement": "The ratio of the shear viscosity to entropy density violated the viscosity bound for the prolate black brane solution.",
+      "sources": [
+        {
+          "arxiv": "1412.8346",
+          "url": "https://arxiv.org/abs/1412.8346",
+          "title": "Thermoelectric conductivities, shear viscosity, and stability in an anisotropic linear axion model"
+        }
+      ]
+    }
+  ]
+}

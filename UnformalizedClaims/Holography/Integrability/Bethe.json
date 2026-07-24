@@ -1,0 +1,203 @@
+{
+  "doc": "# Bethe — Integrability\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “Bethe ansatz anomalous dimension”).",
+  "claims": [
+    {
+      "name": "anomalous_dimension_scalar_operators_computed",
+      "statement": "The anomalous dimension of the scalar operators is computed using the Bethe ansatz.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0405167",
+          "url": "https://arxiv.org/abs/hep-th/0405167",
+          "title": "Bethe ansatz and fluctuations in SU(3) Yang-Mills operators"
+        }
+      ]
+    },
+    {
+      "name": "asymptotic_bethe_ansatz_contribution_sixloop",
+      "statement": "The asymptotic Bethe ansatz contribution to the six-loop anomalous dimension is found first.",
+      "sources": [
+        {
+          "arxiv": "1412.4762",
+          "url": "https://arxiv.org/abs/1412.4762",
+          "title": "Six-loop anomalous dimension of twist-two operators in planar N=4 SYM theory"
+        }
+      ]
+    },
+    {
+      "name": "boundary_thermodynamic_bethe_ansatz_equations",
+      "statement": "The boundary thermodynamic Bethe Ansatz equations for the cusp anomalous dimension contain imaginary chemical potentials and singular boundary fugacities.",
+      "sources": [
+        {
+          "arxiv": "1312.4258",
+          "url": "https://arxiv.org/abs/1312.4258",
+          "title": "Reformulating the TBA equations for the quark anti-quark potential and their two loop expansion"
+        }
+      ]
+    },
+    {
+      "name": "one_part_anomalous_dimension_calculated",
+      "statement": "One part of the anomalous dimension is calculated in the usual way with the help of the Asymptotic Bethe Ansatz.",
+      "sources": [
+        {
+          "arxiv": "1311.6953",
+          "url": "https://arxiv.org/abs/1311.6953",
+          "title": "Twist-2 at five loops: Wrapping corrections without wrapping computations"
+        }
+      ]
+    },
+    {
+      "name": "anomalous_dimension_twist_operators_planar",
+      "statement": "The anomalous dimension of twist operators in the planar limit of N=4 SYM is computed using the asymptotic Bethe ansatz.",
+      "sources": [
+        {
+          "arxiv": "1012.3993",
+          "url": "https://arxiv.org/abs/1012.3993",
+          "title": "Review of AdS/CFT Integrability, Chapter III.4: Twist states and the cusp anomalous dimension"
+        }
+      ]
+    },
+    {
+      "name": "perturbative_asymptotic_bethe_ansatz_paba",
+      "statement": "A perturbative asymptotic Bethe ansatz (PABA) is proposed for open spin-chain systems whose Hamiltonians are anomalous-dimension matrices of composite operators.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0604100",
+          "url": "https://arxiv.org/abs/hep-th/0604100",
+          "title": "Higher Loop Bethe Ansatz for Open Spin-Chains in AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "closed_expression_spindependent_anomalous_dimension",
+      "statement": "A closed expression for the spin-dependent anomalous dimension at four-loop order is extracted from the asymptotic long-range Bethe Ansatz.",
+      "sources": [
+        {
+          "arxiv": "0803.3768",
+          "url": "https://arxiv.org/abs/0803.3768",
+          "title": "Reciprocity of gauge operators in N=4 SYM"
+        }
+      ]
+    },
+    {
+      "name": "su_sector_strongcoupling_limit_anomalous",
+      "statement": "In the $su(1|1)$ sector, the strong-coupling limit of the anomalous dimension for the all-loop gauge Bethe ansatz is analytically studied.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0703241",
+          "url": "https://arxiv.org/abs/hep-th/0703241",
+          "title": "Analytic Bethe Ansatz Solutions for Highest States in the su(1|1) and su(2) Sectors"
+        }
+      ]
+    },
+    {
+      "name": "use_thermodynamic_bethe_ansatz_equations",
+      "statement": "We use the Thermodynamic Bethe Ansatz equations for the ${\\rm AdS}_5\\times {\\rm S}^5$ mirror model to derive the five-loop anomalous dimension of the Konishi operator.",
+      "sources": [
+        {
+          "arxiv": "1002.1711",
+          "url": "https://arxiv.org/abs/1002.1711",
+          "title": "Five-loop Konishi from the Mirror TBA"
+        }
+      ]
+    },
+    {
+      "name": "closed_expression_derived_threeloop_anomalous",
+      "statement": "A closed expression is derived for the three-loop anomalous dimension of twist-3 gauge operators by solving long-range Bethe Ansatz equations at finite spin under maximal transcendentality violation. The result reproduces the universal cusp anomalous dimension and satisfies reciprocity-inspired recursion relations.",
+      "sources": [
+        {
+          "arxiv": "0707.1574",
+          "url": "https://arxiv.org/abs/0707.1574",
+          "title": "Three loop anomalous dimensions of twist-3 gauge operators in N=4 SYM"
+        }
+      ]
+    },
+    {
+      "name": "comparing_bethe_ansatz_predictions_fourloop",
+      "statement": "Comparing Bethe ansatz predictions for the four-loop anomalous dimension of finite-spin twist-two operators with BFKL constraints from high-energy scattering amplitudes in $\\mathcal{N}=4$ gauge theory shows disagreement.",
+      "sources": [
+        {
+          "arxiv": "0704.3586",
+          "url": "https://arxiv.org/abs/0704.3586",
+          "title": "Dressing and Wrapping"
+        }
+      ]
+    },
+    {
+      "name": "highestanomalousdimension_operators_mathfrak_su_mathfrak",
+      "statement": "For highest-anomalous-dimension operators in the $\\mathfrak{su}(1|1)$ and $\\mathfrak{su}(2)$ sectors of ${\\cal N}=4$ SYM, the paper tracks the coupling dependence of $\\Delta$ using both the all-loop gauge Bethe Ansatz and the quantum string Bethe Ansatz and finds incompatible strong-coupling exponents, $\\nu=1/2$ versus $\\nu=1/4$. This provides an explicit failure mode of the gauge Bethe Ansatz at large $\\lambda$.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0607236",
+          "url": "https://arxiv.org/abs/hep-th/0607236",
+          "title": "Bethe Ansatz solutions for highest states in ${\\cal N}=4$ SYM and AdS/CFT duality"
+        }
+      ]
+    },
+    {
+      "name": "paper_derives_thermodynamiclimit_integral_equations",
+      "statement": "The paper derives thermodynamic-limit integral equations for the highest states in the $su(1|1)$ and $su(2)$ sectors from the all-loop gauge and string Bethe ansatz equations, and solves them iteratively by Fourier transformation to obtain weak-coupling anomalous dimensions. It also gives an analytic study of the strong-coupling anomalous dimension in the $su(1|1)$ sector for the all-loop gauge Bethe ansatz.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0703241",
+          "url": "https://arxiv.org/abs/hep-th/0703241",
+          "title": "Analytic Bethe Ansatz Solutions for Highest States in the su(1|1) and su(2) Sectors"
+        }
+      ]
+    },
+    {
+      "name": "string_theory_provides_automatic_regularization",
+      "statement": "The string theory provides an automatic regularization of the $\\mathcal{L}$ mode contributions, and the one-loop anomalous dimension computed from the Bethe ansatz equations agrees with the string calculation for the $1/J$ correction.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0502173",
+          "url": "https://arxiv.org/abs/hep-th/0502173",
+          "title": "Matching quantum strings to quantum spins: one-loop vs. finite-size corrections"
+        }
+      ]
+    },
+    {
+      "name": "using_additional_input_thermodynamic_bethe",
+      "statement": "Using additional input from the thermodynamic Bethe ansatz at strong coupling, the paper conjectures exact expressions for amplitudes with up to eight gluons in all origin limits, which are governed by the tilted cusp anomalous dimension.",
+      "sources": [
+        {
+          "arxiv": "2211.12555",
+          "url": "https://arxiv.org/abs/2211.12555",
+          "title": "An Origin Story for Amplitudes"
+        }
+      ]
+    },
+    {
+      "name": "using_integrability_lightcone_quantized_worldsheet",
+      "statement": "Using integrability of the light-cone quantized worldsheet QFT of the string in $AdS_5 \\times S^5$, the paper obtains the four-loop wrapping correction to the anomalous dimension of twist-2 operators with spin $M$; it does not modify the Bethe Ansatz result for the cusp anomalous dimension at large $M$, but it exactly cancels the higher-order poles in the Bethe Ansatz result under analytic continuation to $M=-1+\\omega$ and leaves leading poles in agreement with LO and NLO BFKL predictions.",
+      "sources": [
+        {
+          "arxiv": "0811.4448",
+          "url": "https://arxiv.org/abs/0811.4448",
+          "title": "Four loop twist two, BFKL, wrapping and strings"
+        }
+      ]
+    },
+    {
+      "name": "substituting_frac_tilde_lambda_lambda",
+      "statement": "Substituting $s=\\frac{1}{2}$ and $\\tilde\\lambda\\to\\lambda/(4\\pi^2)$ into the sigma model results for the spinning solution reproduces precisely the Bethe ansatz result for the anomalous dimension of the corresponding gauge-theory operators.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0311203",
+          "url": "https://arxiv.org/abs/hep-th/0311203",
+          "title": "Spin chains and string theory"
+        }
+      ]
+    },
+    {
+      "name": "class_scaling_psu_operators_sym",
+      "statement": "For a class of scaling $psu(2,2|4)$ operators in $N=4$ SYM that reduce at one loop to twist-3 maximal-helicity gluonic operators, the paper derives a closed four-loop expression for the spin-dependent anomalous dimension from the asymptotic long-range Bethe Ansatz. It then proves that this anomalous dimension satisfies generalized Gribov-Lipatov reciprocity.",
+      "sources": [
+        {
+          "arxiv": "0803.3768",
+          "url": "https://arxiv.org/abs/0803.3768",
+          "title": "Reciprocity of gauge operators in N=4 SYM"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "doc": "# CTheorem — Renormalization\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic c-theorem”).",
+  "claims": [
+    {
+      "name": "theorem_suggests_deep_connection_between",
+      "statement": "The theorem suggests a deep connection between the holographic Zamolodchikov-Polchinski theorem and the holographic $c$-theorem.",
+      "sources": [
+        {
+          "arxiv": "1009.0491",
+          "url": "https://arxiv.org/abs/1009.0491",
+          "title": "Higher derivative corrections in holographic Zamolodchikov-Polchinski theorem"
+        }
+      ]
+    },
+    {
+      "name": "holographic_theorem_related_twodimensional_fieldtheory",
+      "statement": "The holographic C theorem is related to the two-dimensional field-theory C theorem that relies on the Zamolodchikov metric.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0103219",
+          "url": "https://arxiv.org/abs/hep-th/0103219",
+          "title": "A Field-theoretical Interpretation of the Holographic Renormalization Group"
+        }
+      ]
+    },
+    {
+      "name": "theorem_equivalent_theorem_theories_satisfying",
+      "statement": "An $F$-theorem is equivalent to a $C_T$-theorem for theories satisfying the holographic relation.",
+      "sources": [
+        {
+          "arxiv": "1806.08374",
+          "url": "https://arxiv.org/abs/1806.08374",
+          "title": "Precision test of AdS$_6$/CFT$_5$ in Type IIB"
+        }
+      ]
+    },
+    {
+      "name": "boundary_central_charges_satisfy_holographic",
+      "statement": "The boundary central charges satisfy a holographic $c$-like theorem.",
+      "sources": [
+        {
+          "arxiv": "1701.04275",
+          "url": "https://arxiv.org/abs/1701.04275",
+          "title": "A New Proposal for Holographic BCFT"
+        }
+      ]
+    },
+    {
+      "name": "constructed_models_consistent_holographic_ctheorem",
+      "statement": "The constructed models are consistent with a holographic c-theorem.",
+      "sources": [
+        {
+          "arxiv": "1405.6213",
+          "url": "https://arxiv.org/abs/1405.6213",
+          "title": "Extended massive gravity in three dimensions"
+        }
+      ]
+    },
+    {
+      "name": "consistent_results_require_application_holographic",
+      "statement": "Consistent results require the application of the holographic c-theorem.",
+      "sources": [
+        {
+          "arxiv": "1112.5535",
+          "url": "https://arxiv.org/abs/1112.5535",
+          "title": "Holographic Entanglement Entropy for d=4 N=2 SCFTs in F-theory"
+        }
+      ]
+    },
+    {
+      "name": "holographic_ctheorem_evaluated_twodimensional_gravity",
+      "statement": "The holographic c-theorem is evaluated in two-dimensional gravity.",
+      "sources": [
+        {
+          "arxiv": "2002.07194",
+          "url": "https://arxiv.org/abs/2002.07194",
+          "title": "Holographic renormalization group flows in two-dimensional gravity and $AdS$ black holes"
+        }
+      ]
+    },
+    {
+      "name": "holographic_theorem_does_not_apply",
+      "statement": "The holographic $c$-theorem does not apply to these solutions.",
+      "sources": [
+        {
+          "arxiv": "1301.6653",
+          "url": "https://arxiv.org/abs/1301.6653",
+          "title": "Gravity duals of cyclic RG flows, with strings attached"
+        }
+      ]
+    },
+    {
+      "name": "abstract_addresses_ctheorem_setting_via",
+      "statement": "The abstract addresses the C-theorem setting via holographic duality.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0009203",
+          "url": "https://arxiv.org/abs/hep-th/0009203",
+          "title": "Holography and the C-Theorem"
+        }
+      ]
+    },
+    {
+      "name": "holographic_function_monotonically_decreasing_along",
+      "statement": "The holographic $c$-function $a_d(r)$ is monotonically decreasing along the renormalization group flow, giving a holographic $c$-theorem.",
+      "sources": [
+        {
+          "arxiv": "1302.0884",
+          "url": "https://arxiv.org/abs/1302.0884",
+          "title": "Scale invariance vs conformal invariance"
+        }
+      ]
+    },
+    {
+      "name": "quasitopological_gravity_naturally_gives_rise",
+      "statement": "Quasi-topological gravity naturally gives rise to a holographic c-theorem.",
+      "sources": [
+        {
+          "arxiv": "1011.5819",
+          "url": "https://arxiv.org/abs/1011.5819",
+          "title": "Holographic c-theorems in arbitrary dimensions"
+        }
+      ]
+    },
+    {
+      "name": "obtained_boundary_central_charges_satisfy",
+      "statement": "The obtained boundary central charges satisfy a holographic c-like theorem.",
+      "sources": [
+        {
+          "arxiv": "1701.07202",
+          "url": "https://arxiv.org/abs/1701.07202",
+          "title": "On New Proposal for Holographic BCFT"
+        }
+      ]
+    },
+    {
+      "name": "cone_holography_neumann_boundary_conditions",
+      "statement": "Cone holography with Neumann boundary conditions obeys the holographic $c$-theorem.",
+      "sources": [
+        {
+          "arxiv": "2312.16463",
+          "url": "https://arxiv.org/abs/2312.16463",
+          "title": "Cone Holography with Neumann Boundary Conditions and Brane-localized Gauge Fields"
+        }
+      ]
+    },
+    {
+      "name": "holographic_limit_extends_more_general",
+      "statement": "The holographic limit extends to more general higher-dimensional theories whenever a holographic $c$-theorem holds.",
+      "sources": [
+        {
+          "arxiv": "2004.12839",
+          "url": "https://arxiv.org/abs/2004.12839",
+          "title": "Three Dimensional Modified Gravities as Holographic Limits of Lancsoz-Lovelock Theories"
+        }
+      ]
+    },
+    {
+      "name": "some_unphysical_models_nonunitary_operators",
+      "statement": "Some 'unphysical' models with nonunitary operators still satisfy a holographic c-theorem.",
+      "sources": [
+        {
+          "arxiv": "1011.5819",
+          "url": "https://arxiv.org/abs/1011.5819",
+          "title": "Holographic c-theorems in arbitrary dimensions"
+        }
+      ]
+    },
+    {
+      "name": "angularmomentum_invariance_provides_another_realization",
+      "statement": "The angular-momentum invariance provides another realization of the holographic c-theorem.",
+      "sources": [
+        {
+          "arxiv": "1303.3691",
+          "url": "https://arxiv.org/abs/1303.3691",
+          "title": "Conserved quantities and Virasoro algebra in New massive gravity"
+        }
+      ]
+    },
+    {
+      "name": "holographic_function_runs_accordance_theorem",
+      "statement": "The holographic $c$ function runs in accordance with the $c$-theorem as the boundary universe evolves.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0602124",
+          "url": "https://arxiv.org/abs/hep-th/0602124",
+          "title": "Supersymmteric Null-like Holographic Cosmologies"
+        }
+      ]
+    },
+    {
+      "name": "unitarity_constraints_more_than_sufficient",
+      "statement": "The unitarity constraints are more than sufficient to produce a holographic c-theorem.",
+      "sources": [
+        {
+          "arxiv": "1011.5819",
+          "url": "https://arxiv.org/abs/1011.5819",
+          "title": "Holographic c-theorems in arbitrary dimensions"
+        }
+      ]
+    }
+  ]
+}

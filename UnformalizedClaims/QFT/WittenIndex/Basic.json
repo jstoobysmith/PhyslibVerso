@@ -1,0 +1,27 @@
+{
+  "doc": "# The Witten index\n\nClaims from wiphy.org for the planned `PhyslibAlpha.QFT.WittenIndex` module.",
+  "claims": [
+    {
+      "name": "wittenIndex_counts_susyVacua",
+      "statement": "The Witten index counts the number of supersymmetric vacua.",
+      "sources": [
+        {
+          "title": "The supersymmetric index in four dimensions",
+          "arxiv": "1608.02965",
+          "url": "https://arxiv.org/abs/1608.02965"
+        }
+      ]
+    },
+    {
+      "name": "wittenIndex_vanishes_pairedStates",
+      "statement": "The number of bosonic and fermionic supersymmetric ground states are equal, so the Witten index vanishes: $\\mathrm{Tr}(-1)^F = 0$.",
+      "sources": [
+        {
+          "title": "Linear Models of Supersymmetric D-Branes",
+          "arxiv": "hep-th/0012179",
+          "url": "https://arxiv.org/abs/hep-th/0012179"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "doc": "# Wormholes — JTGravity\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “Euclidean wormhole JT”).",
+  "claims": [
+    {
+      "name": "jackiw_teitelboim_jt_gravity_setup",
+      "statement": "A Jackiw–Teitelboim (JT) gravity setup exhibits a Euclidean wormhole to black hole phase transition at finite charge density and/or chemical potential.",
+      "sources": [
+        {
+          "arxiv": "2111.11279",
+          "url": "https://arxiv.org/abs/2111.11279",
+          "title": "Phases of Euclidean wormholes in JT gravity"
+        }
+      ]
+    },
+    {
+      "name": "semiclassical_negativity_hawking_radiation_requires",
+      "statement": "Semi-classical negativity of Hawking radiation requires island contributions, and this is verified in JT gravity through the Euclidean wormhole origin of these contributions.",
+      "sources": [
+        {
+          "arxiv": "2109.02649",
+          "url": "https://arxiv.org/abs/2109.02649",
+          "title": "Negativity Spectra in Random Tensor Networks and Holography"
+        }
+      ]
+    },
+    {
+      "name": "study_identifies_firstorder_phase_transition",
+      "statement": "The study identifies a first-order phase transition in a Jackiw-Teitelboim (JT) gravity setup from a low-temperature charged Euclidean wormhole to a two-black hole system at finite charge density.",
+      "sources": [
+        {
+          "arxiv": "2111.11279",
+          "url": "https://arxiv.org/abs/2111.11279",
+          "title": "Phases of Euclidean wormholes in JT gravity"
+        }
+      ]
+    }
+  ]
+}

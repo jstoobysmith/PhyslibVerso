@@ -1,0 +1,49 @@
+{
+  "doc": "# Hydrodynamics — Fluids\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “relativistic hydrodynamics holography”).",
+  "claims": [
+    {
+      "name": "convergence_relativistic_hydrodynamics_charged_fluids",
+      "statement": "The convergence of relativistic hydrodynamics in charged fluids is investigated within the framework of holography.",
+      "sources": [
+        {
+          "arxiv": "2007.14418",
+          "url": "https://arxiv.org/abs/2007.14418",
+          "title": "Quasinormal modes in charged fluids at complex momentum"
+        }
+      ]
+    },
+    {
+      "name": "review_synthesizes_recent_progress_relativistic",
+      "statement": "This review synthesizes recent progress on relativistic hydrodynamic attractors, emphasizing applications to heavy ion collisions and the quark-gluon plasma. It frames the subject pedagogically through the effective descriptions most relevant in high-energy physics, namely hydrodynamics, holography, and kinetic theory, and highlights recent advances.",
+      "sources": [
+        {
+          "arxiv": "2109.15081",
+          "url": "https://arxiv.org/abs/2109.15081",
+          "title": "Hydrodynamic attractors in heavy ion collisions: a review"
+        }
+      ]
+    },
+    {
+      "name": "dissertation_introduces_causal_stable_formulations",
+      "statement": "This dissertation introduces causal and stable formulations of relativistic viscous hydrodynamics, establishing constraints on short-wavelength dispersion relations to guarantee stability in all reference frames. It extracts first-order causal theories from kinetic theory and holography, and develops causal models for charged plasmas and superfluids.",
+      "sources": [
+        {
+          "arxiv": "2509.22862",
+          "url": "https://arxiv.org/abs/2509.22862",
+          "title": "Causal Theories of Relativistic Hydrodynamics"
+        }
+      ]
+    },
+    {
+      "name": "review_uses_holography_especially_rotating",
+      "statement": "This review uses holography, especially rotating Myers-Perry black holes, to synthesize what is known about relativistic hydrodynamics under rotation: rotating strongly coupled fluids can behave like boosted fluids, like genuinely distinct hydrodynamic systems, or show no clear hydrodynamic regime at all. It also summarizes how hydrodynamic and non-hydrodynamic modes are extracted, how radii of convergence are computed, and what these results imply about the limits of hydrodynamics in rotating settings.",
+      "sources": [
+        {
+          "arxiv": "2308.11686",
+          "url": "https://arxiv.org/abs/2308.11686",
+          "title": "Relativistic Hydrodynamics under Rotation: Prospects & Limitations from a Holographic Perspective"
+        }
+      ]
+    }
+  ]
+}

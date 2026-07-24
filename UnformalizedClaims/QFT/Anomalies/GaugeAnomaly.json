@@ -1,0 +1,27 @@
+{
+  "doc": "# Gauge anomalies\n\nClaims on anomaly cancellation, a well-formalized area of Physlib (`Physlib.QFT.AnomalyCancellation`).",
+  "claims": [
+    {
+      "name": "standardModel_anomalyFree",
+      "statement": "The Standard Model gauge group is free of gauge anomalies for each generation.",
+      "sources": [
+        {
+          "title": "Anomaly cancellation and the Standard Model",
+          "arxiv": "1907.00514",
+          "url": "https://arxiv.org/abs/1907.00514"
+        }
+      ]
+    },
+    {
+      "name": "anomaly_diophantine_solution",
+      "statement": "Anomaly-cancellation conditions reduce to a system of Diophantine equations with a general solution.",
+      "sources": [
+        {
+          "title": "A general solution to the anomaly Diophantine equations",
+          "arxiv": "2006.03588",
+          "url": "https://arxiv.org/abs/2006.03588"
+        }
+      ]
+    }
+  ]
+}

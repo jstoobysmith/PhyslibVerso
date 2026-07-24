@@ -1,0 +1,27 @@
+{
+  "doc": "# The second law\n\nThermodynamics claims; Physlib's Thermodynamics area is thin (halo).",
+  "claims": [
+    {
+      "name": "secondLaw_entropyIncrease",
+      "statement": "The total entropy of an isolated system never decreases.",
+      "sources": [
+        {
+          "title": "Foundations of statistical mechanics",
+          "arxiv": "cond-mat/0511321",
+          "url": "https://arxiv.org/abs/cond-mat/0511321"
+        }
+      ]
+    },
+    {
+      "name": "carnot_efficiencyBound",
+      "statement": "No heat engine between reservoirs $T_h > T_c$ exceeds efficiency $1 - T_c/T_h$.",
+      "sources": [
+        {
+          "title": "Thermodynamic efficiency bounds",
+          "arxiv": "cond-mat/0511321",
+          "url": "https://arxiv.org/abs/cond-mat/0511321"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "doc": "# The photon\n\nClaims from wiphy.org; sits beside `Physlib.Electromagnetism.Basic`.",
+  "claims": [
+    {
+      "name": "photon_gaugeInvariance_transversality",
+      "statement": "A single photon state demonstrates gauge invariance, the no-(anti)ghost theorem, and the transversality of photon.",
+      "sources": [
+        {
+          "title": "BRST cohomology and Hodge decomposition theorem in Abelian gauge theory",
+          "arxiv": "hep-th/9808040",
+          "url": "https://arxiv.org/abs/hep-th/9808040"
+        }
+      ]
+    },
+    {
+      "name": "photonMass_nonlocal_regulator",
+      "statement": "A nonlocal, higher derivative correction to the photon kinetic term regulates the photon mass while preserving gauge invariance and Poincare covariance.",
+      "sources": [
+        {
+          "title": "Higher-Order Kinetic Term for Controlling Photon Mass in Off-Shell Electrodynamics",
+          "arxiv": "hep-th/0603074",
+          "url": "https://arxiv.org/abs/hep-th/0603074"
+        }
+      ]
+    }
+  ]
+}

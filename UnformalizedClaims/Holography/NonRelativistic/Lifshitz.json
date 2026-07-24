@@ -1,0 +1,203 @@
+{
+  "doc": "# Lifshitz — Non Relativistic\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “Lifshitz holography”).",
+  "claims": [
+    {
+      "name": "underlying_geometrical_structure_lifshitz_holography",
+      "statement": "Underlying geometrical structure of Lifshitz holography identified via holographic dictionary",
+      "sources": [
+        {
+          "arxiv": "1512.03554",
+          "url": "https://arxiv.org/abs/1512.03554",
+          "title": "Lifshitz holography"
+        }
+      ]
+    },
+    {
+      "name": "flows_provide_further_insight_into",
+      "statement": "The flows provide further insight into holography for Lifshitz geometries.",
+      "sources": [
+        {
+          "arxiv": "1108.3067",
+          "url": "https://arxiv.org/abs/1108.3067",
+          "title": "Flows involving Lifshitz solutions"
+        }
+      ]
+    },
+    {
+      "name": "deformations_lifshitz_holography_investigated_dimensional",
+      "statement": "Deformations of Lifshitz holography are investigated in $(n+1)$ dimensional spacetime.",
+      "sources": [
+        {
+          "arxiv": "1202.3944",
+          "url": "https://arxiv.org/abs/1202.3944",
+          "title": "Deformations of Lifshitz Holography in $(n+1)$-dimensions"
+        }
+      ]
+    },
+    {
+      "name": "lifshitzinvariant_hydrodynamics_holography_generalized_arbitrary",
+      "statement": "Lifshitz-invariant hydrodynamics from holography is generalized to arbitrary hyperscaling-violating Lifshitz scaling theories with an unbroken $U(1)$ symmetry.",
+      "sources": [
+        {
+          "arxiv": "1611.04773",
+          "url": "https://arxiv.org/abs/1611.04773",
+          "title": "Hyperscaling-Violating Lifshitz hydrodynamics from black-holes: Part II"
+        }
+      ]
+    },
+    {
+      "name": "deformations_gaussbonnetlifshitz_holography_occur_dimensional",
+      "statement": "Deformations of Gauss-Bonnet-Lifshitz holography occur in (n + 1) dimensional spacetime.",
+      "sources": [
+        {
+          "arxiv": "1305.5578",
+          "url": "https://arxiv.org/abs/1305.5578",
+          "title": "Deformations of Lifshitz holography with the Gauss-Bonnet term in ($n+1$) dimensions"
+        }
+      ]
+    },
+    {
+      "name": "ho_ava_gravity_theory_possesses",
+      "statement": "Hořava gravity theory possesses global Lifshitz space as a solution and is conjectured to provide a natural framework for Lifshitz holography.",
+      "sources": [
+        {
+          "arxiv": "1601.03274",
+          "url": "https://arxiv.org/abs/1601.03274",
+          "title": "Asymptotically Lifshitz spacetimes with universal horizons in $(1 + 2)$ dimensions"
+        }
+      ]
+    },
+    {
+      "name": "higherorder_curvature_corrections_lifshitz_holography",
+      "statement": "Higher-order curvature corrections to Lifshitz holography are under control and have a sensible physical interpretation.",
+      "sources": [
+        {
+          "arxiv": "1004.4397",
+          "url": "https://arxiv.org/abs/1004.4397",
+          "title": "Lovelock-Lifshitz Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "holography_lifshitz_spacetimes_studied_epsilon",
+      "statement": "Holography for Lifshitz spacetimes is studied at $z=1+\\epsilon^2$ with small deformation parameter $\\epsilon$.",
+      "sources": [
+        {
+          "arxiv": "1304.7776",
+          "url": "https://arxiv.org/abs/1304.7776",
+          "title": "Lifshitz as a deformation of Anti-de Sitter"
+        }
+      ]
+    },
+    {
+      "name": "schr_dinger_symmetries_enforce_entire",
+      "statement": "Schrödinger symmetries enforce that the entire boundary geometry for Lifshitz holography is dictated by local Schrödinger invariance.",
+      "sources": [
+        {
+          "arxiv": "1409.5555",
+          "url": "https://arxiv.org/abs/1409.5555",
+          "title": "Torsional Newton-Cartan Geometry and the Schrödinger Algebra"
+        }
+      ]
+    },
+    {
+      "name": "holography_lifshitz_spacetimes_corresponds_dual",
+      "statement": "Holography for Lifshitz space-times corresponds to dual field theories on a fixed torsional Newton-Cartan background.",
+      "sources": [
+        {
+          "arxiv": "1502.00228",
+          "url": "https://arxiv.org/abs/1502.00228",
+          "title": "Field Theory on Newton-Cartan Backgrounds and Symmetries of the Lifshitz Vacuum"
+        }
+      ]
+    },
+    {
+      "name": "lifshitz_holography_serves_efficient_framework",
+      "statement": "Lifshitz holography serves as an efficient framework for anomalous transport in strongly coupled non-relativistic quantum matter.",
+      "sources": [
+        {
+          "arxiv": "2602.01971",
+          "url": "https://arxiv.org/abs/2602.01971",
+          "title": "Shear subdiffusion in non-relativistic holography"
+        }
+      ]
+    },
+    {
+      "name": "tnc_boundary_geometry_expected_universal",
+      "statement": "The TNC boundary geometry is expected to be universal in Lifshitz holography for all values of $z>1$.",
+      "sources": [
+        {
+          "arxiv": "1311.4794",
+          "url": "https://arxiv.org/abs/1311.4794",
+          "title": "Torsional Newton-Cartan Geometry and Lifshitz Holography"
+        }
+      ]
+    },
+    {
+      "name": "realtime_holography_spinorial_fields_considered",
+      "statement": "Real-time holography for spinorial fields is considered on Anti-de-Sitter (AdS) and more generally on Lifshitz spacetimes.",
+      "sources": [
+        {
+          "arxiv": "1107.0558",
+          "url": "https://arxiv.org/abs/1107.0558",
+          "title": "Holographic Renormalization for Fermions in Real Time"
+        }
+      ]
+    },
+    {
+      "name": "establishes_holography_lifshitz_spacetimes_dynamical",
+      "statement": "Establishes holography for Lifshitz spacetimes with dynamical exponent $z=1+\\epsilon^2$ by showing the dual field theory is a specific deformation of relativistic CFT; renormalization maps conformal to Lifshitz invariance, and QFT arguments demonstrate such deformations generically yield Lifshitz scaling.",
+      "sources": [
+        {
+          "arxiv": "1304.7776",
+          "url": "https://arxiv.org/abs/1304.7776",
+          "title": "Lifshitz as a deformation of Anti-de Sitter"
+        }
+      ]
+    },
+    {
+      "name": "also_introduces_extended_schr_dinger",
+      "statement": "It also introduces an extended Schrödinger algebra whose Chern-Simons theory yields a new nonprojectable conformal Hořava-Lifshitz gravity, dubbed Chern-Simons Schrödinger gravity. This theory has a $z=2$ Lifshitz vacuum, providing a new setting for Lifshitz holography.",
+      "sources": [
+        {
+          "arxiv": "1604.08054",
+          "url": "https://arxiv.org/abs/1604.08054",
+          "title": "Non-Relativistic Chern-Simons Theories and Three-Dimensional Horava-Lifshitz Gravity"
+        }
+      ]
+    },
+    {
+      "name": "holography_used_investigate_scrambling_properties",
+      "statement": "Holography is used to investigate scrambling properties for non-conformal black Dp brane backgrounds, asymptotically Lifshitz black holes, and Gauss-Bonnet black AdS solutions.",
+      "sources": [
+        {
+          "arxiv": "1602.07307",
+          "url": "https://arxiv.org/abs/1602.07307",
+          "title": "Extending the scope of holographic mutual information and chaotic behavior"
+        }
+      ]
+    },
+    {
+      "name": "holography_suggests_lifshitzlike_fixed_points",
+      "statement": "Holography suggests that Lifshitz-like fixed points can be obtained from various four-dimensional CFTs, including ${\\cal N}=4$ super Yang-Mills, via RG flows.",
+      "sources": [
+        {
+          "arxiv": "0905.0688",
+          "url": "https://arxiv.org/abs/0905.0688",
+          "title": "On String Theory Duals of Lifshitz-like Fixed Points"
+        }
+      ]
+    },
+    {
+      "name": "gravity_solutions_describing_renormalization_group",
+      "statement": "Gravity solutions describing renormalization group flows from relativistic to non-relativistic conformal theories are constructed in both a phenomenological massive vector model and $N=4$, $d=6$ gauged supergravity. These flows illuminate holography for Lifshitz geometries and provide field theory descriptions of Lifshitz duals.",
+      "sources": [
+        {
+          "arxiv": "1108.3067",
+          "url": "https://arxiv.org/abs/1108.3067",
+          "title": "Flows involving Lifshitz solutions"
+        }
+      ]
+    }
+  ]
+}

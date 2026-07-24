@@ -1,0 +1,27 @@
+{
+  "doc": "# Time dilation\n\nElementary special-relativity claims not present in Physlib.",
+  "claims": [
+    {
+      "name": "timeDilation_factor",
+      "statement": "A clock moving at speed $v$ runs slow by the factor $\\gamma = 1/\\sqrt{1-v^2/c^2}$.",
+      "sources": [
+        {
+          "title": "On the electrodynamics of moving bodies",
+          "arxiv": "physics/0503066",
+          "url": "https://arxiv.org/abs/physics/0503066"
+        }
+      ]
+    },
+    {
+      "name": "velocityAddition_relativistic",
+      "statement": "Collinear velocities compose as $w = (u+v)/(1+uv/c^2)$.",
+      "sources": [
+        {
+          "title": "Relativistic kinematics",
+          "arxiv": "physics/0503066",
+          "url": "https://arxiv.org/abs/physics/0503066"
+        }
+      ]
+    }
+  ]
+}

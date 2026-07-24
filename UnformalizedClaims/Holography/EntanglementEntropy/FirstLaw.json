@@ -1,0 +1,93 @@
+{
+  "doc": "# First Law — Entanglement Entropy\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “entanglement first law holography”).",
+  "claims": [
+    {
+      "name": "first_law_entanglement_entropy_verified",
+      "statement": "The first law of entanglement entropy is verified for wedge holography, and the massive fluctuations are irrelevant at first order.",
+      "sources": [
+        {
+          "arxiv": "2201.02014",
+          "url": "https://arxiv.org/abs/2201.02014",
+          "title": "Effective Action, Spectrum and First Law of Wedge Holography"
+        }
+      ]
+    },
+    {
+      "name": "using_holography_paper_studies_timedependent",
+      "statement": "Using holography, the paper studies time-dependent entanglement entropy in CFTs driven by a $t$-linear source for a conserved U(1) current or a marginal scalar operator. It shows that even when the usual first law of entanglement entropy fails, a first law for the rates of change of entanglement entropy and energy still holds.",
+      "sources": [
+        {
+          "arxiv": "1612.07769",
+          "url": "https://arxiv.org/abs/1612.07769",
+          "title": "A First Law of Entanglement Rates from Holography"
+        }
+      ]
+    },
+    {
+      "name": "using_holography_paper_shows_entanglement",
+      "statement": "Using holography, the paper shows that the entanglement entropy of a very small subsystem in excited states obeys a relationship analogous to the first law of thermodynamics. In relativistic setups, the effective temperature of this subsystem is inversely proportional to its size.",
+      "sources": [
+        {
+          "arxiv": "1212.1164",
+          "url": "https://arxiv.org/abs/1212.1164",
+          "title": "Thermodynamical Property of Entanglement Entropy for Excited States"
+        }
+      ]
+    },
+    {
+      "name": "using_holography_paper_computes_first",
+      "statement": "Using holography, the paper computes the first thermal correction to the entanglement entropy of a cap-like region in a CFT on a sphere and reproduces the field-theory result. It shows that this is an order-one effect in the large-N expansion, so quantum corrections to the holographic entanglement-entropy formula are essential, and evaluates the bulk contribution with machinery developed from entanglement-first-law derivations of linearized Einstein equations.",
+      "sources": [
+        {
+          "arxiv": "1502.07348",
+          "url": "https://arxiv.org/abs/1502.07348",
+          "title": "Thermal Corrections to Entanglement Entropy from Holography"
+        }
+      ]
+    },
+    {
+      "name": "using_holography_low_thermal_excitations",
+      "statement": "Using holography for low thermal excitations of pure AdS in higher-derivative gravity, the paper studies entanglement entropy and entanglement temperature for small subsystems. It shows that the entanglement entropy depends on the boundary CFT central charges and derives an entropy-variance-energy relation consistent with the proposed first-law-like entanglement relation, with a Fefferman-Graham framework for extending the analysis to more general excited states.",
+      "sources": [
+        {
+          "arxiv": "1305.2682",
+          "url": "https://arxiv.org/abs/1305.2682",
+          "title": "Note on Entanglement Temperature for Low Thermal Excited States in Higher Derivative Gravity"
+        }
+      ]
+    },
+    {
+      "name": "applying_reduced_theory_holography_authors",
+      "statement": "Applying the reduced theory to holography, the authors derive thermodynamics and first-order hydrodynamics, finding a temperature-independent shear viscosity to entropy density ratio. In the hyperscaling violating case, they show that the entanglement entropy violates the area law logarithmically, consistent with the presence of a Fermi surface.",
+      "sources": [
+        {
+          "arxiv": "1206.1499",
+          "url": "https://arxiv.org/abs/1206.1499",
+          "title": "Higher-derivative scalar-vector-tensor theories: black holes, Galileons, singularity cloaking and holography"
+        }
+      ]
+    },
+    {
+      "name": "minkowski_spacetime_holography_three_four",
+      "statement": "For Minkowski spacetime holography in three and four dimensions, the paper develops an entanglement-entropy prescription for special subregions by refining the three-dimensional construction and proposing a four-dimensional generalization of the Ryu-Takayanagi-type formula. Under assumptions on the holographic stress tensor, it then shows that the entanglement first law is equivalent to the bulk gravitational equations linearized around Minkowski spacetime.",
+      "sources": [
+        {
+          "arxiv": "1908.02044",
+          "url": "https://arxiv.org/abs/1908.02044",
+          "title": "Gravitation in flat spacetime from entanglement"
+        }
+      ]
+    },
+    {
+      "name": "wedge_holography_paper_derives_brane",
+      "statement": "For wedge holography, the paper derives the brane effective action in perturbative (infinite Pauli-Fierz tower) and non-perturbative (higher-derivative gravity plus matter) forms, showing that the matter sector removes the ghost problem and yields a ghost-free multi-gravity interpretation with the correct Einstein-like Weyl anomaly. It also determines the graviton spectrum under boundary choices and confirms the first law of entanglement entropy, with massive modes dropping out at first order.",
+      "sources": [
+        {
+          "arxiv": "2201.02014",
+          "url": "https://arxiv.org/abs/2201.02014",
+          "title": "Effective Action, Spectrum and First Law of Wedge Holography"
+        }
+      ]
+    }
+  ]
+}

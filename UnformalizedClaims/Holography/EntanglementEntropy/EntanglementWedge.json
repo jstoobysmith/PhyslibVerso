@@ -1,0 +1,203 @@
+{
+  "doc": "# Entanglement Wedge — Entanglement Entropy\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “entanglement wedge”).",
+  "claims": [
+    {
+      "name": "entanglement_wedge_defined_collection_bulk",
+      "statement": "The entanglement wedge is defined as the collection of bulk subsystems minimizing generalized entropy $A_B(\\mathbf{b}) + S(\\mathbf{b})$ that are reconstructible from the boundary.",
+      "sources": [
+        {
+          "arxiv": "2109.14618",
+          "url": "https://arxiv.org/abs/2109.14618",
+          "title": "Quantum minimal surfaces from quantum error correction"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_wedge_defined_domain_dependence",
+      "statement": "The ENTANGLEMENT WEDGE is defined as the domain of dependence of any spatial bulk region with the extremal surface $\\tilde{A}$ as one boundary and a Cauchy surface in $D_A$ as the other boundary; it is larger than the causal wedge and dual to the density matrix $\\rho_A$.",
+      "sources": [
+        {
+          "arxiv": "1609.00026",
+          "url": "https://arxiv.org/abs/1609.00026",
+          "title": "Lectures on Gravity and Entanglement"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_wedge_denoted_mathcal_mathcal",
+      "statement": "The entanglement wedge, denoted $\\mathcal{W}_{\\mathcal{E}}[\\mathcal{A}]$, is a bulk spacetime region bounded on one side by $D[\\mathcal{A}]$ and on the other by $\\mathcal{E}_{\\mathcal{A}}$.",
+      "sources": [
+        {
+          "arxiv": "1408.6300",
+          "url": "https://arxiv.org/abs/1408.6300",
+          "title": "Causality & holographic entanglement entropy"
+        }
+      ]
+    },
+    {
+      "name": "show_bulk_region_reconstructable_given",
+      "statement": "We show that the bulk region reconstructable from a given boundary subregion—which we term the reconstruction wedge—can be much smaller than the entanglement wedge even when backreaction is small.",
+      "sources": [
+        {
+          "arxiv": "1908.03975",
+          "url": "https://arxiv.org/abs/1908.03975",
+          "title": "Large Breakdowns of Entanglement Wedge Reconstruction"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_wedge_codimensionzero_bulk_region",
+      "statement": "The entanglement wedge is a codimension-zero bulk region naturally associated with the given boundary spatial region.",
+      "sources": [
+        {
+          "arxiv": "1408.6300",
+          "url": "https://arxiv.org/abs/1408.6300",
+          "title": "Causality & holographic entanglement entropy"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_wedge_proposed_most_natural",
+      "statement": "The entanglement wedge is proposed to be the most natural bulk region corresponding to the boundary reduced density matrix.",
+      "sources": [
+        {
+          "arxiv": "1408.6300",
+          "url": "https://arxiv.org/abs/1408.6300",
+          "title": "Causality & holographic entanglement entropy"
+        }
+      ]
+    },
+    {
+      "name": "wedge_holography_exhibits_phasetransition_behaviors",
+      "statement": "Wedge holography exhibits phase-transition behaviors of entanglement entropy for disconnected subsystems as expected in holographic CFTs",
+      "sources": [
+        {
+          "arxiv": "2007.06800",
+          "url": "https://arxiv.org/abs/2007.06800",
+          "title": "Codimension two holography for wedges"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_wedge_reconstruction_statement_any",
+      "statement": "Entanglement wedge reconstruction is the statement that any bulk operator $O_a$ acting within $\\mathcal{H}_a$ can always be represented in the CFT by an operator $O_A$ that has support only on $\\mathcal{H}_A$.",
+      "sources": [
+        {
+          "arxiv": "1601.05416",
+          "url": "https://arxiv.org/abs/1601.05416",
+          "title": "Reconstruction of Bulk Operators within the Entanglement Wedge in Gauge-Gravity Duality"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_wedge_bulk_region_most",
+      "statement": "The entanglement wedge is the bulk region most naturally associated with the boundary reduced density matrix $\\rho_{\\mathcal{A}}$.",
+      "sources": [
+        {
+          "arxiv": "1408.6300",
+          "url": "https://arxiv.org/abs/1408.6300",
+          "title": "Causality & holographic entanglement entropy"
+        }
+      ]
+    },
+    {
+      "name": "single_boundary_reconstruction_region_bulk",
+      "statement": "A single boundary reconstruction in region $A$ of a bulk operator works for every state in a subspace if the bulk operator lies within the entanglement wedge of $A$ for every state in the subspace, including states entangled with a reference system",
+      "sources": [
+        {
+          "arxiv": "1807.06041",
+          "url": "https://arxiv.org/abs/1807.06041",
+          "title": "Learning the Alpha-bits of Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "ads_cft_correspondence_bulk_operators",
+      "statement": "In the AdS/CFT correspondence, bulk operators can be reconstructed as CFT operators in a spatial subregion $A$ provided that they lie in the entanglement wedge of $A$, which improves on prior reconstruction methods that succeeded only in the smaller causal wedge.",
+      "sources": [
+        {
+          "arxiv": "1601.05416",
+          "url": "https://arxiv.org/abs/1601.05416",
+          "title": "Reconstruction of Bulk Operators within the Entanglement Wedge in Gauge-Gravity Duality"
+        }
+      ]
+    },
+    {
+      "name": "holographic_entanglement_purification_rho_ab",
+      "statement": "Holographic entanglement of purification $E_W(\\rho_{AB})$ perfectly matches minimal cross section length calculation",
+      "sources": [
+        {
+          "arxiv": "1812.05268",
+          "url": "https://arxiv.org/abs/1812.05268",
+          "title": "Holographic Entanglement of Purification from Conformal Field Theories"
+        }
+      ]
+    },
+    {
+      "name": "propose_entanglement_wedge_most_natural",
+      "statement": "We propose that the entanglement wedge is the most natural bulk region corresponding to the boundary reduced density matrix.",
+      "sources": [
+        {
+          "arxiv": "1408.6300",
+          "url": "https://arxiv.org/abs/1408.6300",
+          "title": "Causality & holographic entanglement entropy"
+        }
+      ]
+    },
+    {
+      "name": "process_introduce_codimensionzero_bulk_region",
+      "statement": "In the process, we introduce a codimension-zero bulk region, named the entanglement wedge, naturally associated with the given boundary spatial region.",
+      "sources": [
+        {
+          "arxiv": "1408.6300",
+          "url": "https://arxiv.org/abs/1408.6300",
+          "title": "Causality & holographic entanglement entropy"
+        }
+      ]
+    },
+    {
+      "name": "holographic_entanglement_entropy_wedge_holography",
+      "statement": "Holographic entanglement entropy in wedge holography computed via double minimization procedure",
+      "sources": [
+        {
+          "arxiv": "2007.06800",
+          "url": "https://arxiv.org/abs/2007.06800",
+          "title": "Codimension two holography for wedges"
+        }
+      ]
+    },
+    {
+      "name": "motivated_properties_tensor_networks_conjecture",
+      "statement": "Motivated by properties of tensor networks, we conjecture that an arbitrary gravitating region <math display=\"inline\"><mi>a</mi></math> can be assigned a generalized entanglement wedge <math display=\"inline\"><mi>E</mi><mo>⊃</mo><mi>a</mi></math>, such that quasilocal operators in <math display=\"inline\"><mi>E</mi></math> have a holographic representation in the full algebra generated by quasilocal operators in <math display=\"inline\"><mi>a</mi></math>.",
+      "sources": [
+        {
+          "arxiv": "2208.04993",
+          "url": "https://arxiv.org/abs/2208.04993",
+          "title": "Entanglement Wedges for Gravitating Regions"
+        }
+      ]
+    },
+    {
+      "name": "holographic_entanglement_purification_defined_minimal",
+      "statement": "Holographic entanglement of purification defined as minimal area of entanglement wedge cross section",
+      "sources": [
+        {
+          "arxiv": "1812.05268",
+          "url": "https://arxiv.org/abs/1812.05268",
+          "title": "Holographic Entanglement of Purification from Conformal Field Theories"
+        }
+      ]
+    },
+    {
+      "name": "entanglement_builds_bridges_macroscopic_entanglement",
+      "statement": "\"Entanglement builds bridges\": macroscopic entanglement in holographic theories indicates spatial connectivity in the dual geometry",
+      "sources": [
+        {
+          "arxiv": "1609.01287",
+          "url": "https://arxiv.org/abs/1609.01287",
+          "title": "Holographic Entanglement Entropy"
+        }
+      ]
+    }
+  ]
+}

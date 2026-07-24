@@ -1,0 +1,203 @@
+{
+  "doc": "# Mutual Information — Entanglement Entropy\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic mutual information”).",
+  "claims": [
+    {
+      "name": "spatial_noncommutativity_enhances_holographic_mutual",
+      "statement": "Spatial noncommutativity enhances the holographic mutual information.",
+      "sources": [
+        {
+          "arxiv": "1609.08841",
+          "url": "https://arxiv.org/abs/1609.08841",
+          "title": "Butterfly Effect and Holographic Mutual Information under External Field and Spatial Noncommutativity"
+        }
+      ]
+    },
+    {
+      "name": "nonpositivity_holographic_partite_information_implies",
+      "statement": "The non-positivity of holographic 3-partite information implies that holographic mutual information is monogamous.",
+      "sources": [
+        {
+          "arxiv": "1802.06618",
+          "url": "https://arxiv.org/abs/1802.06618",
+          "title": "Holographic Calculation of BMSFT Mutual and 3-partite Information"
+        }
+      ]
+    },
+    {
+      "name": "energy_scale_influences_holographic_mutual",
+      "statement": "The energy scale influences holographic mutual/tripartite information.",
+      "sources": [
+        {
+          "arxiv": "1907.08917",
+          "url": "https://arxiv.org/abs/1907.08917",
+          "title": "Holographic Mutual and Tripartite Information in a Non-Conformal Background"
+        }
+      ]
+    },
+    {
+      "name": "mutual_information_also_computed_proposed",
+      "statement": "The mutual information is also computed for a proposed holographic local quench whose holographic energy-momentum tensor matches the CFT one, and the holographic mutual information differs qualitatively from the CFT result.",
+      "sources": [
+        {
+          "arxiv": "1311.4173",
+          "url": "https://arxiv.org/abs/1311.4173",
+          "title": "Mutual information after a local quench in conformal field theory"
+        }
+      ]
+    },
+    {
+      "name": "holographic_local_quench_maximum_mutual",
+      "statement": "In the holographic local quench, the maximum mutual information decreases logarithmically with separation d, and increasing d produces a transition to a phase where the holographic mutual information vanishes identically.",
+      "sources": [
+        {
+          "arxiv": "1311.4173",
+          "url": "https://arxiv.org/abs/1311.4173",
+          "title": "Mutual information after a local quench in conformal field theory"
+        }
+      ]
+    },
+    {
+      "name": "external_magnetic_electric_melvin_fields",
+      "statement": "External magnetic and electric Melvin fields enhance the holographic mutual information.",
+      "sources": [
+        {
+          "arxiv": "1609.08841",
+          "url": "https://arxiv.org/abs/1609.08841",
+          "title": "Butterfly Effect and Holographic Mutual Information under External Field and Spatial Noncommutativity"
+        }
+      ]
+    },
+    {
+      "name": "transition_curves_holographic_mutual_information",
+      "statement": "From the transition curves of the holographic mutual information in the configuration space we could identify the different behaviors and also find a region in the configuration space where the holographic mutual information is zero at all times. Considering the holographic tripartite information, we observed that the holographic mutual information is monogamous also for these time-dependent backgrounds in the ranges of the variables explored.",
+      "sources": [
+        {
+          "arxiv": "1110.1607",
+          "url": "https://arxiv.org/abs/1110.1607",
+          "title": "Holographic evolution of the mutual information"
+        }
+      ]
+    },
+    {
+      "name": "using_ryutakayanagi_formula_paper_shows",
+      "statement": "Using the Ryu-Takayanagi formula, the paper shows that holographic mutual information is monogamous: for arbitrary regions the tripartite information obeys $I_3(A:B:C) \\le 0$, so mutual information is always extensive or superextensive in holographic theories.",
+      "sources": [
+        {
+          "arxiv": "1107.2940",
+          "url": "https://arxiv.org/abs/1107.2940",
+          "title": "Holographic Mutual Information is Monogamous"
+        }
+      ]
+    },
+    {
+      "name": "holographic_mutual_information_obeys_area",
+      "statement": "The holographic mutual information obeys an area law even in finite temperature.",
+      "sources": [
+        {
+          "arxiv": "1903.08490",
+          "url": "https://arxiv.org/abs/1903.08490",
+          "title": "Some Aspects of Entanglement Wedge Cross-Section"
+        }
+      ]
+    },
+    {
+      "name": "geodesic_combination_reduces_holographic_mutual",
+      "statement": "That geodesic combination reduces to the holographic mutual information between the intervals.",
+      "sources": [
+        {
+          "arxiv": "1707.08293",
+          "url": "https://arxiv.org/abs/1707.08293",
+          "title": "Holographic entanglement negativity conjecture for adjacent intervals in $AdS_3/CFT_2$"
+        }
+      ]
+    },
+    {
+      "name": "various_behaviors_holographic_mutual_information",
+      "statement": "Various behaviors of the holographic mutual information are found in this setup.",
+      "sources": [
+        {
+          "arxiv": "1507.00306",
+          "url": "https://arxiv.org/abs/1507.00306",
+          "title": "Holographic mutual information in global Vaidya-BTZ spacetime"
+        }
+      ]
+    },
+    {
+      "name": "results_consistent_behavior_holographic_mutual",
+      "statement": "The results are consistent with the behavior of the holographic mutual information.",
+      "sources": [
+        {
+          "arxiv": "2105.12476",
+          "url": "https://arxiv.org/abs/2105.12476",
+          "title": "Entanglement Wedge Cross Section in Holographic Excited States"
+        }
+      ]
+    },
+    {
+      "name": "holographic_mutual_information_computed_two",
+      "statement": "Holographic mutual information is computed for two disjoint subsystems $A$ and $B$.",
+      "sources": [
+        {
+          "arxiv": "2307.13712",
+          "url": "https://arxiv.org/abs/2307.13712",
+          "title": "Mixed state entanglement measures for the dipole deformed supersymmetric Yang-Mills theory"
+        }
+      ]
+    },
+    {
+      "name": "mutual_tripartite_information_studied_nonconformal",
+      "statement": "Mutual and tripartite information are studied in a non-conformal holographic background.",
+      "sources": [
+        {
+          "arxiv": "1907.08917",
+          "url": "https://arxiv.org/abs/1907.08917",
+          "title": "Holographic Mutual and Tripartite Information in a Non-Conformal Background"
+        }
+      ]
+    },
+    {
+      "name": "largeseparation_limit_holographic_mutual_information",
+      "statement": "In the large-separation limit, holographic mutual information vanishes at semiclassical order.",
+      "sources": [
+        {
+          "arxiv": "1712.05131",
+          "url": "https://arxiv.org/abs/1712.05131",
+          "title": "Holographic Mutual Information of Two Disjoint Spheres"
+        }
+      ]
+    },
+    {
+      "name": "holographic_entanglement_entropy_mutual_information",
+      "statement": "The holographic entanglement entropy and mutual information are studied for Lorentz boosted subsystems.",
+      "sources": [
+        {
+          "arxiv": "1703.00915",
+          "url": "https://arxiv.org/abs/1703.00915",
+          "title": "Holographic Entanglement Entropy on Generic Time Slices"
+        }
+      ]
+    },
+    {
+      "name": "mutual_tripartite_information_used_probes",
+      "statement": "Mutual and tripartite information are used as probes of thermalization in holographic models.",
+      "sources": [
+        {
+          "arxiv": "1212.0848",
+          "url": "https://arxiv.org/abs/1212.0848",
+          "title": "Holographic thermalization of mutual and tripartite information in 2d CFTs"
+        }
+      ]
+    },
+    {
+      "name": "largeseparation_limit_holographic_mutual_information_",
+      "statement": "In the large-separation limit, holographic mutual information receives quantum corrections from fluctuations.",
+      "sources": [
+        {
+          "arxiv": "1712.05131",
+          "url": "https://arxiv.org/abs/1712.05131",
+          "title": "Holographic Mutual Information of Two Disjoint Spheres"
+        }
+      ]
+    }
+  ]
+}

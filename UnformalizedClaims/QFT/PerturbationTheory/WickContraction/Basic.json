@@ -1,0 +1,27 @@
+{
+  "doc": "# Wick contraction — literature claims\n\nClaims from wiphy.org, merging into `Physlib.QFT.PerturbationTheory.WickContraction.Basic`.",
+  "claims": [
+    {
+      "name": "wickContraction_domainWall_partitionFunctions",
+      "statement": "The new Wick-contraction procedure directly produces partial domain wall partition functions.",
+      "sources": [
+        {
+          "title": "Novel construction and the monodromy relation for three-point functions at weak coupling",
+          "arxiv": "1410.8533",
+          "url": "https://arxiv.org/abs/1410.8533"
+        }
+      ]
+    },
+    {
+      "name": "wickContraction_vertex_gluing",
+      "statement": "A variant of Wick contraction glues together numerator factors for general interaction vertices.",
+      "sources": [
+        {
+          "title": "Tropical Amplitudes For Colored Lagrangians",
+          "arxiv": "2402.06719",
+          "url": "https://arxiv.org/abs/2402.06719"
+        }
+      ]
+    }
+  ]
+}

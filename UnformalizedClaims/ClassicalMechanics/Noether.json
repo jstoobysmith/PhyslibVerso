@@ -1,0 +1,27 @@
+{
+  "doc": "# Noether's theorem\n\nClaims from wiphy.org; a formalization target beside the existing Euler–Lagrange modules.",
+  "claims": [
+    {
+      "name": "noether_boundaryTerms_vanish",
+      "statement": "Noether's theorem requires that boundary terms in the Noether current vanish at the boundary.",
+      "sources": [
+        {
+          "title": "A Note on Infinite Symmetries of a Free Scalar on AdS Backgrounds and the Breitenlohner-Freedman Bound",
+          "arxiv": "1104.4761",
+          "url": "https://arxiv.org/abs/1104.4761"
+        }
+      ]
+    },
+    {
+      "name": "noetherPrepotential_trivial_charges",
+      "statement": "The vanishing Noether prepotential implies trivial Noether-Wald charges.",
+      "sources": [
+        {
+          "title": "Noether-Wald charges in six-dimensional Critical Gravity",
+          "arxiv": "2105.02924",
+          "url": "https://arxiv.org/abs/2105.02924"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "doc": "# Coherent states\n\nClaims from wiphy.org; a natural next formalization target beside the existing harmonic-oscillator modules.",
+  "claims": [
+    {
+      "name": "coherentStates_starProduct",
+      "statement": "Coherent states are formulated within the star-product deformed harmonic oscillator algebra.",
+      "sources": [
+        {
+          "title": "Star products and deformed oscillators",
+          "arxiv": "hep-th/9309031",
+          "url": "https://arxiv.org/abs/hep-th/9309031"
+        }
+      ]
+    },
+    {
+      "name": "coherentStates_generalizedUncertainty",
+      "statement": "The coherent states of the harmonic oscillator are constructed in the framework of the generalized uncertainty principle (GUP).",
+      "sources": [
+        {
+          "title": "Coherent States in Gravitational Quantum Mechanics",
+          "arxiv": "1204.1524",
+          "url": "https://arxiv.org/abs/1204.1524"
+        }
+      ]
+    },
+    {
+      "name": "oscillator_twoPointFunctions_coherent",
+      "statement": "Two-point functions for the harmonic oscillator are computed for position eigenstates and coherent states.",
+      "sources": [
+        {
+          "title": "Homological Quantum Mechanics",
+          "arxiv": "2112.11495",
+          "url": "https://arxiv.org/abs/2112.11495"
+        }
+      ]
+    }
+  ]
+}

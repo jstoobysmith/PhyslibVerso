@@ -1,0 +1,203 @@
+{
+  "doc": "# Transport — Thermalization\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic transport coefficient”).",
+  "claims": [
+    {
+      "name": "derive_closedform_linear_holographic_rg",
+      "statement": "We derive closed-form linear holographic RG flow-type equations for momenta-dependent transport coefficient functions.",
+      "sources": [
+        {
+          "arxiv": "1409.3095",
+          "url": "https://arxiv.org/abs/1409.3095",
+          "title": "Linearized fluid/gravity correspondence: from shear viscosity to all order hydrodynamics"
+        }
+      ]
+    },
+    {
+      "name": "hydrodynamic_descriptions_homogeneous_holographic_models",
+      "statement": "Hydrodynamic descriptions of homogeneous holographic models with spontaneously broken translations must include the transport coefficient termed “strain pressure.”",
+      "sources": [
+        {
+          "arxiv": "2001.05737",
+          "url": "https://arxiv.org/abs/2001.05737",
+          "title": "On the Hydrodynamic Description of Holographic Viscoelastic Models"
+        }
+      ]
+    },
+    {
+      "name": "transport_coefficient_associated_first_normal",
+      "statement": "A transport coefficient associated with the first normal stress difference is computed for the first time in the holographic context.",
+      "sources": [
+        {
+          "arxiv": "1212.4838",
+          "url": "https://arxiv.org/abs/1212.4838",
+          "title": "New Transport Properties of Anisotropic Holographic Superfluids"
+        }
+      ]
+    },
+    {
+      "name": "transport_coefficient_functions_computed_holographic",
+      "statement": "Transport coefficient functions are computed in a holographic $U(1)_V \\times U(1)_A$ Maxwell--Chern--Simons theory in Schwarzschild--AdS$_5$ in the probe limit.",
+      "sources": [
+        {
+          "arxiv": "2606.10689",
+          "url": "https://arxiv.org/abs/2606.10689",
+          "title": "Chiral Plasma under Strong Magnetic Fields: A Holographic Analysis of Transport Phenomena"
+        }
+      ]
+    },
+    {
+      "name": "using_combined_hydrodynamic_quantum_field",
+      "statement": "Using combined hydrodynamic and quantum field theory arguments, this paper derives analytic magneto-transport formulas for charge density wave states with spontaneous or pseudo-spontaneous translation breaking in the diffusive regime. It expresses all relevant hydrodynamic transport coefficients in terms of thermodynamics and DC thermoelectric conductivities, identifies the role of momentum dissipation in the crossover to purely explicit breaking, and clarifies transport-coefficient relations seen in holographic models.",
+      "sources": [
+        {
+          "arxiv": "2101.05343",
+          "url": "https://arxiv.org/abs/2101.05343",
+          "title": "Hydrodynamic magneto-transport in charge density wave states"
+        }
+      ]
+    },
+    {
+      "name": "paper_formulates_holographic_fluidgravity_description",
+      "statement": "The paper formulates a holographic fluid-gravity description of the chiral magnetic effect for a strongly coupled plasma with multiple anomalous $U(1)$ currents. In the axial-vector two-charge case, it identifies the CME as a first-order transport coefficient in the vector current and computes that coefficient holographically at strong coupling.",
+      "sources": [
+        {
+          "arxiv": "1301.6558",
+          "url": "https://arxiv.org/abs/1301.6558",
+          "title": "Chiral magnetic effect and holography"
+        }
+      ]
+    },
+    {
+      "name": "using_backreacted_su_einsteinyangmills_model",
+      "statement": "Using the backreacted $SU(2)$ Einstein-Yang-Mills model, the paper completes the transport analysis of anisotropic holographic p-wave superfluids by including helicity-zero fluctuations and computing a new transport coefficient associated with the first normal stress difference, relating it in the unbroken phase to a minimally coupled bulk scalar. It also identifies transport responses along the condensate analogous to thermoelectric and piezoelectric effects, together with a flexoelectric effect.",
+      "sources": [
+        {
+          "arxiv": "1212.4838",
+          "url": "https://arxiv.org/abs/1212.4838",
+          "title": "New Transport Properties of Anisotropic Holographic Superfluids"
+        }
+      ]
+    },
+    {
+      "name": "paper_shows_correct_hydrodynamic_dual",
+      "statement": "The paper shows that the correct hydrodynamic dual of homogeneous holographic models with spontaneously broken translations must include the transport coefficient 'strain pressure'. With this ingredient, the near-equilibrium hydrodynamics reproduces all quasinormal-mode hydrodynamic excitations and yields a first complete matching between these holographic models and their effective hydrodynamic description.",
+      "sources": [
+        {
+          "arxiv": "2001.05737",
+          "url": "https://arxiv.org/abs/2001.05737",
+          "title": "On the Hydrodynamic Description of Holographic Viscoelastic Models"
+        }
+      ]
+    },
+    {
+      "name": "effective_longwavelength_theory_nearly_critical",
+      "statement": "An effective long-wavelength theory for nearly critical holographic superfluids is derived using bulk analytic techniques, enabling computation of the complex dissipative kinetic transport coefficient from black hole thermodynamics. At finite density, the theory predicts discontinuous dispersion relations between normal and broken phases.",
+      "sources": [
+        {
+          "arxiv": "2210.06513",
+          "url": "https://arxiv.org/abs/2210.06513",
+          "title": "Nearly Critical Holographic Superfluids"
+        }
+      ]
+    },
+    {
+      "name": "using_gauge_gravity_duality_probe",
+      "statement": "Using gauge/gravity duality in the probe limit, the paper extends holographic transport theory for graphene near the Dirac point to a two-interacting-current model with a perpendicular magnetic field. The model captures the charge-density dependence of the Seebeck coefficient and thermoelectric coefficients $\\alpha_{ij}$ in agreement with experiment, while showing that the magnetic field strongly alters transport and that any dark-sector contribution is mainly quantitative, making it hard to detect through graphene transport measurements.",
+      "sources": [
+        {
+          "arxiv": "1708.08051",
+          "url": "https://arxiv.org/abs/1708.08051",
+          "title": "Two interacting current model of holographic Dirac fluid in graphene"
+        }
+      ]
+    },
+    {
+      "name": "examining_conformal_interfaces_symmetric_orbifold",
+      "statement": "By examining conformal interfaces in symmetric orbifold theories, the paper shows that at the orbifold point, weighted-average energy transport coefficients are simple averages of the underlying seed theory coefficients. A holographic comparison also reveals that the transmission coefficient substantially increases with strong coupling, unlike boundary entropy.",
+      "sources": [
+        {
+          "arxiv": "2301.13198",
+          "url": "https://arxiv.org/abs/2301.13198",
+          "title": "Transport across interfaces in symmetric orbifolds"
+        }
+      ]
+    },
+    {
+      "name": "paper_formulates_dissipative_hydrodynamics_charge",
+      "statement": "The paper formulates dissipative hydrodynamics for charge density waves in a clean isotropic electronic crystal with spontaneously broken translations, identifying 'lattice pressure' as a new transport coefficient that encodes background strain and thermal expansion and should be included in holographic models of such systems. It also gives the first calculation of thermal and chemical expansion coefficients in a holographic electronic crystal.",
+      "sources": [
+        {
+          "arxiv": "2001.07357",
+          "url": "https://arxiv.org/abs/2001.07357",
+          "title": "Hydrodynamics for charge density waves and their holographic duals"
+        }
+      ]
+    },
+    {
+      "name": "paper_analyzes_rotational_holographic_transport",
+      "statement": "The paper analyzes rotational holographic transport in strongly coupled $2+1$-dimensional systems by identifying the moment of inertia $I$ of a charged rotating black hole in an $\\text{AdS}_4$ background as a transport coefficient. In the low-temperature regime, the response of the moment of inertia density, $\\partial(I/A)/\\partial\\Omega$, is shown to exhibit a quadratic dependence on temperature $T$ in the presence of charge $Q$.",
+      "sources": [
+        {
+          "arxiv": "2402.04194",
+          "url": "https://arxiv.org/abs/2402.04194",
+          "title": "Rotational holographic transport from KN-AdS black hole"
+        }
+      ]
+    },
+    {
+      "name": "paper_derives_closedform_linear_holographic",
+      "statement": "The paper derives closed-form linear holographic renormalization group flow equations to construct all-order linearized fluid dynamics for strongly coupled $\\mathcal{N}=4$ super-Yang-Mills theory. Through perturbative and numerical solutions, it establishes that dissipative effects are completely encoded by the shear term and a novel third-order transport coefficient.",
+      "sources": [
+        {
+          "arxiv": "1409.3095",
+          "url": "https://arxiv.org/abs/1409.3095",
+          "title": "Linearized fluid/gravity correspondence: from shear viscosity to all order hydrodynamics"
+        }
+      ]
+    },
+    {
+      "name": "resumming_constitutive_relations_all_gradient",
+      "statement": "By resumming constitutive relations to all gradient orders in a holographic Maxwell-Chern-Simons theory, the paper computes nine momentum-dependent transport coefficient functions. Utilizing these memory functions, the authors show that the chiral magnetic effect deviates from an instantaneous response and discover non-dissipative modes in the chiral magnetic wave at high magnetic fields.",
+      "sources": [
+        {
+          "arxiv": "1807.11908",
+          "url": "https://arxiv.org/abs/1807.11908",
+          "title": "Gradient resummation for nonlinear chiral transport: an insight from holography"
+        }
+      ]
+    },
+    {
+      "name": "paper_formulates_shear_viscosity_translationsymmetrybroken",
+      "statement": "The paper formulates shear viscosity in a translation-symmetry-broken hydrodynamic and holographic setting by defining $\\eta$ as the coefficient of the shear tensor in a modified constitutive relation that includes the symmetry-breaking scalar fields. It shows that this transport coefficient differs, already at leading disorder order, from the usual Kubo-type quantity $\\eta^\\star = -\\lim_{\\omega\\to 0}\\frac{1}{\\omega}\\,\\text{Im}\\, G^{R}_{T^{xy}T^{xy}}(\\omega,k=0)$.",
+      "sources": [
+        {
+          "arxiv": "1601.04624",
+          "url": "https://arxiv.org/abs/1601.04624",
+          "title": "Shear viscosity in holography and effective theory of transport without translational symmetry"
+        }
+      ]
+    },
+    {
+      "name": "paper_constructs_slowly_varying_spacetimedependent",
+      "statement": "The paper constructs a slowly varying, spacetime-dependent holographic superfluid using an expansion in inverse powers of the order-parameter charge and computes its transport coefficients. Within this framework it shows that the condensate shear viscosity vanishes, the superfluid diffusion coefficient is continuous across the phase transition, and the bulk viscosity \\(\\zeta_3\\) diverges near criticality; it also derives an analytic near-critical backreacted metric for a particular holographic superfluid.",
+      "sources": [
+        {
+          "arxiv": "1101.3330",
+          "url": "https://arxiv.org/abs/1101.3330",
+          "title": "Transport in holographic superfluids"
+        }
+      ]
+    },
+    {
+      "name": "using_gauge_gravity_duality_boostinvariant",
+      "statement": "Using gauge/gravity duality for boost-invariant expansion at fixed late-time energy-density scale, the paper shows that holographic Bjorken flow at large $D$ is governed by hydrodynamics and computes the first corrections to the large-$D$ limit. It also constrains the leading large-$D$ behavior of a transport-coefficient combination through 6$^{th}$ order in the gradient expansion.",
+      "sources": [
+        {
+          "arxiv": "1810.02314",
+          "url": "https://arxiv.org/abs/1810.02314",
+          "title": "Holographic Bjorken Flow at Large-D"
+        }
+      ]
+    }
+  ]
+}

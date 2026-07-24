@@ -1,0 +1,49 @@
+{
+  "doc": "# Celestial — Amplitudes\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “celestial amplitude holography”).",
+  "claims": [
+    {
+      "name": "decomposition_underwrites_scatteringamplitude_celestial_cft",
+      "statement": "The decomposition underwrites the scattering-amplitude to celestial CFT correlation-function correspondence used in celestial holography.",
+      "sources": [
+        {
+          "arxiv": "2411.19219",
+          "url": "https://arxiv.org/abs/2411.19219",
+          "title": "Celestial decomposition of Wigner's particles"
+        }
+      ]
+    },
+    {
+      "name": "dozz_small_expansion_generates_looplevel",
+      "statement": "The DOZZ small-$b$ expansion generates loop-level corrections to the tree-level three-gluon scattering amplitude in celestial holography.",
+      "sources": [
+        {
+          "arxiv": "2509.21182",
+          "url": "https://arxiv.org/abs/2509.21182",
+          "title": "Small-$b$ expansion of the DOZZ formula for light operators"
+        }
+      ]
+    },
+    {
+      "name": "authors_apply_dozz_expansion_formulate",
+      "statement": "The authors apply this DOZZ expansion to formulate a perturbative Liouville program for celestial holography, which generates loop-level corrections to the tree-level three-gluon scattering amplitude.",
+      "sources": [
+        {
+          "arxiv": "2509.21182",
+          "url": "https://arxiv.org/abs/2509.21182",
+          "title": "Small-$b$ expansion of the DOZZ formula for light operators"
+        }
+      ]
+    },
+    {
+      "name": "paper_derives_bar_deformed_soft",
+      "statement": "The paper derives a $T\\bar T$-deformed soft graviton theorem using celestial holography. As a concrete amplitude-level example, it shows that a two-dimensional irrelevant $T\\bar T$ deformation can be implemented on a four-dimensional theory.",
+      "sources": [
+        {
+          "arxiv": "2209.01953",
+          "url": "https://arxiv.org/abs/2209.01953",
+          "title": "$T\\bar{T}$ deformed soft theorem"
+        }
+      ]
+    }
+  ]
+}

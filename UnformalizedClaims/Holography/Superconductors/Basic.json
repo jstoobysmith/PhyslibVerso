@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Superconductors\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic superconductor”).",
+  "claims": [
+    {
+      "name": "standard_holographic_superconductor_setup_extends",
+      "statement": "The standard holographic superconductor setup extends to a rotating 2D holographic superconductor in the probe limit and small angular momentum approximation.",
+      "sources": [
+        {
+          "arxiv": "1107.2909",
+          "url": "https://arxiv.org/abs/1107.2909",
+          "title": "Analytical approach to phase transitions in rotating and non-rotating 2D holographic superconductors"
+        }
+      ]
+    },
+    {
+      "name": "phase_transitions_between_swave_holographic",
+      "statement": "Phase transitions between s-wave holographic insulator/superconductor and metal/superconductor are studied analytically.",
+      "sources": [
+        {
+          "arxiv": "1509.01769",
+          "url": "https://arxiv.org/abs/1509.01769",
+          "title": "Analytic investigation of holographic phase transitions influenced by dark matter sector"
+        }
+      ]
+    },
+    {
+      "name": "superconductor_effect_momentum_relaxation_combined",
+      "statement": "The superconductor effect and momentum relaxation are combined in the holographic relaxed superconductor system.",
+      "sources": [
+        {
+          "arxiv": "2112.14092",
+          "url": "https://arxiv.org/abs/2112.14092",
+          "title": "Entanglement of Purification for Momentum Relaxed Superconductor"
+        }
+      ]
+    },
+    {
+      "name": "holographic_superconductor_model_behaves_type",
+      "statement": "The holographic superconductor model behaves as a type II superconductor under the effect of magnetic fields.",
+      "sources": [
+        {
+          "arxiv": "0810.1563",
+          "url": "https://arxiv.org/abs/0810.1563",
+          "title": "Holographic Superconductors"
+        }
+      ]
+    },
+    {
+      "name": "holographic_einsteinmaxwelldilatonaxion_emda_pwave_superconductor",
+      "statement": "A holographic Einstein--Maxwell--Dilaton--Axion (EMDA) p-wave superconductor exhibits a superconductor--insulator transition (SIT).",
+      "sources": [
+        {
+          "arxiv": "2602.14446",
+          "url": "https://arxiv.org/abs/2602.14446",
+          "title": "Quantum criticality and mixed-state entanglement in holographic superconductor--insulator transitions"
+        }
+      ]
+    },
+    {
+      "name": "holographic_superconductor_model_has_kink",
+      "statement": "The holographic superconductor model has kink crystalline condensates.",
+      "sources": [
+        {
+          "arxiv": "1911.05444",
+          "url": "https://arxiv.org/abs/1911.05444",
+          "title": "Kink Crystalline Condensate and Multi-kink Solution in Holographic Superconductor"
+        }
+      ]
+    },
+    {
+      "name": "minimal_holographic_superconductor_finite_coupling",
+      "statement": "For a minimal holographic superconductor at finite coupling, the dual Ginzburg-Landau theory can be identified exactly in the Gauss-Bonnet holographic superconductor, including exact numerical coefficients.",
+      "sources": [
+        {
+          "arxiv": "2409.18323",
+          "url": "https://arxiv.org/abs/2409.18323",
+          "title": "The dual Ginzburg-Landau theory for a holographic superconductor: Finite coupling corrections"
+        }
+      ]
+    },
+    {
+      "name": "st_ckelberg_holographic_superconductor_constructed",
+      "statement": "The Stückelberg holographic superconductor is constructed with Weyl corrections.",
+      "sources": [
+        {
+          "arxiv": "1201.2486",
+          "url": "https://arxiv.org/abs/1201.2486",
+          "title": "The Stückelberg Holographic Superconductors with Weyl corrections"
+        }
+      ]
+    },
+    {
+      "name": "standard_holographic_superconductor_described_notes",
+      "statement": "The standard holographic superconductor is described in the notes.",
+      "sources": [
+        {
+          "arxiv": "1401.1504",
+          "url": "https://arxiv.org/abs/1401.1504",
+          "title": "Introductory notes on holographic superconductors"
+        }
+      ]
+    },
+    {
+      "name": "preferred_ground_state_holographic_superconductor",
+      "statement": "The preferred ground state can be a holographic superconductor.",
+      "sources": [
+        {
+          "arxiv": "1307.4572",
+          "url": "https://arxiv.org/abs/1307.4572",
+          "title": "Bose-Fermi competition in holographic metals"
+        }
+      ]
+    },
+    {
+      "name": "condensation_operator_holographic_superconductor_computed",
+      "statement": "The condensation operator of the holographic superconductor is computed.",
+      "sources": [
+        {
+          "arxiv": "1801.06051",
+          "url": "https://arxiv.org/abs/1801.06051",
+          "title": "Noncommutative effects of charged black hole on holographic superconductors"
+        }
+      ]
+    },
+    {
+      "name": "momentum_relaxation_affects_information_quantities",
+      "statement": "Momentum relaxation affects information quantities in holographic superconductor systems.",
+      "sources": [
+        {
+          "arxiv": "2112.14092",
+          "url": "https://arxiv.org/abs/2112.14092",
+          "title": "Entanglement of Purification for Momentum Relaxed Superconductor"
+        }
+      ]
+    },
+    {
+      "name": "holographic_superconductor_model_has_metastable",
+      "statement": "The holographic superconductor model has metastable multi-kink solutions.",
+      "sources": [
+        {
+          "arxiv": "1911.05444",
+          "url": "https://arxiv.org/abs/1911.05444",
+          "title": "Kink Crystalline Condensate and Multi-kink Solution in Holographic Superconductor"
+        }
+      ]
+    },
+    {
+      "name": "photon_coupled_holographic_superconductor_acquires",
+      "statement": "A photon coupled to the holographic superconductor acquires a mass.",
+      "sources": [
+        {
+          "arxiv": "0810.1563",
+          "url": "https://arxiv.org/abs/0810.1563",
+          "title": "Holographic Superconductors"
+        }
+      ]
+    },
+    {
+      "name": "below_critical_temperature_holographic_superconductor",
+      "statement": "Below a critical temperature, holographic superconductor solutions are thermodynamically preferred.",
+      "sources": [
+        {
+          "arxiv": "1110.3454",
+          "url": "https://arxiv.org/abs/1110.3454",
+          "title": "Minimal Holographic Superconductors from Maximal Supergravity"
+        }
+      ]
+    },
+    {
+      "name": "holographic_superconductor_constructed_massive_gravity",
+      "statement": "A holographic superconductor is constructed in a massive gravity background.",
+      "sources": [
+        {
+          "arxiv": "1404.5321",
+          "url": "https://arxiv.org/abs/1404.5321",
+          "title": "Holographic superconductors from the massive gravity"
+        }
+      ]
+    },
+    {
+      "name": "model_realizes_pwave_holographic_insulator",
+      "statement": "The model realizes a p-wave holographic insulator/superconductor transition.",
+      "sources": [
+        {
+          "arxiv": "1011.6158",
+          "url": "https://arxiv.org/abs/1011.6158",
+          "title": "P-Wave Holographic Insulator/Superconductor Phase Transition"
+        }
+      ]
+    },
+    {
+      "name": "nonabelian_holographic_superconductor_admits_only",
+      "statement": "The non-Abelian holographic superconductor admits only a droplet solution.",
+      "sources": [
+        {
+          "arxiv": "1007.4151",
+          "url": "https://arxiv.org/abs/1007.4151",
+          "title": "d-wave Holographic Superconductor Vortex Lattice and Non-Abelian Holographic Superconductor Droplet"
+        }
+      ]
+    }
+  ]
+}

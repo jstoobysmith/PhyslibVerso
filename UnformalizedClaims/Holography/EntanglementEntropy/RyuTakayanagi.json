@@ -1,0 +1,203 @@
+{
+  "doc": "# Ryu Takayanagi — Entanglement Entropy\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “Ryu-Takayanagi holographic entanglement”).",
+  "claims": [
+    {
+      "name": "ryutakayanagi_formula_formulated_holographic_entanglement",
+      "statement": "The Ryu-Takayanagi formula is formulated for holographic entanglement entropy.",
+      "sources": [
+        {
+          "arxiv": "1707.08231",
+          "url": "https://arxiv.org/abs/1707.08231",
+          "title": "Non-relativistic entanglement entropy from Horava gravity"
+        }
+      ]
+    },
+    {
+      "name": "holographic_ryutakayanagi_ansatz_used_compute",
+      "statement": "The holographic Ryu-Takayanagi ansatz is used to compute entanglement entropy.",
+      "sources": [
+        {
+          "arxiv": "0803.1928",
+          "url": "https://arxiv.org/abs/0803.1928",
+          "title": "Holographic entanglement entropy probes (non)locality"
+        }
+      ]
+    },
+    {
+      "name": "modification_holographic_ryutakayanagi_formula_used",
+      "statement": "A modification of the holographic Ryu-Takayanagi formula is used to calculate holographic entanglement measures.",
+      "sources": [
+        {
+          "arxiv": "2401.00943",
+          "url": "https://arxiv.org/abs/2401.00943",
+          "title": "Entanglement from holography for five-dimensional charged Schrödinger black hole"
+        }
+      ]
+    },
+    {
+      "name": "work_related_ryutakayanagi_proposal_holographic",
+      "statement": "The work is related to the Ryu-Takayanagi proposal for holographic entanglement entropy.",
+      "sources": [
+        {
+          "arxiv": "1209.6368",
+          "url": "https://arxiv.org/abs/1209.6368",
+          "title": "Tracing Through Scalar Entanglement"
+        }
+      ]
+    },
+    {
+      "name": "classical_level_bulk_construction_reproduces",
+      "statement": "Classical level bulk construction reproduces the conjectured Ryu-Takayanagi formula for holographic entanglement entropy",
+      "sources": [
+        {
+          "arxiv": "1306.4682",
+          "url": "https://arxiv.org/abs/1306.4682",
+          "title": "Holographic entanglement beyond classical gravity"
+        }
+      ]
+    },
+    {
+      "name": "proposal_generalizes_holographic_entanglement_entropy",
+      "statement": "The proposal generalizes the holographic entanglement entropy of Ryu-Takayanagi to spacetime-split regions.",
+      "sources": [
+        {
+          "arxiv": "1404.0794",
+          "url": "https://arxiv.org/abs/1404.0794",
+          "title": "EPR = ER and Scattering Amplitude as Entanglement Entropy Change"
+        }
+      ]
+    },
+    {
+      "name": "ryu_takayanagi_formula_entanglement_entropy",
+      "statement": "The Ryu–Takayanagi formula for entanglement entropy appears naturally in the $p$-adic holographic setting.",
+      "sources": [
+        {
+          "arxiv": "1605.07639",
+          "url": "https://arxiv.org/abs/1605.07639",
+          "title": "Tensor networks, $p$-adic fields, and algebraic curves: arithmetic and the AdS$_3$/CFT$_2$ correspondence"
+        }
+      ]
+    },
+    {
+      "name": "ryu_takayanagi_conjecture_used_compute",
+      "statement": "The Ryu–Takayanagi conjecture is used to compute entanglement entropy in the proposed holographic dual.",
+      "sources": [
+        {
+          "arxiv": "1806.02289",
+          "url": "https://arxiv.org/abs/1806.02289",
+          "title": "AdS Vacuum Bubbles, Holography and Dual RG Flows"
+        }
+      ]
+    },
+    {
+      "name": "holographic_ryu_takayanagi_rt_algorithm",
+      "statement": "The holographic Ryu–Takayanagi (RT) algorithm computes the entanglement entropy (EE) in dual CFT$_{2}$.",
+      "sources": [
+        {
+          "arxiv": "1504.00106",
+          "url": "https://arxiv.org/abs/1504.00106",
+          "title": "Holographic Entanglement Entropy for noncommutative Anti-de Sitter space"
+        }
+      ]
+    },
+    {
+      "name": "holographic_entanglement_entropy_formula_ryutakayanagi",
+      "statement": "The holographic entanglement entropy formula of Ryu-Takayanagi appears to detect only the hidden Fermi surfaces.",
+      "sources": [
+        {
+          "arxiv": "1112.0573",
+          "url": "https://arxiv.org/abs/1112.0573",
+          "title": "Hidden Fermi surfaces in compressible states of gauge-gravity duality"
+        }
+      ]
+    },
+    {
+      "name": "complex_codimensiontwo_extremal_surfaces_may",
+      "statement": "Complex codimension-two extremal surfaces may be relevant to the Ryu-Takayanagi holographic entanglement proposal and its covariant Hubeny-Rangamani-Takayanagi generalization.",
+      "sources": [
+        {
+          "arxiv": "1407.2900",
+          "url": "https://arxiv.org/abs/1407.2900",
+          "title": "Complex Entangling Surfaces for AdS and Lifshitz Black Holes?"
+        }
+      ]
+    },
+    {
+      "name": "ryutakayanagi_holographic_entanglement_entropy_formula",
+      "statement": "The Ryu-Takayanagi holographic entanglement entropy formula calculates some terms in the entanglement entropy of entangled superpositions of coherent states.",
+      "sources": [
+        {
+          "arxiv": "1205.5036",
+          "url": "https://arxiv.org/abs/1205.5036",
+          "title": "Holographic entanglement entropy beyond coherent states"
+        }
+      ]
+    },
+    {
+      "name": "ads_ryu_takayanagi_holographic_entanglement",
+      "statement": "In AdS$_3$, Ryu–Takayanagi holographic entanglement entropy yields a maximum entanglement temperature for thermal energy near the boundary region.",
+      "sources": [
+        {
+          "arxiv": "1505.00215",
+          "url": "https://arxiv.org/abs/1505.00215",
+          "title": "Realization of Holographic Entanglement Temperature for a Nearly-AdS boundary"
+        }
+      ]
+    },
+    {
+      "name": "holographic_case_emphasizes_how_ryutakayanagi",
+      "statement": "The holographic case emphasizes how the Ryu-Takayanagi formula geometrically realizes general features of field-theory entanglement.",
+      "sources": [
+        {
+          "arxiv": "1907.08126",
+          "url": "https://arxiv.org/abs/1907.08126",
+          "title": "Lectures on entanglement entropy in field theory and holography"
+        }
+      ]
+    },
+    {
+      "name": "new_corrections_holographic_entanglement_entropy",
+      "statement": "New corrections to holographic entanglement entropy are expected near phase transitions of the associated Ryu-Takayanagi surface.",
+      "sources": [
+        {
+          "arxiv": "2006.10089",
+          "url": "https://arxiv.org/abs/2006.10089",
+          "title": "Probing phase transitions of holographic entanglement entropy with fixed area states"
+        }
+      ]
+    },
+    {
+      "name": "ryu_takayanagi_holographic_entanglement_entropy",
+      "statement": "The Ryu–Takayanagi holographic entanglement entropy proposal is evaluated in a de Sitter braneworld embedded in AdS.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0606027",
+          "url": "https://arxiv.org/abs/hep-th/0606027",
+          "title": "Holographic entanglement entropy of de Sitter braneworld"
+        }
+      ]
+    },
+    {
+      "name": "minimal_area_condition_ryutakayanagi_used",
+      "statement": "The minimal area condition of Ryu-Takayanagi is used in the holographic calculation of the entanglement entropy.",
+      "sources": [
+        {
+          "arxiv": "1406.5593",
+          "url": "https://arxiv.org/abs/1406.5593",
+          "title": "Weak Minimal Area In Entanglement Entropy"
+        }
+      ]
+    },
+    {
+      "name": "analogue_ryutakayanagi_formula_holographic_entanglement",
+      "statement": "An analogue of the Ryu-Takayanagi formula for holographic entanglement entropy is applicable to non-relativistic holographic dualities involving Horava gravity.",
+      "sources": [
+        {
+          "arxiv": "1707.08231",
+          "url": "https://arxiv.org/abs/1707.08231",
+          "title": "Non-relativistic entanglement entropy from Horava gravity"
+        }
+      ]
+    }
+  ]
+}

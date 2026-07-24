@@ -1,0 +1,16 @@
+{
+  "doc": "# HKLL — Bulk Reconstruction\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “HKLL smearing bulk operator”).",
+  "claims": [
+    {
+      "name": "nonperturbative_violations_bulk_microcausality_achieved",
+      "statement": "Non-perturbative violations of bulk micro-causality can be achieved by implementing a late boundary time cut-off while smearing the boundary operator via the HKLL kernel.",
+      "sources": [
+        {
+          "arxiv": "2606.21537",
+          "url": "https://arxiv.org/abs/2606.21537",
+          "title": "Near-horizon modifications in finite $N$ holography"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "doc": "# Minkowski space — literature claims\n\nClaims from wiphy.org, merging into `Physlib.Relativity.MinkowskiMatrix`.",
+  "claims": [
+    {
+      "name": "minkowskiVacuum_coincidence",
+      "statement": "If $(M,g)$ is Minkowski spacetime, $\\lambda_M$ coincides with the Minkowski vacuum.",
+      "sources": [
+        {
+          "title": "Quantum out-states holographically induced by asymptotic flatness: Invariance under spacetime symmetries, energy positivity and Hadamard property",
+          "arxiv": "gr-qc/0610143",
+          "url": "https://arxiv.org/abs/gr-qc/0610143"
+        }
+      ]
+    }
+  ]
+}

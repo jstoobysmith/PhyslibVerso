@@ -1,0 +1,16 @@
+{
+  "doc": "# Quench — Thermalization\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “quantum quench holography”).",
+  "claims": [
+    {
+      "name": "using_holography_paper_studies_finitetemperature",
+      "statement": "Using holography, the paper studies finite-temperature quantum quenches of relevant operators with $2\\leq\\Delta\\leq4$ by tracking the operator expectation value and stress tensor through the quench. It finds universal scaling behavior in both fast and slow quenches, with scaling exponents varying smoothly with $\\Delta$, and shows that for fast quenches the relaxation time is fixed by the thermal timescale rather than by operator dimension or quench rate.",
+      "sources": [
+        {
+          "arxiv": "1302.2924",
+          "url": "https://arxiv.org/abs/1302.2924",
+          "title": "Quantum quenches of holographic plasmas"
+        }
+      ]
+    }
+  ]
+}

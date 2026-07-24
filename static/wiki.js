@@ -35,6 +35,11 @@
 
     var right = document.createElement('div');
     right.className = 'pv-right';
+    var roadmap = document.createElement('a');
+    roadmap.className = 'pv-navlink';
+    roadmap.href = 'roadmap/';
+    roadmap.textContent = 'Roadmap';
+    right.appendChild(roadmap);
     var search = document.createElement('a');
     search.className = 'pv-search';
     search.href = 'search/';

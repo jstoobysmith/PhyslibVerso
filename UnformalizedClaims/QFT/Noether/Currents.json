@@ -1,0 +1,16 @@
+{
+  "doc": "# Noether currents\n\nClassical symmetry–current claims.",
+  "claims": [
+    {
+      "name": "noether_currentConservation",
+      "statement": "Every continuous symmetry of the action yields a conserved current.",
+      "sources": [
+        {
+          "title": "Ward–Takahashi identities and Noether currents",
+          "arxiv": "2001.02631",
+          "url": "https://arxiv.org/abs/2001.02631"
+        }
+      ]
+    }
+  ]
+}

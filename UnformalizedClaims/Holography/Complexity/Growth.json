@@ -1,0 +1,203 @@
+{
+  "doc": "# Growth — Complexity\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “complexity growth rate”).",
+  "claims": [
+    {
+      "name": "last_term_complexity_growth_rate",
+      "statement": "The last term in the complexity growth rate expression is the effect of higher-derivative terms, which slows down the rate of complexity growth.",
+      "sources": [
+        {
+          "arxiv": "1702.06796",
+          "url": "https://arxiv.org/abs/1702.06796",
+          "title": "On Complexity for Higher Derivative Gravities"
+        }
+      ]
+    },
+    {
+      "name": "complexityaction_duality_yields_discontinuous_complexity",
+      "statement": "Complexity-action duality yields a discontinuous complexity growth rate at the critical temperature.",
+      "sources": [
+        {
+          "arxiv": "2205.02442",
+          "url": "https://arxiv.org/abs/2205.02442",
+          "title": "Interior Structure and Complexity Growth Rate of Holographic Superconductor from M-Theory"
+        }
+      ]
+    },
+    {
+      "name": "lyapunov_exponent_proportional_complexity_growth",
+      "statement": "The Lyapunov exponent is proportional to the complexity growth rate in the linear-growth regime.",
+      "sources": [
+        {
+          "arxiv": "1906.02063",
+          "url": "https://arxiv.org/abs/1906.02063",
+          "title": "To be unitary-invariant or not?: a simple but non-trivial proposal for the complexity between states in quantum mechanics/field theory"
+        }
+      ]
+    },
+    {
+      "name": "exponential_growth_rate_krylov_complexity",
+      "statement": "The exponential growth rate of Krylov complexity decreases under the deformations.",
+      "sources": [
+        {
+          "arxiv": "2212.14702",
+          "url": "https://arxiv.org/abs/2212.14702",
+          "title": "Krylov Complexity in Free and Interacting Scalar Field Theories with Bounded Power Spectrum"
+        }
+      ]
+    },
+    {
+      "name": "finitetime_behavior_complexity_growth_rate",
+      "statement": "Finite-time behavior of the complexity growth rate is also analyzed.",
+      "sources": [
+        {
+          "arxiv": "1710.07833",
+          "url": "https://arxiv.org/abs/1710.07833",
+          "title": "Holographic complexity and non-commutative gauge theory"
+        }
+      ]
+    },
+    {
+      "name": "late_times_complexity_growth_rate",
+      "statement": "At late times, the complexity growth rate asymptotes to a constant.",
+      "sources": [
+        {
+          "arxiv": "2010.11203",
+          "url": "https://arxiv.org/abs/2010.11203",
+          "title": "Holographic complexity of rotating black holes"
+        }
+      ]
+    },
+    {
+      "name": "very_large_anisotropy_leads_triviality",
+      "statement": "Very large anisotropy leads to the triviality of the complexity growth rate and the complexity itself.",
+      "sources": [
+        {
+          "arxiv": "2401.00732",
+          "url": "https://arxiv.org/abs/2401.00732",
+          "title": "Inverse anisotropic catalysis and complexity"
+        }
+      ]
+    },
+    {
+      "name": "first_divergent_term_complexity_growth",
+      "statement": "The first divergent term of the complexity growth rate in massive gravity obeys the growth rate of the spatial volume of the Universe.",
+      "sources": [
+        {
+          "arxiv": "2003.11415",
+          "url": "https://arxiv.org/abs/2003.11415",
+          "title": "Holographic Complexity Growth Rate in a dual FLRW Universe"
+        }
+      ]
+    },
+    {
+      "name": "growth_rate_action_within_wheeler",
+      "statement": "The growth rate of action within the Wheeler–DeWitt (WDW) patch is dual to the growth rate of quantum complexity of the holographic boundary state.",
+      "sources": [
+        {
+          "arxiv": "2002.09974",
+          "url": "https://arxiv.org/abs/2002.09974",
+          "title": "Holographic complexity of Born-Infeld gravity"
+        }
+      ]
+    },
+    {
+      "name": "complexity_growth_rate_complexityvolume_conjecture",
+      "statement": "The complexity growth rate in the complexity-volume conjecture obeys the upper bound argued by quantum information theory.",
+      "sources": [
+        {
+          "arxiv": "1911.12561",
+          "url": "https://arxiv.org/abs/1911.12561",
+          "title": "Upper bound about cross-sections inside black holes and complexity growth rate"
+        }
+      ]
+    },
+    {
+      "name": "complexity_growth_rate_shows_stronger",
+      "statement": "The complexity growth rate shows a stronger correlation with temperature than with entropy.",
+      "sources": [
+        {
+          "arxiv": "1708.07981",
+          "url": "https://arxiv.org/abs/1708.07981",
+          "title": "On complexity growth in massive gravity theories, the effects of chirality and more"
+        }
+      ]
+    },
+    {
+      "name": "circuit_analysis_relates_operator_growth",
+      "statement": "Circuit analysis relates the operator growth to the rate of increase of complexity.",
+      "sources": [
+        {
+          "arxiv": "2006.03019",
+          "url": "https://arxiv.org/abs/2006.03019",
+          "title": "Complexity and Momentum"
+        }
+      ]
+    },
+    {
+      "name": "each_realization_complexity_growth_rate",
+      "statement": "For each realization, the complexity growth rate is computed in closed and flat universes using both the complexity-volume and complexity-action dualities.",
+      "sources": [
+        {
+          "arxiv": "1909.12172",
+          "url": "https://arxiv.org/abs/1909.12172",
+          "title": "Holographic complexity growth in a FLRW universe"
+        }
+      ]
+    },
+    {
+      "name": "gaussbonnet_effect_plays_vital_role",
+      "statement": "The Gauss-Bonnet effect plays a vital role on the holographic complexity growth rate.",
+      "sources": [
+        {
+          "arxiv": "2003.11415",
+          "url": "https://arxiv.org/abs/2003.11415",
+          "title": "Holographic Complexity Growth Rate in a dual FLRW Universe"
+        }
+      ]
+    },
+    {
+      "name": "late_times_rate_complexity_growth",
+      "statement": "At late times, the rate of complexity growth is independent of the hyperscaling parameters.",
+      "sources": [
+        {
+          "arxiv": "2006.08478",
+          "url": "https://arxiv.org/abs/2006.08478",
+          "title": "Holographic Complexity of Subregions in the Hyperscaling Violating Theories"
+        }
+      ]
+    },
+    {
+      "name": "latetime_complexity_growth_rate_differs",
+      "statement": "The late-time complexity growth rate differs from that of ordinary charged black holes.",
+      "sources": [
+        {
+          "arxiv": "2106.09371",
+          "url": "https://arxiv.org/abs/2106.09371",
+          "title": "Holographic Complexity in Charged Accelerating Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "saturation_value_complexity_growth_rate",
+      "statement": "The saturation value of the complexity growth rate is independent of the initial temperature.",
+      "sources": [
+        {
+          "arxiv": "1809.05044",
+          "url": "https://arxiv.org/abs/1809.05044",
+          "title": "Complexity Growth Following Multiple Shocks"
+        }
+      ]
+    },
+    {
+      "name": "growth_rate_holographic_complexity_violates",
+      "statement": "The growth rate of the holographic complexity violates Lloyd’s bound at finite times.",
+      "sources": [
+        {
+          "arxiv": "2112.10725",
+          "url": "https://arxiv.org/abs/2112.10725",
+          "title": "Complexity growth in Gubser-Rocha models with momentum relaxation"
+        }
+      ]
+    }
+  ]
+}

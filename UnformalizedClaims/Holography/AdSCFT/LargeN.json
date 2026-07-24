@@ -1,0 +1,192 @@
+{
+  "doc": "# Large N — Ad SCFT\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “large N gauge theory gravity dual”).",
+  "claims": [
+    {
+      "name": "semiclassical_factorization_wilson_line_observables",
+      "statement": "Semiclassical factorization of Wilson line observables in gravity induces corresponding factorization in dual observables, matching expectations from large-$N$ gauge theory.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9909112",
+          "url": "https://arxiv.org/abs/hep-th/9909112",
+          "title": "Chern-Simons Gravity, Wilson Lines and Large N Dual Gauge Theories"
+        }
+      ]
+    },
+    {
+      "name": "when_large_ads_dual_expected",
+      "statement": "When $N,N_f$ are large, the $AdS_4$ dual is expected to be a theory of gravity coupled to $U(N_f)$ gauge fields and massive fields, with large $AdS_4$ radius in Planck units.",
+      "sources": [
+        {
+          "arxiv": "0704.3740",
+          "url": "https://arxiv.org/abs/0704.3740",
+          "title": "Notes on Superconformal Chern-Simons-Matter Theories"
+        }
+      ]
+    },
+    {
+      "name": "holographic_framework_classical_quasitopological_gravity",
+      "statement": "In a holographic framework, classical quasi-topological gravity can be thought of as dual to the large $N_c$ limit of some non-supersymmetric but conformal gauge theory.",
+      "sources": [
+        {
+          "arxiv": "1004.2055",
+          "url": "https://arxiv.org/abs/1004.2055",
+          "title": "Holographic studies of quasi-topological gravity"
+        }
+      ]
+    },
+    {
+      "name": "demonstrates_semiclassical_factorization_wilson_line",
+      "statement": "Demonstrates that the semiclassical factorization of Wilson line observables in gravity induces a corresponding factorization in the dual theory observables, consistent with expectations from large-$N$ gauge theories.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9909112",
+          "url": "https://arxiv.org/abs/hep-th/9909112",
+          "title": "Chern-Simons Gravity, Wilson Lines and Large N Dual Gauge Theories"
+        }
+      ]
+    },
+    {
+      "name": "finitetemperature_su_gauge_theory_large",
+      "statement": "Finite-temperature $SU(N_c)$ gauge theory at large $N_c$ with fundamental quark flavours in a quenched approximation exhibits a gravity-dual description with fixed R--charge under a global R--current.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0605175",
+          "url": "https://arxiv.org/abs/hep-th/0605175",
+          "title": "Global Currents, Phase Transitions, and Chiral Symmetry Breaking in Large N_c Gauge Theory"
+        }
+      ]
+    },
+    {
+      "name": "disordered_large_gauge_theory_gravity",
+      "statement": "In a disordered large-$N$ gauge theory with a gravity dual, phases exist in which the nearest neighbor spacing distribution of the unfolded pole spectra of generic two-point correlators is Poisson.",
+      "sources": [
+        {
+          "arxiv": "1206.1856",
+          "url": "https://arxiv.org/abs/1206.1856",
+          "title": "Disorder in Gauge/Gravity Duality, Pole Spectrum Statistics and Random Matrix Theory"
+        }
+      ]
+    },
+    {
+      "name": "under_gauge_gravity_duality_term",
+      "statement": "Under gauge/gravity duality, the Θ-term induces a nontrivial contact term in the energy-momentum tensor of a (2+1)-dimensional large-N gauge theory, yielding the same parity-violating transport coefficient as the dual black hole horizon.",
+      "sources": [
+        {
+          "arxiv": "1612.06010",
+          "url": "https://arxiv.org/abs/1612.06010",
+          "title": "Physical Effects of the Gravitational $Θ$-Parameter"
+        }
+      ]
+    },
+    {
+      "name": "paper_proves_euclidean_selfdual_supergravity",
+      "statement": "The paper proves that for Euclidean self-dual supergravity solutions on the four-ball, the gravitational free energy depends only on the supersymmetric Killing vector, yielding a closed formula for U(1) × U(1) symmetry. This exactly matches the large-N localization computation of the dual $\\mathcal{N}=2$ gauge theory, providing a precise check of the gauge/gravity correspondence on general three-manifolds.",
+      "sources": [
+        {
+          "arxiv": "1404.0268",
+          "url": "https://arxiv.org/abs/1404.0268",
+          "title": "Gravity duals of supersymmetric gauge theories on three-manifolds"
+        }
+      ]
+    },
+    {
+      "name": "paper_constructs_gravity_dual_large",
+      "statement": "The paper constructs the gravity dual of large \\(N\\) supersymmetric gauge theories on a squashed five-sphere as a one-parameter family of solutions in Euclidean Romans \\(F(4)\\) gauged supergravity in six dimensions, and shows that these solutions uplift to massive type IIA supergravity. By renormalizing the gravitational theory with appropriate counterterms, it computes the on-shell action and finds precise agreement with the large-\\(N\\) gauge-theory partition function.",
+      "sources": [
+        {
+          "arxiv": "1404.1925",
+          "url": "https://arxiv.org/abs/1404.1925",
+          "title": "The gravity dual of supersymmetric gauge theories on a squashed five-sphere"
+        }
+      ]
+    },
+    {
+      "name": "paper_maps_noncommutative_gauge_theory",
+      "statement": "The paper maps noncommutative $U(1)$ gauge theory on $\\mathbb{R}^d_C \\times \\mathbb{R}^{2n}_{NC}$ to a large-$N$ Yang-Mills gauge-Higgs system on $\\mathbb{R}^d_C$, equivalent to dimensional reduction of $(d+2n)$-dimensional $U(N)$ Yang-Mills theory. It then shows that this gauge-Higgs system generates an emergent $(d+2n)$-dimensional geometry, with half-BPS configurations realizing self-dual Einstein gravity.",
+      "sources": [
+        {
+          "arxiv": "0704.0929",
+          "url": "https://arxiv.org/abs/0704.0929",
+          "title": "Noncommutative Electromagnetism As A Large N Gauge Theory"
+        }
+      ]
+    },
+    {
+      "name": "paper_proposes_threedimensional_nonsupersymmetric_large",
+      "statement": "The paper proposes a three-dimensional non-supersymmetric large-$N$ conformal field theory whose bosonic gauge-invariant subsector is planar equivalent to the ABJM M2-brane orbifold theory. It also gives a type 0B brane realization and proposes an 11D gravity dual obtained by projecting M-theory on $AdS_4\\times S^7/\\mathbb Z_k$.",
+      "sources": [
+        {
+          "arxiv": "0806.4068",
+          "url": "https://arxiv.org/abs/0806.4068",
+          "title": "A Non-Supersymmetric Large-N 3D CFT And Its Gravity Dual"
+        }
+      ]
+    },
+    {
+      "name": "paper_reformulates_holographic_correspondence_highly",
+      "statement": "The paper reformulates the holographic correspondence as a highly efficient Wilsonian renormalization group (RG) flow in a strongly interacting large-$N$ quantum field theory, where background metrics and external sources become effectively dynamical. By reconstructing the pure gravity sector in this framework, the authors show that special symmetries of these RG flows encode the gauge fixing of bulk diffeomorphisms in the dual classical gravity equations.",
+      "sources": [
+        {
+          "arxiv": "1502.06619",
+          "url": "https://arxiv.org/abs/1502.06619",
+          "title": "Holography as a highly efficient RG flow I: Rephrasing gravity"
+        }
+      ]
+    },
+    {
+      "name": "using_geometrical_large_dual_chernsimons",
+      "statement": "Using the geometrical large $N$ dual of $U(N)$ Chern-Simons gauge theory on $\\mathbf{S}^3$, the framing dependence of Wilson loop observables leads to a direct computation of topological string amplitudes in closed form, yielding new formulae for intersection numbers of cohomology classes on the moduli of Riemann surfaces with punctures, including all amplitudes of pure topological gravity in two dimensions.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0108064",
+          "url": "https://arxiv.org/abs/hep-th/0108064",
+          "title": "Framed knots at large N"
+        }
+      ]
+    },
+    {
+      "name": "paper_proposes_assuming_quantum_supergravity",
+      "statement": "This paper proposes that, assuming the quantum supergravity sector of string theory converges with loop-quantized supergravity, the large-quantum-number expansion of loop quantum supergravity maps to the $1/N_c^2$ expansion of the dual gauge theory in AdS/CFT. The argument targets a strong-coupling, finite-$N_c$ regime by neglecting high-energy $\\alpha'$ corrections and is presented as a qualitative starting point for connecting loop quantum gravity and string theory.",
+      "sources": [
+        {
+          "arxiv": "1509.02036",
+          "url": "https://arxiv.org/abs/1509.02036",
+          "title": "A note on quantum supergravity and AdS/CFT"
+        }
+      ]
+    },
+    {
+      "name": "using_randommatrixinspired_analysis_unfolded_pole",
+      "statement": "Using random-matrix-inspired analysis of unfolded pole spectra in a disordered large-$N$ gauge theory with a gravity dual, the paper provides evidence for distinct spectral phases in generic two-point correlators. Dyson-Mehta $\\Delta_3$ and $\\chi^2$ tests support a transition between a regular pole sequence and an uncorrelated phase with Poisson nearest-neighbor spacing, analogous to localization statistics.",
+      "sources": [
+        {
+          "arxiv": "1206.1856",
+          "url": "https://arxiv.org/abs/1206.1856",
+          "title": "Disorder in Gauge/Gravity Duality, Pole Spectrum Statistics and Random Matrix Theory"
+        }
+      ]
+    },
+    {
+      "name": "paper_shows_undecidability_spectralgap_problem",
+      "statement": "The paper shows that undecidability from the spectral-gap problem can be transmitted through AdS/CFT into gravity: by embedding a translationally invariant spin Hamiltonian with undecidable gap status into a large-$N$ gauge theory, it constructs an AdS dual in which the dominant bulk saddle is itself undecidable. Under semiclassical holographic assumptions, this means the emergent smooth spacetime geometry cannot always be decided computably.",
+      "sources": [
+        {
+          "arxiv": "2601.22761",
+          "url": "https://arxiv.org/abs/2601.22761",
+          "title": "Undecidability in Spacetime Geometry via the AdS/CFT Correspondence"
+        }
+      ]
+    },
+    {
+      "name": "paper_derives_how_large_lorentzian",
+      "statement": "The paper derives how large-$N$ 4D Lorentzian CFT organizes into a 5D AdS description with weakly coupled particles dual to minimal color-singlet primary operators, and shows that when only finitely many protected primaries remain light this sector admits a low-curvature AdS effective field theory. In this framework, protected currents and the stress tensor give rise to 5D gauge theory and gravity, and Witten's prescription for CFT correlators is recovered.",
+      "sources": [
+        {
+          "arxiv": "1106.4501",
+          "url": "https://arxiv.org/abs/1106.4501",
+          "title": "From Fixed Points to the Fifth Dimension"
+        }
+      ]
+    }
+  ]
+}

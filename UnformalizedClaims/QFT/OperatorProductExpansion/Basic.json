@@ -1,0 +1,38 @@
+{
+  "doc": "# Operator product expansion\n\nClaims from wiphy.org for the planned OPE module.",
+  "claims": [
+    {
+      "name": "ope_convergent_cft",
+      "statement": "The operator product expansion in conformal field theories is proved to be convergent rather than merely asymptotic as in non-conformal field theories.",
+      "sources": [
+        {
+          "title": "Scale invariance vs conformal invariance",
+          "arxiv": "1302.0884",
+          "url": "https://arxiv.org/abs/1302.0884"
+        }
+      ]
+    },
+    {
+      "name": "ope_convergent_finiteSeparation",
+      "statement": "In CFT, the OPE (Operator Product Expansion) is convergent at finite point separation, not just asymptotic",
+      "sources": [
+        {
+          "title": "EPFL Lectures on Conformal Field Theory in D>= 3 Dimensions",
+          "arxiv": "1601.05000",
+          "url": "https://arxiv.org/abs/1601.05000"
+        }
+      ]
+    },
+    {
+      "name": "ope_primary_form",
+      "statement": "The OPE is $O_i(x) O_j(y) = \\frac{\\delta_{ij}}{\\left\\lvert x-y \\right\\rvert^{2 \\Delta_i}} + \\frac{C^{k}_{ij}\\, O_k(x)}{\\left\\lvert x-y \\right\\rvert^{\\Delta_i+ \\Delta_j - \\Delta_k}} + \\ldots \\qquad \\text{as $x \\to y$}\\,$",
+      "sources": [
+        {
+          "title": "F-Theorem without Supersymmetry",
+          "arxiv": "1105.4598",
+          "url": "https://arxiv.org/abs/1105.4598"
+        }
+      ]
+    }
+  ]
+}

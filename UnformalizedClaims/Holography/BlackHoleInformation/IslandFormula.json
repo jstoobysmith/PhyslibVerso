@@ -1,0 +1,203 @@
+{
+  "doc": "# Island Formula — Black Hole Information\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “island formula Page curve”).",
+  "claims": [
+    {
+      "name": "island_formula_computes_entropy_semiclassical",
+      "statement": "The island formula computes the entropy of semiclassical black holes and yields a Page curve.",
+      "sources": [
+        {
+          "arxiv": "2105.01130",
+          "url": "https://arxiv.org/abs/2105.01130",
+          "title": "Homology Conditions for RT Surfaces in Double Holography"
+        }
+      ]
+    },
+    {
+      "name": "island_formula_extremizes_generalized_entropy",
+      "statement": "The island formula extremizes generalized entropy and yields a unitary Page curve for the entropy of Hawking radiation.",
+      "sources": [
+        {
+          "arxiv": "2111.06912",
+          "url": "https://arxiv.org/abs/2111.06912",
+          "title": "Microcanonical Action and the Entropy of Hawking Radiation"
+        }
+      ]
+    },
+    {
+      "name": "using_island_formula_entanglement_entropy",
+      "statement": "Using the island formula, the entanglement entropy between states inside and outside a cosmological horizon yields a Page curve.",
+      "sources": [
+        {
+          "arxiv": "2008.07994",
+          "url": "https://arxiv.org/abs/2008.07994",
+          "title": "Pure de Sitter space and the island moving back in time"
+        }
+      ]
+    },
+    {
+      "name": "result_page_curve_obtained_general",
+      "statement": "Result that Page curve is obtained is general feature of any gravitational theory despite island formula originally motivated by AdS/CFT.",
+      "sources": [
+        {
+          "arxiv": "2005.08715",
+          "url": "https://arxiv.org/abs/2005.08715",
+          "title": "Island in the Presence of Higher Derivative Terms"
+        }
+      ]
+    },
+    {
+      "name": "argue_novel_interpretation_island_formula",
+      "statement": "We argue for a novel interpretation of the island formula in the context of closed universes that recovers the Page curve",
+      "sources": [
+        {
+          "arxiv": "2008.05275",
+          "url": "https://arxiv.org/abs/2008.05275",
+          "title": "Islands in de Sitter space"
+        }
+      ]
+    },
+    {
+      "name": "finegrained_entropy_hawking_radiation_expressed",
+      "statement": "The fine-grained entropy of Hawking radiation can be expressed by the semiclassical island formula and reproduce the unitary Page curve.",
+      "sources": [
+        {
+          "arxiv": "2302.02379",
+          "url": "https://arxiv.org/abs/2302.02379",
+          "title": "Page curves and Entanglement Islands for the Step-Function Vaidya Model of Evaporating Black Holes"
+        }
+      ]
+    },
+    {
+      "name": "island_formula_recovers_page_curve",
+      "statement": "The island formula recovers the Page curve to explore the influence of the boundary central charge on the information loss paradox.",
+      "sources": [
+        {
+          "arxiv": "2512.24808",
+          "url": "https://arxiv.org/abs/2512.24808",
+          "title": "Holographic Central Charge Effects on Black Hole Thermodynamics and Quantum Information"
+        }
+      ]
+    },
+    {
+      "name": "leaky_boundary_conditions_asymptotically_ads",
+      "statement": "Leaky boundary conditions in asymptotically AdS spacetimes are used to discuss black hole evaporation and Page-curve evolution via the island formula.",
+      "sources": [
+        {
+          "arxiv": "2312.06744",
+          "url": "https://arxiv.org/abs/2312.06744",
+          "title": "One-loop partition function of gravity with leaky boundary conditions"
+        }
+      ]
+    },
+    {
+      "name": "island_formula_computes_black_hole",
+      "statement": "The island formula computes the black hole entropy of radiation and describes the Page curve to ensure the unitarity of black hole evaporation.",
+      "sources": [
+        {
+          "arxiv": "2408.15104",
+          "url": "https://arxiv.org/abs/2408.15104",
+          "title": "Probing the Page transition via approximate quantum error correction"
+        }
+      ]
+    },
+    {
+      "name": "ryutakayanagi_formula_extended_so_extremal",
+      "statement": "The Ryu-Takayanagi formula can be extended so that extremal surfaces computing entanglement entropy are allowed to pass through the brane into its dual geometry, which reproduces the Page curve for evaporating black holes, consistent with the island formula.",
+      "sources": [
+        {
+          "arxiv": "2003.05448",
+          "url": "https://arxiv.org/abs/2003.05448",
+          "title": "Geometric secret sharing in a model of Hawking radiation"
+        }
+      ]
+    },
+    {
+      "name": "find_principle_while_metaobserver_mathcal",
+      "statement": "We find that in principle, while the meta-observer at $ \\mathcal{I} ^{+}$ naturally observes a pure state, the static patch observer requires the use of the island formula to reproduce a unitary Page curve.",
+      "sources": [
+        {
+          "arxiv": "2108.09318",
+          "url": "https://arxiv.org/abs/2108.09318",
+          "title": "No Page Curves for the de Sitter Horizon"
+        }
+      ]
+    },
+    {
+      "name": "using_decomposition_ads_bulk_defect",
+      "statement": "Using the decomposition of an AdS bulk with a defect brane, the paper derives the Page curve in a time-dependent AdS$_3$/BCFT$_2$ setup and shows precise agreement between the island formula and the defect extremal surface formula. It then extends the comparison to higher dimensions, where bulk defect extremal surfaces give generally smaller entropy than the boundary low-energy island formula, implying that the UV-complete island formula yields a smaller entropy.",
+      "sources": [
+        {
+          "arxiv": "2105.09106",
+          "url": "https://arxiv.org/abs/2105.09106",
+          "title": "Page Curve from Defect Extremal Surface and Island in Higher Dimensions"
+        }
+      ]
+    },
+    {
+      "name": "making_use_extended_island_formula",
+      "statement": "By making use of the extended island formula we compute the entanglement entropy of the Hawking radiation and observe that in both cases an island appears at late times resulting in an entropy following the Page curve, despite the fact that both models might be non-unitary.",
+      "sources": [
+        {
+          "arxiv": "2005.08715",
+          "url": "https://arxiv.org/abs/2005.08715",
+          "title": "Island in the Presence of Higher Derivative Terms"
+        }
+      ]
+    },
+    {
+      "name": "paper_also_proposes_formula_finegrained",
+      "statement": "The paper also proposes a formula for the fine-grained entropy of Hawking radiation for an eternal black hole in the presence of an island, extending the Page-curve analysis within the quantum-corrected Schwarzschild setting.",
+      "sources": [
+        {
+          "arxiv": "2503.19475",
+          "url": "https://arxiv.org/abs/2503.19475",
+          "title": "Investigating the role of mutual information in the Page curve for a functional renormalization group improved Schwarzschild black hole"
+        }
+      ]
+    },
+    {
+      "name": "based_decomposition_procedure_ads_bulk",
+      "statement": "Based on the decomposition procedure of an AdS bulk with a defect brane, proposed in [69], we derive Page curve in a time dependent set up of AdS$_{3}$/BCFT$_{2}$, and find that the result from island formula agrees with defect extremal surface formula precisely.",
+      "sources": [
+        {
+          "arxiv": "2105.09106",
+          "url": "https://arxiv.org/abs/2105.09106",
+          "title": "Page Curve from Defect Extremal Surface and Island in Higher Dimensions"
+        }
+      ]
+    },
+    {
+      "name": "applying_quantum_extremal_island_formula",
+      "statement": "By applying the quantum extremal island formula to Hawking radiation from a two-dimensional Liouville black hole, the paper finds no reasonable island saddle upon extremizing the generalized entropy. Consequently, the model does not reproduce a Page curve, suggesting that islands do not resolve the information paradox for Liouville black holes in this setting.",
+      "sources": [
+        {
+          "arxiv": "2105.03271",
+          "url": "https://arxiv.org/abs/2105.03271",
+          "title": "Island may not save the information paradox of Liouville black holes"
+        }
+      ]
+    },
+    {
+      "name": "uses_island_formula_calculate_entanglement",
+      "statement": "Uses the island formula to calculate entanglement entropy of Hawking radiation from Reissner-Nordström anti-de Sitter black holes in the large-$D$ limit, showing nonextremal black holes obey the Page curve with entropy saturating at twice the Bekenstein-Hawking value, while extremal black holes achieve entropy equal to Bekenstein-Hawking entropy when the island exists.",
+      "sources": [
+        {
+          "arxiv": "2306.06682",
+          "url": "https://arxiv.org/abs/2306.06682",
+          "title": "Island of Reissner-Nordstr$\\mathbf{\\ddot{o}}$m anti-de Sitter black holes in the large $d$ limit"
+        }
+      ]
+    },
+    {
+      "name": "using_ads_cft_paper_identifies",
+      "statement": "Using AdS/CFT, the paper identifies the boundary central charge as the control parameter linking gravity regime, black-hole thermodynamics, and Hawking-radiation entanglement: large central charge gives classical gravity with the usual unstable/sable AdS-Schwarzschild phases, while small central charge gives a quantum-gravity regime with stable, lower-entropy black holes. With the island formula, it further shows that the radiation entropy growth before Page time is central-charge dependent and that an island restores a constant Page-curve plateau after Page time.",
+      "sources": [
+        {
+          "arxiv": "2512.24808",
+          "url": "https://arxiv.org/abs/2512.24808",
+          "title": "Holographic Central Charge Effects on Black Hole Thermodynamics and Quantum Information"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "doc": "# Brane World — Defects\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “brane world holography”).",
+  "claims": [
+    {
+      "name": "braneworld_holography_consists_induced_higherderivative",
+      "statement": "Brane-world holography consists of an induced higher-derivative theory of gravity coupled to a cut-off CFT on the brane.",
+      "sources": [
+        {
+          "arxiv": "2504.00644",
+          "url": "https://arxiv.org/abs/2504.00644",
+          "title": "Brane-Worlds and Higher-Derivative Gravities"
+        }
+      ]
+    },
+    {
+      "name": "braneworld_holography_characterized_induced_higherderivative",
+      "statement": "Brane-world holography is characterized as an induced higher-derivative theory of gravity coupled to a cut-off CFT on the brane.",
+      "sources": [
+        {
+          "arxiv": "2504.00131",
+          "url": "https://arxiv.org/abs/2504.00131",
+          "title": "Gravity in Enhanced Brane-World Models"
+        }
+      ]
+    },
+    {
+      "name": "shortdistance_potential_braneworld_holography_suggest",
+      "statement": "The short-distance potential and brane-world holography suggest that the theory may contain asymptotically flat black hole solutions.",
+      "sources": [
+        {
+          "arxiv": "2312.04637",
+          "url": "https://arxiv.org/abs/2312.04637",
+          "title": "Nonlocal Massive Gravity from Einstein Gravity"
+        }
+      ]
+    },
+    {
+      "name": "spherical_hyperbolic_ir_geometries_intimately",
+      "statement": "The spherical and hyperbolic IR geometries are intimately related separately to the physics of differential entropy and brane-world holography.",
+      "sources": [
+        {
+          "arxiv": "2404.02737",
+          "url": "https://arxiv.org/abs/2404.02737",
+          "title": "Entanglement structures from modified IR geometry"
+        }
+      ]
+    },
+    {
+      "name": "holography_principle_imposes_stringent_constraint",
+      "statement": "Holography principle imposes a stringent constraint on the scale of quantum gravity $M_*$ in brane-world scenarios, where all matter is confined on the brane.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0401060",
+          "url": "https://arxiv.org/abs/hep-th/0401060",
+          "title": "Brane World Confronts Holography"
+        }
+      ]
+    },
+    {
+      "name": "another_cone_holography_model_neumann",
+      "statement": "Another cone holography model with Neumann boundary conditions is constructed by applying massive vector (Proca) fields on the end-of-the-world brane.",
+      "sources": [
+        {
+          "arxiv": "2312.16463",
+          "url": "https://arxiv.org/abs/2312.16463",
+          "title": "Cone Holography with Neumann Boundary Conditions and Brane-localized Gauge Fields"
+        }
+      ]
+    },
+    {
+      "name": "double_holography_relates_intermediate_description",
+      "statement": "Double holography relates an intermediate description with gravity on an end-of-the-world brane plus bath to a BCFT picture and a bulk picture.",
+      "sources": [
+        {
+          "arxiv": "2107.01219",
+          "url": "https://arxiv.org/abs/2107.01219",
+          "title": "Causal Structures and Nonlocality in Double Holography"
+        }
+      ]
+    },
+    {
+      "name": "holography_determines_correlation_functions_local",
+      "statement": "Holography determines correlation functions of local operators in maximally supersymmetric Yang-Mills theories on Dp-brane world-volumes in the large-$N$ and strong-coupling limit.",
+      "sources": [
+        {
+          "arxiv": "2503.18770",
+          "url": "https://arxiv.org/abs/2503.18770",
+          "title": "Correlation functions for non-conformal D$p$-brane holography"
+        }
+      ]
+    },
+    {
+      "name": "construction_uses_braneworld_holography_accelerating",
+      "statement": "The construction uses braneworld holography in which an accelerating, electrically charged anti-de Sitter$_{4}$ black hole localizes on a Randall-Sundrum end-of-the-world brane.",
+      "sources": [
+        {
+          "arxiv": "2410.02375",
+          "url": "https://arxiv.org/abs/2410.02375",
+          "title": "Nucleation of charged quantum de-Sitter$_{3}$ black holes"
+        }
+      ]
+    },
+    {
+      "name": "paper_also_constructs_distinct_neumannboundarycondition",
+      "statement": "The paper also constructs a distinct Neumann-boundary-condition version of cone holography in which massive vector (Proca) fields live on the end-of-the-world brane.",
+      "sources": [
+        {
+          "arxiv": "2312.16463",
+          "url": "https://arxiv.org/abs/2312.16463",
+          "title": "Cone Holography with Neumann Boundary Conditions and Brane-localized Gauge Fields"
+        }
+      ]
+    },
+    {
+      "name": "combining_ads_bcft_correspondence_brane",
+      "statement": "By combining AdS/BCFT correspondence and brane world holography, there exists an equivalence between a boundary conformal field theory (BCFT) and a gravitational system coupled to a CFT.",
+      "sources": [
+        {
+          "arxiv": "2202.08462",
+          "url": "https://arxiv.org/abs/2202.08462",
+          "title": "BCFT and Islands in Two Dimensions"
+        }
+      ]
+    },
+    {
+      "name": "paper_extends_gravity_localization_karchrandallsundrum",
+      "statement": "The paper extends gravity localization in Karch-Randall-Sundrum brane-worlds through brane-world holography and then studies an enhanced model with an explicit brane Einstein-Hilbert (DGP) term. By analyzing brane position and gravity localization, it derives bounds on the DGP coupling beyond which the theory becomes pathological.",
+      "sources": [
+        {
+          "arxiv": "2504.00131",
+          "url": "https://arxiv.org/abs/2504.00131",
+          "title": "Gravity in Enhanced Brane-World Models"
+        }
+      ]
+    },
+    {
+      "name": "large_central_charge_limit_using",
+      "statement": "In the large central charge limit, using holography, we establish a connection between the rate of spread complexity and the proper momentum of the tip of the end-of-the world brane, which probes the bulk analogously to a point particle.",
+      "sources": [
+        {
+          "arxiv": "2502.19485",
+          "url": "https://arxiv.org/abs/2502.19485",
+          "title": "Local Quenches from a Krylov Perspective"
+        }
+      ]
+    },
+    {
+      "name": "double_holography_provides_understanding_island",
+      "statement": "Double holography provides an understanding of the island formula by describing a gravitational system on AdS$_d$ coupled to a conformal field theory on $\\mathbb{R}^{1,d-1}$, dual to an AdS$_{d+1}$ spacetime with an end-of-the-world brane.",
+      "sources": [
+        {
+          "arxiv": "2308.03645",
+          "url": "https://arxiv.org/abs/2308.03645",
+          "title": "Island formula in Planck brane"
+        }
+      ]
+    },
+    {
+      "name": "large_central_charge_limit_authors",
+      "statement": "In the large central charge limit, the authors use holography to establish a connection between the rate of spread complexity and the proper momentum of the tip of the end-of-the-world brane, which probes the bulk analogously to a point particle.",
+      "sources": [
+        {
+          "arxiv": "2502.19485",
+          "url": "https://arxiv.org/abs/2502.19485",
+          "title": "Local Quenches from a Krylov Perspective"
+        }
+      ]
+    },
+    {
+      "name": "paper_extends_double_holography_bulk",
+      "statement": "The paper extends double holography to a bulk with two end-of-the-world branes, with one brane carrying gravity and the other serving as a thermal bath, and shows that this construction is equivalent to wedge holography. Using this setup, it computes Hawking-radiation entanglement entropy in both AdS and dS gravity and verifies the entanglement-entropy formula for subregions in conformally flat spacetime.",
+      "sources": [
+        {
+          "arxiv": "2308.03645",
+          "url": "https://arxiv.org/abs/2308.03645",
+          "title": "Island formula in Planck brane"
+        }
+      ]
+    },
+    {
+      "name": "since_ads_holography_expected_exist",
+      "statement": "Since AdS holography is expected to exist independently of string or M-theory realizations, the physics of the EM-AdS$_{7}$ system is expected to have a holographic interpretation in terms of a field theory closely related to that residing on M5-brane world-volumes.",
+      "sources": [
+        {
+          "arxiv": "hep-th/9902170",
+          "url": "https://arxiv.org/abs/hep-th/9902170",
+          "title": "Charged AdS Black Holes and Catastrophic Holography"
+        }
+      ]
+    },
+    {
+      "name": "paper_argues_static_braneworld_black",
+      "statement": "The paper argues that static brane-world black holes are unstable by relating bulk linear perturbations to Hawking flux on the brane and by using the trace anomaly to test both holography and instability for proposed static brane metrics. It also proposes a time-dependent metric for the late evaporation stage, featuring a decreasing Hawking temperature in qualitative agreement with energy conservation.",
+      "sources": [
+        {
+          "arxiv": "hep-th/0302171",
+          "url": "https://arxiv.org/abs/hep-th/0302171",
+          "title": "Holography and trace anomaly: what is the fate of (brane-world) black holes?"
+        }
+      ]
+    }
+  ]
+}

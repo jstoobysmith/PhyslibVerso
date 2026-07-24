@@ -1,0 +1,203 @@
+{
+  "doc": "# Quantum Corrections — Entanglement Entropy\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “quantum extremal surface”).",
+  "claims": [
+    {
+      "name": "quantum_extremal_surface_formula_operatorname",
+      "statement": "Quantum extremal surface formula: $S_A^g = \\operatorname{Ext}_{\\gamma=\\partial I}[|\\gamma|/(4G_N) + S^{\\rm qft}(\\Sigma = I \\cup A)]$",
+      "sources": [
+        {
+          "arxiv": "2007.02987",
+          "url": "https://arxiv.org/abs/2007.02987",
+          "title": "Effective entropy of quantum fields coupled with gravity"
+        }
+      ]
+    },
+    {
+      "name": "quantum_extremal_surface_formula_recovered",
+      "statement": "Quantum extremal surface formula recovered as: $S_{A_1} = \\min\\{S_{\\rm QFT}(A); S_{\\rm QFT}(IA) + |L_1|\\log 2\\}$ with $I$ as entanglement island.",
+      "sources": [
+        {
+          "arxiv": "2007.02987",
+          "url": "https://arxiv.org/abs/2007.02987",
+          "title": "Effective entropy of quantum fields coupled with gravity"
+        }
+      ]
+    },
+    {
+      "name": "propose_holographic_entanglement_entropy_calculated",
+      "statement": "We propose that holographic entanglement entropy can be calculated at arbitrary orders in the bulk Planck constant using the concept of a “quantum extremal surface”: a surface which extremizes the generalized entropy, i.e. the sum of area and bulk entanglement entropy.",
+      "sources": [
+        {
+          "arxiv": "1408.3203",
+          "url": "https://arxiv.org/abs/1408.3203",
+          "title": "Quantum Extremal Surfaces: Holographic Entanglement Entropy beyond the Classical Regime"
+        }
+      ]
+    },
+    {
+      "name": "generalized_entropy_quantum_extremal_surfaces",
+      "statement": "The generalized entropy of quantum extremal surfaces is proposed to be the correct extension of the HRT and FLM proposals to quantum bulk spacetimes at subleading order in $\\hbar$.",
+      "sources": [
+        {
+          "arxiv": "1408.3203",
+          "url": "https://arxiv.org/abs/1408.3203",
+          "title": "Quantum Extremal Surfaces: Holographic Entanglement Entropy beyond the Classical Regime"
+        }
+      ]
+    },
+    {
+      "name": "quantum_extremal_surface_almost_coincides",
+      "statement": "The quantum extremal surface almost coincides with the classical horizon of the black hole at high entanglement temperature, contributing generalized entropy $S_{\\mathrm{gen}} = \\frac{2\\pi\\,\\bar{\\phi}}{\\beta_{\\mathrm{BH}}}$.",
+      "sources": [
+        {
+          "arxiv": "2008.05274",
+          "url": "https://arxiv.org/abs/2008.05274",
+          "title": "Entanglement between two disjoint universes"
+        }
+      ]
+    },
+    {
+      "name": "extending_hrt_flm_proposals_quantum",
+      "statement": "Extending the HRT and FLM proposals to quantum bulk spacetimes via the generalized entropy of quantum extremal surfaces corresponds to calculating corrections to the boundary entanglement entropy that are subleading in $N$.",
+      "sources": [
+        {
+          "arxiv": "1408.3203",
+          "url": "https://arxiv.org/abs/1408.3203",
+          "title": "Quantum Extremal Surfaces: Holographic Entanglement Entropy beyond the Classical Regime"
+        }
+      ]
+    },
+    {
+      "name": "paper_propose_revision_quantum_extremal",
+      "statement": "In this paper, we propose a revision to the Quantum Extremal Surface (QES) prescription, which plays a crucial role in describing the entanglement entropy of black holes.",
+      "sources": [
+        {
+          "arxiv": "2506.14071",
+          "url": "https://arxiv.org/abs/2506.14071",
+          "title": "A revision to the QES prescription"
+        }
+      ]
+    },
+    {
+      "name": "holographic_entanglement_entropy_calculated_arbitrary",
+      "statement": "Holographic entanglement entropy can be calculated at arbitrary orders in the bulk Planck constant using a quantum extremal surface, defined as a surface that extremizes the generalized entropy (the sum of area and bulk entanglement entropy).",
+      "sources": [
+        {
+          "arxiv": "1408.3203",
+          "url": "https://arxiv.org/abs/1408.3203",
+          "title": "Quantum Extremal Surfaces: Holographic Entanglement Entropy beyond the Classical Regime"
+        }
+      ]
+    },
+    {
+      "name": "formulate_quantum_generalization_maximin_surfaces",
+      "statement": "We formulate a quantum generalization of maximin surfaces and show that a quantum maximin surface is identical to the minimal quantum extremal surface, introduced in the EW prescription.",
+      "sources": [
+        {
+          "arxiv": "1912.02799",
+          "url": "https://arxiv.org/abs/1912.02799",
+          "title": "Quantum Maximin Surfaces"
+        }
+      ]
+    },
+    {
+      "name": "saddlepoints_quantum_extremal_surface_formula",
+      "statement": "Saddle-points of quantum extremal surface formula are precisely quantum extremal surfaces, stationary points of generalized entropy $S_{\\mathrm{gen}}$",
+      "sources": [
+        {
+          "arxiv": "2010.06602",
+          "url": "https://arxiv.org/abs/2010.06602",
+          "title": "Observations of Hawking radiation: the Page curve and baby universes"
+        }
+      ]
+    },
+    {
+      "name": "quantum_extremal_surfaces_used_compute",
+      "statement": "Quantum extremal surfaces can be used to compute entanglement entropy in holographic models where bulk evolution leads to information loss.",
+      "sources": [
+        {
+          "arxiv": "1910.00972",
+          "url": "https://arxiv.org/abs/1910.00972",
+          "title": "Simple holographic models of black hole evaporation"
+        }
+      ]
+    },
+    {
+      "name": "quantum_extremal_surface_defined_extremizing",
+      "statement": "A quantum extremal surface is defined by extremizing the total generalized entropy $S_{\\mathrm{gen}}$, rather than extremizing the area and then adding $S_{\\mathrm{out}}$ as in the FLM prescription.",
+      "sources": [
+        {
+          "arxiv": "1408.3203",
+          "url": "https://arxiv.org/abs/1408.3203",
+          "title": "Quantum Extremal Surfaces: Holographic Entanglement Entropy beyond the Classical Regime"
+        }
+      ]
+    },
+    {
+      "name": "leading_order_bulk_quantum_corrections",
+      "statement": "At leading order in bulk quantum corrections, the quantum extremal surface proposal agrees with the formula of Faulkner, Lewkowycz, and Maldacena, which was derived only at that order.",
+      "sources": [
+        {
+          "arxiv": "1408.3203",
+          "url": "https://arxiv.org/abs/1408.3203",
+          "title": "Quantum Extremal Surfaces: Holographic Entanglement Entropy beyond the Classical Regime"
+        }
+      ]
+    },
+    {
+      "name": "quantum_extremal_surface_qes_exists",
+      "statement": "A quantum extremal surface (QES) exists in the near-horizon region outside black holes when $c \\cdot G_{(D)}$ is sufficiently small, with late-time radiation entropy saturating at twice the black hole entropy.",
+      "sources": [
+        {
+          "arxiv": "2110.07598",
+          "url": "https://arxiv.org/abs/2110.07598",
+          "title": "The universality of islands outside the horizon"
+        }
+      ]
+    },
+    {
+      "name": "quantum_extremal_surface_reflected_entropy",
+      "statement": "A quantum extremal surface for reflected entropy, called quantum extremal cross section, is proposed.",
+      "sources": [
+        {
+          "arxiv": "2006.10846",
+          "url": "https://arxiv.org/abs/2006.10846",
+          "title": "Reflected Entropy for an Evaporating Black Hole"
+        }
+      ]
+    },
+    {
+      "name": "novel_quantum_extremal_surface_qes",
+      "statement": "A novel quantum extremal surface (QES) was identified that cannot be described as a small quantum correction to a classical extremal surface, instead arising only due to quantum effects.",
+      "sources": [
+        {
+          "arxiv": "1905.08762",
+          "url": "https://arxiv.org/abs/1905.08762",
+          "title": "The entropy of bulk quantum fields and the entanglement wedge of an evaporating black hole"
+        }
+      ]
+    },
+    {
+      "name": "both_small_large_mathrm_bulk",
+      "statement": "In both the small and large $S_{\\mathrm{bulk}}$ regimes, the dominant quantum extremal surface indicates that the entanglement wedge is associated with an entropy less than or equal to the density of states of the system to which it is dual.",
+      "sources": [
+        {
+          "arxiv": "1905.08762",
+          "url": "https://arxiv.org/abs/1905.08762",
+          "title": "The entropy of bulk quantum fields and the entanglement wedge of an evaporating black hole"
+        }
+      ]
+    },
+    {
+      "name": "model_where_gradients_bulk_entropy",
+      "statement": "In a model where $O(1/G_N)$ gradients of bulk entropy can be calculated in detail, the ensuing effects on quantum extremal surfaces (QESs) and entanglement wedges can be studied by considering a standard two-sided AdS$_2$ black hole in Jackiw–Teitelboim (JT) gravity coupled to a 1+1 CFT in the Hartle–Hawking state.",
+      "sources": [
+        {
+          "arxiv": "1905.08762",
+          "url": "https://arxiv.org/abs/1905.08762",
+          "title": "The entropy of bulk quantum fields and the entanglement wedge of an evaporating black hole"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "doc": "# Conductivity — Superconductors\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic conductivity”).",
+  "claims": [
+    {
+      "name": "holographic_edge_states_correctly_reproduce",
+      "statement": "Holographic edge states correctly reproduce Hall conductivity",
+      "sources": [
+        {
+          "arxiv": "0901.0924",
+          "url": "https://arxiv.org/abs/0901.0924",
+          "title": "Fractional Quantum Hall Effect via Holography: Chern-Simons, Edge States, and Hierarchy"
+        }
+      ]
+    },
+    {
+      "name": "dual_holographic_dc_conductivity_computed",
+      "statement": "The dual holographic DC conductivity is computed.",
+      "sources": [
+        {
+          "arxiv": "1708.07194",
+          "url": "https://arxiv.org/abs/1708.07194",
+          "title": "Axionic black branes in the k-essence sector of the Horndeski model"
+        }
+      ]
+    },
+    {
+      "name": "holographic_system_optical_conductivity_computed",
+      "statement": "The holographic system’s optical conductivity is computed numerically.",
+      "sources": [
+        {
+          "arxiv": "1605.03260",
+          "url": "https://arxiv.org/abs/1605.03260",
+          "title": "Lifshitz holographic superconductor in Horava-Lifshitz gravity"
+        }
+      ]
+    },
+    {
+      "name": "holographic_conductivity_exhibits_expected_meanfieldlike",
+      "statement": "The holographic conductivity exhibits the expected mean-field-like behavior.",
+      "sources": [
+        {
+          "arxiv": "1102.0977",
+          "url": "https://arxiv.org/abs/1102.0977",
+          "title": "Holographic Multi-Band Superconductor"
+        }
+      ]
+    },
+    {
+      "name": "dc_current_affects_ac_conductivity",
+      "statement": "The DC current affects the AC conductivity of the holographic superconductor.",
+      "sources": [
+        {
+          "arxiv": "1003.5661",
+          "url": "https://arxiv.org/abs/1003.5661",
+          "title": "On Holographic Superconductors with DC Current"
+        }
+      ]
+    },
+    {
+      "name": "holographic_prescription_dc_conductivity_disordered",
+      "statement": "A holographic prescription for DC conductivity in disordered systems is provided.",
+      "sources": [
+        {
+          "arxiv": "1103.6068",
+          "url": "https://arxiv.org/abs/1103.6068",
+          "title": "Holographic Conductivity in Disordered Systems"
+        }
+      ]
+    },
+    {
+      "name": "holographic_conductivity_studied_twodimensional_systems",
+      "statement": "Holographic conductivity is studied for two-dimensional systems such as graphene.",
+      "sources": [
+        {
+          "arxiv": "1601.04732",
+          "url": "https://arxiv.org/abs/1601.04732",
+          "title": "Thermodynamics and gauge/gravity duality for Lifshitz black holes in the presence of exponential electrodynamics"
+        }
+      ]
+    },
+    {
+      "name": "mechanism_negative_differential_conductivity_holographic",
+      "statement": "The mechanism for negative differential conductivity in holographic conductors is clarified.",
+      "sources": [
+        {
+          "arxiv": "2008.00904",
+          "url": "https://arxiv.org/abs/2008.00904",
+          "title": "Mechanism for Negative Differential Conductivity in Holographic Conductors"
+        }
+      ]
+    },
+    {
+      "name": "holographic_computation_conductivity_weakly_disordered",
+      "statement": "A holographic computation of the conductivity of weakly disordered strange metals is carried out, including average conductivity and sample-to-sample fluctuations.",
+      "sources": [
+        {
+          "arxiv": "1411.3331",
+          "url": "https://arxiv.org/abs/1411.3331",
+          "title": "Conductivity of weakly disordered strange metals: from conformal to hyperscaling-violating regimes"
+        }
+      ]
+    },
+    {
+      "name": "abstract_indicates_possible_bounds_conductivity",
+      "statement": "The abstract indicates possible bounds on conductivity are considered using holographic duality.",
+      "sources": [
+        {
+          "arxiv": "0806.0110",
+          "url": "https://arxiv.org/abs/0806.0110",
+          "title": "Universal conductivity and central charges"
+        }
+      ]
+    },
+    {
+      "name": "bulk_metric_successfully_extracted_boundary",
+      "statement": "The bulk metric is successfully extracted from boundary holographic optical conductivity data.",
+      "sources": [
+        {
+          "arxiv": "2401.00939",
+          "url": "https://arxiv.org/abs/2401.00939",
+          "title": "Deep learning bulk spacetime from boundary optical conductivity"
+        }
+      ]
+    },
+    {
+      "name": "conductivity_jumps_analogous_previously_studied",
+      "statement": "The conductivity jumps are analogous to previously studied jumps of holographic entanglement.",
+      "sources": [
+        {
+          "arxiv": "2104.14582",
+          "url": "https://arxiv.org/abs/2104.14582",
+          "title": "Direct photons emission rate and electric conductivity in twice anisotropic QGP holographic model with first-order phase transition"
+        }
+      ]
+    },
+    {
+      "name": "incoherent_conductivity_computed_holographic_spatially",
+      "statement": "The incoherent conductivity is computed for holographic spatially modulated breaking translations spontaneously.",
+      "sources": [
+        {
+          "arxiv": "1803.03089",
+          "url": "https://arxiv.org/abs/1803.03089",
+          "title": "Incoherent conductivity of holographic charge density waves"
+        }
+      ]
+    },
+    {
+      "name": "experimental_magnetoconductivity_data_well_fit",
+      "statement": "The experimental magneto-conductivity data are well fit by the holographic theory.",
+      "sources": [
+        {
+          "arxiv": "1708.02257",
+          "url": "https://arxiv.org/abs/1708.02257",
+          "title": "Small Fermi Surfaces and Strong Correlation Effects in Dirac Materials with Holography"
+        }
+      ]
+    },
+    {
+      "name": "electric_conductivity_holographic_metal_depends",
+      "statement": "The electric conductivity of the holographic metal depends on the doping parameter.",
+      "sources": [
+        {
+          "arxiv": "1911.09193",
+          "url": "https://arxiv.org/abs/1911.09193",
+          "title": "Holographic metals at finite doping"
+        }
+      ]
+    },
+    {
+      "name": "conductivity_holographic_superconductor_calculated_analytical",
+      "statement": "The conductivity of the holographic superconductor is calculated by the analytical method.",
+      "sources": [
+        {
+          "arxiv": "1810.12407",
+          "url": "https://arxiv.org/abs/1810.12407",
+          "title": "Holographic superconductor with nonlinear Born - Infeld-type electrodynamics"
+        }
+      ]
+    },
+    {
+      "name": "work_applies_holographic_methods_conductivity",
+      "statement": "The work applies holographic methods to conductivity in disordered $2+1$ dimensional systems.",
+      "sources": [
+        {
+          "arxiv": "1103.6068",
+          "url": "https://arxiv.org/abs/1103.6068",
+          "title": "Holographic Conductivity in Disordered Systems"
+        }
+      ]
+    },
+    {
+      "name": "conductivity_computed_holographic_model_energy",
+      "statement": "Conductivity is computed in the holographic model and the energy gap is extracted.",
+      "sources": [
+        {
+          "arxiv": "1012.1558",
+          "url": "https://arxiv.org/abs/1012.1558",
+          "title": "Holographic Superconductivity with Gauss-Bonnet gravity"
+        }
+      ]
+    }
+  ]
+}

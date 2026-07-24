@@ -1,0 +1,27 @@
+{
+  "doc": "# Anomaly cancellation — literature claims\n\nClaims from wiphy.org, merging into `Physlib.QFT.AnomalyCancellation.Basic`.",
+  "claims": [
+    {
+      "name": "anomalyCancellation_stringSetup",
+      "statement": "Anomaly cancellation in quantum field theory is a central setup for understanding string-theoretic anomaly cancellation.",
+      "sources": [
+        {
+          "title": "Anomalies and the Green-Schwarz Mechanism",
+          "arxiv": "2211.06467",
+          "url": "https://arxiv.org/abs/2211.06467"
+        }
+      ]
+    },
+    {
+      "name": "tadpole_gaugeAnomaly_equivalence_qualified",
+      "statement": "The commonly stated equivalence between tadpole cancellation and gauge anomaly cancellation is qualified.",
+      "sources": [
+        {
+          "title": "Tadpole versus anomaly cancellation in D=4,6 compact IIB orientifolds",
+          "arxiv": "hep-th/9904071",
+          "url": "https://arxiv.org/abs/hep-th/9904071"
+        }
+      ]
+    }
+  ]
+}

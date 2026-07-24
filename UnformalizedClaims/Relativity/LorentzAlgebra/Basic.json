@@ -1,0 +1,27 @@
+{
+  "doc": "# Lorentz algebra — literature claims\n\nClaims gathered from [wiphy.org](https://wiphy.org/), merging into `Physlib.Relativity.LorentzAlgebra.Basic`.",
+  "claims": [
+    {
+      "name": "lorentzAlgebra_charges_satisfy",
+      "statement": "The constructed charges satisfy the Lorentz algebra.",
+      "sources": [
+        {
+          "title": "Supertranslation-Invariant Dressed Lorentz Charges",
+          "arxiv": "2202.03442",
+          "url": "https://arxiv.org/abs/2202.03442"
+        }
+      ]
+    },
+    {
+      "name": "lorentzTransformations_lieBialgebra",
+      "statement": "Infinitesimal Lorentz transformations form a Lie bi-algebra.",
+      "sources": [
+        {
+          "title": "The Mass Hyperboloid as a Poisson-Lie Group",
+          "arxiv": "2205.09468",
+          "url": "https://arxiv.org/abs/2205.09468"
+        }
+      ]
+    }
+  ]
+}

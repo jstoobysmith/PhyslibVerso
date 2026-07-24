@@ -1,0 +1,203 @@
+{
+  "doc": "# Hyperscaling Violation — Non Relativistic\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “hyperscaling violating geometry”).",
+  "claims": [
+    {
+      "name": "infrared_theory_dual_hyperscalingviolating_lifshitzlike",
+      "statement": "The infrared theory is dual to a hyperscaling-violating Lifshitz-like geometry with dynamical exponent $z = 5$ and hyperscaling-violating exponent $\\theta = 1$.",
+      "sources": [
+        {
+          "arxiv": "1511.05484",
+          "url": "https://arxiv.org/abs/1511.05484",
+          "title": "Three-dimensional super Yang-Mills with compressible quark matter"
+        }
+      ]
+    },
+    {
+      "name": "hyperscalingviolating_geometry_arises_special_case",
+      "statement": "A hyperscaling-violating geometry arises in a special case after dimensional reduction.",
+      "sources": [
+        {
+          "arxiv": "1603.08004",
+          "url": "https://arxiv.org/abs/1603.08004",
+          "title": "Asymptotically AdS spacetimes with a timelike Kasner singularity"
+        }
+      ]
+    },
+    {
+      "name": "asymptotic_geometry_hyperscalingviolating_conformal_ads",
+      "statement": "The asymptotic geometry is hyperscaling-violating and conformal to AdS$_2$ × H$^2$.",
+      "sources": [
+        {
+          "arxiv": "1503.09055",
+          "url": "https://arxiv.org/abs/1503.09055",
+          "title": "Supersymmetric black holes and attractors in gauged supergravity with hypermultiplets"
+        }
+      ]
+    },
+    {
+      "name": "smarrlike_entanglement_relation_demonstrated_hyperscaling",
+      "statement": "The Smarr-like entanglement relation is demonstrated in a hyperscaling violating geometry background.",
+      "sources": [
+        {
+          "arxiv": "2004.00867",
+          "url": "https://arxiv.org/abs/2004.00867",
+          "title": "Generalized entanglement temperature and entanglement Smarr relation"
+        }
+      ]
+    },
+    {
+      "name": "analysis_focuses_exclusively_unstable_modes",
+      "statement": "The analysis focuses exclusively on unstable modes arising from the hyperscaling-violating portion of the geometry.",
+      "sources": [
+        {
+          "arxiv": "1606.02745",
+          "url": "https://arxiv.org/abs/1606.02745",
+          "title": "Criteria For Superfluid Instabilities of Geometries with Hyperscaling Violation"
+        }
+      ]
+    },
+    {
+      "name": "hyperscaling_violating_geometry_conjectured_sign",
+      "statement": "In hyperscaling violating geometry, the conjectured sign property is disproved for $n>3$ with general configurations.",
+      "sources": [
+        {
+          "arxiv": "2304.11430",
+          "url": "https://arxiv.org/abs/2304.11430",
+          "title": "Holographic n-partite Information in Hyperscaling Violating Geometry"
+        }
+      ]
+    },
+    {
+      "name": "holographic_calculation_hyperscalingviolating_bulk_geometry",
+      "statement": "A holographic calculation in a hyperscaling-violating bulk geometry yields the same leading term for the entanglement entropy if the effective dimension of the hyperscaling-violating theory matches the spectral dimension of the fractal.",
+      "sources": [
+        {
+          "arxiv": "1511.01330",
+          "url": "https://arxiv.org/abs/1511.01330",
+          "title": "Entangling Fractals"
+        }
+      ]
+    },
+    {
+      "name": "groundstate_geometry_has_hyperscalingviolating_geometry",
+      "statement": "The ground-state geometry has a hyperscaling-violating geometry in the IR and is asymptotically anti–de Sitter in the UV.",
+      "sources": [
+        {
+          "arxiv": "2206.03498",
+          "url": "https://arxiv.org/abs/2206.03498",
+          "title": "Holographic superconductors at zero density"
+        }
+      ]
+    },
+    {
+      "name": "ground_state_emd_model_represented",
+      "statement": "The ground state of the EMD model is represented in the bulk via a hyperscaling-violating geometry.",
+      "sources": [
+        {
+          "arxiv": "1712.09826",
+          "url": "https://arxiv.org/abs/1712.09826",
+          "title": "Holographic Complexity of Einstein-Maxwell-Dilaton Gravity"
+        }
+      ]
+    },
+    {
+      "name": "holographic_dc_conductivity_dimensional_systems",
+      "statement": "The holographic DC conductivity of $(2+1)$-dimensional systems is analyzed in a bulk hyperscaling violating geometry.",
+      "sources": [
+        {
+          "arxiv": "1707.04013",
+          "url": "https://arxiv.org/abs/1707.04013",
+          "title": "DC conductivity with external magnetic field in hyperscaling violating geometry"
+        }
+      ]
+    },
+    {
+      "name": "hyperscaling_violating_geometry_conjectured_sign_",
+      "statement": "In hyperscaling violating geometry, the conjectured sign property is confirmed for strips of equal length with equal separation distance.",
+      "sources": [
+        {
+          "arxiv": "2304.11430",
+          "url": "https://arxiv.org/abs/2304.11430",
+          "title": "Holographic n-partite Information in Hyperscaling Violating Geometry"
+        }
+      ]
+    },
+    {
+      "name": "hyperscaling_violating_geometry_lattice_structure",
+      "statement": "In hyperscaling violating geometry with lattice structure, the ratio $\\eta/s$ obeys a temperature power law $\\eta/s \\sim T^{\\kappa}$.",
+      "sources": [
+        {
+          "arxiv": "1605.03879",
+          "url": "https://arxiv.org/abs/1605.03879",
+          "title": "Holographic Shear Viscosity in Hyperscaling Violating Theories without Translational Invariance"
+        }
+      ]
+    },
+    {
+      "name": "behavior_thermal_entropy_function_temperature",
+      "statement": "The behavior of the thermal entropy as a function of temperature is compared between the fractal geometry and the hyperscaling-violating background.",
+      "sources": [
+        {
+          "arxiv": "1511.01330",
+          "url": "https://arxiv.org/abs/1511.01330",
+          "title": "Entangling Fractals"
+        }
+      ]
+    },
+    {
+      "name": "mixedstate_complexity_probed_through_mutual",
+      "statement": "Mixed-state complexity is probed through the mutual complexity for the BTZ black hole and the hyperscaling violating geometry using the holographic subregion complexity conjecture.",
+      "sources": [
+        {
+          "arxiv": "2101.00887",
+          "url": "https://arxiv.org/abs/2101.00887",
+          "title": "Holographic study of entanglement and complexity for mixed states"
+        }
+      ]
+    },
+    {
+      "name": "case_theta_associated_violation_area",
+      "statement": "The case $\\theta=2$ is associated with a violation of the area law of entanglement entropy in the regime of validity of the hyperscaling violating geometry.",
+      "sources": [
+        {
+          "arxiv": "1208.1752",
+          "url": "https://arxiv.org/abs/1208.1752",
+          "title": "On the IR completion of geometries with hyperscaling violation"
+        }
+      ]
+    },
+    {
+      "name": "other_words_even_though_dealing",
+      "statement": "In other words, even though we are dealing with a hyperscaling violating geometry, nontrivial behaviors of the resultant entanglement entropy are the same as that of a Lifshitz geometry in $d+1$ dimensions.",
+      "sources": [
+        {
+          "arxiv": "1401.2807",
+          "url": "https://arxiv.org/abs/1401.2807",
+          "title": "Thermalization in backgrounds with hyperscaling violating factor"
+        }
+      ]
+    },
+    {
+      "name": "renormalization_group_flows_interpolate_between",
+      "statement": "The renormalization group flows interpolate between AdS$_4$ in the UV and a hyperscaling violating Lifshitz geometry in the IR with $1<z<3$ and $\\theta=z+1$.",
+      "sources": [
+        {
+          "arxiv": "1505.04131",
+          "url": "https://arxiv.org/abs/1505.04131",
+          "title": "Holographic Hall conductivities from dyonic backgrounds"
+        }
+      ]
+    },
+    {
+      "name": "turning_point_rho_rho_not",
+      "statement": "The turning point $\\rho_0 (l,\\rho_c)$ is not solvable globally in either exact or perturbative form from hyperscaling violating bulk geometry with a finite radial cutoff.",
+      "sources": [
+        {
+          "arxiv": "2012.01895",
+          "url": "https://arxiv.org/abs/2012.01895",
+          "title": "Quantum entanglement measures from Hyperscaling violating geometries with finite radial cut off at general d, $θ$ from the emergent global symmetry"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "doc": "# Causality — Bulk Reconstruction\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “bulk causality holography”).",
+  "claims": [
+    {
+      "name": "flat_bmsft_toy_model_flatspace",
+      "statement": "In the flat$_3$/BMSFT toy model of flat-space holography, the paper uses boundary and bulk local modular flow to analyze bulk causality structures associated with the holographic swing surface proposal, relating them to a decomposition of global Minkowski spacetime and to entanglement phase transitions. It also shows that a partial entanglement entropy correspondence exists in this setting despite the unusual boundary modular flow of BMS$_3$ field theory.",
+      "sources": [
+        {
+          "arxiv": "2309.05220",
+          "url": "https://arxiv.org/abs/2309.05220",
+          "title": "Revisiting 3D Flat Holography: Causality Structure and Modular flow"
+        }
+      ]
+    }
+  ]
+}

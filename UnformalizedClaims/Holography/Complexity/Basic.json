@@ -1,0 +1,203 @@
+{
+  "doc": "# Basic — Complexity\n\nUnformalized claims gathered verbatim from [wiphy.org](https://wiphy.org/) (query: “holographic complexity”).",
+  "claims": [
+    {
+      "name": "large_volume_limit_holographic_complexity",
+      "statement": "In large volume limit, holographic complexity reduces to holographic information metric.",
+      "sources": [
+        {
+          "arxiv": "1509.06614",
+          "url": "https://arxiv.org/abs/1509.06614",
+          "title": "Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "holographic_complexity_investigated_eternal_black",
+      "statement": "Holographic complexity is investigated for eternal black hole backgrounds perturbed by shock waves using both complexity=action (CA) and complexity=volume (CV) proposals",
+      "sources": [
+        {
+          "arxiv": "1805.07262",
+          "url": "https://arxiv.org/abs/1805.07262",
+          "title": "Holographic Complexity in Vaidya Spacetimes II"
+        }
+      ]
+    },
+    {
+      "name": "complexity_superadditive_holographic_settings_while",
+      "statement": "Complexity is superadditive in holographic settings while subadditive in free scalar QFT using diagonal basis.",
+      "sources": [
+        {
+          "arxiv": "1909.10557",
+          "url": "https://arxiv.org/abs/1909.10557",
+          "title": "Complexity of Mixed States in QFT and Holography"
+        }
+      ]
+    },
+    {
+      "name": "holographic_definition_complexity_independent_orientation",
+      "statement": "The holographic definition of complexity is independent of the orientation of time on the boundary.",
+      "sources": [
+        {
+          "arxiv": "1612.00433",
+          "url": "https://arxiv.org/abs/1612.00433",
+          "title": "Comments on Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "possible_relation_exists_between_holographic",
+      "statement": "A possible relation exists between holographic complexity and fidelity from quantum-information literature.",
+      "sources": [
+        {
+          "arxiv": "1509.06614",
+          "url": "https://arxiv.org/abs/1509.06614",
+          "title": "Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "show_framework_also_encompasses_nicely",
+      "statement": "We show that this framework also encompasses nicely the holographic notions of complexity.",
+      "sources": [
+        {
+          "arxiv": "2212.10583",
+          "url": "https://arxiv.org/abs/2212.10583",
+          "title": "A universal approach to Krylov State and Operator complexities"
+        }
+      ]
+    },
+    {
+      "name": "infinite_volume_limit_holographic_complexity",
+      "statement": "In infinite volume limit, holographic complexity reduces to fidelity susceptibility.",
+      "sources": [
+        {
+          "arxiv": "1509.06614",
+          "url": "https://arxiv.org/abs/1509.06614",
+          "title": "Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "quantum_state_black_hole_interior",
+      "statement": "The quantum state of a black hole interior has a growing complexity that is dual to the growing spacetime volume behind the horizon, equal at any instant to the Einstein-Hilbert action of the Wheeler-DeWitt patch anchored at boundary time t.",
+      "sources": [
+        {
+          "arxiv": "1701.01107",
+          "url": "https://arxiv.org/abs/1701.01107",
+          "title": "The Second Law of Quantum Complexity"
+        }
+      ]
+    },
+    {
+      "name": "holographic_complexity_contains_universal_term",
+      "statement": "Holographic complexity contains a universal term independent of the UV cutoff for arbitrary $d$.",
+      "sources": [
+        {
+          "arxiv": "1509.06614",
+          "url": "https://arxiv.org/abs/1509.06614",
+          "title": "Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "universal_terms_holographic_complexity_independent",
+      "statement": "Universal terms of holographic complexity are independent of subsystem size and may reflect intrinsic properties of the theory, potentially analogous to central charge.",
+      "sources": [
+        {
+          "arxiv": "1509.06614",
+          "url": "https://arxiv.org/abs/1509.06614",
+          "title": "Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "quantum_computational_complexity_was_suggested",
+      "statement": "Quantum computational complexity was suggested as a new entry in the holographic dictionary, extending the connection between geometry and information.",
+      "sources": [
+        {
+          "arxiv": "2110.14672",
+          "url": "https://arxiv.org/abs/2110.14672",
+          "title": "Quantum Computational Complexity -- From Quantum Information to Black Holes and Back"
+        }
+      ]
+    },
+    {
+      "name": "find_complexity_subregions_subadditive_comment",
+      "statement": "We find that the complexity of subregions is subadditive, and comment on potential implications for holography.",
+      "sources": [
+        {
+          "arxiv": "1807.07075",
+          "url": "https://arxiv.org/abs/1807.07075",
+          "title": "Complexity as a novel probe of quantum quenches: universal scalings and purifications"
+        }
+      ]
+    },
+    {
+      "name": "holographic_complexity_subsystem_proportional_volume",
+      "statement": "Holographic complexity for a subsystem is proportional to the volume of a co-dimension one time slice in the bulk geometry enclosed by the extremal co-dimension two hyper-surface from holographic entanglement entropy computation.",
+      "sources": [
+        {
+          "arxiv": "1509.06614",
+          "url": "https://arxiv.org/abs/1509.06614",
+          "title": "Holographic Complexity"
+        }
+      ]
+    },
+    {
+      "name": "complexity_growth_holographic_states_dual",
+      "statement": "The complexity growth of holographic states dual to charged black holes in AdS space can be calculated by analyzing charged black holes with a single horizon",
+      "sources": [
+        {
+          "arxiv": "1702.06766",
+          "url": "https://arxiv.org/abs/1702.06766",
+          "title": "Action growth of charged black holes with a single horizon"
+        }
+      ]
+    },
+    {
+      "name": "evolution_quantum_complexity_growth_geometry",
+      "statement": "The evolution of quantum complexity and the growth of the geometry behind black hole horizons follow identical patterns.",
+      "sources": [
+        {
+          "arxiv": "1608.02612",
+          "url": "https://arxiv.org/abs/1608.02612",
+          "title": "Quantum Complexity and Negative Curvature"
+        }
+      ]
+    },
+    {
+      "name": "find_holographic_complexity_corresponding_growth",
+      "statement": "We find that holographic complexity and corresponding growth rate presents universal behaviour for all three approaches.",
+      "sources": [
+        {
+          "arxiv": "2202.10684",
+          "url": "https://arxiv.org/abs/2202.10684",
+          "title": "Holographic Complexity in dS$_{d+1}$"
+        }
+      ]
+    },
+    {
+      "name": "propose_quantum_complexity_boundary_state",
+      "statement": "We propose that the quantum complexity of the boundary state is equal to the classical action of a spacetime region that extends deep inside the horizon.",
+      "sources": [
+        {
+          "arxiv": "1512.04993",
+          "url": "https://arxiv.org/abs/1512.04993",
+          "title": "Complexity, action, and black holes"
+        }
+      ]
+    },
+    {
+      "name": "holographic_complexity_sensitive_boundary_terms",
+      "statement": "Holographic complexity is sensitive to boundary terms at unobserved internal boundaries: an internal boundary term inadvertently introduced in integrating out the gauge field from RN to JT explains the discrepancy in complexity growth between JT and RN.",
+      "sources": [
+        {
+          "arxiv": "1810.08741",
+          "url": "https://arxiv.org/abs/1810.08741",
+          "title": "The Case of the Missing Gates: Complexity of Jackiw-Teitelboim Gravity"
+        }
+      ]
+    }
+  ]
+}
