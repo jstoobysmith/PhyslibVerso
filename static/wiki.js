@@ -985,9 +985,18 @@
       cancel.className = 'pv-btn';
       cancel.textContent = 'Cancel';
       cancel.onclick = function () { overlay.remove(); };
+      /* Submitting posts a GitHub issue, which needs a signed-in account. */
+      var note = document.createElement('div');
+      note.className = 'pv-modal-note';
+      note.innerHTML = '<span class="pv-note-ico" aria-hidden="true">🔒</span>' +
+        '<span>Submitting opens GitHub in a new tab. You must be <b>signed in to ' +
+        'a GitHub account</b> to post the suggestion — it’s free to ' +
+        '<a href="https://github.com/join" target="_blank" rel="noopener">create one</a>.</span>';
+      modal.appendChild(note);
+
       var submit = document.createElement('button');
       submit.className = 'pv-btn pv-btn-primary';
-      submit.textContent = 'Propose change';
+      submit.textContent = 'Propose on GitHub →';
       function doSubmit() {
         var suggestion = currentMarkdown();
         if (suggestion === original) {
