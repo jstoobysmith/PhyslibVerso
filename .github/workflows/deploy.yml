@@ -6,6 +6,11 @@ name: Build and deploy wiki
 on:
   push:
     branches: [main, master]
+  # Rebuild every day at 00:00 UTC. `lake update` fetches the latest Physlib
+  # (pinned to a branch), so the daily run republishes upstream changes even
+  # without a push here. GitHub cron is always UTC.
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 # Allow one concurrent deployment; let a new push cancel an in-progress run.
