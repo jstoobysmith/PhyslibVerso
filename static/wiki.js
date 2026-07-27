@@ -584,11 +584,21 @@
        <h2> (so levels shift down by one), and list items are direct <p>
        children of <ul>/<ol> — there are no <li> elements. Math is left
        alone: this runs before KaTeX, so `$…$` is still literal text. */
+    /* Elements this script injects (the meta line, the alpha banner, the edit
+       button, keyword rows) are page furniture, not part of the docstring —
+       they must never be serialized back into the Markdown source. */
+    function isInjectedNode(n) {
+      if (n.tagName === 'BUTTON') return true;
+      var c = n.classList;
+      return !!(c && (c.contains('pv-meta') || c.contains('pv-alpha-banner') ||
+        c.contains('pv-edit-btn') || c.contains('pv-kw-row')));
+    }
+
     function mdInline(node) {
       var out = '';
       Array.prototype.forEach.call(node.childNodes, function (n) {
         if (n.nodeType === 3) { out += n.nodeValue; return; }
-        if (n.nodeType !== 1) return;
+        if (n.nodeType !== 1 || isInjectedNode(n)) return;
         var tag = n.tagName;
         if (tag === 'CODE') out += '`' + n.textContent + '`';
         else if (tag === 'EM' || tag === 'I') out += '*' + mdInline(n) + '*';
@@ -599,7 +609,6 @@
           /* <url> autolinks render with the URL as their own label. */
           out += label.trim() === href ? '<' + href + '>' : '[' + label + '](' + href + ')';
         } else if (tag === 'BR') out += '\n';
-        else if (tag === 'BUTTON') { /* the injected ✎ button */ }
         else out += mdInline(n);
       });
       return out;
@@ -611,7 +620,7 @@
       return text.split('\n').join('\n' + pad);
     }
 
-    function mdList(list) {
+    function mdList(list, hShift) {
       var ordered = list.tagName === 'OL';
       var nestPad = ordered ? '   ' : '  ';
       var lines = [];
@@ -621,52 +630,68 @@
         if (tag === 'P' || tag === 'LI') {
           count += 1;
           var marker = ordered ? count + '. ' : '- ';
-          var body = tag === 'LI' ? mdBlocks(child) : mdInline(child).trim();
+          var body = tag === 'LI' ? mdBlocks(child, hShift) : mdInline(child).trim();
           var pad = new Array(marker.length + 1).join(' ');
           lines.push(marker + mdHang(body.trim(), pad));
         } else if (tag === 'UL' || tag === 'OL') {
-          lines.push(nestPad + mdHang(mdList(child), nestPad));
+          lines.push(nestPad + mdHang(mdList(child, hShift), nestPad));
         } else {
-          var other = mdBlocks(child).trim();
+          var other = mdBlocks(child, hShift).trim();
           if (other) lines.push(other);
         }
       });
       return lines.join('\n');
     }
 
-    function mdBlocks(node) {
+    var BLOCK_TAGS = /^(H[1-6]|P|UL|OL|PRE|HR|BLOCKQUOTE|DIV|FIGURE|TABLE)$/;
+
+    function mdInlineNodes(nodes) {
+      var span = document.createElement('span');
+      nodes.forEach(function (n) { span.appendChild(n.cloneNode(true)); });
+      return mdInline(span).trim();
+    }
+
+    /* `hShift` maps rendered heading levels back to `#` counts. Verso renders a
+       docstring's `#` as <h2>, so capture passes -1; the visual editor renders
+       Markdown with marked (`#` → <h1>), so it passes 0.
+       Consecutive inline children (text, `code`, *em*, links) are grouped into
+       one paragraph — otherwise `<li><code>X</code> y</li>` would split. */
+    function mdBlocks(node, hShift) {
+      if (hShift == null) hShift = -1;
       var out = [];
       var push = function (text, kind) {
         if (text) out.push({ text: text, kind: kind });
       };
+      var run = [];
+      var flush = function () {
+        if (run.length) { push(mdInlineNodes(run), 'para'); run = []; }
+      };
       Array.prototype.forEach.call(node.childNodes, function (n) {
-        if (n.nodeType === 3) {
-          push(n.nodeValue.trim(), 'para');
-          return;
-        }
-        if (n.nodeType !== 1) return;
+        if (n.nodeType === 3) { run.push(n); return; }
+        if (n.nodeType !== 1 || isInjectedNode(n)) return;
         var tag = n.tagName;
+        if (!BLOCK_TAGS.test(tag)) { run.push(n); return; } // inline element
+        flush();
         if (/^H[1-6]$/.test(tag)) {
-          var level = Math.max(1, parseInt(tag.charAt(1), 10) - 1);
+          var level = Math.max(1, parseInt(tag.charAt(1), 10) + hShift);
           push(new Array(level + 1).join('#') + ' ' + mdInline(n).trim(), 'head');
-        } else if (tag === 'P') {
-          push(mdInline(n).trim(), 'para');
+        } else if (tag === 'P' || tag === 'DIV' || tag === 'FIGURE') {
+          push(mdBlocks(n, hShift).trim(), 'para');
         } else if (tag === 'UL' || tag === 'OL') {
-          push(mdList(n), 'list');
+          push(mdList(n, hShift), 'list');
         } else if (tag === 'PRE') {
           push('```\n' + n.textContent.replace(/^\n+|\n+$/g, '') + '\n```', 'pre');
         } else if (tag === 'HR') {
           push('---', 'rule');
         } else if (tag === 'BLOCKQUOTE') {
-          push(mdBlocks(n).split('\n').map(function (line) {
+          push(mdBlocks(n, hShift).split('\n').map(function (line) {
             return line ? '> ' + line : '>';
           }).join('\n'), 'quote');
-        } else if (tag === 'BUTTON') {
-          /* skip injected UI */
         } else {
-          push(mdBlocks(n).trim(), 'para');
+          push(mdBlocks(n, hShift).trim(), 'para');
         }
       });
+      flush();
       /* A list directly under its introducing paragraph stays tight, the way
          it is written in the docstring; everything else gets a blank line. */
       return out.map(function (item, i) {
@@ -678,7 +703,7 @@
 
     var proseBlocks = Array.prototype.slice.call(
       document.querySelectorAll('.code-content > .md-text, .code-content > .verso-text'));
-    proseBlocks.forEach(function (b) { b.pvSource = mdBlocks(b).trim(); });
+    proseBlocks.forEach(function (b) { b.pvSource = mdBlocks(b, -1).trim(); });
 
     function renderMathIn(container) {
       if (typeof katex === 'undefined') return;
@@ -820,21 +845,140 @@
       window.open(url, '_blank');
     }
 
+    /* Render Markdown to HTML for the visual editor, using the marked bundle
+       Verso already ships. Falls back to escaped text if it's unavailable. */
+    function renderMarkdown(md) {
+      if (window.marked) {
+        try { return (marked.parse ? marked.parse(md) : marked(md)); } catch (e) { /* fall through */ }
+      }
+      var esc = md.replace(/[&<>]/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c];
+      });
+      return '<p>' + esc.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>') + '</p>';
+    }
+
+    /* A Wikipedia-style editor: a Visual (WYSIWYG) tab and a Markdown tab, kept
+       in sync, submitting a prefilled GitHub issue with the diff. */
     function openEditModal(block, modName) {
+      var original = (block.pvSource || '').trim();
+      var haveVisual = !!window.marked;
+
       var overlay = document.createElement('div');
       overlay.className = 'pv-modal-overlay';
       var modal = document.createElement('div');
-      modal.className = 'pv-modal';
-      modal.innerHTML =
-        '<div class="pv-modal-title">Suggest an edit</div>' +
-        '<div class="pv-modal-sub">Edit the Markdown below — it opens a ' +
-        'prefilled GitHub issue on <code>' + GITHUB_REPO + '</code> showing ' +
-        'the diff against the current docstring of <code>' + modName +
-        '</code>.</div>';
+      modal.className = 'pv-modal pv-modal-edit';
+
+      var head = document.createElement('div');
+      head.className = 'pv-modal-head';
+      head.innerHTML =
+        '<div class="pv-modal-title">Edit this documentation</div>' +
+        '<div class="pv-modal-sub">Like a wiki — edit the text directly. ' +
+        'Submitting opens a prefilled GitHub issue on <code>' + GITHUB_REPO +
+        '</code> with your changes to <code>' + modName + '</code> for a ' +
+        'maintainer to review.</div>';
+      modal.appendChild(head);
+
+      /* Tab strip (Visual | Markdown). */
+      var tabs = document.createElement('div');
+      tabs.className = 'pv-tabs';
+      var tabVisual = document.createElement('button');
+      tabVisual.className = 'pv-tab';
+      tabVisual.textContent = 'Visual';
+      var tabMd = document.createElement('button');
+      tabMd.className = 'pv-tab';
+      tabMd.textContent = 'Markdown';
+      if (haveVisual) { tabs.appendChild(tabVisual); tabs.appendChild(tabMd); modal.appendChild(tabs); }
+
+      /* Formatting toolbar (visual mode). */
+      var toolbar = document.createElement('div');
+      toolbar.className = 'pv-toolbar';
+      var TOOLS = [
+        ['bold', '<b>B</b>', 'Bold'],
+        ['italic', '<i>I</i>', 'Italic'],
+        ['code', '&lt;&gt;', 'Inline code'],
+        ['h2', 'H2', 'Heading'],
+        ['h3', 'H3', 'Subheading'],
+        ['ul', '• List', 'Bulleted list'],
+        ['ol', '1. List', 'Numbered list'],
+        ['link', '🔗', 'Link']
+      ];
+
+      var visual = document.createElement('div');
+      visual.className = 'pv-visual';
+      visual.contentEditable = 'true';
+      visual.spellcheck = true;
+      visual.innerHTML = renderMarkdown(original);
+
       var ta = document.createElement('textarea');
       ta.className = 'pv-modal-text';
-      ta.value = block.pvSource || '';
-      modal.appendChild(ta);
+      ta.value = original;
+
+      function runTool(cmd) {
+        visual.focus();
+        try { document.execCommand('styleWithCSS', false, false); } catch (e) { /* */ }
+        if (cmd === 'bold' || cmd === 'italic') document.execCommand(cmd);
+        else if (cmd === 'ul') document.execCommand('insertUnorderedList');
+        else if (cmd === 'ol') document.execCommand('insertOrderedList');
+        else if (cmd === 'h2' || cmd === 'h3') {
+          var tag = cmd.toUpperCase();
+          var inHeading = document.queryCommandValue &&
+            (document.queryCommandValue('formatBlock') || '').toLowerCase() === cmd;
+          document.execCommand('formatBlock', false, inHeading ? 'P' : tag);
+        } else if (cmd === 'code') {
+          var sel = window.getSelection();
+          var text = sel && !sel.isCollapsed ? sel.toString() : '';
+          document.execCommand('insertHTML', false,
+            '<code>' + (text || 'code').replace(/[&<>]/g, function (c) {
+              return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c];
+            }) + '</code>');
+        } else if (cmd === 'link') {
+          var url = window.prompt('Link URL');
+          if (url) document.execCommand('createLink', false, url);
+        }
+      }
+      TOOLS.forEach(function (t) {
+        var b = document.createElement('button');
+        b.className = 'pv-tool';
+        b.type = 'button';
+        b.innerHTML = t[1];
+        b.title = t[2];
+        /* mousedown-preventDefault keeps the editor selection alive. */
+        b.addEventListener('mousedown', function (e) { e.preventDefault(); });
+        b.addEventListener('click', function () { runTool(t[0]); });
+        toolbar.appendChild(b);
+      });
+
+      var editWrap = document.createElement('div');
+      editWrap.className = 'pv-edit-wrap';
+      if (haveVisual) editWrap.appendChild(toolbar);
+      editWrap.appendChild(visual);
+      editWrap.appendChild(ta);
+      modal.appendChild(editWrap);
+
+      /* Contenteditable Enter should make paragraphs, not <div>s. */
+      try { document.execCommand('defaultParagraphSeparator', false, 'p'); } catch (e) { /* */ }
+
+      var mode = haveVisual ? 'visual' : 'markdown';
+      function syncTo(next) {
+        if (next === mode) return;
+        if (next === 'markdown') ta.value = mdBlocks(visual, 0).trim();
+        else visual.innerHTML = renderMarkdown(ta.value);
+        mode = next;
+        modal.classList.toggle('pv-mode-md', mode === 'markdown');
+        tabVisual.classList.toggle('active', mode === 'visual');
+        tabMd.classList.toggle('active', mode === 'markdown');
+        (mode === 'visual' ? visual : ta).focus();
+      }
+      tabVisual.addEventListener('click', function () { syncTo('visual'); });
+      tabMd.addEventListener('click', function () { syncTo('markdown'); });
+      modal.classList.toggle('pv-mode-md', mode === 'markdown');
+      tabVisual.classList.toggle('active', mode === 'visual');
+      tabMd.classList.toggle('active', mode === 'markdown');
+
+      function currentMarkdown() {
+        return (mode === 'markdown' ? ta.value : mdBlocks(visual, 0)).trim();
+      }
+
       var row = document.createElement('div');
       row.className = 'pv-modal-actions';
       var cancel = document.createElement('button');
@@ -843,25 +987,31 @@
       cancel.onclick = function () { overlay.remove(); };
       var submit = document.createElement('button');
       submit.className = 'pv-btn pv-btn-primary';
-      submit.textContent = 'Open GitHub issue';
-      submit.onclick = function () {
-        var suggestion = ta.value.trim();
-        if (suggestion === (block.pvSource || '').trim()) {
+      submit.textContent = 'Propose change';
+      function doSubmit() {
+        var suggestion = currentMarkdown();
+        if (suggestion === original) {
           alert('No changes made yet — edit the text first.');
           return;
         }
-        openIssue(modName, block.pvSource || '', suggestion);
+        openIssue(modName, original, suggestion);
         overlay.remove();
-      };
+      }
+      submit.onclick = doSubmit;
       row.appendChild(cancel);
       row.appendChild(submit);
       modal.appendChild(row);
+
       overlay.appendChild(modal);
       overlay.addEventListener('click', function (e) {
         if (e.target === overlay) overlay.remove();
       });
+      overlay.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') overlay.remove();
+        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') doSubmit();
+      });
       document.body.appendChild(overlay);
-      ta.focus();
+      (haveVisual ? visual : ta).focus();
     }
 
     if (content) {
@@ -870,8 +1020,9 @@
         proseBlocks.forEach(function (block) {
           var btn = document.createElement('button');
           btn.className = 'pv-edit-btn';
-          btn.title = 'Suggest an edit to this text';
-          btn.innerHTML = '✎';
+          btn.title = 'Edit this documentation';
+          btn.innerHTML = '<span class="pv-edit-ico">✎</span>' +
+            '<span class="pv-edit-label">Edit</span>';
           btn.onclick = function () { openEditModal(block, editModName); };
           block.classList.add('pv-editable');
           block.appendChild(btn);

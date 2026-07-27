@@ -231,9 +231,14 @@ Source: GitHub Actions**.
   where the name is defined (resolved from `xref.json`).
 - **Callouts.** `TODO` commands render as blue "Open problem" cards;
   `informal_definition` / `informal_lemma` render as green / purple cards.
-- **Suggest an edit.** Every prose block has a hover "✎" button that opens a
-  prefilled GitHub issue. The target repository is the `GITHUB_REPO` constant at
-  the top of `static/wiki.js`.
+- **Edit the docs (wiki-style).** Every prose block carries a visible "✎ Edit"
+  button that opens an editor with two tabs — a **Visual** (WYSIWYG)
+  surface with a formatting toolbar, and a **Markdown** source view — kept in
+  sync. Submitting opens a prefilled GitHub issue with a diff of the change for
+  a maintainer to review. The rendered HTML is serialized back to Markdown by
+  the `mdBlocks` serializer (the same one that reconstructs the docstring
+  source), so both tabs round-trip; the target repository is the `GITHUB_REPO`
+  constant at the top of `static/wiki.js`.
 
 ## Styling
 
