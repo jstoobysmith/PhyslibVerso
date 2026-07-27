@@ -828,6 +828,8 @@
         'Suggested change to the docstring Markdown (reconstructed from the ' +
         'rendered page, so formatting may differ slightly from the source):\n\n' +
         '```diff\n' + diffLines(original, suggestion) + '\n```\n\n' +
+        '_If this suggestion is accepted, please credit the issue author as a ' +
+        'co-author of the change (`Co-authored-by:`)._\n\n' +
         '---\n*Suggested from the Physlib wiki.*\n';
       var url = 'https://github.com/' + GITHUB_REPO + '/issues/new' +
         '?title=' + encodeURIComponent('docs: suggestion for ' + modName) +
@@ -991,7 +993,8 @@
       note.innerHTML = '<span class="pv-note-ico" aria-hidden="true">🔒</span>' +
         '<span>Submitting opens GitHub in a new tab. You must be <b>signed in to ' +
         'a GitHub account</b> to post the suggestion — it’s free to ' +
-        '<a href="https://github.com/join" target="_blank" rel="noopener">create one</a>.</span>';
+        '<a href="https://github.com/join" target="_blank" rel="noopener">create one</a>. ' +
+        '<b>If your suggestion is accepted, you’ll be credited as a co-author.</b></span>';
       modal.appendChild(note);
 
       var submit = document.createElement('button');
