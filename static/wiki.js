@@ -50,14 +50,44 @@
     document.body.insertBefore(header, document.body.firstChild);
     document.body.classList.add('pv');
 
-    /* Site-wide work-in-progress banner above the header. */
-    var wip = document.createElement('div');
-    wip.className = 'pv-wip-banner';
-    wip.innerHTML = 'Work in progress (and for demonstration purposes only): ' +
-      'Based of <a href="https://paperview.org/">https://paperview.org/</a> ' +
-      'by Sabrina Pasterski.';
-    document.body.insertBefore(wip, document.body.firstChild);
-    document.body.classList.add('pv-has-banner');
+    /* ── 1a. Sidebar toggle (works at every screen size) ─────────
+           Replaces Verso's mobile-only hamburger with a header button that
+           collapses the docked sidebar on desktop and drives an overlay
+           drawer on mobile. Open/closed state is persisted. */
+    var sidebarEl = document.querySelector('.layout .sidebar') || document.querySelector('.sidebar');
+    if (sidebarEl) {
+      var navToggle = document.createElement('button');
+      navToggle.className = 'pv-nav-toggle';
+      navToggle.setAttribute('aria-label', 'Toggle navigation sidebar');
+      navToggle.title = 'Show/hide the navigation sidebar';
+      navToggle.innerHTML = '<span></span><span></span><span></span>';
+      header.insertBefore(navToggle, header.firstChild);
+
+      var NAV_KEY = 'pv-nav-open';
+      function setNav(open) {
+        document.body.classList.toggle('pv-nav-open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        try { localStorage.setItem(NAV_KEY, open ? '1' : '0'); } catch (e) { /* private */ }
+      }
+      var stored = null;
+      try { stored = localStorage.getItem(NAV_KEY); } catch (e) { /* private */ }
+      /* Default: open on wide screens, closed on phones. */
+      setNav(stored === null ? window.innerWidth > 768 : stored === '1');
+      navToggle.addEventListener('click', function () {
+        setNav(!document.body.classList.contains('pv-nav-open'));
+      });
+
+      var scrim = document.createElement('div');
+      scrim.className = 'pv-scrim';
+      scrim.addEventListener('click', function () { setNav(false); });
+      document.body.appendChild(scrim);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && window.innerWidth <= 768) setNav(false);
+      });
+    }
+
+    /* The design credit lives in a page footnote (added near the end of this
+       function), not a top banner. */
 
     /* ── 2. Breadcrumbs: move from the title bar to above the
            article title, like a wiki crumb line ─────────────────── */
@@ -91,6 +121,27 @@
           'same extent as the main Physlib library.';
         if (heading && meta) meta.insertAdjacentElement('afterend', notice);
         else content.insertBefore(notice, content.children[1] || null);
+      }
+
+      /* ── 3c. "On this page" as an in-page box, not a right rail.
+             Moving Verso's .page-toc into the article collapses the empty
+             right column (so the article uses the full width) and gives phones
+             a table of contents too. It's collapsible and scrolls if tall. */
+      var toc = document.querySelector('.page-toc');
+      if (toc) {
+        toc.classList.add('pv-toc-box');
+        var anchor = content.querySelector('.pv-alpha-banner') ||
+                     content.querySelector('.pv-meta');
+        if (anchor) anchor.insertAdjacentElement('afterend', toc);
+        else content.insertBefore(toc, content.querySelector('.mod-doc') || content.firstChild);
+        var tocTitle = toc.querySelector('.page-toc-title');
+        if (tocTitle) {
+          tocTitle.classList.add('pv-toc-toggle');
+          tocTitle.setAttribute('role', 'button');
+          tocTitle.addEventListener('click', function () {
+            toc.classList.toggle('pv-toc-collapsed');
+          });
+        }
       }
     }
 
@@ -545,6 +596,93 @@
       if (toc) toc.remove();
       landing.appendChild(hero);
 
+      /* ── Edit callout: this is a wiki, you can edit it ──────────── */
+      var editCallout = document.createElement('div');
+      editCallout.className = 'pv-edit-callout';
+      editCallout.innerHTML =
+        '<span class="pv-edit-callout-ico" aria-hidden="true">✎</span>' +
+        '<div><b>This is a wiki — you can edit it.</b> Open any page and use its ' +
+        '<span class="pv-inline-edit">✎&nbsp;Edit</span> button to improve the ' +
+        'documentation. Submitting opens a prefilled GitHub issue for review, and ' +
+        'accepted suggestions credit you as a co-author.</div>';
+      landing.appendChild(editCallout);
+
+      /* ── Leaderboard: who has opened the most `documentation` issues ──
+             Queried live from the GitHub API (public, CORS-enabled). Hidden if
+             the API is unreachable/rate-limited or there are none yet. */
+      var board = document.createElement('div');
+      board.className = 'pv-leaderboard';
+      board.style.display = 'none';
+      board.innerHTML =
+        '<div class="pv-section-title">Documentation contributors</div>' +
+        '<div class="pv-candidates-note">People who have opened the most issues ' +
+        'labelled <code>documentation</code> on ' +
+        '<a href="https://github.com/leanprover-community/physlib/labels/documentation" ' +
+        'target="_blank" rel="noopener">leanprover-community/physlib</a>.</div>' +
+        '<div class="pv-board-body"></div>';
+      landing.appendChild(board);
+
+      fetch('https://api.github.com/search/issues?per_page=100&q=' +
+            encodeURIComponent('repo:leanprover-community/physlib label:documentation is:issue'))
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (!data || !data.items || !data.items.length) return;
+          var byUser = {};
+          data.items.forEach(function (it) {
+            var u = it.user || {};
+            if (!u.login) return;
+            if (!byUser[u.login]) byUser[u.login] = { login: u.login, avatar: u.avatar_url, url: u.html_url, n: 0 };
+            byUser[u.login].n += 1;
+          });
+          var ranked = Object.keys(byUser).map(function (k) { return byUser[k]; })
+            .sort(function (a, b) { return b.n - a.n || a.login.localeCompare(b.login); })
+            .slice(0, 10);
+          if (!ranked.length) return;
+          board.querySelector('.pv-board-body').innerHTML = ranked.map(function (u, i) {
+            return '<a class="pv-board-row" href="' + u.url + '" target="_blank" rel="noopener">' +
+              '<span class="pv-board-rank">' + (i + 1) + '</span>' +
+              '<img class="pv-board-avatar" src="' + u.avatar + '" alt="" width="22" height="22">' +
+              '<span class="pv-board-name">' + u.login + '</span>' +
+              '<span class="pv-board-count">' + u.n + (u.n === 1 ? ' issue' : ' issues') + '</span></a>';
+          }).join('');
+          board.style.display = '';
+        })
+        .catch(function () { /* offline / rate-limited — leave hidden */ });
+
+      /* ── "Pages that could use more documentation" table ────────── */
+      var editSection = document.createElement('div');
+      editSection.className = 'pv-edit-candidates';
+      editSection.style.display = 'none';
+      editSection.innerHTML =
+        '<div class="pv-section-title">Pages that could use more documentation</div>' +
+        '<div class="pv-candidates-note">Two pages from each area of Physlib, chosen ' +
+        'for having the most formalized results per character of overview — lots of ' +
+        'content, little prose. A good place to start editing.</div>' +
+        '<div class="pv-candidates-body"></div>';
+      landing.appendChild(editSection);
+
+      fetch('edit-candidates.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var cands = data.candidates || [];
+          if (!cands.length) return;
+          var rows = cands.map(function (c) {
+            var title = c.path.replace(/\./g, ' › ');
+            var alpha = c.source === 'PhyslibAlpha'
+              ? ' <span class="pv-chip-alpha">Alpha</span>' : '';
+            return '<a class="pv-cand-row" href="' + c.href + '">' +
+              '<span class="pv-cand-name">' + title + alpha + '</span>' +
+              '<span class="pv-cand-num">' + c.decls + '</span>' +
+              '<span class="pv-cand-num">' + (c.docChars || 0) + '</span></a>';
+          }).join('');
+          editSection.querySelector('.pv-candidates-body').innerHTML =
+            '<div class="pv-cand-row pv-cand-head"><span class="pv-cand-name">Page</span>' +
+            '<span class="pv-cand-num">Results</span>' +
+            '<span class="pv-cand-num">Doc chars</span></div>' + rows;
+          editSection.style.display = '';
+        })
+        .catch(function () { /* file absent (e.g. no roadmap build) — hide */ });
+
       groups.forEach(function (key) {
         var sectionTitle = document.createElement('div');
         sectionTitle.className = 'pv-section-title';
@@ -591,7 +729,8 @@
       if (n.tagName === 'BUTTON') return true;
       var c = n.classList;
       return !!(c && (c.contains('pv-meta') || c.contains('pv-alpha-banner') ||
-        c.contains('pv-edit-btn') || c.contains('pv-kw-row')));
+        c.contains('pv-edit-btn') || c.contains('pv-kw-row') ||
+        c.contains('page-toc')));
     }
 
     function mdInline(node) {
@@ -795,6 +934,11 @@
 
     /* ── 7. Suggest-edit: diff modal → prefilled GitHub issue ────── */
     var GITHUB_REPO = 'leanprover-community/physlib';
+    /* Label applied to wiki issues; the home-page leaderboard counts it. The
+       `labels=` URL param only takes effect for users with triage/write access
+       to the repo — for others GitHub drops it and a maintainer (or a
+       label-on-footer Action) must apply it. */
+    var GITHUB_LABEL = 'documentation';
 
     function diffLines(a, b) {
       var A = a.split('\n'), B = b.split('\n');
@@ -831,18 +975,17 @@
         '_If this suggestion is accepted, please credit the issue author as a ' +
         'co-author of the change (`Co-authored-by:`)._\n\n' +
         '---\n*Suggested from the Physlib wiki.*\n';
-      var url = 'https://github.com/' + GITHUB_REPO + '/issues/new' +
-        '?title=' + encodeURIComponent('docs: suggestion for ' + modName) +
-        '&body=' + encodeURIComponent(body);
+      var base = 'https://github.com/' + GITHUB_REPO + '/issues/new' +
+        '?labels=' + encodeURIComponent(GITHUB_LABEL) +
+        '&title=' + encodeURIComponent('docs: suggestion for ' + modName);
+      var url = base + '&body=' + encodeURIComponent(body);
       if (url.length > 7500) {
         var short = 'The suggested diff was too long for a URL and has been ' +
           'copied to the suggester’s clipboard — paste it here.';
         if (navigator.clipboard) navigator.clipboard.writeText(body);
         alert('The diff is too long for a prefilled issue and was copied ' +
           'to your clipboard — please paste it into the issue body.');
-        url = 'https://github.com/' + GITHUB_REPO + '/issues/new' +
-          '?title=' + encodeURIComponent('docs: suggestion for ' + modName) +
-          '&body=' + encodeURIComponent(short);
+        url = base + '&body=' + encodeURIComponent(short);
       }
       window.open(url, '_blank');
     }
@@ -1051,5 +1194,15 @@
     if (nPages) {
       stats.textContent = (nAreas ? nAreas + ' areas · ' : '') + nPages + ' pages';
     }
+
+    /* ── Footnote crediting the design (replaces the old top banner). ── */
+    var foot = document.createElement('div');
+    foot.className = 'pv-footnote';
+    foot.innerHTML = 'Work in progress, for demonstration only. The design of ' +
+      'this wiki is copied from ' +
+      '<a href="https://paperview.org/" target="_blank" rel="noopener">paperview.org</a> ' +
+      'by Sabrina Pasterski.';
+    var footHost = content || landing;
+    if (footHost) footHost.appendChild(foot);
   });
 })();

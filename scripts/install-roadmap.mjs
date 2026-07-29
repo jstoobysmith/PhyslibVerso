@@ -63,3 +63,14 @@ for (const [src, name] of assets) {
 }
 
 console.error(`Installed roadmap → ${path.relative(REPO, DEST)}/ (index.html, roadmap.js, d3.v7.min.js, roadmap-data.json)`);
+
+// Derive the home page's "pages that could use more docs" table from the
+// roadmap data, written to the site root where the landing page fetches it.
+await new Promise((resolve, reject) => {
+  const child = spawn(process.execPath, [
+    path.join(REPO, 'scripts', 'edit-candidates.mjs'),
+    '--data', path.join(DEST, 'roadmap-data.json'),
+    '--out', path.join(SITE, 'edit-candidates.json'),
+  ], { stdio: 'inherit' });
+  child.on('exit', (code) => (code === 0 ? resolve() : reject(new Error(`edit-candidates.mjs exited ${code}`))));
+});

@@ -34,9 +34,132 @@
   var SOURCE_CLASS = { Physlib: 'physlib', PhyslibAlpha: 'alpha', UnformalizedClaims: 'claims' };
 
   var svg = d3.select('#rm-svg');
+  var svgTop = d3.select('#rm-svg-top');
+  var canvas = document.getElementById('rm-canvas');
+  var ctx2d = canvas.getContext('2d');
+  var stageEl = document.getElementById('rm-stage');
   var sidebar = document.getElementById('rm-sidebar');
   var countEl = document.getElementById('rm-count');
   var searchInput = document.getElementById('rm-search-input');
+  var tooltip = document.getElementById('rm-tooltip');
+
+  /* Navigation is registered once here; render() swaps in the current fit
+     function (a theme re-render must not stack listeners). */
+  var currentFit = null;
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { if (currentFit) currentFit(false); }, 150);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && document.activeElement !== searchInput && currentFit) {
+      if (searchResults) searchResults.style.display = 'none';
+      currentFit(true);
+    }
+    /* "/" focuses the search box from anywhere. */
+    if (e.key === '/' && document.activeElement !== searchInput &&
+        !/INPUT|TEXTAREA/.test((document.activeElement || {}).tagName || '')) {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    }
+  });
+  var resetBtn = document.getElementById('rm-reset');
+  if (resetBtn) resetBtn.addEventListener('click', function () { if (currentFit) currentFit(true); });
+
+  /* View dropdown: whole map or jump straight to an area. */
+  var viewSel = document.getElementById('rm-view');
+  if (viewSel) viewSel.addEventListener('change', function () {
+    if (!viewSel.value) { if (currentFit) currentFit(true); }
+    else if (currentGoPath) currentGoPath(viewSel.value);
+  });
+
+  /* Search wiring lives here once; render() swaps the hooks. */
+  var searchResults = document.getElementById('rm-search-results');
+  var currentApply = null, currentGoDot = null, currentGoPath = null;
+  searchInput.addEventListener('input', function () { if (currentApply) currentApply(); });
+  searchInput.addEventListener('focus', function () { if (searchInput.value && currentApply) currentApply(); });
+  searchInput.addEventListener('blur', function () {
+    setTimeout(function () { if (searchResults) searchResults.style.display = 'none'; }, 150);
+  });
+  searchInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      searchInput.value = '';
+      if (currentApply) currentApply();
+      searchInput.blur();
+      e.stopPropagation();
+    }
+    if (e.key === 'Enter' && searchResults) {
+      var first = searchResults.querySelector('[data-i]');
+      if (first && currentGoDot) { currentGoDot(+first.getAttribute('data-i')); searchInput.blur(); }
+    }
+  });
+  if (searchResults) searchResults.addEventListener('mousedown', function (e) {
+    var it = e.target.closest('[data-i]');
+    if (it && currentGoDot) { e.preventDefault(); currentGoDot(+it.getAttribute('data-i')); }
+  });
+  /* Breadcrumb clicks in the sidebar focus that level of the tree. */
+  sidebar.addEventListener('click', function (e) {
+    var c = e.target.closest('.rm-crumb');
+    if (c && currentGoPath) currentGoPath(c.getAttribute('data-path'));
+  });
+
+  /* Lazy KaTeX from the wiki's own bundle (no CDN); math in sidebar text. */
+  var katexState = 0, katexQueue = [];
+  function ensureKatex(cb) {
+    if (window.katex) { cb(true); return; }
+    if (katexState === 3) { cb(false); return; }
+    katexQueue.push(cb);
+    if (katexState === 1) return;
+    katexState = 1;
+    var l = document.createElement('link');
+    l.rel = 'stylesheet'; l.href = '../katex/katex.css';
+    document.head.appendChild(l);
+    var sc = document.createElement('script');
+    sc.src = '../katex/katex.js';
+    sc.onload = function () { katexState = 2; katexQueue.forEach(function (f) { f(true); }); katexQueue = []; };
+    sc.onerror = function () { katexState = 3; katexQueue.forEach(function (f) { f(false); }); katexQueue = []; };
+    document.head.appendChild(sc);
+  }
+  function typesetMath(container) {
+    if (container.textContent.indexOf('$') === -1) return;
+    ensureKatex(function (ok) {
+      if (!ok || !window.katex) return;
+      var walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, {
+        acceptNode: function (n) {
+          for (var p = n.parentElement; p && p !== container; p = p.parentElement) {
+            if (p.tagName === 'CODE' || p.tagName === 'A') return NodeFilter.FILTER_REJECT;
+          }
+          return n.nodeValue.indexOf('$') !== -1 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+        }
+      });
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      var re = /\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g;
+      nodes.forEach(function (node) {
+        var text = node.nodeValue, m, last = 0, found = false;
+        var frag = document.createDocumentFragment();
+        re.lastIndex = 0;
+        while ((m = re.exec(text))) {
+          found = true;
+          frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+          var span = document.createElement('span');
+          try { katex.render(m[1] || m[2], span, { throwOnError: false, displayMode: false }); }
+          catch (err) { span.textContent = m[0]; }
+          frag.appendChild(span);
+          last = m.index + m[0].length;
+        }
+        if (found) {
+          frag.appendChild(document.createTextNode(text.slice(last)));
+          node.parentNode.replaceChild(frag, node);
+        }
+      });
+    });
+  }
+
+  countEl.textContent = 'loading\u2026';
+  sidebar.innerHTML = '<div class="rm-sb-kicker">Physlib roadmap</div>' +
+    '<div class="rm-help">Loading the roadmap\u2026</div>';
 
   /* Explicit theme override (auto → dark → light), persisted. */
   var themeBtn = document.getElementById('rm-theme-btn');
@@ -61,7 +184,7 @@
         else localStorage.removeItem('rm-theme');
       } catch (e) { /* private mode */ }
       themeLabel();
-      if (loadedData) { svg.selectAll('*').remove(); render(loadedData); }
+      if (loadedData) { svg.selectAll('*').remove(); svgTop.selectAll('*').remove(); render(loadedData); }
     });
   }
 
@@ -94,8 +217,9 @@
   }
 
   function render(data) {
-    countEl.textContent = data.stats.results.toLocaleString() + ' results · ' +
+    var baseCount = data.stats.results.toLocaleString() + ' results · ' +
       data.stats.areas + ' areas · ' + data.sources.length + ' sources';
+    countEl.textContent = baseCount;
     renderDefault(data);
 
     var dark = themeDark();
@@ -186,6 +310,14 @@
     var dirs = root.descendants().filter(function (d) { return d.depth >= 1 && d.children; });
     var cells = root.leaves().filter(function (d) { return d.data.cell; });
 
+    if (viewSel) {
+      viewSel.innerHTML = '<option value="">Whole map</option>' +
+        areas.map(function (a) {
+          return '<option value="' + escapeHtml(a.data.path) + '">' +
+            escapeHtml(prettyName(a.data.name)) + ' (' + a.value.toLocaleString() + ')</option>';
+        }).join('');
+    }
+
     function dirR(d) { return Math.min(HUB + d.depth * TREE_STEP, TREE_MAX); }
     function midA(d) { return ((d._a0 || 0) + (d._a1 || 0)) / 2; }
 
@@ -202,21 +334,28 @@
       var arcLen0 = (d._a1 - d._a0) * rMid0;
       d._lo = arcLen0 >= radLen ? 't' : 'r'; // title runs along the longer axis
       var counts = {};
-      (d.data.decls || []).forEach(function (x) { counts[x.source] = (counts[x.source] || 0) + 1; });
+      var cnt = { def: 0, thm: 0, claim: 0 };
+      (d.data.decls || []).forEach(function (x) {
+        counts[x.source] = (counts[x.source] || 0) + 1;
+        if (x.source === 'UnformalizedClaims') cnt.claim++;
+        else if (x.kind === 'def') cnt.def++;
+        else cnt.thm++;
+      });
+      d._cnt = cnt;
       var dom = 'Physlib', best = -1;
       Object.keys(counts).forEach(function (k2) { if (counts[k2] > best) { best = counts[k2]; dom = k2; } });
       d._dom = dom;
     });
 
-    var g = svg.append('g');
+    var g = svg.append('g').attr('class', 'rm-scene');
+    var gTop = svgTop.append('g').attr('class', 'rm-scene');
     var gGuides = g.append('g');
     var gLinks = g.append('g');
     var gBands = g.append('g');
     var gCells = g.append('g');
     var gNodes = g.append('g');
-    var gDots = g.append('g');
     var gTips = g.append('g');
-    var gLabels = g.append('g');
+    var gLabels = gTop.append('g');
 
     /* Dashed concentric guide rings in the tree region. */
     gGuides.selectAll('circle').data([260, 520, 780]).join('circle')
@@ -227,7 +366,7 @@
     var linkGen = d3.linkRadial().angle(function (p) { return p.a; }).radius(function (p) { return p.r; });
     var links = [];
     areas.forEach(function (a) {
-      links.push({ s: { a: midA(a), r: 0 }, t: { a: midA(a), r: BAND_IN }, c: branchColor(a), w: 7 });
+      links.push({ n: a, s: { a: midA(a), r: 0 }, t: { a: midA(a), r: BAND_IN }, c: branchColor(a), w: 7 });
     });
     subBandDirs.forEach(function (d) {
       var anc = d.parent, from = BAND_OUT;
@@ -235,7 +374,7 @@
         if (anc._band) { from = anc._band.r1; break; }
         anc = anc.parent;
       }
-      links.push({ s: { a: midA(d), r: from }, t: { a: midA(d), r: d._band.r0 },
+      links.push({ n: d, s: { a: midA(d), r: from }, t: { a: midA(d), r: d._band.r0 },
                    c: branchColor(d), w: Math.max(2.6 - 0.4 * (d.depth - 2), 1) });
     });
     cells.forEach(function (d) {
@@ -245,10 +384,10 @@
         if (anc._band) { from = anc._band.r1; break; }
         anc = anc.parent;
       }
-      links.push({ s: { a: midA(d), r: from }, t: { a: midA(d), r: d._r0 }, c: branchColor(d), w: 0.8 });
+      links.push({ n: d, stub: true, s: { a: midA(d), r: from }, t: { a: midA(d), r: d._r0 }, c: branchColor(d), w: 0.8 });
     });
-    gLinks.selectAll('path').data(links).join('path')
-      .attr('class', 'rm-branch')
+    var linkSel = gLinks.selectAll('path').data(links).join('path')
+      .attr('class', function (l) { return l.stub ? 'rm-branch stub' : 'rm-branch'; })
       .attr('d', function (l) { return linkGen({ source: l.s, target: l.t }); })
       .attr('stroke', function (l) { return l.c; })
       .attr('stroke-width', function (l) { return l.w; });
@@ -268,7 +407,7 @@
       });
 
     /* Branch tips: a small node where each branch meets its tile. */
-    gTips.selectAll('circle').data(cells).join('circle')
+    var tipSel = gTips.selectAll('circle').data(cells).join('circle')
       .attr('class', 'rm-branch-tip')
       .attr('transform', function (d) { return 'translate(' + ptRadial(midA(d), d._r0) + ')'; })
       .attr('r', 5)
@@ -293,22 +432,171 @@
         var dotR = Math.min(Math.max(1.2, 0.34 * Math.min(sA * rad, sR)), 26);
         var p = ptRadial(ang, rad);
         allDots.push({ x: p[0], y: p[1], r: dotR, cell: d,
-          d: { name: dec.name, source: dec.source, href: dec.href, kind: dec.kind,
+          d: { name: dec.name, source: dec.source, kind: dec.kind,
+               href: declHref(dec.source, d.data.path, dec.name),
                statement: dec.statement, srcs: dec.sources, filePath: d.data.path } });
       });
     });
-    /* Definitions render as stars, lemmas/theorems and claims as circles,
-       always visible. */
-    var symStar = d3.symbol().type(d3.symbolStar);
-    var symCircle = d3.symbol().type(d3.symbolCircle);
-    var dotSel = gDots.selectAll('path').data(allDots).join('path')
-      .attr('class', function (o) { return 'rm-dot ' + SOURCE_CLASS[o.d.source]; })
-      .attr('transform', function (o) { return 'translate(' + o.x + ',' + o.y + ')'; })
-      .attr('d', function (o) {
-        var sym = o.d.kind === 'def' ? symStar : symCircle;
-        return sym.size(3.1 * o.r * o.r)();
-      })
-      .on('click', function (event, o) { event.stopPropagation(); selectDot(this, o.d); });
+    /* ── Dots on canvas ──────────────────────────────────────────
+       10.7k individually-painted SVG nodes made zooming crawl; the dots now
+       live on one canvas redrawn per frame (with viewport culling), which is
+       what canvases are for. Stars = definitions, circles = lemmas/claims.
+       Hits (click, hover) are resolved against a quadtree. */
+    var css = getComputedStyle(document.documentElement);
+    var DOT_COLOR = {
+      Physlib: css.getPropertyValue('--physlib').trim() || '#0056b3',
+      PhyslibAlpha: css.getPropertyValue('--alpha').trim() || '#e65100',
+      UnformalizedClaims: css.getPropertyValue('--claims').trim() || '#a01818'
+    };
+    allDots.forEach(function (o) { o.dim = false; o.faded = false; });
+    var quad = d3.quadtree()
+      .x(function (o) { return o.x; }).y(function (o) { return o.y; })
+      .addAll(allDots);
+
+    var dpr = window.devicePixelRatio || 1;
+    function sizeCanvas() {
+      var r = stageEl.getBoundingClientRect();
+      canvas.width = Math.round(r.width * dpr);
+      canvas.height = Math.round(r.height * dpr);
+    }
+    sizeCanvas();
+
+    /* One reusable unit star (outer radius 1), scaled per dot. */
+    var STAR = (function () {
+      var pts = [];
+      for (var i = 0; i < 10; i++) {
+        var ang = -Math.PI / 2 + i * Math.PI / 5;
+        var rr = i % 2 ? 0.4763 : 1;
+        pts.push([rr * Math.cos(ang), rr * Math.sin(ang)]);
+      }
+      return pts;
+    })();
+
+    var lastT = d3.zoomIdentity;
+    function draw(t) {
+      lastT = t;
+      var w = canvas.width, h = canvas.height;
+      ctx2d.setTransform(1, 0, 0, 1, 0, 0);
+      ctx2d.clearRect(0, 0, w, h);
+      ctx2d.setTransform(dpr * t.k, 0, 0, dpr * t.k, dpr * t.x, dpr * t.y);
+      /* Scene-space viewport for culling. */
+      var vx0 = -t.x / t.k, vy0 = -t.y / t.k;
+      var vx1 = vx0 + w / (dpr * t.k), vy1 = vy0 + h / (dpr * t.k);
+      /* Batch by (colour, alpha-state, shape) so fills stay cheap. */
+      var buckets = {};
+      for (var i = 0; i < allDots.length; i++) {
+        var o = allDots[i];
+        if (o.x + o.r < vx0 || o.x - o.r > vx1 || o.y + o.r < vy0 || o.y - o.r > vy1) continue;
+        var alpha = o.faded ? 0.07 : (o.dim ? 0.08 : 1);
+        var star = o.d.kind === 'def' && o.d.source !== 'UnformalizedClaims';
+        var key = o.d.source + '|' + alpha + '|' + (star ? 's' : 'c');
+        (buckets[key] = buckets[key] || []).push(o);
+      }
+      Object.keys(buckets).forEach(function (key) {
+        var parts = key.split('|');
+        ctx2d.fillStyle = DOT_COLOR[parts[0]];
+        ctx2d.globalAlpha = +parts[1];
+        var star = parts[2] === 's';
+        ctx2d.beginPath();
+        var list = buckets[key];
+        /* Sub-2px dots are visually squares anyway; rects rasterize far
+           faster than arcs, which is what the overview is mostly made of. */
+        var tiny = list.length && list[0].r * t.k * dpr < 2.2;
+        for (var j = 0; j < list.length; j++) {
+          var o2 = list[j];
+          if (tiny) {
+            ctx2d.rect(o2.x - o2.r, o2.y - o2.r, o2.r * 2, o2.r * 2);
+          } else if (star) {
+            var R = o2.r * 1.6;
+            ctx2d.moveTo(o2.x + STAR[0][0] * R, o2.y + STAR[0][1] * R);
+            for (var v = 1; v < 10; v++) ctx2d.lineTo(o2.x + STAR[v][0] * R, o2.y + STAR[v][1] * R);
+            ctx2d.closePath();
+          } else {
+            ctx2d.moveTo(o2.x + o2.r, o2.y);
+            ctx2d.arc(o2.x, o2.y, o2.r, 0, 2 * Math.PI);
+          }
+        }
+        ctx2d.fill();
+      });
+      ctx2d.globalAlpha = 1;
+    }
+    var rafPending = false;
+    function scheduleDraw(t) {
+      lastT = t || lastT;
+      if (rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(function () { rafPending = false; draw(lastT); });
+    }
+
+    /* Selection ring lives in the top svg so it stays crisp above the dots. */
+    var selRing = gTop.append('circle').attr('class', 'rm-sel-ring').attr('display', 'none');
+    var selIdx = -1;
+    function selectDotIdx(i) {
+      var o = allDots[i];
+      if (!o) return;
+      clearSel();
+      selIdx = i;
+      selRing.attr('display', null)
+        .attr('cx', o.x).attr('cy', o.y).attr('r', o.r + 3)
+        .attr('stroke-width', 1.4 / lastT.k);
+      renderResult(o.d);
+      setHash('d=' + encodeURIComponent(o.d.filePath) + '~' + encodeURIComponent(o.d.name));
+    }
+
+    /* Dot hits beat cell handlers via a capture-phase listener on the stage. */
+    function dotAt(clientX, clientY) {
+      var r = svg.node().getBoundingClientRect();
+      var sx = (clientX - r.left - lastT.x) / lastT.k;
+      var sy = (clientY - r.top - lastT.y) / lastT.k;
+      var tol = 6 / lastT.k;
+      var o = quad.find(sx, sy, 30 / lastT.k + 20);
+      if (!o) return null;
+      var dx = o.x - sx, dy = o.y - sy;
+      return Math.sqrt(dx * dx + dy * dy) <= Math.max(o.r * 1.2, tol) ? o : null;
+    }
+    stageEl.addEventListener('click', function (event) {
+      var o = dotAt(event.clientX, event.clientY);
+      if (!o) return;
+      event.stopPropagation();
+      selectDotIdx(allDots.indexOf(o));
+    }, true);
+    stageEl.addEventListener('mousemove', function (event) {
+      var o = dotAt(event.clientX, event.clientY);
+      if (!o || o.faded) { svg.style('cursor', null); return; }
+      event.stopPropagation();
+      svg.style('cursor', 'pointer');
+      var kindLabel = o.d.source === 'UnformalizedClaims' ? '\u25cf claim'
+        : o.d.kind === 'def' ? '\u2605 definition' : '\u25cf lemma';
+      tooltip.innerHTML = '<div class="tt-name">' + escapeHtml(o.d.name) + '</div>' +
+        '<div class="tt-meta">' + kindLabel + ' \u00b7 ' + SOURCE_LABEL[o.d.source] + '</div>';
+      var stage = stageEl.getBoundingClientRect();
+      var x = event.clientX - stage.left + 14, y = event.clientY - stage.top + 14;
+      if (x + tooltip.offsetWidth > stage.width - 8) x = event.clientX - stage.left - tooltip.offsetWidth - 14;
+      if (y + tooltip.offsetHeight > stage.height - 8) y = event.clientY - stage.top - tooltip.offsetHeight - 14;
+      tooltip.style.left = x + 'px';
+      tooltip.style.top = y + 'px';
+      tooltip.style.opacity = 1;
+    }, true);
+
+    /* Cell tooltip: file name + result counts (helps when plates are hidden). */
+    gCells.on('mousemove', function (event) {
+      var d = event.target && event.target.__data__;
+      if (!d || !d._cnt) { tooltip.style.opacity = 0; return; }
+      var c = d._cnt;
+      var meta = [];
+      if (c.def) meta.push('\u2605 ' + c.def);
+      if (c.thm) meta.push('\u25cf ' + c.thm);
+      if (c.claim) meta.push(c.claim + ' claims');
+      tooltip.innerHTML = '<div class="tt-name">' + escapeHtml(d.data.path) + '</div>' +
+        '<div class="tt-meta">' + meta.join(' \u00b7 ') + '</div>';
+      var stage = svg.node().parentNode.getBoundingClientRect();
+      var x = event.clientX - stage.left + 14, y = event.clientY - stage.top + 14;
+      if (x + tooltip.offsetWidth > stage.width - 8) x = event.clientX - stage.left - tooltip.offsetWidth - 14;
+      if (y + tooltip.offsetHeight > stage.height - 8) y = event.clientY - stage.top - tooltip.offsetHeight - 14;
+      tooltip.style.left = x + 'px';
+      tooltip.style.top = y + 'px';
+      tooltip.style.opacity = 1;
+    }).on('mouseleave', function () { tooltip.style.opacity = 0; });
 
     /* ── Area bands: thick coloured arcs with the name curved along ── */
     var bandArc = d3.arc()
@@ -456,32 +744,82 @@
       .attr('font-size', '16px').text('Physics');
 
     /* ── Zoom & pan ─────────────────────────────────────────────── */
-    var zoom = d3.zoom().scaleExtent([0.05, 30]).on('zoom', function (event) {
-      var k = event.transform.k;
-      g.attr('transform', event.transform);
+    /* The hot path writes ONE attribute per frame (the transform). All
+       counter-scaled cosmetics — stroke widths, label sizes, micro-label
+       gating — wait for the gesture to end. While a gesture is live the svg
+       carries .zooming, and CSS drops the most expensive paint work
+       (file-title plates, sub-band textPaths, dot anti-aliasing). */
+    function zoomStatics(k) {
       hubLabel.attr('font-size', (16 / k) + 'px');
       gGuides.selectAll('circle').attr('stroke-width', 1 / k);
       cellSel.attr('stroke-width', 2 / k);
-      dotSel.filter('.sel').attr('stroke-width', 1.4 / k);
-    });
+      selRing.attr('stroke-width', 1.4 / k);
+      titleSel.attr('display', function (d) { return d._labFit * k < 3.2 ? 'none' : null; });
+      subLabelSel.attr('display', function () {
+        return parseFloat(this.style.fontSize || '9') * k < 2.4 ? 'none' : null;
+      });
+      tipSel.attr('display', k < 0.35 ? 'none' : null);
+    }
+    var zoom = d3.zoom().scaleExtent([0.05, 30])
+      .on('start.perf', function () { stageEl.classList.add('zooming'); })
+      .on('zoom', function (event) {
+        g.attr('transform', event.transform);
+        gTop.attr('transform', event.transform);
+        scheduleDraw(event.transform);
+      })
+      .on('end.perf', function (event) {
+        stageEl.classList.remove('zooming');
+        zoomStatics(event.transform.k);
+      });
     svg.call(zoom).on('dblclick.zoom', null);
+    /* Clicking empty background resets the view (element handlers stop
+       propagation; d3-zoom suppresses the click that follows a drag). */
+    svg.on('click', function () { fit(true); });
     svg.on('mousedown.cursor', function () { svg.classed('dragging', true); });
     d3.select(window).on('mouseup.cursor', function () { svg.classed('dragging', false); });
 
     function viewport() { var r = svg.node().getBoundingClientRect(); return { w: r.width, h: r.height }; }
-    function fit() {
+    function fit(animate) {
+      setFocusFade(null);
+      setHash(null);
+      if (viewSel) viewSel.value = '';
+      sizeCanvas();
       var vp = viewport();
       var k = 0.96 * Math.min(vp.w, vp.h) / (2 * (R_OUT + 30));
-      svg.call(zoom.transform, d3.zoomIdentity.translate(vp.w / 2, vp.h / 2).scale(k));
+      var t = d3.zoomIdentity.translate(vp.w / 2, vp.h / 2).scale(k);
+      if (animate) svg.transition().duration(600).call(zoom.transform, t);
+      else svg.call(zoom.transform, t);
     }
-    fit();
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer); resizeTimer = setTimeout(fit, 150);
-    });
+    fit(false);
+    zoomStatics(currentTransformK());
+    currentFit = fit;
+    function currentTransformK() { return d3.zoomTransform(svg.node()).k; }
+
+    /* Everything outside the focused subtree fades back. */
+    function inSub(n, top) { while (n) { if (n === top) return true; n = n.parent; } return false; }
+    function setFocusFade(top) {
+      var out = top ? function (n) { return !inSub(n, top); } : function () { return false; };
+      cellSel.classed('faded', function (d) { return out(d); });
+      allDots.forEach(function (o) { o.faded = out(o.cell); });
+      scheduleDraw();
+      tipSel.classed('faded', function (d) { return out(d); });
+      titleSel.classed('faded', function (d) { return out(d); });
+      linkSel.classed('faded', function (l) { return l.n ? out(l.n) : false; });
+      gBands.selectAll('.rm-band').classed('faded', function (d) { return out(d); });
+      gBands.selectAll('.rm-subband').classed('faded', function (d) { return out(d); });
+      areaLabelSel.classed('faded', function (d) { return out(d); });
+      subLabelSel.classed('faded', function (d) { return out(d); });
+    }
+    function setHash(s2) {
+      try { history.replaceState(null, '', s2 ? '#' + s2 : location.pathname + location.search); }
+      catch (e) { /* sandboxed */ }
+    }
 
     /* Focus the view on a band's whole region (band + everything outside it). */
     function focusNode(node, rIn) {
+      setFocusFade(node);
+      setHash('f=' + encodeURIComponent(node.data.path));
+      if (viewSel) viewSel.value = node.depth === 1 ? node.data.path : '';
       var a0 = node._a0, a1 = node._a1, r1 = node._r1;
       var pts = [ptRadial(a0, rIn), ptRadial(a1, rIn), ptRadial(a0, r1), ptRadial(a1, r1)];
       for (var c = 0; c <= 4; c++) {
@@ -497,25 +835,95 @@
     }
 
     /* ── Selection ──────────────────────────────────────────────── */
-    var selCell = null, selDot = null;
+    var selCell = null;
     function clearSel() {
       if (selCell) selCell.classList.remove('sel');
-      if (selDot) selDot.classList.remove('sel');
-      selCell = selDot = null;
+      selCell = null;
+      selIdx = -1;
+      selRing.attr('display', 'none');
     }
-    function selectCell(el, d) { clearSel(); el.classList.add('sel'); selCell = el; renderFile(d); }
-    function selectDot(el, d) { clearSel(); el.classList.add('sel'); selDot = el; renderResult(d); }
+    function selectCell(el, d) {
+      clearSel(); el.classList.add('sel'); selCell = el;
+      renderFile(d);
+      setHash('f=' + encodeURIComponent(d.path));
+    }
 
     /* ── Search + legend filters ────────────────────────────────── */
     var srcOn = { Physlib: true, PhyslibAlpha: true, UnformalizedClaims: true };
     function applyFilters() {
       var q = searchInput.value.trim().toLowerCase();
-      dotSel.classed('dim', function (o) {
-        if (!srcOn[o.d.source]) return true;
-        return q && o.d.name.toLowerCase().indexOf(q) === -1;
+      var matches = 0;
+      allDots.forEach(function (o) {
+        o.dim = !srcOn[o.d.source] || (q && o.d.name.toLowerCase().indexOf(q) === -1);
+        if (!o.dim) matches++;
       });
+      scheduleDraw();
+      var filtering = q || !(srcOn.Physlib && srcOn.PhyslibAlpha && srcOn.UnformalizedClaims);
+      countEl.textContent = filtering
+        ? matches.toLocaleString() + ' matching \u00b7 ' + baseCount
+        : baseCount;
+      /* Result list: click (or Enter) jumps to the result. */
+      if (!searchResults) return;
+      if (!q) { searchResults.innerHTML = ''; searchResults.style.display = 'none'; return; }
+      var hits = [];
+      for (var i = 0; i < allDots.length; i++) {
+        var o = allDots[i];
+        if (!srcOn[o.d.source]) continue;
+        var ix = o.d.name.toLowerCase().indexOf(q);
+        if (ix !== -1) hits.push({ i: i, o: o, pre: ix === 0 ? 0 : 1 });
+      }
+      hits.sort(function (a, b) { return a.pre - b.pre || d3.ascending(a.o.d.name, b.o.d.name); });
+      searchResults.innerHTML = hits.slice(0, 15).map(function (h) {
+        return '<div class="rm-sr-item" data-i="' + h.i + '">' +
+          '<span class="rm-sr-dot ' + SOURCE_CLASS[h.o.d.source] + '"></span>' +
+          '<span class="rm-sr-name">' + escapeHtml(h.o.d.name) + '</span>' +
+          '<span class="rm-sr-path">' + escapeHtml(h.o.d.filePath) + '</span></div>';
+      }).join('') || '<div class="rm-sr-empty">No matches</div>';
+      searchResults.style.display = 'block';
     }
-    searchInput.addEventListener('input', applyFilters);
+    currentApply = applyFilters;
+
+    /* Jump targets for search results, breadcrumbs, and the URL hash. */
+    var cellByPath = {}, dirByPath = {};
+    cells.forEach(function (c) { cellByPath[c.data.path] = c; });
+    dirs.forEach(function (d) { dirByPath[d.data.path] = d; });
+    function goDot(i) {
+      var o = allDots[i];
+      if (!o) return;
+      /* Land with context: clear the search (its dimming has done its job —
+         the ring marks the result) and focus the nearest ancestor that has
+         siblings, so the jump target isn't an isolated sliver. */
+      searchInput.value = '';
+      applyFilters();
+      var ctx = o.cell;
+      while (ctx.parent && ctx.parent.depth >= 1 && ctx.parent.children.length === 1) ctx = ctx.parent;
+      if (ctx.parent && ctx.parent.depth >= 1) ctx = ctx.parent;
+      focusNode(ctx, ctx._band ? ctx._band.r0 : (ctx.depth === 1 ? BAND_IN : ctx._r0));
+      selectDotIdx(i);
+      if (searchResults) searchResults.style.display = 'none';
+    }
+    function goPath(p) {
+      var c = cellByPath[p];
+      if (c) { selectCell(cellSel.nodes()[cells.indexOf(c)], c.data); focusNode(c, c._r0); return; }
+      var d = dirByPath[p];
+      if (d) focusNode(d, d._band ? d._band.r0 : (d.depth === 1 ? BAND_IN : d._r0));
+    }
+    currentGoDot = goDot;
+    currentGoPath = goPath;
+
+    /* Deep links: restore #d=<file>~<name> or #f=<path> from the URL. */
+    (function restoreFromHash() {
+      var h = decodeURIComponent(location.hash.replace(/^#/, ''));
+      if (!h) return;
+      var m = h.match(/^d=(.+)~([^~]+)$/);
+      if (m) {
+        for (var i = 0; i < allDots.length; i++) {
+          if (allDots[i].d.filePath === m[1] && allDots[i].d.name === m[2]) { goDot(i); return; }
+        }
+      }
+      var fm = h.match(/^f=(.+)$/);
+      if (fm) goPath(fm[1]);
+    })();
     d3.selectAll('.rm-legend-item').on('click', function () {
       var s = this.getAttribute('data-source');
       if (!s) return;
@@ -553,7 +961,7 @@
         : d.kind === 'def' ? 'Definition' : 'Lemma / theorem') + '</div>' +
       '<div class="rm-sb-name">' + escapeHtml(d.name) + '</div>' +
       '<div class="rm-sb-badges"><span class="rm-badge ' + cls + '">' + SOURCE_LABEL[d.source] + '</span></div>' +
-      '<div class="rm-sb-path">' + escapeHtml(dirOf(d.filePath)) + '</div>';
+      crumbsHtml(d.filePath);
 
     if (d.statement) {
       html += '<div class="rm-sb-section">Statement</div>' +
@@ -584,13 +992,23 @@
         : '') +
       '</div>';
     sidebar.innerHTML = html;
+    typesetMath(sidebar);
   }
 
   function renderFile(d) {
+    var decls = d.decls || [];
+    var nDef = decls.filter(function (x) { return x.kind === 'def'; }).length;
+    var nClaim = decls.filter(function (x) { return x.source === 'UnformalizedClaims'; }).length;
+    var nThm = decls.length - nDef - nClaim;
     var html =
       '<div class="rm-sb-kicker">File</div>' +
       '<div class="rm-sb-name">' + escapeHtml(d.path || '') + '</div>' +
-      badges(d.sources);
+      badges(d.sources) +
+      '<div class="rm-sb-path">' + decls.length + ' results' +
+      (nDef ? ' \u00b7 \u2605 ' + nDef + ' definitions' : '') +
+      (nThm ? ' \u00b7 \u25cf ' + nThm + ' lemmas' : '') +
+      (nClaim ? ' \u00b7 ' + nClaim + ' claims' : '') + '</div>' +
+      crumbsHtml(d.path);
     if (d.moduleHref) {
       html += '<a class="rm-open" href="' + d.moduleHref + '">Open in the wiki →</a>';
     }
@@ -604,6 +1022,7 @@
         return actionBtn('Suggest an edit to the ' + SOURCE_LABEL[s] + ' docstring', editIssue(s, d.path));
       }).join('') + '</div>';
     sidebar.innerHTML = html;
+    typesetMath(sidebar);
   }
 
   function actionBtn(label, href) {
@@ -631,6 +1050,12 @@
   }
 
   /* ── Helpers ──────────────────────────────────────────────────── */
+  /* Wiki page link for a formalized declaration, matching the site's xref
+     scheme: /<source>/<module path>/#<name with dots as ___>. */
+  function declHref(source, filePath, name) {
+    if (source === 'UnformalizedClaims') return null;
+    return '../' + source + '/' + filePath.split('.').join('/') + '/#' + name.split('.').join('___');
+  }
   function ptRadial(angle, radius) { var a = angle - Math.PI / 2; return [radius * Math.cos(a), radius * Math.sin(a)]; }
   function themeDark() {
     var t = document.documentElement.getAttribute('data-theme');
@@ -640,6 +1065,14 @@
   }
   function prettyName(s) { return s.replace(/([a-z0-9])([A-Z])/g, '$1 $2'); }
   function dirOf(p) { return (p || '').split('.').join(' › '); }
+  /* Clickable breadcrumb: each segment focuses that level of the tree. */
+  function crumbsHtml(p) {
+    var acc = '';
+    return '<div class="rm-sb-path">' + (p || '').split('.').map(function (seg) {
+      acc = acc ? acc + '.' + seg : seg;
+      return '<span class="rm-crumb" data-path="' + escapeHtml(acc) + '">' + escapeHtml(seg) + '</span>';
+    }).join(' › ') + '</div>';
+  }
   function escapeHtml(s) {
     return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
