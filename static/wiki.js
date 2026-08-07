@@ -35,6 +35,12 @@
 
     var right = document.createElement('div');
     right.className = 'pv-right';
+    var contributeLink = document.createElement('a');
+    contributeLink.className = 'pv-navlink pv-navlink-cta';
+    contributeLink.href = 'contribute/';
+    contributeLink.textContent = 'Contribute';
+    contributeLink.title = 'How to improve this wiki — no Lean needed';
+    right.appendChild(contributeLink);
     var roadmap = document.createElement('a');
     roadmap.className = 'pv-navlink';
     roadmap.href = 'roadmap/';
@@ -64,15 +70,24 @@
       header.insertBefore(navToggle, header.firstChild);
 
       var NAV_KEY = 'pv-nav-open';
-      function setNav(open) {
+      var isPhone = function () { return window.innerWidth <= 768; };
+      function setNav(open, persist) {
         document.body.classList.toggle('pv-nav-open', open);
         navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        try { localStorage.setItem(NAV_KEY, open ? '1' : '0'); } catch (e) { /* private */ }
+        /* Behind an open drawer the page must not scroll, or a swipe that
+           misses the drawer scrolls the article underneath it. */
+        document.documentElement.classList.toggle('pv-nav-locked',
+          open && isPhone());
+        /* Only the docked (desktop) state is remembered: on a phone the drawer
+           is a modal, and restoring it open would hide the next page behind it. */
+        if (persist !== false && !isPhone()) {
+          try { localStorage.setItem(NAV_KEY, open ? '1' : '0'); } catch (e) { /* private */ }
+        }
       }
       var stored = null;
       try { stored = localStorage.getItem(NAV_KEY); } catch (e) { /* private */ }
-      /* Default: open on wide screens, closed on phones. */
-      setNav(stored === null ? window.innerWidth > 768 : stored === '1');
+      /* Default: docked open on wide screens, drawer closed on phones. */
+      setNav(isPhone() ? false : stored !== '0', false);
       navToggle.addEventListener('click', function () {
         setNav(!document.body.classList.contains('pv-nav-open'));
       });
@@ -82,7 +97,21 @@
       scrim.addEventListener('click', function () { setNav(false); });
       document.body.appendChild(scrim);
       document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && window.innerWidth <= 768) setNav(false);
+        if (e.key === 'Escape' && isPhone()) setNav(false);
+      });
+      /* Tapping a page link closes the drawer: same-page anchors would
+         otherwise scroll the article while the drawer still covers it. */
+      sidebarEl.addEventListener('click', function (e) {
+        if (isPhone() && e.target.closest && e.target.closest('a')) setNav(false);
+      });
+      /* Rotating a phone to landscape (or resizing a window) crosses the
+         breakpoint: re-apply the mode's default rather than leaving a
+         drawer-shaped sidebar docked open, or vice versa. */
+      var wasPhone = isPhone();
+      window.addEventListener('resize', function () {
+        if (isPhone() === wasPhone) return;
+        wasPhone = isPhone();
+        setNav(isPhone() ? false : stored !== '0', false);
       });
     }
 
@@ -134,12 +163,18 @@
                      content.querySelector('.pv-meta');
         if (anchor) anchor.insertAdjacentElement('afterend', toc);
         else content.insertBefore(toc, content.querySelector('.mod-doc') || content.firstChild);
+        /* On a phone a full table of contents can be a screen and a half of
+           links before the article even starts, so start it folded away. */
+        if (window.innerWidth <= 768) toc.classList.add('pv-toc-collapsed');
         var tocTitle = toc.querySelector('.page-toc-title');
         if (tocTitle) {
           tocTitle.classList.add('pv-toc-toggle');
           tocTitle.setAttribute('role', 'button');
-          tocTitle.addEventListener('click', function () {
-            toc.classList.toggle('pv-toc-collapsed');
+          tocTitle.setAttribute('tabindex', '0');
+          var toggleToc = function () { toc.classList.toggle('pv-toc-collapsed'); };
+          tocTitle.addEventListener('click', toggleToc);
+          tocTitle.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleToc(); }
           });
         }
       }
@@ -536,10 +571,14 @@
           });
         });
 
-        /* Bring the current page into view. */
+        /* Bring the current page into view by scrolling the sidebar itself.
+           `scrollIntoView` would also scroll every ancestor scroller — on a
+           phone, where the document scrolls, that jumps past the article. */
         var curRow = treeWrap.querySelector('.leaf.current, summary.current');
-        if (curRow && curRow.scrollIntoView) {
-          curRow.scrollIntoView({ block: 'center' });
+        var navScroller = document.querySelector('.layout .sidebar') || sidebarEl;
+        if (curRow && navScroller) {
+          navScroller.scrollTop += curRow.getBoundingClientRect().top -
+            navScroller.getBoundingClientRect().top - navScroller.clientHeight / 2;
         }
       }
     }
@@ -596,16 +635,96 @@
       if (toc) toc.remove();
       landing.appendChild(hero);
 
-      /* ── Edit callout: this is a wiki, you can edit it ──────────── */
+      /* ── Contributor pitch: what this is, and the three steps ────
+             The library is long on formalized physics and short on prose, so
+             the front page leads with the ask rather than burying it. */
       var editCallout = document.createElement('div');
       editCallout.className = 'pv-edit-callout';
       editCallout.innerHTML =
         '<span class="pv-edit-callout-ico" aria-hidden="true">✎</span>' +
-        '<div><b>This is a wiki — you can edit it.</b> Open any page and use its ' +
-        '<span class="pv-inline-edit">✎&nbsp;Edit</span> button to improve the ' +
-        'documentation. Submitting opens a prefilled GitHub issue for review, and ' +
-        'accepted suggestions credit you as a co-author.</div>';
+        '<div><b>This is a wiki — and it needs physicists, not Lean users.</b> ' +
+        'Every result here has been machine-checked; what most pages lack is the ' +
+        'English explaining what it means, which convention it uses and where it ' +
+        'comes from. If you know the physics you can fix that today, in the browser, ' +
+        'without installing anything.</div>';
       landing.appendChild(editCallout);
+
+      var howto = document.createElement('div');
+      howto.className = 'pv-howto';
+      var HOW_STEPS = [
+        ['Find a page', 'Anything in your field — use the list below, the sidebar, ' +
+          'or the search box.'],
+        ['Press <span class="pv-inline-edit">✎&nbsp;Edit</span>',
+          'Every block of prose has one. Type into it like a document; there is a ' +
+          'preview for your maths.'],
+        ['Press “Propose”', 'It opens GitHub with the change already written up. A ' +
+          'maintainer reviews it and credits you as a co-author.']
+      ];
+      howto.innerHTML = HOW_STEPS.map(function (s, i) {
+        return '<div class="pv-howto-step"><span class="pv-howto-n">' + (i + 1) +
+          '</span><b>' + s[0] + '</b><span>' + s[1] + '</span></div>';
+      }).join('') +
+        '<div class="pv-howto-cta"><a href="contribute/">Read the contributor guide — ' +
+        'what to write, how to write maths, and what happens next →</a></div>';
+      landing.appendChild(howto);
+
+      /* ── "Start here": the pages most starved of documentation ───
+             Ranked by formalized results per character of prose, two per area.
+             This is the concrete answer to "what should I write?", so it comes
+             before everything else on the page. */
+      var editSection = document.createElement('div');
+      editSection.className = 'pv-edit-candidates';
+      editSection.style.display = 'none';
+      editSection.innerHTML =
+        '<div class="pv-section-title">Start here: pages that need documentation</div>' +
+        '<div class="pv-candidates-note">Two pages from each area, ranked by how much ' +
+        'formalized physics they carry per character of explanation — many results, ' +
+        'almost no prose. Pick one in your field and write the paragraph that should ' +
+        'have been at the top of it.</div>' +
+        '<div class="pv-candidates-body"></div>' +
+        '<div class="pv-cand-foot"></div>';
+      landing.appendChild(editSection);
+
+      fetch('edit-candidates.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var cands = data.candidates || [];
+          if (!cands.length) return;
+          var rows = cands.map(function (c) {
+            var title = c.path.replace(/\./g, ' \u203a ');
+            var alpha = c.source === 'PhyslibAlpha'
+              ? ' <span class="pv-chip-alpha">Alpha</span>' : '';
+            /* The numbers carry their own labels: on a phone the table collapses
+               to one row per page and a header line would be lost. */
+            return '<a class="pv-cand-row" href="' + c.href + '">' +
+              '<span class="pv-cand-name">' + title + alpha + '</span>' +
+              '<span class="pv-cand-num"><span class="pv-cand-lbl">results </span>' +
+              c.decls + '</span>' +
+              '<span class="pv-cand-num"><span class="pv-cand-lbl">prose </span>' +
+              (c.docChars || 0) + ' ch</span></a>';
+          }).join('');
+          editSection.querySelector('.pv-candidates-body').innerHTML =
+            '<div class="pv-cand-row pv-cand-head"><span class="pv-cand-name">Page</span>' +
+            '<span class="pv-cand-num">Results</span>' +
+            '<span class="pv-cand-num">Prose</span></div>' + rows;
+          /* "Pick one for me" removes the last excuse not to start. */
+          var foot = editSection.querySelector('.pv-cand-foot');
+          var pick = document.createElement('button');
+          pick.className = 'pv-linkbtn';
+          pick.type = 'button';
+          pick.textContent = 'Pick one for me →';
+          pick.onclick = function () {
+            var c = cands[Math.floor(Math.random() * cands.length)];
+            window.location.href = c.href;
+          };
+          foot.appendChild(pick);
+          var guide = document.createElement('a');
+          guide.href = 'contribute/';
+          guide.textContent = 'How to write a good page overview';
+          foot.appendChild(guide);
+          editSection.style.display = '';
+        })
+        .catch(function () { /* file absent (e.g. no roadmap build) — hide */ });
 
       /* ── Leaderboard: who has opened the most `documentation` issues ──
              Queried live from the GitHub API (public, CORS-enabled). Hidden if
@@ -648,40 +767,6 @@
           board.style.display = '';
         })
         .catch(function () { /* offline / rate-limited — leave hidden */ });
-
-      /* ── "Pages that could use more documentation" table ────────── */
-      var editSection = document.createElement('div');
-      editSection.className = 'pv-edit-candidates';
-      editSection.style.display = 'none';
-      editSection.innerHTML =
-        '<div class="pv-section-title">Pages that could use more documentation</div>' +
-        '<div class="pv-candidates-note">Two pages from each area of Physlib, chosen ' +
-        'for having the most formalized results per character of overview — lots of ' +
-        'content, little prose. A good place to start editing.</div>' +
-        '<div class="pv-candidates-body"></div>';
-      landing.appendChild(editSection);
-
-      fetch('edit-candidates.json')
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          var cands = data.candidates || [];
-          if (!cands.length) return;
-          var rows = cands.map(function (c) {
-            var title = c.path.replace(/\./g, ' › ');
-            var alpha = c.source === 'PhyslibAlpha'
-              ? ' <span class="pv-chip-alpha">Alpha</span>' : '';
-            return '<a class="pv-cand-row" href="' + c.href + '">' +
-              '<span class="pv-cand-name">' + title + alpha + '</span>' +
-              '<span class="pv-cand-num">' + c.decls + '</span>' +
-              '<span class="pv-cand-num">' + (c.docChars || 0) + '</span></a>';
-          }).join('');
-          editSection.querySelector('.pv-candidates-body').innerHTML =
-            '<div class="pv-cand-row pv-cand-head"><span class="pv-cand-name">Page</span>' +
-            '<span class="pv-cand-num">Results</span>' +
-            '<span class="pv-cand-num">Doc chars</span></div>' + rows;
-          editSection.style.display = '';
-        })
-        .catch(function () { /* file absent (e.g. no roadmap build) — hide */ });
 
       groups.forEach(function (key) {
         var sectionTitle = document.createElement('div');
@@ -730,7 +815,8 @@
       var c = n.classList;
       return !!(c && (c.contains('pv-meta') || c.contains('pv-alpha-banner') ||
         c.contains('pv-edit-btn') || c.contains('pv-kw-row') ||
-        c.contains('page-toc')));
+        c.contains('page-toc') || c.contains('pv-lean-help') ||
+        c.contains('pv-improve')));
     }
 
     function mdInline(node) {
@@ -963,12 +1049,20 @@
       return out.join('\n');
     }
 
-    function openIssue(modName, original, suggestion) {
-      var srcPath = modName.split('.').join('/') + '.lean';
+    function srcPathOf(modName) {
+      return modName.split('.').join('/') + '.lean';
+    }
+    function srcUrlOf(modName) {
+      return 'https://github.com/' + GITHUB_REPO + '/blob/master/' + srcPathOf(modName);
+    }
+
+    /* Prefilled GitHub issue. `reason` is the contributor's own note ("why"),
+       which is what a maintainer reads first. */
+    function openIssue(modName, original, suggestion, reason) {
       var body = '### Documentation edit suggestion\n\n' +
         '**Module:** `' + modName + '`\n' +
-        '**Source file:** https://github.com/' + GITHUB_REPO +
-        '/blob/master/' + srcPath + '\n\n' +
+        '**Source file:** ' + srcUrlOf(modName) + '\n\n' +
+        (reason ? '**Why:** ' + reason + '\n\n' : '') +
         'Suggested change to the docstring Markdown (reconstructed from the ' +
         'rendered page, so formatting may differ slightly from the source):\n\n' +
         '```diff\n' + diffLines(original, suggestion) + '\n```\n\n' +
@@ -990,6 +1084,50 @@
       window.open(url, '_blank');
     }
 
+    /* A short prefilled issue for the page-level actions ("add a reference",
+       "report an error", "ask a question") — no diff, just a template. */
+    function openTemplateIssue(modName, kind) {
+      var TEMPLATES = {
+        reference: {
+          title: 'docs: add a reference to ' + modName,
+          heading: 'Suggested reference',
+          prompt: 'Which book, paper, review or lecture notes should this page ' +
+            'point to, and which part of the page does it support?\n\n' +
+            '- **Reference:** \n- **Relevant to:** \n- **Why it helps:** \n'
+        },
+        error: {
+          title: 'docs: possible error on ' + modName,
+          heading: 'Possible error',
+          prompt: 'What looks wrong, and what do you think it should say?\n\n' +
+            '- **Where:** \n- **What it says:** \n- **What I think it should say:** \n'
+        },
+        question: {
+          title: 'docs: question about ' + modName,
+          heading: 'Question',
+          prompt: 'What was unclear? Questions are useful even when nothing is ' +
+            'wrong — a page that needs a question answered is a page that needs ' +
+            'better documentation.\n\n- **My question:** \n'
+        },
+        notation: {
+          title: 'docs: explain the notation on ' + modName,
+          heading: 'Notation that needs explaining',
+          prompt: 'Which symbol, name or convention on this page is not defined ' +
+            'in the prose?\n\n- **Notation:** \n- **What it means:** \n'
+        }
+      };
+      var t = TEMPLATES[kind] || TEMPLATES.question;
+      var body = '### ' + t.heading + '\n\n' +
+        '**Page:** ' + location.href + '\n' +
+        '**Module:** `' + modName + '`\n' +
+        '**Source file:** ' + srcUrlOf(modName) + '\n\n' +
+        t.prompt + '\n---\n*Sent from the Physlib wiki. No Lean knowledge ' +
+        'required — a maintainer will make the change.*\n';
+      window.open('https://github.com/' + GITHUB_REPO + '/issues/new' +
+        '?labels=' + encodeURIComponent(GITHUB_LABEL) +
+        '&title=' + encodeURIComponent(t.title) +
+        '&body=' + encodeURIComponent(body), '_blank');
+    }
+
     /* Render Markdown to HTML for the visual editor, using the marked bundle
        Verso already ships. Falls back to escaped text if it's unavailable. */
     function renderMarkdown(md) {
@@ -1002,11 +1140,41 @@
       return '<p>' + esc.replace(/\n{2,}/g, '</p><p>').replace(/\n/g, '<br>') + '</p>';
     }
 
-    /* A Wikipedia-style editor: a Visual (WYSIWYG) tab and a Markdown tab, kept
-       in sync, submitting a prefilled GitHub issue with the diff. */
-    function openEditModal(block, modName) {
+    /* ── Drafts ───────────────────────────────────────────────────
+       An edit is often interrupted (a phone call, a closed tab). Keeping the
+       work in localStorage means a contributor never loses it, which matters
+       most for the people we are trying not to scare off. */
+    var DRAFT_PREFIX = 'pv-draft:';
+    function draftKey(modName, idx) { return DRAFT_PREFIX + modName + '#' + idx; }
+    function saveDraft(key, md) {
+      try { localStorage.setItem(key, JSON.stringify({ md: md, t: Date.now() })); }
+      catch (e) { /* private mode / quota — drafts are a nicety, not a promise */ }
+    }
+    function loadDraft(key) {
+      try {
+        var raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : null;
+      } catch (e) { return null; }
+    }
+    function clearDraft(key) {
+      try { localStorage.removeItem(key); } catch (e) { /* ignore */ }
+    }
+    function ago(t) {
+      var s = Math.max(1, Math.round((Date.now() - t) / 1000));
+      if (s < 90) return s + ' seconds ago';
+      if (s < 5400) return Math.round(s / 60) + ' minutes ago';
+      if (s < 172800) return Math.round(s / 3600) + ' hours ago';
+      return Math.round(s / 86400) + ' days ago';
+    }
+
+    var HELP_SEEN_KEY = 'pv-edit-help-seen';
+
+    /* A Wikipedia-style editor: Visual (WYSIWYG), Markdown and Preview tabs
+       kept in sync, submitting a prefilled GitHub issue with the diff. */
+    function openEditModal(block, modName, blockIndex) {
       var original = (block.pvSource || '').trim();
       var haveVisual = !!window.marked;
+      var key = draftKey(modName, blockIndex);
 
       var overlay = document.createElement('div');
       overlay.className = 'pv-modal-overlay';
@@ -1017,22 +1185,56 @@
       head.className = 'pv-modal-head';
       head.innerHTML =
         '<div class="pv-modal-title">Edit this documentation</div>' +
-        '<div class="pv-modal-sub">Like a wiki — edit the text directly. ' +
-        'Submitting opens a prefilled GitHub issue on <code>' + GITHUB_REPO +
-        '</code> with your changes to <code>' + modName + '</code> for a ' +
-        'maintainer to review.</div>';
+        '<div class="pv-modal-sub">You are editing the <b>English explanation</b> ' +
+        'only — the Lean statements and proofs on the page are not touched, and ' +
+        'you do not need to know any Lean. Submitting opens a prefilled GitHub ' +
+        'issue for a maintainer to review.</div>';
       modal.appendChild(head);
 
-      /* Tab strip (Visual | Markdown). */
+      /* First-timers get the three-step explanation opened for them; after one
+         edit it stays folded away. */
+      var seenHelp = false;
+      try { seenHelp = localStorage.getItem(HELP_SEEN_KEY) === '1'; } catch (e) { /* private */ }
+      var help = document.createElement('details');
+      help.className = 'pv-help-box';
+      if (!seenHelp) help.setAttribute('open', '');
+      help.innerHTML =
+        '<summary>First time? Here is exactly what happens</summary>' +
+        '<ol class="pv-help-steps">' +
+        '<li><b>Write.</b> Change the text below like any document. ' +
+        'Use the toolbar for bold, headings, lists, links and maths — or switch ' +
+        'to the <i>Markdown</i> tab if you prefer plain text. Maths goes between ' +
+        'dollar signs: <code>$E = mc^2$</code>. Check it in the <i>Preview</i> tab.</li>' +
+        '<li><b>Say why (optional).</b> One line telling a maintainer what you ' +
+        'improved makes a suggestion much easier to accept.</li>' +
+        '<li><b>Propose.</b> The button opens GitHub with everything filled in; ' +
+        'you press <i>Submit new issue</i>. A maintainer copies your text into the ' +
+        'Lean source and credits you as a co-author.</li>' +
+        '</ol>' +
+        '<div class="pv-help-foot">Nothing you do here can break the library: ' +
+        'suggestions are reviewed before anything changes. ' +
+        '<a href="contribute/" target="_blank" rel="noopener">' +
+        'Read the full guide →</a></div>';
+      modal.appendChild(help);
+      try { localStorage.setItem(HELP_SEEN_KEY, '1'); } catch (e) { /* private */ }
+
+      /* Tab strip (Visual | Markdown | Preview). */
       var tabs = document.createElement('div');
       tabs.className = 'pv-tabs';
-      var tabVisual = document.createElement('button');
-      tabVisual.className = 'pv-tab';
-      tabVisual.textContent = 'Visual';
-      var tabMd = document.createElement('button');
-      tabMd.className = 'pv-tab';
-      tabMd.textContent = 'Markdown';
-      if (haveVisual) { tabs.appendChild(tabVisual); tabs.appendChild(tabMd); modal.appendChild(tabs); }
+      var mkTab = function (label, title) {
+        var b = document.createElement('button');
+        b.className = 'pv-tab';
+        b.type = 'button';
+        b.textContent = label;
+        b.title = title;
+        tabs.appendChild(b);
+        return b;
+      };
+      var tabVisual = mkTab('Visual', 'Edit the formatted text directly');
+      var tabMd = mkTab('Markdown', 'Edit the Markdown source');
+      var tabPreview = mkTab('Preview', 'See it the way it will appear, with maths rendered');
+      if (!haveVisual) tabVisual.style.display = 'none';
+      modal.appendChild(tabs);
 
       /* Formatting toolbar (visual mode). */
       var toolbar = document.createElement('div');
@@ -1040,7 +1242,8 @@
       var TOOLS = [
         ['bold', '<b>B</b>', 'Bold'],
         ['italic', '<i>I</i>', 'Italic'],
-        ['code', '&lt;&gt;', 'Inline code'],
+        ['code', '&lt;&gt;', 'Inline code — use it for Lean names, e.g. MassUnit'],
+        ['math', '<i>∑</i>', 'Maths: wraps the selection in $…$ (LaTeX)'],
         ['h2', 'H2', 'Heading'],
         ['h3', 'H3', 'Subheading'],
         ['ul', '• List', 'Bulleted list'],
@@ -1058,7 +1261,11 @@
       ta.className = 'pv-modal-text';
       ta.value = original;
 
+      var preview = document.createElement('div');
+      preview.className = 'pv-preview';
+
       function runTool(cmd) {
+        if (mode === 'markdown') { runToolMd(cmd); return; }
         visual.focus();
         try { document.execCommand('styleWithCSS', false, false); } catch (e) { /* */ }
         if (cmd === 'bold' || cmd === 'italic') document.execCommand(cmd);
@@ -1069,17 +1276,45 @@
           var inHeading = document.queryCommandValue &&
             (document.queryCommandValue('formatBlock') || '').toLowerCase() === cmd;
           document.execCommand('formatBlock', false, inHeading ? 'P' : tag);
-        } else if (cmd === 'code') {
+        } else if (cmd === 'code' || cmd === 'math') {
           var sel = window.getSelection();
           var text = sel && !sel.isCollapsed ? sel.toString() : '';
-          document.execCommand('insertHTML', false,
-            '<code>' + (text || 'code').replace(/[&<>]/g, function (c) {
+          var esc = function (s) {
+            return s.replace(/[&<>]/g, function (c) {
               return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c];
-            }) + '</code>');
+            });
+          };
+          /* Maths stays literal `$…$` in the source, so it round-trips through
+             the Markdown serializer and renders on the page via KaTeX. */
+          document.execCommand('insertHTML', false, cmd === 'code'
+            ? '<code>' + esc(text || 'code') + '</code>'
+            : esc('$' + (text || 'E = mc^2') + '$'));
         } else if (cmd === 'link') {
           var url = window.prompt('Link URL');
           if (url) document.execCommand('createLink', false, url);
         }
+      }
+      /* The same buttons work on the Markdown tab by wrapping the selection. */
+      function runToolMd(cmd) {
+        var WRAP = {
+          bold: ['**', '**'], italic: ['*', '*'], code: ['`', '`'],
+          math: ['$', '$'], h2: ['# ', ''], h3: ['## ', ''],
+          ul: ['- ', ''], ol: ['1. ', '']
+        };
+        ta.focus();
+        var s = ta.selectionStart, e = ta.selectionEnd;
+        var sel = ta.value.slice(s, e);
+        if (cmd === 'link') {
+          var url = window.prompt('Link URL');
+          if (!url) return;
+          var text = sel || 'link text';
+          ta.setRangeText('[' + text + '](' + url + ')', s, e, 'end');
+        } else {
+          var w = WRAP[cmd];
+          if (!w) return;
+          ta.setRangeText(w[0] + (sel || '') + w[1], s, e, sel ? 'end' : 'end');
+        }
+        onEdit();
       }
       TOOLS.forEach(function (t) {
         var b = document.createElement('button');
@@ -1095,41 +1330,105 @@
 
       var editWrap = document.createElement('div');
       editWrap.className = 'pv-edit-wrap';
-      if (haveVisual) editWrap.appendChild(toolbar);
+      editWrap.appendChild(toolbar);
       editWrap.appendChild(visual);
       editWrap.appendChild(ta);
+      editWrap.appendChild(preview);
       modal.appendChild(editWrap);
 
       /* Contenteditable Enter should make paragraphs, not <div>s. */
       try { document.execCommand('defaultParagraphSeparator', false, 'p'); } catch (e) { /* */ }
 
       var mode = haveVisual ? 'visual' : 'markdown';
+      function currentMarkdown() {
+        return (mode === 'markdown' ? ta.value : mdBlocks(visual, 0)).trim();
+      }
+      function setMarkdown(md) {
+        ta.value = md;
+        visual.innerHTML = renderMarkdown(md);
+      }
       function syncTo(next) {
         if (next === mode) return;
-        if (next === 'markdown') ta.value = mdBlocks(visual, 0).trim();
-        else visual.innerHTML = renderMarkdown(ta.value);
+        var md = currentMarkdown();
+        if (next === 'markdown') ta.value = md;
+        else if (next === 'visual') visual.innerHTML = renderMarkdown(md);
+        else {
+          preview.innerHTML = renderMarkdown(md);
+          renderMathIn(preview);
+        }
         mode = next;
         modal.classList.toggle('pv-mode-md', mode === 'markdown');
+        modal.classList.toggle('pv-mode-preview', mode === 'preview');
         tabVisual.classList.toggle('active', mode === 'visual');
         tabMd.classList.toggle('active', mode === 'markdown');
-        (mode === 'visual' ? visual : ta).focus();
+        tabPreview.classList.toggle('active', mode === 'preview');
+        if (mode !== 'preview') (mode === 'visual' ? visual : ta).focus();
       }
       tabVisual.addEventListener('click', function () { syncTo('visual'); });
       tabMd.addEventListener('click', function () { syncTo('markdown'); });
+      tabPreview.addEventListener('click', function () { syncTo('preview'); });
       modal.classList.toggle('pv-mode-md', mode === 'markdown');
       tabVisual.classList.toggle('active', mode === 'visual');
       tabMd.classList.toggle('active', mode === 'markdown');
 
-      function currentMarkdown() {
-        return (mode === 'markdown' ? ta.value : mdBlocks(visual, 0)).trim();
+      /* Autosave, debounced. */
+      var saveTimer = null;
+      var status = document.createElement('div');
+      status.className = 'pv-edit-status';
+      function onEdit() {
+        clearTimeout(saveTimer);
+        saveTimer = setTimeout(function () {
+          var md = currentMarkdown();
+          if (md === original) { clearDraft(key); status.textContent = ''; return; }
+          saveDraft(key, md);
+          status.textContent = 'Draft saved in this browser';
+        }, 700);
+      }
+      visual.addEventListener('input', onEdit);
+      ta.addEventListener('input', onEdit);
+
+      /* An interrupted edit is offered back rather than silently dropped. */
+      var draft = loadDraft(key);
+      if (draft && draft.md && draft.md !== original) {
+        var bar = document.createElement('div');
+        bar.className = 'pv-draft-bar';
+        bar.innerHTML = '<span>You have an unsent draft of this section from ' +
+          ago(draft.t) + '.</span>';
+        var restore = document.createElement('button');
+        restore.className = 'pv-linkbtn';
+        restore.type = 'button';
+        restore.textContent = 'Restore it';
+        restore.onclick = function () {
+          setMarkdown(draft.md);
+          if (mode === 'preview') syncTo('visual');
+          bar.remove();
+        };
+        var discard = document.createElement('button');
+        discard.className = 'pv-linkbtn';
+        discard.type = 'button';
+        discard.textContent = 'Discard';
+        discard.onclick = function () { clearDraft(key); bar.remove(); };
+        bar.appendChild(restore);
+        bar.appendChild(discard);
+        editWrap.insertBefore(bar, toolbar);
       }
 
-      var row = document.createElement('div');
-      row.className = 'pv-modal-actions';
-      var cancel = document.createElement('button');
-      cancel.className = 'pv-btn';
-      cancel.textContent = 'Cancel';
-      cancel.onclick = function () { overlay.remove(); };
+      /* "Why this change?" — the single most useful thing a reviewer can read. */
+      var why = document.createElement('div');
+      why.className = 'pv-why';
+      why.innerHTML = '<label for="pv-why-input">Why this change? ' +
+        '<span>(optional, one line — e.g. “the overview never says what ' +
+        '<i>MassUnit</i> is for”)</span></label>';
+      var whyInput = document.createElement('input');
+      whyInput.type = 'text';
+      whyInput.id = 'pv-why-input';
+      whyInput.className = 'pv-why-input';
+      whyInput.placeholder = 'What does this improve?';
+      why.appendChild(whyInput);
+      modal.appendChild(why);
+
+      modal.appendChild(status);
+
       /* Submitting posts a GitHub issue, which needs a signed-in account. */
       var note = document.createElement('div');
       note.className = 'pv-modal-note';
@@ -1140,8 +1439,17 @@
         '<b>If your suggestion is accepted, you’ll be credited as a co-author.</b></span>';
       modal.appendChild(note);
 
+      var row = document.createElement('div');
+      row.className = 'pv-modal-actions';
+      var cancel = document.createElement('button');
+      cancel.className = 'pv-btn';
+      cancel.type = 'button';
+      cancel.textContent = 'Cancel';
+      cancel.onclick = function () { overlay.remove(); };
+
       var submit = document.createElement('button');
       submit.className = 'pv-btn pv-btn-primary';
+      submit.type = 'button';
       submit.textContent = 'Propose on GitHub →';
       function doSubmit() {
         var suggestion = currentMarkdown();
@@ -1149,7 +1457,8 @@
           alert('No changes made yet — edit the text first.');
           return;
         }
-        openIssue(modName, original, suggestion);
+        openIssue(modName, original, suggestion, whyInput.value.trim());
+        clearDraft(key);
         overlay.remove();
       }
       submit.onclick = doSubmit;
@@ -1169,20 +1478,205 @@
       (haveVisual ? visual : ta).focus();
     }
 
+    /* The first node of a block that is actual documentation rather than page
+       furniture: the heading, the meta line, the alpha notice and the table of
+       contents are all injected into the overview block above the prose. */
+    function firstProseNode(block) {
+      var found = null;
+      Array.prototype.some.call(block.childNodes, function (n) {
+        if (n.nodeType === 3) return !!n.nodeValue.trim() && (found = n);
+        if (n.nodeType !== 1) return false;
+        if (/^H[1-6]$/.test(n.tagName)) return false;
+        var c = n.classList;
+        if (c && (c.contains('pv-meta') || c.contains('pv-alpha-banner') ||
+                  c.contains('page-toc') || c.contains('pv-lean-help'))) return false;
+        found = n;
+        return true;
+      });
+      return found;
+    }
+
     if (content) {
       var editModName = (content.id || '').replace(/___/g, '.');
       if (editModName) {
-        proseBlocks.forEach(function (block) {
+        /* The page overview is the block worth the most to a reader and the
+           one most often missing, so it gets a full-width invitation rather
+           than the small ✎ pill the other docstrings carry.
+
+           Identifying it takes two steps. A module docstring is split into one
+           block per `/-! … -/` in the source, so a page has several `mod-doc`
+           blocks — the overview plus a header for each section — and
+           declaration docstrings carry `mod-doc` too, distinguished only by an
+           `--indent` inline style (see the matching note in wiki.css). The
+           overview is therefore the *first* un-indented `mod-doc` block. */
+        var seenOverview = false;
+        proseBlocks.forEach(function (block, blockIndex) {
+          var isOverview = !seenOverview && block.classList.contains('mod-doc') &&
+            (block.getAttribute('style') || '').indexOf('--indent') === -1;
+          if (isOverview) seenOverview = true;
           var btn = document.createElement('button');
-          btn.className = 'pv-edit-btn';
-          btn.title = 'Edit this documentation';
-          btn.innerHTML = '<span class="pv-edit-ico">✎</span>' +
-            '<span class="pv-edit-label">Edit</span>';
-          btn.onclick = function () { openEditModal(block, editModName); };
+          btn.type = 'button';
+          if (isOverview) {
+            /* Prose only: the `#` title line is not an overview. Under ~240
+               characters there is effectively nothing here, and the button
+               asks for an overview; above it, it asks for an improvement —
+               inviting someone to "add an overview" below three good
+               paragraphs reads as though nobody looked. */
+            var prose = (block.pvSource || '').split('\n')
+              .filter(function (l) { return !/^#{1,6}\s/.test(l.trim()); })
+              .join(' ').trim();
+            var thin = prose.length < 240;
+            btn.className = 'pv-edit-btn pv-edit-btn-main';
+            btn.title = thin
+              ? 'Write this page’s overview — no Lean needed'
+              : 'Improve this page’s overview — no Lean needed';
+            btn.innerHTML = '<span class="pv-edit-ico" aria-hidden="true">✎</span>' +
+              '<span class="pv-edit-main-text"><b>Know this area?</b> ' +
+              (thin
+                ? 'Add a brief overview of the physics here to help us improve.'
+                : 'Help us improve the overview of the physics on this page.') +
+              '</span>' +
+              '<span class="pv-edit-main-cta">' +
+              (thin ? 'Add overview' : 'Edit overview') + '</span>';
+          } else {
+            btn.className = 'pv-edit-btn';
+            btn.title = 'Improve this explanation — no Lean needed';
+            btn.innerHTML = '<span class="pv-edit-ico">✎</span>' +
+              '<span class="pv-edit-label">Edit</span>';
+            /* Marks the blocks whose pill floats in the top-right corner, so
+               the stylesheet can keep their text clear of it. */
+            block.classList.add('pv-editable-pill');
+          }
+          btn.onclick = function () { openEditModal(block, editModName, blockIndex); };
           block.classList.add('pv-editable');
-          block.appendChild(btn);
+          if (isOverview) {
+            /* Above the prose, not after it: an invitation to write the
+               overview belongs where the overview should be, and on a page
+               that has none there is otherwise nothing to scroll past to
+               find it. It goes below the title and the meta line — asking
+               "know this area?" before the page has said which area it is
+               would be backwards. */
+            block.insertBefore(btn, firstProseNode(block));
+          } else {
+            block.appendChild(btn);
+          }
+          /* A draft left behind is easy to forget about; flag it on the button. */
+          var d = loadDraft(draftKey(editModName, blockIndex));
+          if (d && d.md) {
+            btn.classList.add('pv-edit-btn-draft');
+            btn.title = 'You have an unsent draft for this section';
+            var dot = document.createElement('span');
+            dot.className = 'pv-edit-dot';
+            dot.setAttribute('aria-hidden', 'true');
+            btn.appendChild(dot);
+          }
         });
       }
+    }
+
+    /* ── 7b. Decoder ring: how to read a Lean page ────────────────
+           A physicist arriving here has never seen Lean. Rather than send
+           them away to learn it, name the handful of symbols that actually
+           appear on these pages and say which parts they can ignore. */
+    if (content && typeof editModName === 'string' && editModName) {
+      var LEAN_ROWS = [
+        ['def', 'A <b>definition</b> — it introduces an object or a piece of notation.'],
+        ['theorem&nbsp;/&nbsp;lemma', 'A <b>statement that has been proved</b>. The proof after ' +
+          '<code>:=&nbsp;by</code> is machine-checked; you can skip it.'],
+        [':=', 'Reads “<b>is defined to be</b>”.'],
+        ['(x&nbsp;:&nbsp;ℝ)', '“<b>x is a real number</b>” — the colon gives the type of a symbol.'],
+        ['∀&nbsp;x,&nbsp;P&nbsp;x', '“<b>for every</b> x, P(x)”. <code>∃</code> is “there exists”, ' +
+          '<code>→</code> is “implies”.'],
+        ['Hover a name', 'Every blue name is a link or a hover: it shows what that ' +
+          'symbol means and where it is defined.']
+      ];
+      var leanBox = document.createElement('details');
+      leanBox.className = 'pv-lean-help';
+      leanBox.innerHTML =
+        '<summary>New to Lean? How to read this page</summary>' +
+        '<p class="pv-lean-intro">The <b>prose</b> between the code boxes is ordinary ' +
+        'English written by physicists — that is the part you are invited to improve, ' +
+        'and it needs no Lean at all. The code boxes are the same physics stated so a ' +
+        'computer can check it. A rough phrasebook:</p>' +
+        '<dl class="pv-lean-gloss">' +
+        LEAN_ROWS.map(function (r) {
+          return '<dt><code>' + r[0] + '</code></dt><dd>' + r[1] + '</dd>';
+        }).join('') +
+        '</dl>' +
+        '<p class="pv-lean-intro">Coloured cards mark what is <i>not</i> settled: a blue ' +
+        '<b>Open problem</b> is work nobody has done yet, and a green or purple ' +
+        '<b>Informal</b> card is a statement written in words but not yet formalized. ' +
+        'Both are good places to contribute. ' +
+        '<a href="contribute/">The full contributor guide →</a></p>';
+      var LEAN_KEY = 'pv-lean-help-open';
+      try { if (localStorage.getItem(LEAN_KEY) === '1') leanBox.setAttribute('open', ''); }
+      catch (e) { /* private */ }
+      leanBox.addEventListener('toggle', function () {
+        try { localStorage.setItem(LEAN_KEY, leanBox.open ? '1' : '0'); } catch (e) { /* private */ }
+      });
+      /* Below the overview invitation, which is the more important of the two
+         and has to stay directly under the title. */
+      var leanAnchor = content.querySelector('.pv-edit-btn-main') ||
+                       content.querySelector('.page-toc') ||
+                       content.querySelector('.pv-alpha-banner') ||
+                       content.querySelector('.pv-meta');
+      if (leanAnchor) leanAnchor.insertAdjacentElement('afterend', leanBox);
+      else content.insertBefore(leanBox, content.firstChild);
+
+      /* ── 7c. "Help improve this page" ──────────────────────────
+             The ✎ buttons only cover *rewriting existing prose*. Most of what
+             a page is missing is something else: a reference, an explanation
+             of the notation, a correction, or simply a question that reveals
+             what is unclear. Each of these opens a prefilled issue, so a
+             reader who cannot write the fix can still report it. */
+      var improve = document.createElement('section');
+      improve.className = 'pv-improve';
+      improve.innerHTML =
+        '<div class="pv-improve-title">Help improve this page</div>' +
+        '<div class="pv-improve-sub">You do not need to know Lean, and you cannot ' +
+        'break anything: every action below sends a suggestion for a maintainer to ' +
+        'review, and accepted suggestions credit you as a co-author.</div>';
+      var actions = document.createElement('div');
+      actions.className = 'pv-improve-actions';
+      var addAction = function (icon, label, hint, onClick) {
+        var b = document.createElement('button');
+        b.className = 'pv-improve-btn';
+        b.type = 'button';
+        b.innerHTML = '<span class="pv-improve-ico" aria-hidden="true">' + icon + '</span>' +
+          '<span class="pv-improve-text"><b>' + label + '</b><span>' + hint + '</span></span>';
+        b.addEventListener('click', onClick);
+        actions.appendChild(b);
+      };
+      if (proseBlocks.length) {
+        addAction('✎', 'Improve the overview',
+          'Rewrite or expand the explanation at the top of the page.',
+          function () {
+            var target = proseBlocks[0];
+            target.scrollIntoView({ block: 'start', behavior: 'smooth' });
+            openEditModal(target, editModName, 0);
+          });
+      }
+      addAction('📚', 'Suggest a reference',
+        'Point to the book, paper or lecture notes this result comes from.',
+        function () { openTemplateIssue(editModName, 'reference'); });
+      addAction('🔤', 'Explain the notation',
+        'Flag a symbol or name the prose never defines.',
+        function () { openTemplateIssue(editModName, 'notation'); });
+      addAction('⚠️', 'Report an error',
+        'Something here reads as wrong, out of date or misleading.',
+        function () { openTemplateIssue(editModName, 'error'); });
+      addAction('❓', 'Ask a question',
+        'A question is a bug report about the documentation.',
+        function () { openTemplateIssue(editModName, 'question'); });
+      improve.appendChild(actions);
+      var links = document.createElement('div');
+      links.className = 'pv-improve-links';
+      links.innerHTML =
+        '<a href="contribute/">Read the contributor guide</a>' +
+        '<a href="' + srcUrlOf(editModName) + '" target="_blank" rel="noopener">' +
+        'View this page’s source file on GitHub</a>';
+      improve.appendChild(links);
+      content.appendChild(improve);
     }
 
     /* ── 5. Header stats (pages · areas), like paperview's ──────── */

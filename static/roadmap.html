@@ -187,17 +187,42 @@
       .rm-legend { order: 3; flex-basis: 100%; gap: 10px 14px; flex-wrap: wrap; margin-left: 0; }
       .rm-search { margin-left: auto; }
     }
-    /* ── Phones: stack the sidebar below the graph ────────────────── */
+    /* Handle for the phone info sheet — hidden on wide screens, where the
+       sidebar is a permanent right rail. */
+    .rm-sheet-handle { display: none; }
+
+    /* ── Phones: the sidebar becomes a bottom sheet under the graph ─── */
     @media (max-width: 760px) {
       .rm-wip-banner { white-space: normal; height: auto; line-height: 1.3; padding: 5px 12px; }
       .rm-view { max-width: 44vw; }
       .rm-search input { width: 150px; }
       .rm-search-results { width: min(340px, 92vw); }
       .rm-body { flex-direction: column; }
-      .rm-stage { flex: 0 0 58vh; }
+      .rm-stage { flex: 0 0 52vh; transition: flex-basis 0.25s ease; }
+      /* Selecting a dot expands the sheet: a 200px-tall panel cannot show a
+         statement, its sources and the contribute actions at once. */
+      body.rm-sheet-open .rm-stage { flex-basis: 26vh; }
       .rm-sidebar { width: auto; flex: 1 1 auto; border-left: none;
-        border-top: 1px solid var(--border); padding: 14px 14px 32px; }
-      .rm-reset { top: 8px; left: 8px; }
+        border-top: 1px solid var(--border); padding: 10px 14px 32px;
+        overscroll-behavior: contain; }
+      .rm-reset { top: 8px; left: 8px; padding: 8px 12px; }
+      .rm-sheet-handle { display: flex; align-items: center; justify-content: center;
+        gap: 8px; width: 100%; flex-shrink: 0; height: 34px; font-family: var(--sans);
+        font-size: 12px; font-weight: 500; color: var(--muted); background: var(--surface);
+        border: none; border-top: 1px solid var(--border); cursor: pointer; }
+      .rm-sheet-handle::before { content: ''; width: 34px; height: 4px; border-radius: 2px;
+        background: var(--border); }
+      body.rm-sheet-open .rm-sheet-handle .rm-sheet-more { display: none; }
+      body:not(.rm-sheet-open) .rm-sheet-handle .rm-sheet-less { display: none; }
+      /* Bottom-of-stage chips stack instead of colliding. */
+      .rm-hint { left: 8px; right: 8px; bottom: 8px; white-space: normal; line-height: 1.35; }
+      .rm-count { display: none; }
+      /* Tappable legend and sidebar actions. */
+      .rm-legend-item { padding: 4px 0; font-size: 12.5px; }
+      .rm-btn, .rm-source, .rm-open { padding: 11px 12px; font-size: 13.5px; }
+      .rm-open { display: block; }
+      .rm-search input, .rm-view, .rm-theme-btn { height: 36px; font-size: 16px; }
+      .rm-sr-item { padding: 10px 8px; }
     }
     .rm-sb-kicker { font-size: 10px; font-weight: 600; letter-spacing: 0.6px;
       text-transform: uppercase; color: var(--faint); margin-bottom: 6px; }
@@ -268,10 +293,13 @@
       <svg id="rm-svg-top"></svg>
       <button class="rm-reset" id="rm-reset" title="Reset view (Esc)">⌂ Reset view</button>
       <div class="rm-tooltip" id="rm-tooltip"></div>
-      <div class="rm-hint">Scroll to zoom · click a band or box to focus · click a dot · Esc resets</div>
+      <div class="rm-hint" id="rm-hint">Scroll to zoom · click a band or box to focus · click a dot · Esc resets</div>
       <div class="rm-credit">Design copied from <a href="https://paperview.org/" target="_blank" rel="noopener">paperview.org</a> · Sabrina Pasterski</div>
       <div class="rm-count" id="rm-count"></div>
     </div>
+    <button class="rm-sheet-handle" id="rm-sheet-handle" aria-expanded="false"
+            aria-controls="rm-sidebar"><span class="rm-sheet-more">More detail</span><span
+            class="rm-sheet-less">Show more map</span></button>
     <aside class="rm-sidebar" id="rm-sidebar"></aside>
   </div>
 

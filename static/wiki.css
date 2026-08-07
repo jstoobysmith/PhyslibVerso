@@ -119,50 +119,14 @@
   .pv-search span { display: none; }
 }
 
-/* Site-wide work-in-progress banner. */
-.pv-wip-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  height: 28px;
-  padding: 0 10px;
-  font-family: var(--pv-font);
-  font-size: 11px;
-  color: #e65100;
-  background: #fff3e0;
-  border-bottom: 1px solid rgba(230, 81, 0, 0.25);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.pv-wip-banner a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-@media (prefers-color-scheme: dark) {
-  .pv-wip-banner {
-    color: #ffb74d;
-    background: rgba(230, 81, 0, 0.12);
-    border-color: rgba(255, 183, 77, 0.3);
-  }
-}
-
 /* Keep the accessibility skip-link fully off-screen until focused. */
 body.pv .skip-link { top: -100px; }
 body.pv .skip-link:focus { top: 0; }
 
-/* The layout fills the viewport below the header (and WIP banner). */
+/* The layout fills the viewport below the header. */
 body.pv .layout {
   height: calc(100vh - 44px);
   height: calc(100dvh - 44px);
-}
-
-body.pv-has-banner .layout {
-  height: calc(100vh - 72px);
-  height: calc(100dvh - 72px);
 }
 
 /* ── Sidebar: paperview wiki-nav clone ──────────────────────────── */
@@ -642,10 +606,7 @@ body.pv-landing {
   flex-direction: column;
 }
 
-body.pv-landing .pv-wip-banner,
-body.pv-landing .pv-header {
-  flex-shrink: 0;
-}
+body.pv-landing .pv-header { flex-shrink: 0; }
 
 /* Full-width scroller (so the scrollbar sits at the window edge) with the
    content column centred inside it. */
@@ -741,10 +702,17 @@ body.pv-landing .layout { display: block; }
   text-decoration: none;
 }
 
+/* Flex-wrap (rather than an inline chip with a left margin) so an "Alpha"
+   badge on a long label wraps instead of spilling out of the card. */
 .pv-card-label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
   font-size: 13px;
   font-weight: 600;
   color: var(--verso-text-color);
+  overflow-wrap: anywhere;
 }
 
 .pv-card-path {
@@ -791,9 +759,12 @@ body.pv-landing .layout { display: block; }
   background: #fff3e0;
   border-radius: 3px;
   padding: 1px 5px;
-  margin-left: 6px;
   vertical-align: 1px;
+  flex-shrink: 0;
 }
+
+/* Outside a flex label (e.g. in the candidates table) it still needs the gap. */
+.pv-cand-name .pv-chip-alpha { margin-left: 6px; }
 
 @media (prefers-color-scheme: dark) {
   .pv-tree .leaf.pv-alpha-node > a::after,
@@ -898,6 +869,13 @@ a.pv-xref:hover code { text-decoration: underline; }
 
 .pv-editable { position: relative; }
 
+/* The pill is absolutely positioned in the block's top-right corner, so a
+   one-line docstring runs underneath it. Reserve its width on the screens
+   where it floats there (on phones it flows below the block instead). */
+@media (min-width: 769px) {
+  .pv-editable-pill { padding-right: 66px; }
+}
+
 /* Visible, labelled "Edit" affordance (not hover-only) so it is discoverable
    like a wiki. It brightens on hover of its block. */
 .pv-edit-btn {
@@ -933,10 +911,68 @@ a.pv-xref:hover code { text-decoration: underline; }
   border-color: var(--pv-accent);
 }
 
+/* The page overview gets an invitation instead of a pill: it is the block a
+   reader most wants and the one most often empty, so it is worth a full-width
+   bar under the prose rather than a 22px control floating in the corner.
+   Selectors are doubled up (`.pv-edit-btn.pv-edit-btn-main`) so they outrank
+   the small-screen `.pv-edit-btn` overrides at the end of this file. */
+.pv-edit-btn.pv-edit-btn-main {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  width: 100%;
+  height: auto;
+  margin: 18px 0 4px;
+  padding: 12px 14px;
+  border: 1px solid var(--pv-accent);
+  border-radius: 10px;
+  background: var(--pv-accent-bg);
+  color: var(--pv-text-2);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+  opacity: 1;
+}
+
+.pv-edit-btn.pv-edit-btn-main:hover {
+  background: var(--verso-surface-color);
+  border-color: var(--pv-accent);
+}
+
+.pv-edit-btn-main .pv-edit-ico {
+  font-size: 15px;
+  color: var(--pv-accent);
+  flex-shrink: 0;
+}
+
+.pv-edit-main-text { flex: 1 1 220px; min-width: 0; }
+.pv-edit-main-text b { color: var(--verso-text-color); font-weight: 600; }
+
+.pv-edit-main-cta {
+  flex-shrink: 0;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--pv-accent);
+  color: var(--verso-background-color);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.pv-edit-btn.pv-edit-btn-main.pv-edit-btn-draft {
+  border-color: rgba(230, 81, 0, 0.55);
+  color: var(--pv-text-2);
+}
+
 /* On narrow screens keep only the pencil to save room. */
 @media (max-width: 700px) {
   .pv-edit-label { display: none; }
   .pv-edit-btn { padding: 0 6px; }
+  /* …but the overview invitation keeps its words, stacked. */
+  .pv-edit-btn.pv-edit-btn-main { padding: 12px 14px; font-size: 13.5px; }
+  .pv-edit-main-cta { margin-left: 25px; }
 }
 
 /* ── Editor modal: tabs, toolbar, visual (WYSIWYG) surface ───────── */
@@ -971,7 +1007,24 @@ a.pv-xref:hover code { text-decoration: underline; }
   border-bottom-color: var(--pv-accent);
 }
 
-.pv-edit-wrap { display: flex; flex-direction: column; min-height: 0; }
+/* The modal is a fixed-height column: everything keeps its natural size and
+   only the editing surface absorbs what is left, so a tall help panel or a
+   restored-draft bar shrinks the text box instead of spilling over the
+   buttons below it. */
+.pv-modal-edit > * { flex-shrink: 0; }
+.pv-edit-wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.pv-modal-edit .pv-visual,
+.pv-modal-edit .pv-preview,
+.pv-modal-edit .pv-modal-text {
+  flex: 1 1 auto;
+  min-height: 140px;
+  max-height: none;
+}
 
 .pv-toolbar {
   display: flex;
@@ -1031,11 +1084,137 @@ a.pv-xref:hover code { text-decoration: underline; }
 }
 .pv-visual a { color: var(--pv-accent); }
 
+/* The preview surface renders exactly what the page will show, maths included. */
+.pv-preview {
+  display: none;
+  min-height: 240px;
+  max-height: 52vh;
+  overflow-y: auto;
+  padding: 12px 14px;
+  font-family: var(--verso-text-font-family, var(--pv-font));
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--verso-text-color);
+  background: var(--verso-surface-color);
+  border: 1px solid var(--verso-border-color);
+  border-radius: 0 0 6px 6px;
+}
+.pv-preview > :first-child { margin-top: 0; }
+.pv-preview h1, .pv-preview h2 { font-size: 17px; font-weight: 600; margin: 16px 0 8px; }
+.pv-preview h3, .pv-preview h4 { font-size: 14.5px; font-weight: 600; margin: 14px 0 6px; }
+.pv-preview p { margin: 0 0 10px; }
+.pv-preview ul, .pv-preview ol { margin: 0 0 10px 22px; }
+.pv-preview code {
+  font-family: var(--pv-mono);
+  font-size: 12.5px;
+  background: var(--verso-inline-code-bg, var(--verso-background-color));
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
 /* Only one editing surface is shown at a time. */
 .pv-modal-edit .pv-modal-text { display: none; }
-.pv-modal-edit.pv-mode-md .pv-toolbar,
 .pv-modal-edit.pv-mode-md .pv-visual { display: none; }
-.pv-modal-edit.pv-mode-md .pv-modal-text { display: block; border-radius: 6px; }
+.pv-modal-edit.pv-mode-md .pv-modal-text { display: block; border-radius: 0 0 6px 6px; }
+.pv-modal-edit.pv-mode-preview .pv-visual,
+.pv-modal-edit.pv-mode-preview .pv-modal-text,
+.pv-modal-edit.pv-mode-preview .pv-toolbar { display: none; }
+.pv-modal-edit.pv-mode-preview .pv-preview { display: block; border-radius: 6px; }
+
+/* ── First-time explainer inside the editor ─────────────────────── */
+.pv-help-box {
+  max-height: 36vh;
+  overflow-y: auto;
+  border: 1px solid var(--verso-border-color);
+  border-radius: 8px;
+  background: var(--pv-accent-bg);
+  padding: 0 12px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--pv-text-2);
+}
+.pv-help-box > summary {
+  padding: 9px 0;
+  font-weight: 600;
+  color: var(--verso-text-color);
+  cursor: pointer;
+  list-style: none;
+}
+.pv-help-box > summary::-webkit-details-marker { display: none; }
+.pv-help-box > summary::before { content: '▸ '; color: var(--pv-text-3); }
+.pv-help-box[open] > summary::before { content: '▾ '; }
+.pv-help-steps { margin: 0 0 8px 20px; padding: 0; }
+.pv-help-steps li { margin-bottom: 6px; }
+.pv-help-steps b { color: var(--verso-text-color); }
+.pv-help-steps code, .pv-help-foot code {
+  font-family: var(--pv-mono);
+  font-size: 11.5px;
+  background: var(--verso-background-color);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+.pv-help-foot { padding-bottom: 10px; }
+.pv-help-foot a { color: var(--pv-accent); }
+
+/* ── Draft restore bar + save status ────────────────────────────── */
+.pv-draft-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--verso-text-color);
+  background: rgba(230, 81, 0, 0.09);
+  border: 1px solid rgba(230, 81, 0, 0.3);
+  border-radius: 6px;
+}
+.pv-linkbtn {
+  font-family: var(--pv-font);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--pv-accent);
+  background: none;
+  border: none;
+  padding: 2px 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.pv-edit-status {
+  min-height: 14px;
+  font-size: 11px;
+  color: var(--pv-text-3);
+  text-align: right;
+}
+
+/* ── "Why this change?" ─────────────────────────────────────────── */
+.pv-why { display: flex; flex-direction: column; gap: 5px; }
+.pv-why label { font-size: 12px; font-weight: 600; color: var(--verso-text-color); }
+.pv-why label span { font-weight: 400; color: var(--pv-text-3); }
+.pv-why-input {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  font-family: var(--pv-font);
+  font-size: 13px;
+  color: var(--verso-text-color);
+  background: var(--verso-background-color);
+  border: 1px solid var(--verso-border-color);
+  border-radius: 6px;
+  outline: none;
+}
+.pv-why-input:focus { border-color: var(--pv-accent); }
+
+/* A section with an unsent draft keeps a dot on its Edit button. */
+.pv-edit-btn-draft { opacity: 1; color: #e65100; border-color: rgba(230, 81, 0, 0.5); }
+.pv-edit-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e65100;
+  flex-shrink: 0;
+}
 
 .pv-modal-overlay {
   position: fixed;
@@ -1050,7 +1229,7 @@ a.pv-xref:hover code { text-decoration: underline; }
 
 .pv-modal {
   width: min(720px, 100%);
-  max-height: 85vh;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1148,39 +1327,6 @@ a.pv-xref:hover code { text-decoration: underline; }
   border-color: var(--pv-accent);
 }
 
-/* ══════════════════════════════════════════════════════════════════
-   Mobile / small-screen fixes.
-   ══════════════════════════════════════════════════════════════════ */
-
-/* Nothing should ever scroll the page sideways. */
-html { overflow-x: hidden; }
-
-/* The WIP banner is `white-space: nowrap`, which gives it a large min-content
-   width; in the body's flex column that forced the whole page wider than the
-   viewport. Let it wrap and stop it forcing width. */
-.pv-wip-banner { min-width: 0; }
-
-@media (max-width: 760px) {
-  .pv-wip-banner {
-    white-space: normal;
-    height: auto;
-    min-height: 26px;
-    padding: 5px 12px;
-    line-height: 1.3;
-    text-align: center;
-  }
-  /* The banner is 26px+ (auto) tall now, so free the layout height clamp to
-     dvh-based flex rather than a fixed 72px subtraction. */
-  body.pv-has-banner .layout,
-  body.pv .layout { height: auto; }
-}
-
-@media (max-width: 700px) {
-  /* Tighter landing padding on phones. */
-  body.pv-landing main.landing-page { padding: 18px 14px 48px; }
-  .pv-hero-title { font-size: 23px; }
-}
-
 /* ── Collapsible sidebar (all screen sizes) ───────────────────────
    A header toggle (`.pv-nav-toggle`, added by wiki.js) drives `body.pv-nav-open`.
    We replace Verso's built-in mobile hamburger entirely. */
@@ -1205,7 +1351,7 @@ html { overflow-x: hidden; }
   height: 2px;
   background: var(--pv-text-2);
   border-radius: 2px;
-  transition: background 0.15s;
+  transition: background 0.15s, transform 0.2s, opacity 0.15s;
 }
 .pv-nav-toggle:hover { border-color: var(--pv-accent); }
 .pv-nav-toggle:hover span { background: var(--pv-accent); }
@@ -1216,36 +1362,6 @@ html { overflow-x: hidden; }
   .pv-scrim { display: none; }
 }
 
-/* Phones: sidebar is an overlay drawer driven by the same state. */
-@media (max-width: 768px) {
-  body.pv .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    height: 100dvh;
-    width: min(320px, 86vw);
-    z-index: 1200;
-    transform: translateX(-102%);
-    transition: transform 0.25s ease;
-    box-shadow: none;
-  }
-  body.pv.pv-nav-open .sidebar {
-    transform: translateX(0);
-    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.28);
-  }
-  body.pv .code-content { padding-left: 14px; padding-right: 14px; }
-  .pv-scrim {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1100;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.25s ease;
-  }
-  body.pv.pv-nav-open .pv-scrim { opacity: 1; visibility: visible; }
-}
 
 /* ── Home page: "you can edit" callout + docs-needed table ───────── */
 
@@ -1282,7 +1398,65 @@ html { overflow-x: hidden; }
   white-space: nowrap;
 }
 
+/* ── "How it works" three-step strip (home page) ─────────────────── */
+.pv-howto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 10px;
+  margin: 0 0 28px;
+}
+.pv-howto-step {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  padding: 13px 15px;
+  border: 1px solid var(--verso-border-color);
+  border-radius: 10px;
+}
+.pv-howto-n {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 21px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  background: var(--pv-accent);
+  color: var(--verso-background-color);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+.pv-howto-step b { font-size: 13.5px; font-weight: 600; color: var(--verso-text-color); }
+.pv-howto-step > span:not(.pv-howto-n) {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--pv-text-2);
+}
+.pv-howto-cta {
+  grid-column: 1 / -1;
+  font-size: 13px;
+}
+.pv-howto-cta a { color: var(--pv-accent); }
+
+/* The Contribute link is the one header action we want people to notice. */
+.pv-navlink-cta { color: var(--pv-accent) !important; font-weight: 600; }
+
 .pv-edit-candidates { margin-bottom: 26px; }
+
+.pv-cand-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 18px;
+  margin-top: 10px;
+  font-size: 12.5px;
+}
+.pv-cand-foot a { color: var(--pv-accent); }
+
+/* Inline column labels: shown only where the table has collapsed to one row
+   per page (see the mobile block), which is where the header line is gone. */
+.pv-cand-lbl { display: none; color: var(--pv-text-3); }
 
 .pv-candidates-note {
   font-size: 12px;
@@ -1372,6 +1546,125 @@ html { overflow-x: hidden; }
 .page-toc.pv-toc-box.pv-toc-collapsed ul { display: none; }
 .page-toc.pv-toc-box ul { padding-left: 2px; }
 
+/* ── "New to Lean?" decoder ring (top of every article) ─────────── */
+
+.pv-lean-help {
+  margin: 6px 0 22px;
+  padding: 0 14px;
+  font-family: var(--pv-font);
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--pv-text-2);
+  border: 1px dashed var(--verso-border-color);
+  border-radius: 8px;
+}
+.pv-lean-help > summary {
+  padding: 9px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--pv-accent);
+  cursor: pointer;
+  list-style: none;
+}
+.pv-lean-help > summary::-webkit-details-marker { display: none; }
+.pv-lean-help > summary::before { content: '▸ '; }
+.pv-lean-help[open] > summary::before { content: '▾ '; }
+.pv-lean-intro { margin: 0 0 10px; }
+.pv-lean-intro b { color: var(--verso-text-color); font-weight: 600; }
+.pv-lean-intro a { color: var(--pv-accent); }
+
+.pv-lean-gloss {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 6px 14px;
+  margin: 0 0 12px;
+}
+.pv-lean-gloss dt { margin: 0; }
+.pv-lean-gloss dt code {
+  font-family: var(--pv-mono);
+  font-size: 11.5px;
+  color: var(--verso-text-color);
+  background: var(--verso-inline-code-bg, var(--verso-surface-color));
+  padding: 1px 5px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+.pv-lean-gloss dd { margin: 0; }
+.pv-lean-gloss dd b { color: var(--verso-text-color); font-weight: 600; }
+.pv-lean-gloss dd code {
+  font-family: var(--pv-mono);
+  font-size: 11.5px;
+  background: var(--verso-inline-code-bg, var(--verso-surface-color));
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
+/* ── "Help improve this page" (end of every article) ────────────── */
+
+.pv-improve {
+  margin: 36px 0 0;
+  padding: 16px 18px;
+  font-family: var(--pv-font);
+  background: var(--verso-surface-color);
+  border: 1px solid var(--verso-border-color);
+  border-radius: 10px;
+}
+.pv-improve-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--verso-text-color);
+  margin-bottom: 4px;
+}
+.pv-improve-sub {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--pv-text-2);
+  margin-bottom: 14px;
+  max-width: 62ch;
+}
+.pv-improve-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+  gap: 8px;
+}
+.pv-improve-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  min-width: 0;
+  padding: 10px 12px;
+  text-align: left;
+  font-family: var(--pv-font);
+  background: var(--verso-background-color);
+  border: 1px solid var(--verso-border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.12s;
+}
+.pv-improve-btn:hover { border-color: var(--pv-accent); }
+.pv-improve-ico { font-size: 15px; line-height: 1.3; flex-shrink: 0; }
+.pv-improve-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.pv-improve-text b {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--verso-text-color);
+}
+.pv-improve-text span {
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--pv-text-2);
+}
+.pv-improve-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--pv-border-subtle);
+  font-size: 12px;
+}
+.pv-improve-links a { color: var(--pv-accent); }
+
 /* ── Design-credit footnote (replaces the old top banner) ───────── */
 .pv-footnote {
   margin: 30px 0 6px;
@@ -1422,3 +1715,246 @@ html { overflow-x: hidden; }
 .pv-board-avatar { border-radius: 50%; flex-shrink: 0; background: var(--verso-surface-color); }
 .pv-board-name { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pv-board-count { flex-shrink: 0; font-family: var(--pv-mono); font-size: 12px; color: var(--pv-text-2); }
+
+/* ══════════════════════════════════════════════════════════════════
+   Mobile / small-screen layout (≤ 768px).
+
+   Verso's desktop layout pins the whole page to the viewport
+   (`body { height: 100dvh; overflow: hidden }`) and scrolls the article
+   inside `.code-content`. That model does not survive on a phone: any
+   element that grows past the fixed-height body is simply clipped, and
+   mobile browsers only collapse their URL bar for *document* scrolling.
+   So below 768px we unpin everything, let the document scroll the way a
+   normal web page does, and keep the header sticky at the top.
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Nothing should ever scroll the page sideways. */
+html { overflow-x: hidden; }
+
+/* While the mobile nav drawer is open the page behind it is frozen. */
+html.pv-nav-locked { overflow: hidden; }
+
+@media (max-width: 768px) {
+  /* 1. Unpin the viewport-height scroll prison. */
+  html { height: auto; }
+  body.pv,
+  body.pv-landing {
+    display: block;
+    height: auto;
+    min-height: 100%;
+    overflow: visible;
+  }
+  body.pv .layout {
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
+  /* A flex item's default `min-width: auto` refuses to shrink below its
+     content's min-content width, and the widest thing on a Lean page — the
+     imports block, or a long proof line — is several hundred pixels wider
+     than a phone. Without this the whole article column inflates to ~800px
+     and every line of prose runs off the screen. */
+  body.pv .main-area,
+  body.pv .content-wrapper,
+  body.pv .code-content { min-width: 0; width: 100%; }
+  body.pv .code-content,
+  body.pv-landing main.landing-page {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  /* …and the wide blocks themselves get their own horizontal scroller. */
+  body.pv .imports-list,
+  body.pv .imports-code { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  /* 2. The header follows the page. */
+  .pv-header {
+    position: sticky;
+    top: 0;
+    height: 48px;
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  body.pv .code-content { padding: 16px 16px 72px; max-width: none; }
+  body.pv-landing main.landing-page { padding: 18px 16px 64px; }
+
+  /* 3. Roomier header controls (touch targets ≥ 38px). */
+  .pv-nav-toggle { width: 38px; height: 38px; padding: 0 9px; }
+  .pv-navlink { padding: 9px 6px; }
+  .pv-search {
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+    padding: 0;
+  }
+  .pv-search svg { width: 17px; height: 17px; }
+
+  /* An open drawer turns the hamburger into a close (×) button. */
+  body.pv-nav-open .pv-nav-toggle span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+  body.pv-nav-open .pv-nav-toggle span:nth-child(2) { opacity: 0; }
+  body.pv-nav-open .pv-nav-toggle span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+  /* 4. Sidebar becomes an overlay drawer, docked below the sticky header
+        so the toggle that opened it can also close it. */
+  body.pv .sidebar {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    height: calc(100vh - 48px);
+    height: calc(100dvh - 48px);
+    width: min(330px, 88vw);
+    z-index: 1200;
+    transform: translateX(-102%);
+    transition: transform 0.25s ease;
+    box-shadow: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+  body.pv.pv-nav-open .sidebar {
+    transform: translateX(0);
+    box-shadow: 2px 0 16px rgba(0, 0, 0, 0.28);
+  }
+  .pv-scrim {
+    position: fixed;
+    inset: 48px 0 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease;
+  }
+  body.pv.pv-nav-open .pv-scrim { opacity: 1; visibility: visible; }
+
+  /* Anchor targets must clear the sticky header. */
+  .code-content [id], .code-content h2, .code-content h3, .code-content h4,
+  .hl.lean .token:target { scroll-margin-top: 60px; }
+
+  /* 5. Bigger nav rows — 11.5px text with 4px padding is not tappable. */
+  .module-tree { font-size: 13.5px; }
+  .module-tree summary { padding: 9px 10px; }
+  .module-tree .leaf a { padding: 9px 8px; }
+  .pv-filter input { height: 38px; font-size: 16px; } /* 16px: iOS won't zoom */
+  .module-tree .nav-title { height: 40px; }
+  .pv-filter { top: 40px; }
+
+  /* 6. Readable body copy. Justified text with hyphens turns into rivers of
+        whitespace in a ~40-character column, so left-align it. */
+  .code-content > .verso-text.mod-doc,
+  .code-content > .md-text.mod-doc { font-size: 15px; line-height: 1.65; }
+  .code-content .mod-doc p { text-align: left; hyphens: none; }
+  .code-content > .md-text[style*="--indent"],
+  .code-content > .verso-text[style*="--indent"] { font-size: 14.5px; line-height: 1.6; }
+  .code-content > .md-text.mod-doc h2,
+  .code-content > .verso-text.mod-doc h2 { font-size: 24px; }
+  .code-content > .md-text.mod-doc h3,
+  .code-content > .verso-text.mod-doc h3 { font-size: 17px; }
+  .code-content > .md-text.mod-doc h4,
+  .code-content > .verso-text.mod-doc h4 { font-size: 15px; }
+  .code-content > .md-text.mod-doc code,
+  .code-content > .verso-text.mod-doc code { font-size: 13px; }
+  .pv-meta, .pv-crumb .breadcrumbs { font-size: 12.5px; }
+  .pv-crumb .breadcrumbs a code,
+  .pv-crumb .breadcrumbs .current code { font-size: 12.5px; }
+  .pv-alpha-banner, .pv-callout-body, .pv-callout-title { font-size: 14px; }
+  .pv-callout-kicker { font-size: 11px; }
+  .page-toc.pv-toc-box { font-size: 14px; }
+  .page-toc.pv-toc-box a { display: block; padding: 6px 0; }
+  .pv-footnote { font-size: 12px; }
+  .pv-footnote a { display: inline-block; padding: 4px 0; }
+  .imports-list summary { font-size: 12px; padding: 6px 0; }
+
+  /* Secondary navigation still has to be tappable. */
+  .pv-logo { padding: 8px 0; }
+  .pv-crumb .breadcrumbs a,
+  .pv-crumb .breadcrumbs .current { padding: 6px 0; }
+  .page-toc.pv-toc-box .page-toc-title { font-size: 11.5px; padding: 4px 0; }
+
+  /* Long Lean names and URLs must not widen the page. */
+  .code-content > .md-text.mod-doc,
+  .code-content > .verso-text.mod-doc,
+  .code-content > .md-text[style*="--indent"],
+  .code-content > .verso-text[style*="--indent"],
+  .pv-callout-body { overflow-wrap: anywhere; }
+
+  /* Code boxes keep their own horizontal scroller (Lean lines are wide). */
+  .code-box {
+    font-size: 12px;
+    padding: 10px 12px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  /* 7. The "Edit" button flows *after* its block instead of floating over the
+        top-right corner: on a narrow column it otherwise lands on top of the
+        heading, and there is no hover to reveal it on a touch screen. */
+  .pv-edit-btn {
+    position: static;
+    height: 34px;
+    margin-top: 10px;
+    padding: 0 14px;
+    font-size: 13px;
+    color: var(--pv-accent);
+    border-color: var(--pv-accent);
+  }
+  .pv-edit-label { display: inline; }
+  .pv-editable { display: flow-root; }
+
+  /* 8. Home-page tables: give the page name a full row of its own rather
+        than ellipsing it away to nothing. */
+  .pv-cand-row { flex-wrap: wrap; gap: 2px 14px; padding: 11px 14px; }
+  .pv-cand-name { flex: 1 0 100%; white-space: normal; overflow: visible; }
+  .pv-cand-num { width: auto; text-align: left; font-size: 12px; }
+  .pv-cand-head { display: none; }
+  .pv-cand-lbl { display: inline; }
+  .pv-board-row { padding: 11px 14px; }
+
+  /* The header runs out of room once "Contribute" is in it. */
+  .pv-stats { display: none; }
+  .pv-navlink { padding: 9px 4px; font-size: 12.5px; }
+}
+
+@media (max-width: 700px) {
+  .pv-hero-title { font-size: 23px; }
+  .pv-hero-sub, .pv-edit-callout { font-size: 14px; }
+}
+
+/* ── The editor as a full-screen sheet on phones ─────────────────── */
+@media (max-width: 768px) {
+  .pv-modal-overlay { padding: 0; align-items: stretch; }
+  .pv-modal, .pv-modal-edit {
+    width: 100%;
+    max-width: none;
+    height: 100vh;
+    height: 100dvh;
+    max-height: none;
+    border: none;
+    border-radius: 0;
+    padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .pv-modal-title { font-size: 17px; }
+  .pv-modal-sub, .pv-modal-note { font-size: 13px; }
+  .pv-tab { padding: 10px 14px; font-size: 14px; }
+  .pv-tool { min-width: 36px; height: 34px; font-size: 14px; }
+  /* 16px is the threshold below which iOS Safari zooms into a focused field. */
+  .pv-visual, .pv-modal-text { font-size: 16px; }
+  .pv-visual { min-height: 40vh; max-height: none; }
+  .pv-modal-text { min-height: 40vh; }
+  /* Keep the actions reachable without scrolling the sheet to its end. */
+  .pv-modal-actions {
+    position: sticky;
+    bottom: 0;
+    margin: 0 -14px -12px;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: var(--verso-background-color);
+    border-top: 1px solid var(--verso-border-color);
+  }
+  .pv-btn { flex: 1 1 0; padding: 12px 14px; font-size: 14px; }
+}
+
+/* Touch devices have no hover, so anything hover-revealed must be visible. */
+@media (hover: none) {
+  .pv-edit-btn { opacity: 1; }
+}

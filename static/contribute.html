@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contribute — Physlib wiki</title>
+  <meta name="description" content="How to improve the Physlib physics wiki. Written for physicists with no Lean background: what you can change, how the editor works, and what happens after you submit.">
+  <link rel="icon" href="data:,">
+  <style>
+    /* Standalone page: it is copied into the built site next to the Verso
+       pages, so it carries its own copy of the wiki's palette rather than
+       depending on literate.css. Kept in sync with static/wiki.css. */
+    :root {
+      --bg: #ffffff;
+      --surface: #f8f9fa;
+      --surface-2: #f1f3f5;
+      --border: #e5e7eb;
+      --border-subtle: #f0f0f0;
+      --ink: #1a1a1a;
+      --muted: #6b7280;
+      --faint: #9ca3af;
+      --accent: #0056b3;
+      --accent-bg: rgba(232, 240, 254, 0.55);
+      --good: #2e7d32;
+      --good-bg: rgba(232, 245, 233, 0.5);
+      --warn: #e65100;
+      --warn-bg: #fff3e0;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --mono: 'SF Mono', 'Menlo', 'Consolas', monospace;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a2e; --surface: #16213e; --surface-2: #1c2947;
+        --border: #2a2a4a; --border-subtle: #26263f;
+        --ink: #e0e0e0; --muted: #9e9e9e; --faint: #7d7d7d;
+        --accent: #90caf9; --accent-bg: rgba(26, 39, 68, 0.7);
+        --good: #a5d6a7; --good-bg: rgba(46, 125, 50, 0.14);
+        --warn: #ffb74d; --warn-bg: rgba(230, 81, 0, 0.14);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--bg);
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* ── Header (matches the wiki's) ─────────────────────────────── */
+    .c-header {
+      position: sticky; top: 0; z-index: 20;
+      display: flex; align-items: center; gap: 10px;
+      height: 48px; padding: 0 14px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .c-logo { font-size: 14px; font-weight: 600; letter-spacing: -0.2px;
+      color: var(--accent); text-decoration: none; white-space: nowrap; padding: 12px 0; }
+    .c-kicker { font-size: 10px; font-weight: 600; letter-spacing: 0.6px;
+      text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+    .c-nav { margin-left: auto; display: flex; gap: 4px; }
+    .c-nav a { font-size: 13px; font-weight: 500; color: var(--muted);
+      text-decoration: none; padding: 9px 8px; white-space: nowrap; }
+    .c-nav a:hover { color: var(--accent); }
+    @media (max-width: 560px) { .c-kicker { display: none; } }
+
+    /* ── Page shell ──────────────────────────────────────────────── */
+    .c-wrap { max-width: 1080px; margin: 0 auto; padding: 26px 18px 70px;
+      display: grid; grid-template-columns: 1fr; gap: 0 36px; }
+    @media (min-width: 1000px) {
+      .c-wrap { grid-template-columns: 1fr 210px; }
+      .c-toc { grid-column: 2; grid-row: 1 / span 99; }
+    }
+
+    .c-toc { display: none; }
+    @media (min-width: 1000px) {
+      .c-toc { display: block; position: sticky; top: 68px; align-self: start;
+        font-size: 12.5px; border-left: 1px solid var(--border); padding-left: 14px; }
+      .c-toc div { font-size: 10px; font-weight: 600; letter-spacing: 0.5px;
+        text-transform: uppercase; color: var(--faint); margin-bottom: 8px; }
+      .c-toc a { display: block; padding: 4px 0; color: var(--muted); text-decoration: none; }
+      .c-toc a:hover { color: var(--accent); }
+    }
+
+    main { min-width: 0; grid-column: 1; }
+
+    h1 { font-size: 30px; font-weight: 600; line-height: 1.15; letter-spacing: -0.3px;
+      margin-bottom: 10px; }
+    .c-lede { font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 62ch; }
+    h2 { font-size: 20px; font-weight: 600; margin: 40px 0 10px;
+      padding-top: 22px; border-top: 1px solid var(--border-subtle); scroll-margin-top: 62px; }
+    h3 { font-size: 15px; font-weight: 600; margin: 22px 0 6px; }
+    p { margin: 0 0 12px; max-width: 68ch; }
+    ul, ol { margin: 0 0 12px 22px; max-width: 66ch; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    b, strong { font-weight: 600; }
+    code { font-family: var(--mono); font-size: 0.86em; background: var(--surface-2);
+      padding: 1px 5px; border-radius: 3px; overflow-wrap: anywhere; }
+    pre { font-family: var(--mono); font-size: 12.5px; line-height: 1.55;
+      background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+      padding: 12px 14px; overflow-x: auto; margin: 0 0 12px;
+      -webkit-overflow-scrolling: touch; }
+    pre code { background: none; padding: 0; font-size: inherit; }
+
+    /* ── Step strip ──────────────────────────────────────────────── */
+    .c-steps { display: grid; gap: 10px; margin: 22px 0 8px;
+      grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); }
+    .c-step { background: var(--surface); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 16px; }
+    .c-step-n { display: inline-flex; align-items: center; justify-content: center;
+      width: 22px; height: 22px; border-radius: 50%; background: var(--accent);
+      color: #fff; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+    @media (prefers-color-scheme: dark) { .c-step-n { color: #10192c; } }
+    .c-step b { display: block; font-size: 14px; margin-bottom: 3px; }
+    .c-step span { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* ── Callouts ────────────────────────────────────────────────── */
+    .c-note, .c-good, .c-warn {
+      border: 1px solid var(--border); border-left-width: 3px;
+      border-radius: 8px; padding: 12px 14px; margin: 0 0 16px;
+      font-size: 14px; line-height: 1.6; max-width: 68ch;
+    }
+    .c-note { border-left-color: var(--accent); background: var(--accent-bg); }
+    .c-good { border-left-color: var(--good); background: var(--good-bg); }
+    .c-warn { border-left-color: var(--warn); background: var(--warn-bg); }
+    .c-note p:last-child, .c-good p:last-child, .c-warn p:last-child { margin-bottom: 0; }
+
+    /* ── Two-column "you can / needs Lean" ───────────────────────── */
+    .c-split { display: grid; gap: 12px; margin: 0 0 16px;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+    .c-col { border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+    .c-col h3 { margin-top: 0; display: flex; align-items: center; gap: 7px; }
+    .c-col ul { margin: 0 0 0 20px; font-size: 14px; }
+    .c-col.yes { border-color: color-mix(in srgb, var(--good) 45%, var(--border)); }
+    .c-col.no { border-color: var(--border); background: var(--surface); }
+
+    /* ── The pretend "Edit" button, so the guide shows what to look for ── */
+    .c-fake-edit {
+      display: inline-flex; align-items: center; gap: 5px;
+      height: 24px; padding: 0 10px; border: 1px solid var(--accent);
+      border-radius: 999px; color: var(--accent); background: var(--bg);
+      font-size: 12px; font-weight: 500; white-space: nowrap; vertical-align: 1px;
+    }
+
+    /* ── Before / after ──────────────────────────────────────────── */
+    .c-ba { display: grid; gap: 12px; margin: 0 0 16px;
+      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+    .c-ba-box { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .c-ba-head { font-size: 10.5px; font-weight: 600; letter-spacing: 0.5px;
+      text-transform: uppercase; padding: 7px 14px; background: var(--surface);
+      border-bottom: 1px solid var(--border); color: var(--muted); }
+    .c-ba-box.after .c-ba-head { color: var(--good); }
+    .c-ba-body { padding: 12px 14px; font-size: 13.5px; line-height: 1.6; }
+
+    /* ── Cheat-sheet table ───────────────────────────────────────── */
+    .c-table { width: 100%; border-collapse: collapse; margin: 0 0 16px;
+      font-size: 13.5px; display: block; overflow-x: auto; }
+    .c-table th, .c-table td { text-align: left; vertical-align: top;
+      padding: 8px 12px 8px 0; border-bottom: 1px solid var(--border-subtle); }
+    .c-table th { font-size: 10.5px; font-weight: 600; letter-spacing: 0.4px;
+      text-transform: uppercase; color: var(--faint); }
+    .c-table td:first-child { white-space: nowrap; }
+
+    /* ── Task menu ───────────────────────────────────────────────── */
+    .c-tasks { display: grid; gap: 8px; margin: 0 0 16px;
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); }
+    .c-task { display: flex; gap: 10px; align-items: flex-start;
+      border: 1px solid var(--border); border-radius: 8px; padding: 11px 13px; }
+    .c-task-ico { font-size: 16px; line-height: 1.3; flex-shrink: 0; }
+    .c-task b { display: block; font-size: 13.5px; }
+    .c-task span { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+    .c-badge { display: inline-block; font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.4px; border-radius: 4px;
+      padding: 1px 6px; margin-left: 6px; vertical-align: 1.5px;
+      color: var(--good); background: var(--good-bg); }
+    .c-badge.med { color: var(--accent); background: var(--accent-bg); }
+
+    /* ── Live "pages that need help" list ────────────────────────── */
+    .c-cands { border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+      margin: 0 0 12px; }
+    .c-cand { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px;
+      padding: 11px 14px; border-top: 1px solid var(--border-subtle);
+      text-decoration: none; color: var(--ink); font-size: 14px; }
+    .c-cand:first-child { border-top: none; }
+    .c-cand:hover { background: var(--surface); }
+    .c-cand-name { flex: 1 1 220px; min-width: 0; }
+    .c-cand-meta { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+    /* ── FAQ ─────────────────────────────────────────────────────── */
+    .c-faq { border-bottom: 1px solid var(--border-subtle); }
+    .c-faq summary { padding: 12px 0; font-size: 14.5px; font-weight: 600;
+      cursor: pointer; list-style: none; }
+    .c-faq summary::-webkit-details-marker { display: none; }
+    .c-faq summary::before { content: '▸ '; color: var(--faint); }
+    .c-faq[open] summary::before { content: '▾ '; }
+    .c-faq div { padding: 0 0 14px; font-size: 14px; color: var(--muted); max-width: 68ch; }
+    .c-faq div p { margin-bottom: 10px; }
+
+    .c-cta { display: inline-flex; align-items: center; gap: 7px;
+      background: var(--accent); color: var(--bg); font-size: 14px; font-weight: 600;
+      padding: 11px 18px; border-radius: 8px; text-decoration: none; margin: 4px 8px 4px 0; }
+    .c-cta:hover { opacity: 0.9; }
+    .c-cta.ghost { background: none; color: var(--accent); border: 1px solid var(--accent); }
+
+    .c-foot { margin-top: 44px; padding-top: 16px; border-top: 1px solid var(--border-subtle);
+      font-size: 12px; color: var(--faint); text-align: center; }
+    .c-foot a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="c-header">
+    <a class="c-logo" href="../">Physlib</a>
+    <span class="c-kicker">Contributor guide</span>
+    <nav class="c-nav">
+      <a href="../">Wiki</a>
+      <a href="../roadmap/">Roadmap</a>
+      <a href="../search/">Search</a>
+    </nav>
+  </div>
+
+  <div class="c-wrap">
+    <nav class="c-toc" aria-label="On this page">
+      <div>On this page</div>
+      <a href="#what">What this wiki is</a>
+      <a href="#can">What you can change</a>
+      <a href="#first">Your first edit</a>
+      <a href="#good">What a good edit looks like</a>
+      <a href="#writing">Writing: maths, links, sources</a>
+      <a href="#lean">Reading a Lean page</a>
+      <a href="#start">Where to start</a>
+      <a href="#after">After you submit</a>
+      <a href="#faq">Questions</a>
+      <a href="#more">Going further</a>
+    </nav>
+
+    <main>
+      <h1>Contribute to the Physlib wiki</h1>
+      <p class="c-lede">This wiki explains physics that has been checked, line by line,
+      by a computer. The checking is done in a language called Lean — but the
+      <b>explaining</b> is done in English, by physicists, and that is the part that is
+      thin. If you know the physics, you are qualified to improve it today, without
+      learning Lean and without installing anything.</p>
+
+      <div class="c-steps">
+        <div class="c-step">
+          <span class="c-step-n">1</span>
+          <b>Find a page</b>
+          <span>Anything you know well. If you would rather be pointed at
+          something, jump to <a href="#start">where to start</a>.</span>
+        </div>
+        <div class="c-step">
+          <span class="c-step-n">2</span>
+          <b>Press <span class="c-fake-edit">✎&nbsp;Edit</span></b>
+          <span>Every block of prose on every page has one. Type into it like a
+          document; there is a preview for your maths.</span>
+        </div>
+        <div class="c-step">
+          <span class="c-step-n">3</span>
+          <b>Press “Propose”</b>
+          <span>It opens GitHub with your change already written up. A
+          maintainer reviews it and credits you as a co-author.</span>
+        </div>
+      </div>
+
+      <p><a class="c-cta" href="../">Open the wiki and find a page →</a><a
+         class="c-cta ghost" href="#first">Show me the steps in detail</a></p>
+
+      <h2 id="what">What this wiki is (and what it is missing)</h2>
+      <p><b>Physlib</b> is a library of physics written in <b>Lean</b>, a language in
+      which every definition is precise and every proof is checked mechanically. If
+      a theorem is in Physlib, it is not “probably right” — it follows from its stated
+      assumptions, and a computer has verified that it does.</p>
+      <p>What that guarantees is <i>correctness</i>, not <i>comprehensibility</i>. A
+      formal statement says exactly what is true and nothing about why you would care,
+      which convention was chosen, what the symbols mean physically, or which textbook
+      chapter it corresponds to. That context lives in the prose between the code
+      boxes — written by hand, in ordinary English, in what Lean calls
+      <b>docstrings</b>. Many pages have a great deal of formalized physics and a
+      single sentence of prose.</p>
+      <div class="c-note">
+        <p><b>That gap is the contribution.</b> A page with thirty proved lemmas and one
+        line of explanation is not a finished page; it is a page waiting for a
+        physicist. You are not being asked to check the mathematics — that is already
+        done — but to say what it means.</p>
+      </div>
+      <p>Two libraries are shown here. <b>Physlib</b> is the reviewed one.
+      <b>PhyslibAlpha</b> (marked with an orange <span style="color:var(--warn);font-weight:600">α</span>
+      and a banner) is newer material that has not been reviewed to the same standard.
+      Both are worth documenting; alpha pages often need it more.</p>
+
+      <h2 id="can">What you can change without knowing any Lean</h2>
+      <div class="c-split">
+        <div class="c-col yes">
+          <h3>✅ Yours, right now</h3>
+          <ul>
+            <li>The <b>page overview</b> — what this file is about, and why.</li>
+            <li>The <b>explanation of any definition or theorem</b>: what it means
+            physically, when it applies, what the assumptions really rule out.</li>
+            <li><b>Notation and conventions</b>: signature, units, sign conventions,
+            which of the two standard definitions is being used.</li>
+            <li><b>References</b>: the textbook, paper or lecture notes this comes from.</li>
+            <li><b>Worked intuition</b>: a limiting case, a picture in words, the
+            standard example everyone is taught alongside it.</li>
+            <li><b>Typos, wrong words, broken English, stale statements.</b></li>
+          </ul>
+        </div>
+        <div class="c-col no">
+          <h3>🔧 Needs Lean (ask instead)</h3>
+          <ul>
+            <li>Changing what a <b>theorem says</b>, or its proof.</li>
+            <li>Adding a <b>new definition or result</b>, or a whole new page.</li>
+            <li>Renaming things, or moving them between files.</li>
+          </ul>
+          <p style="font-size:13.5px;color:var(--muted);margin:10px 0 0">These are still
+          worth raising — open an issue describing what is missing and someone who
+          writes Lean can pick it up. Every page has an <b>Ask a question</b> button
+          for exactly this.</p>
+        </div>
+      </div>
+      <div class="c-good">
+        <p><b>You cannot break anything.</b> Editing here never writes to the library.
+        It composes a suggestion, which a maintainer reads and applies by hand. The
+        worst possible outcome of a bad edit is that someone politely declines it.</p>
+      </div>
+
+      <h2 id="first">Your first edit, step by step</h2>
+      <ol>
+        <li><b>Open a page you know something about.</b> Use the sidebar, the
+        <a href="../search/">search box</a>, or the
+        <a href="../roadmap/">roadmap</a>. On a phone, the ☰ button top-left opens
+        the page list.</li>
+        <li><b>Find the prose.</b> The paragraphs between the code boxes are the
+        editable text. Each one carries a small
+        <span class="c-fake-edit">✎&nbsp;Edit</span> button — at the top-right of the
+        block on a computer, and just underneath it on a phone.</li>
+        <li><b>Press it.</b> An editor opens on top of the page. It starts in
+        <b>Visual</b> mode, which behaves like any text box: type, select, use the
+        toolbar for <b>bold</b>, headings, lists, links and maths. If you prefer
+        plain text, the <b>Markdown</b> tab shows the same content as source.</li>
+        <li><b>Check your maths.</b> The <b>Preview</b> tab renders the page exactly
+        as it will appear, with <code>$…$</code> typeset. Always look at it if you
+        wrote a formula.</li>
+        <li><b>Say why (one line).</b> The “Why this change?” box is optional and
+        disproportionately useful: it is the first thing a reviewer reads.</li>
+        <li><b>Press “Propose on GitHub”.</b> A new tab opens on GitHub with the title
+        and the whole write-up already filled in, including a diff of your change. You
+        press <b>Submit new issue</b>. That is the whole submission.</li>
+      </ol>
+      <div class="c-note">
+        <p><b>You need a free GitHub account</b> to post the suggestion —
+        <a href="https://github.com/join" target="_blank" rel="noopener">signing up</a>
+        takes a minute and needs only an email address. Your draft is saved in your
+        browser while you work, so you can create the account and come back to it.</p>
+      </div>
+
+      <h2 id="good">What a good edit looks like</h2>
+      <p>The bar is not literary. It is: <b>would this have saved you five minutes
+      when you first met this result?</b> Concretely, the most valuable additions are
+      the ones a formal statement structurally cannot carry — motivation, convention,
+      scope, and provenance.</p>
+
+      <div class="c-ba">
+        <div class="c-ba-box">
+          <div class="c-ba-head">Before</div>
+          <div class="c-ba-body">
+            <p style="margin:0"># The damped harmonic oscillator</p>
+            <p style="margin:8px 0 0">Basic definitions.</p>
+          </div>
+        </div>
+        <div class="c-ba-box after">
+          <div class="c-ba-head">After</div>
+          <div class="c-ba-body">
+            <p style="margin:0"># The damped harmonic oscillator</p>
+            <p style="margin:8px 0 0">A mass on a spring with a drag force proportional
+            to velocity: <code>$m\ddot x + b\dot x + kx = 0$</code>. It is the simplest
+            system in which energy is not conserved, and the standard model for any
+            weakly dissipative oscillation — an RLC circuit, a pendulum in air, a
+            damped mode of a field.</p>
+            <p style="margin:8px 0 0">The behaviour is controlled by the ratio of
+            <code>$b$</code> to <code>$2\sqrt{mk}$</code>: under-damped (oscillates
+            with decaying amplitude), critically damped, or over-damped. This file sets
+            up the equation of motion and the damping ratio; the solutions are in
+            <code>Solution</code>.</p>
+            <p style="margin:8px 0 0">Convention: <code>$b &gt; 0$</code> throughout, and
+            the damping ratio is <code>$\zeta = b/(2\sqrt{mk})$</code> as in Goldstein
+            §3.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Things that are always welcome</h3>
+      <ul>
+        <li><b>One sentence saying what the file is for</b>, before any detail.</li>
+        <li><b>The physical reading of a symbol</b> — “<code>$\zeta$</code> is the
+        damping ratio; <code>$\zeta = 1$</code> is critical damping”.</li>
+        <li><b>The assumption that matters</b> — which hypothesis is doing the work,
+        and what breaks without it.</li>
+        <li><b>A pointer</b>: “Goldstein §3.2”, “Peskin &amp; Schroeder eq. (4.31)”,
+        an arXiv number, a DOI.</li>
+        <li><b>The name people actually use</b> for the result, if the Lean name is
+        different.</li>
+      </ul>
+
+      <h3>Things to avoid</h3>
+      <ul>
+        <li>Restating the formal statement in words with nothing added.</li>
+        <li>Changing conventions or claims to match your preference — if the
+        convention seems wrong, say so with the <b>Report an error</b> button instead.</li>
+        <li>Very long derivations. Link to the source; keep the page readable.</li>
+        <li>Editing the Lean code inside the code boxes. The editor does not touch
+        them, and suggestions that try to are hard to apply.</li>
+      </ul>
+
+      <h2 id="writing">Writing: maths, links and sources</h2>
+      <p>The prose is <b>Markdown</b> with LaTeX maths. You do not have to memorise it —
+      the toolbar inserts everything below — but here is the whole vocabulary you need:</p>
+      <table class="c-table">
+        <thead><tr><th>You write</th><th>You get</th></tr></thead>
+        <tbody>
+          <tr><td><code>*emphasis*</code></td><td><i>emphasis</i></td></tr>
+          <tr><td><code>**bold**</code></td><td><b>bold</b></td></tr>
+          <tr><td><code># Heading</code></td><td>The page title (one per page, at the top)</td></tr>
+          <tr><td><code>## Section</code></td><td>A section heading</td></tr>
+          <tr><td><code>- item</code></td><td>A bulleted list</td></tr>
+          <tr><td><code>$E = mc^2$</code></td><td>Inline maths, typeset with KaTeX</td></tr>
+          <tr><td><code>$$ … $$</code></td><td>A displayed equation on its own line</td></tr>
+          <tr><td><code>`MassUnit`</code></td><td>A Lean name — becomes a link to where it is defined</td></tr>
+          <tr><td><code>[text](https://…)</code></td><td>A link</td></tr>
+        </tbody>
+      </table>
+      <div class="c-note">
+        <p><b>Maths.</b> Anything between single dollars is rendered as LaTeX:
+        <code>$\hbar\omega$</code>, <code>$\partial_\mu F^{\mu\nu} = j^\nu$</code>.
+        Use <code>$$…$$</code> for a centred display. The <b>Preview</b> tab is the
+        fastest way to check a formula — a mistyped command shows up immediately.</p>
+      </div>
+      <div class="c-note">
+        <p><b>Cross-references are free.</b> Put a Lean name in backticks and the
+        wiki turns it into a link to its definition automatically, on every page. So
+        writing <code>`MassUnit`</code> in your paragraph connects it to the rest of
+        the library at no cost to you.</p>
+      </div>
+      <h3>Citing a source</h3>
+      <p>There is no bibliography system; a plain sentence is the convention:</p>
+      <pre><code>This follows Goldstein, *Classical Mechanics* (3rd ed.), §3.2.
+
+See [Maldacena 1997](https://arxiv.org/abs/hep-th/9711200) for the original
+statement, and Peskin &amp; Schroeder eq. (4.31) for the conventions used here.</code></pre>
+      <p>If you have a reference but do not want to write prose around it, the
+      <b>Suggest a reference</b> button at the bottom of every page takes just the
+      citation.</p>
+
+      <h2 id="lean">Reading a Lean page without knowing Lean</h2>
+      <p>You can contribute without reading a single code box. But the code is
+      readable at a glance once you know six things, and it helps to know what you are
+      documenting.</p>
+      <table class="c-table">
+        <thead><tr><th>What you see</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td><code>def foo …</code></td><td>A <b>definition</b>: it introduces an object or a piece of notation.</td></tr>
+          <tr><td><code>theorem</code>, <code>lemma</code></td><td>A <b>statement that has been proved</b>. Everything after <code>:= by</code> is the machine-checked proof — you can skip it entirely.</td></tr>
+          <tr><td><code>:=</code></td><td>“is defined to be”.</td></tr>
+          <tr><td><code>(x : ℝ)</code></td><td>“<i>x</i> is a real number”. The colon gives the type of a symbol.</td></tr>
+          <tr><td><code>∀ x, P x</code></td><td>“for every <i>x</i>, <i>P(x)</i>”. <code>∃</code> is “there exists”, <code>→</code> is “implies”.</td></tr>
+          <tr><td><code>{x : ℝ}</code></td><td>The same, but Lean works the argument out for itself. Read it as ordinary quantification.</td></tr>
+        </tbody>
+      </table>
+      <p>Every coloured name in a code box is live: hover it (or tap it) to see what it
+      is and where it is defined. The <b>Imports</b> drawer at the top of the page lists
+      what the file builds on.</p>
+      <h3>The coloured cards</h3>
+      <ul>
+        <li>A blue <b>Open problem</b> card is a <code>TODO</code> left in the source:
+        something nobody has done yet. Say what it would take, or point at the
+        literature.</li>
+        <li>A green <b>Informal definition</b> or purple <b>Informal lemma</b> card is
+        physics stated in words but not yet formalized. These especially need good
+        prose — they are the bridge between the literature and the library.</li>
+      </ul>
+
+      <h2 id="start">Where to start</h2>
+      <p>If nothing springs to mind, pick from here. These are ordered roughly by how
+      little time they take.</p>
+      <div class="c-tasks">
+        <div class="c-task"><span class="c-task-ico">🔤</span><span><b>Explain one symbol
+          <span class="c-badge">5 min</span></b><span>Find a page in your field, pick a
+          symbol the prose never defines, and add a clause defining it.</span></span></div>
+        <div class="c-task"><span class="c-task-ico">📚</span><span><b>Add a reference
+          <span class="c-badge">5 min</span></b><span>Name the textbook section or paper
+          the result comes from. Use the button at the bottom of any page.</span></span></div>
+        <div class="c-task"><span class="c-task-ico">❓</span><span><b>Ask what you could
+          not follow <span class="c-badge">2 min</span></b><span>A question is a bug
+          report about the documentation, and one of the most useful things you can
+          leave behind.</span></span></div>
+        <div class="c-task"><span class="c-task-ico">✎</span><span><b>Write a page overview
+          <span class="c-badge med">20 min</span></b><span>Take one of the
+          under-documented pages listed below and write the paragraph that should have
+          been at the top of it.</span></span></div>
+        <div class="c-task"><span class="c-task-ico">🌉</span><span><b>Document an informal
+          card <span class="c-badge med">20 min</span></b><span>Find a green or purple
+          card, and write down the statement properly with its source.</span></span></div>
+        <div class="c-task"><span class="c-task-ico">🗺️</span><span><b>Adopt an area
+          <span class="c-badge med">ongoing</span></b><span>Pick the subfield you work
+          in and read down its section in the sidebar, fixing as you go.</span></span></div>
+      </div>
+
+      <h3>Pages that are asking for it</h3>
+      <p>Ranked by how much formalized physics they contain per character of
+      explanation — lots of results, almost no prose. Two per area of the library.</p>
+      <div class="c-cands" id="c-cands">
+        <div class="c-cand"><span class="c-cand-name" style="color:var(--muted)">Loading the
+        current list…</span></div>
+      </div>
+      <p style="font-size:13px;color:var(--muted)">The
+      <a href="../roadmap/">roadmap</a> shows the same thing as a map: every result in
+      the library at once, coloured by source. Tap any file to read its documentation —
+      the empty ones are obvious.</p>
+
+      <h2 id="after">What happens after you submit</h2>
+      <ol>
+        <li>Your suggestion appears as an <b>issue</b> on the
+        <a href="https://github.com/leanprover-community/physlib" target="_blank" rel="noopener">Physlib
+        repository</a>, containing your text and a diff against the current
+        documentation.</li>
+        <li>A maintainer reads it. If it needs discussion, they will reply in the
+        issue — you will get an email.</li>
+        <li>When it is accepted, the text is copied into the Lean source file and
+        the commit credits you with a <code>Co-authored-by:</code> line, so the
+        contribution is attributed to you in the repository history.</li>
+        <li>The wiki rebuilds automatically, and your words are on the page.</li>
+      </ol>
+      <p>Contributors who have opened the most documentation issues are listed on
+      the <a href="../">front page</a>.</p>
+
+      <h2 id="faq">Questions</h2>
+      <details class="c-faq"><summary>Do I really not need to know Lean?</summary>
+        <div><p>No. The editor works on the English prose only, and never shows you a
+        proof. Knowing what <code>theorem</code> and <code>:=</code> mean (see
+        <a href="#lean">above</a>) is enough to tell which paragraph goes with which
+        result, and that is the whole prerequisite.</p></div></details>
+      <details class="c-faq"><summary>Do I need to install anything?</summary>
+        <div><p>No. Everything happens in the browser — including on a phone. You never
+        clone the repository, run Lean, or use git.</p></div></details>
+      <details class="c-faq"><summary>Why a GitHub issue rather than editing directly?</summary>
+        <div><p>Because the text you are editing lives inside a Lean source file that
+        must still compile. Routing through a review step means a contributor cannot
+        accidentally break the build, and it keeps the barrier at “write a paragraph”
+        rather than “learn git”.</p>
+        <p>If you are comfortable with GitHub, you are welcome to open a pull request
+        against the source file directly — the <b>View this page’s source file on
+        GitHub</b> link at the bottom of every page takes you there.</p></div></details>
+      <details class="c-faq"><summary>What if I am wrong, or I mis-remember a convention?</summary>
+        <div><p>Then a maintainer says so and nothing happens. Suggestions are reviewed
+        before anything changes; there is no way to damage the library from here. Being
+        approximately right and specific is far more useful than being silent.</p></div></details>
+      <details class="c-faq"><summary>I lost my work / closed the tab.</summary>
+        <div><p>Your draft is saved in your browser as you type. Reopen the same page
+        and press <b>Edit</b> on the same block: it offers the draft back, and the
+        Edit button carries an orange dot while an unsent draft exists.</p></div></details>
+      <details class="c-faq"><summary>My maths does not render.</summary>
+        <div><p>Check it in the <b>Preview</b> tab. The usual causes are an unmatched
+        <code>$</code>, a stray backslash, or a command KaTeX does not implement.
+        Single dollars must hug the formula: <code>$x$</code>, not <code>$ x $</code>.</p></div></details>
+      <details class="c-faq"><summary>Can I add a whole new page?</summary>
+        <div><p>New pages appear when new Lean files are added to Physlib, so that
+        needs someone writing Lean. Open an issue describing the result you want
+        covered and the source it comes from — a well-specified request is genuinely
+        useful to the people who do formalize.</p></div></details>
+      <details class="c-faq"><summary>What is the α on some pages?</summary>
+        <div><p>It marks <code>PhyslibAlpha</code>: correct in the sense that it
+        compiles and is proved, but not reviewed to the same standard as the main
+        library. Documentation there is just as welcome.</p></div></details>
+
+      <h2 id="more">Going further</h2>
+      <p>If the formalization itself starts to interest you, the natural next steps
+      are the <a href="https://github.com/leanprover-community/physlib" target="_blank" rel="noopener">Physlib
+      repository</a> and the Lean community’s
+      <a href="https://leanprover.zulipchat.com/" target="_blank" rel="noopener">Zulip
+      chat</a>, where people are used to helping physicists get started.
+      <a href="https://leanprover-community.github.io/" target="_blank" rel="noopener">Mathlib’s
+      site</a> has the standard tutorials.</p>
+      <p>But that is optional. The wiki needs physicists writing English about physics
+      far more than it needs another Lean user.</p>
+
+      <p style="margin-top:24px"><a class="c-cta" href="../">Find a page to improve →</a><a
+         class="c-cta ghost" href="../roadmap/">Browse the roadmap</a></p>
+
+      <div class="c-foot">
+        Work in progress, for demonstration only. The design of this wiki is copied
+        from <a href="https://paperview.org/" target="_blank" rel="noopener">paperview.org</a>
+        by Sabrina Pasterski.
+      </div>
+    </main>
+  </div>
+
+  <script>
+    /* The "pages that are asking for it" list is the same data the front page
+       uses (built by scripts/edit-candidates.mjs). Absent in a build without
+       the roadmap step, in which case the section quietly removes itself. */
+    (function () {
+      var box = document.getElementById('c-cands');
+      fetch('../edit-candidates.json')
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function (data) {
+          var cands = (data.candidates || []).slice(0, 12);
+          if (!cands.length) throw new Error('empty');
+          box.innerHTML = cands.map(function (c) {
+            var name = c.path.replace(/\./g, ' › ');
+            var alpha = c.source === 'PhyslibAlpha'
+              ? ' <span class="c-badge" style="color:var(--warn);background:var(--warn-bg)">Alpha</span>' : '';
+            return '<a class="c-cand" href="../' + c.href + '">' +
+              '<span class="c-cand-name">' + name + alpha + '</span>' +
+              '<span class="c-cand-meta">' + c.decls + ' results · ' +
+              (c.docChars || 0) + ' characters of prose</span></a>';
+          }).join('');
+        })
+        .catch(function () {
+          var section = box.previousElementSibling; // the explanatory paragraph
+          var heading = section && section.previousElementSibling;
+          box.remove();
+          if (section) section.remove();
+          if (heading && heading.tagName === 'H3') heading.remove();
+        });
+    })();
+  </script>
+</body>
+</html>

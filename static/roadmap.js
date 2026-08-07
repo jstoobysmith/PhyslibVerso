@@ -67,6 +67,42 @@
   var resetBtn = document.getElementById('rm-reset');
   if (resetBtn) resetBtn.addEventListener('click', function () { if (currentFit) currentFit(true); });
 
+  /* ── Phone info sheet ──────────────────────────────────────────────
+     On a phone the sidebar sits under the map as a bottom sheet. It starts
+     small (the map is the point of the page) and grows when there is
+     something to read — a tapped dot, or the handle. */
+  var isPhone = function () { return window.innerWidth <= 760; };
+  var sheetHandle = document.getElementById('rm-sheet-handle');
+  function setSheet(open) {
+    document.body.classList.toggle('rm-sheet-open', open);
+    if (sheetHandle) sheetHandle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    /* The stage changed height, so the map has to be re-fitted into it. */
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { if (currentFit) currentFit(false); }, 300);
+  }
+  if (sheetHandle) {
+    sheetHandle.addEventListener('click', function () {
+      setSheet(!document.body.classList.contains('rm-sheet-open'));
+    });
+  }
+  /* Called by the sidebar renderers when a selection produces real content. */
+  function revealSheet() {
+    if (!isPhone()) return;
+    sidebar.scrollTop = 0;
+    if (!document.body.classList.contains('rm-sheet-open')) setSheet(true);
+  }
+
+  /* Touch devices have no scroll wheel, no hover and no Esc key. */
+  var isTouch = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
+  var CLICK = isTouch ? 'Tap' : 'Click';
+  if (isTouch) {
+    var hintEl = document.getElementById('rm-hint');
+    if (hintEl) {
+      hintEl.textContent = 'Pinch to zoom · drag to pan · tap a dot for details · ' +
+        'tap the background to reset';
+    }
+  }
+
   /* View dropdown: whole map or jump straight to an area. */
   var viewSel = document.getElementById('rm-view');
   if (viewSel) viewSel.addEventListener('change', function () {
@@ -944,7 +980,7 @@
       '<b>' + (s.Physlib || 0).toLocaleString() + '</b> Physlib · ' +
       '<b>' + (s.PhyslibAlpha || 0).toLocaleString() + '</b> PhyslibAlpha · ' +
       '<b>' + (s.UnformalizedClaims || 0).toLocaleString() + '</b> unformalized claims' +
-      '<br><br>Click a <b>dot</b> for a result, or a <b>cell</b> for its file docstring. ' +
+      '<br><br>' + CLICK + ' a <b>dot</b> for a result, or a <b>cell</b> for its file docstring. ' +
       'Toggle a source in the legend; filter with the search box.</div>';
   }
 
@@ -993,6 +1029,7 @@
       '</div>';
     sidebar.innerHTML = html;
     typesetMath(sidebar);
+    revealSheet();
   }
 
   function renderFile(d) {
@@ -1023,6 +1060,7 @@
       }).join('') + '</div>';
     sidebar.innerHTML = html;
     typesetMath(sidebar);
+    revealSheet();
   }
 
   function actionBtn(label, href) {

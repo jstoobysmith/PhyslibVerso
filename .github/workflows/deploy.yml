@@ -49,6 +49,11 @@ jobs:
       - name: Install the roadmap page
         run: node scripts/install-roadmap.mjs
 
+      # The contributor guide is likewise a standalone page. It is installed
+      # after the roadmap step, whose edit-candidates.json it reads at runtime.
+      - name: Install the contributor guide
+        run: node scripts/install-contribute.mjs
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
